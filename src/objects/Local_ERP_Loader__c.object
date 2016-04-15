@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R3 - Object to hold the data which is used to do comparison with SAP data - (SAP data is compared with mapping table)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Account_GUID__c</fullName>
+        <description>R3 - Field GUID Account reference data</description>
+        <externalId>false</externalId>
+        <label>Account GUID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Class__c</fullName>
+        <description>R3 Application Class</description>
+        <externalId>false</externalId>
+        <label>Application Class</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Block_Description__c</fullName>
+        <description>R3 Block Description</description>
+        <externalId>false</externalId>
+        <label>Block Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Block__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R3 Customer Blocking Data Block</description>
+        <externalId>false</externalId>
+        <label>Block</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Business_1__c</fullName>
+        <description>R3 Business 1</description>
+        <externalId>false</externalId>
+        <label>Business 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_2__c</fullName>
+        <description>R3 Business 2</description>
+        <externalId>false</externalId>
+        <label>Business 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_3__c</fullName>
+        <description>R3 Business 3</description>
+        <externalId>false</externalId>
+        <label>Business 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Class__c</fullName>
+        <description>R3 Channel Class</description>
+        <externalId>false</externalId>
+        <label>Channel Class</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>R3 - Country</description>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Information_Risk_class__c</fullName>
+        <description>R3 Credit Information Risk class</description>
+        <externalId>false</externalId>
+        <label>Risk Class</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Limit_Information__c</fullName>
+        <description>R3 Credit Limit Information</description>
+        <externalId>false</externalId>
+        <label>Credit Limit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Blocking_Data_Deletion_Flag__c</fullName>
+        <description>R3 Customer Blocking Data Deletion Flag</description>
+        <externalId>false</externalId>
+        <label>Customer Blocking Data Deletion Flag</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_allocation__c</fullName>
+        <description>R3 Customer allocation</description>
+        <externalId>false</externalId>
+        <label>Customer allocation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_ID__c</fullName>
+        <description>R3 - ERP ID</description>
+        <externalId>false</externalId>
+        <label>ERP ID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_Usage__c</fullName>
+        <description>R3 Industry Usage</description>
+        <externalId>false</externalId>
+        <label>Industry Usage</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadingBusinessPartnerSegment__c</fullName>
+        <description>R3 LeadingBusinessPartnerSegment</description>
+        <externalId>false</externalId>
+        <label>Leading Business Partner Segment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Channel__c</fullName>
+        <description>R3 - Local Channel</description>
+        <externalId>false</externalId>
+        <label>Local Channel</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Customer_ID__c</fullName>
+        <description>R3 - Local Customer ID</description>
+        <externalId>false</externalId>
+        <label>Local Customer ID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Main_Business__c</fullName>
+        <description>R3 Local Main Business</description>
+        <externalId>false</externalId>
+        <label>Local Main Business</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Segment__c</fullName>
+        <description>R3 Local Segment</description>
+        <externalId>false</externalId>
+        <label>Local Segment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAP_Distribution_Channel__c</fullName>
+        <description>R3 - Distribution Channel</description>
+        <externalId>false</externalId>
+        <label>SAP Distribution Channel</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAP_Division__c</fullName>
+        <description>R3 - field Division</description>
+        <externalId>false</externalId>
+        <label>SAP Division</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAP_Sales_Organization__c</fullName>
+        <description>R3 - Sales Organization</description>
+        <externalId>false</externalId>
+        <label>SAP Sales Organization</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_District__c</fullName>
+        <description>R3 Sales District</description>
+        <externalId>false</externalId>
+        <label>Sales District</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Office__c</fullName>
+        <description>R3 Sales Office</description>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Person_1__c</fullName>
+        <description>R3 - Sales Person 1</description>
+        <externalId>false</externalId>
+        <label>Sales Person 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Person_2__c</fullName>
+        <description>R3 - Sales Person 2</description>
+        <externalId>false</externalId>
+        <label>Sales Person 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Person_3__c</fullName>
+        <description>R3 - Sales Person</description>
+        <externalId>false</externalId>
+        <label>Sales Person 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_Sales_Force__c</fullName>
+        <description>R3 Type of Sales Force</description>
+        <externalId>false</externalId>
+        <label>Type of Salesforce</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Local ERP Loader</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account_GUID__c</columns>
+        <columns>ERP_ID__c</columns>
+        <columns>SAP_Division__c</columns>
+        <columns>SAP_Distribution_Channel__c</columns>
+        <columns>SAP_Sales_Organization__c</columns>
+        <columns>Country__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>ERP Data # - {0000000000}</displayFormat>
+        <label>ERP Data Hold Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Local ERP Loader</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

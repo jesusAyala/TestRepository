@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>HR Request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>HR Request</name>
+    <style>formalLetter</style>
+    <subject>HR Request</subject>
+    <textOnly>We encourage you to visit our careers website where you will find all currently available jobs.
+
+Alternatively, you can also visit www.abb.com/careers to explore global career opportunities.
+
+The application can be submitted to a specific job advertisement or you can register your CV for recruiters to contact you directly. 
+
+This will allow us to track your application better and also provide you with the status of your application.</textOnly>
+    <type>html</type>
+</EmailTemplate>

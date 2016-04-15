@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <standardLabel>New</standardLabel>
+    <targetObject>ERP_Reference_Data__c</targetObject>
+    <targetParentField>Account__c</targetParentField>
+    <targetRecordType>ERP_Reference_Data__c.External_Non_Buying_Account_LSO_Reference_Data</targetRecordType>
+    <type>Create</type>
+</QuickAction>

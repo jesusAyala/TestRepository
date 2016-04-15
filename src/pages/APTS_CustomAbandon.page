@@ -1,0 +1,11 @@
+<!--
+@Name: APTS_CustomAbandon
+@Author: Ganga Vemula
+@CreateDate: 28th December 2015.
+@Description: This page is to perform the custom Abandon action. 
+@UsedBy: 
+-->
+
+<apex:page controller="APTS_ConfigProductsCustomController" action="{!doCancel}" sidebar="false" showheader="false" >
+ <!--Page to implement custom Abandon action on cart--> 
+</apex:page>

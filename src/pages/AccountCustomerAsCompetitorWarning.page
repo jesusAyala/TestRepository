@@ -1,0 +1,6 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" id="page" >
+<apex:pagemessage summary="{!$Label.OpptyWinnerSameAsAccntCust}" severity="warning" strength="1" 
+rendered="{!Opportunity.AccountId == Opportunity.Opportunity_Winner__c}" />
+<apex:pagemessage summary="{!$Label.OpptyWinnerSameAsAccntCust}" severity="warning" strength="1" 
+rendered="{!OR(Opportunity.Opportunity_Winner__r.Channel_Class_Level1__c == 'ABBINT',Opportunity.Opportunity_Winner__r.Channel_Class_Level1__c == 'DEU')}" />  
+</apex:page>

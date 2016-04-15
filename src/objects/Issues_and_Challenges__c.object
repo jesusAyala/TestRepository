@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - Issues and Challenges</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+	<enableSearch>true</enableSearch>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account_Plan__c</fullName>
+        <description>R5 - Master Detail Relationship with Account Plan</description>
+        <externalId>false</externalId>
+        <label>Account Plan</label>
+        <referenceTo>Account_Plan__c</referenceTo>
+        <relationshipName>Issues_and_Challenges</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Account_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account_Plan__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actions__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Lookup Relationship to Actions</description>
+        <externalId>false</externalId>
+        <label>Account Analysis and PIE Actions</label>
+        <referenceTo>Actions__c</referenceTo>
+        <relationshipLabel>Issues and Challenges</relationshipLabel>
+        <relationshipName>Issues_and_Challenges</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Resolution_Date__c</fullName>
+        <description>R5 - Actual Resolution Date</description>
+        <externalId>false</externalId>
+        <label>Actual Resolution Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Lookup To User</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Person assign to resolve Account Plan Issue or Challenge</inlineHelpText>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Issues_and_Challenges</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Problem_Identified__c</fullName>
+        <description>R5 - Business Problem Identified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Plan Issue or Challenge Identified</inlineHelpText>
+        <label>Business Problem Identified</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>R5 - Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A more detailed description of the Account Plan Issue or Challenge Identified</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Logged_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>R5 - Logged Date</description>
+        <externalId>false</externalId>
+        <label>Logged Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <description>R5 - Resolution</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Outcome of the Account Plan Issue or Challenge</inlineHelpText>
+        <label>Resolution</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>R5 - Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status as per picklist</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In progress</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Target_Resolution_Date__c</fullName>
+        <description>R5 - Target Resolution Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The targeted end date the Account Plan Issue or Challenges should be resolved</inlineHelpText>
+        <label>Target Resolution Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Issues and Challenges</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Plan__c</columns>
+        <columns>Actions__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Target_Resolution_Date__c</columns>
+        <columns>Actual_Resolution_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Issues and Challenges Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Issues and Challenges</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actions__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Assigned_To__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Target_Resolution_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actual_Resolution_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account_Plan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Assigned_To__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Business_Problem_Identified__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Resolution__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Actions__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Target_Resolution_Date__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Account_Plan__c</lookupFilterFields>
+        <lookupFilterFields>Assigned_To__c</lookupFilterFields>
+        <lookupFilterFields>Actions__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>Target_Resolution_Date__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Account_Plan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Assigned_To__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Business_Problem_Identified__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Resolution__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Actions__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Target_Resolution_Date__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account_Plan__c</searchFilterFields>
+        <searchFilterFields>Assigned_To__c</searchFilterFields>
+        <searchFilterFields>Actions__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Target_Resolution_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account_Plan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assigned_To__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Problem_Identified__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Resolution__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Actions__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Target_Resolution_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Target_Resolution_Year_comparison</fullName>
+        <active>true</active>
+        <description>R5</description>
+        <errorConditionFormula>IF ( TEXT(Account_Plan__r.Account_Plan_Year__c) != NULL, YEAR(Target_Resolution_Date__c) &lt; (VALUE(TEXT(Account_Plan__r.Account_Plan_Year__c))-3), FALSE)</errorConditionFormula>
+        <errorMessage>Target Resolution Date year must be either greater than Account Plan Year or past three years from Account Plan Year</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Issues_Challenges_Status_Closed_Check</fullName>
+        <active>true</active>
+        <description>R5 - If Account Plan Status is Closed, then the user should not edit the Issues and Challenges.</description>
+        <errorConditionFormula>ISPICKVAL(Account_Plan__r.Status__c, &apos;Closed&apos;)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Account Plan is Closed</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Issues_and_Challenges</fullName>
+        <availability>online</availability>
+        <description>R5 New Issues and Challenges</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issues and Challenges</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Issues_and_Challenges__c
+&amp;sfdc_created__c=1
+&amp;Actions__c={! Actions__c.Name }
+&amp;ID_Actions__c={! Actions__c.Id }
+&amp;Account_Plan__c={! Actions__c.Account_Plan__c}
+&amp;ID_Account_Plan__c={! Actions__c.Account_PlanId__c}
+&amp;retURL={!Actions__c.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,6 @@
+<apex:page controller="cancelOpptyChanges" action="{!revertOpptyRecrdType}" id="page">
+<apex:pageMessages id="pm" showDetail="false"></apex:pageMessages>
+<apex:form id="form">
+<apex:commandButton id="cb" value="{!$Label.Back}" action="{!back}"/>
+</apex:form>
+</apex:page>

@@ -1,0 +1,173 @@
+<apex:page standardController="Contact" extensions="AccountChangeFlowController">
+       
+    <apex:form >
+        <apex:outputPanel id="pagePanel">
+        <apex:pageBlock id="pb1" rendered="{!displayscreen=='screen1'}">
+            <div style="float:right"><apex:commandButton value="Next" action="{!step2}"/></div>
+            <apex:pageBlockSection columns="1" id="pbs1">
+               <b><h3> Please refine your search! </h3></b> <br/>
+                <apex:inputText label="Account Legal Name" value="{!inputText1}"/>
+                <apex:inputText label="Account Country" value="{!inputText2}"/>
+                <apex:inputText label="Account city" value="{!inputText3}"/>
+                <apex:inputText label="Account Short Name" value="{!inputText4}"/>
+                <apex:inputText label="GUID Number" value="{!inputText5}"/>
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+            <div style="float:Right">
+                <apex:commandButton value="Next" action="{!step2}"/>
+            </div>
+            
+        </apex:pageBlock>
+        
+       
+        <apex:pageBlock title="" id="pageBlock" rendered="{!displayscreen=='screen2'}">
+            
+             <div style="float:right">
+                <apex:commandButton value="Previous" action="{!step1}"/>
+                <apex:commandButton value="Next" action="{!step3}" rendered="{!NOT(ISNULL(pageAccounts)) && pageAccounts.size > 0}"/>
+            </div>
+            <br></br>
+    <br></br>
+
+            Select the new Account for the Contact : <b>{!con.Name}</b>
+            <br></br>
+        <br></br>
+       
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:actionRegion >
+    <div align="right" style="display:{!IF(NOT(ISNULL(pageAccounts)) && pageAccounts.size > 0,'block','none')}">
+        <!--<font size="1pt">Page #:&nbsp;<apex:outputLabel value="{!PageNumberAcc}"/>&nbsp;out of&nbsp;<apex:outputLabel value="{!totalPageNumber}"/>&nbsp;&nbsp;&nbsp;&nbsp;</font>-->
+        <!--<apex:commandButton value="<" action="{!previousBtnClick}" disabled="{!previousButtonEnabled}" reRender="pageBlock"></apex:commandButton>
+        <apex:commandButton value=">" action="{!nextBtnClick}" reRender="pageBlock" disabled="{!nextButtonDisabled}" ></apex:commandButton>-->
+            <apex:panelGrid columns="4">
+                <apex:commandLink action="{!first}" rendered="{!hasMultiplePages}" reRender="pageBlock">First</apex:commandlink>
+                <apex:commandLink action="{!previous}" rendered="{!hasPrevious}" reRender="pageBlock">Previous</apex:commandlink>
+                <apex:commandLink action="{!next}" rendered="{!hasNext}" reRender="pageBlock">Next</apex:commandlink>
+                <apex:commandLink action="{!last}" rendered="{!hasMultiplePages}" reRender="pageBlock">Last</apex:commandlink>
+            </apex:panelGrid>
+    </div>
+    <br/><br/>
+    <apex:outputPanel id="Selected_PBS">
+
+    </apex:outputPanel>
+    
+    
+    <apex:pageBlockTable value="{!pageAccounts}" var="acc" rendered="{!NOT(ISNULL(pageAccounts)) && pageAccounts.size > 0}">
+      
+        <apex:column headerValue="Select Account">
+        <apex:actionRegion >
+            <apex:outputPanel rendered="{!acc.id == accountId}">
+                <input type="radio" name="selectRadio" id="radio" checked="true">
+                    <apex:actionSupport event="onclick" action="{!getSelected}" rerender="Selected_PBS" status="radioCheck">
+                    <apex:param name="acid" value="{!acc.id}"/>
+                    </apex:actionSupport>
+                </input>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!acc.id != accountId}">
+                <input type="radio" name="selectRadio" id="radio">
+                    <apex:actionSupport event="onclick" action="{!getSelected}" rerender="Selected_PBS" status="radioCheck">
+                    <apex:param name="acid" value="{!acc.id}"/>
+                    </apex:actionSupport>
+                </input>
+            </apex:outputPanel><apex:actionStatus startText="Please Wait..." id="radioCheck" style="font:bold"></apex:actionStatus>&nbsp;
+        </apex:actionRegion>
+            
+    </apex:column>
+     
+    <apex:column headerValue="Account Name" >
+            <apex:outputField value="{!acc.AccSelectionDetail__c}"/>               
+    </apex:column>
+   
+</apex:pageBlockTable>
+
+<div align="right" style="display:{!IF(NOT(ISNULL(pageAccounts)) && pageAccounts.size > 0,'block','none')}">
+    <br/>
+    <!--<font size="1pt">Page #:&nbsp;<apex:outputLabel value="{!PageNumber}"/>&nbsp;out of&nbsp;<apex:outputLabel value="{!totalPageNumber}"/>&nbsp;&nbsp;&nbsp;&nbsp;</font>-->
+    <!--<apex:commandButton value="<" action="{!previousBtnClick}" disabled="{!previousButtonEnabled}" reRender="pageBlock"></apex:commandButton>
+    <apex:commandButton value=">" action="{!nextBtnClick}" reRender="pageBlock" disabled="{!nextButtonDisabled}" ></apex:commandButton>-->
+                <apex:panelGrid columns="4">
+                <apex:commandLink action="{!first}" rendered="{!hasMultiplePages}" reRender="pageBlock">First</apex:commandlink>
+                <apex:commandLink action="{!previous}" rendered="{!hasPrevious}" reRender="pageBlock">Previous</apex:commandlink>
+                <apex:commandLink action="{!next}" rendered="{!hasNext}" reRender="pageBlock">Next</apex:commandlink>
+                <apex:commandLink action="{!last}" rendered="{!hasMultiplePages}" reRender="pageBlock">Last</apex:commandlink>
+            </apex:panelGrid>
+</div>
+</apex:actionRegion>
+<br></br>
+    <br></br>
+
+<apex:commandButton action="{!cancel}" value="Cancel"/ >
+<div style="float:right">
+<apex:commandButton value="Previous" action="{!step1}"/>
+<apex:commandButton value="Next" action="{!step3}" rendered="{!NOT(ISNULL(pageAccounts)) && pageAccounts.size > 0}"/>
+</div>
+
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!displayscreen=='screen4'}">
+<apex:pageMessages ></apex:pageMessages>
+    <div style="float:right">
+        <apex:commandButton value="Previous" action="{!step3}" rendered="{!isErrorInContact}"/>
+        <apex:commandButton value="Finish" action="{!cancel}"/>
+    </div>
+        <apex:pageBlockSection columns="1" rendered="{! !isErrorInContact}">
+        Success! - A new contact has been created under the account:  {!acc.Name}
+        <br></br>
+        <br></br>
+        <br></br>
+        Contact Name : {!FirstName}{!LastName}
+        <br></br>
+        <br></br>
+        Email : {!successEmail}
+        <br></br>
+        <br></br>
+        Address :
+        {!Mailingstreet}
+        <br></br>
+        {!MailingPostalCode}{!MailingCity}
+        <br></br>
+        {!MailingState}{!MailingCountry} 
+        <br></br>
+        <br></br>
+        You may now close the window.
+        </apex:pageBlockSection>
+   <div style="float:right">
+      <apex:commandButton value="Finish" action="{!cancel}" rendered="{! !isErrorInContact}"/>
+   </div><br/><br/><br/>
+</apex:pageBlock>
+<apex:pageBlock rendered="{!displayscreen=='screen3'}">
+<apex:pagemessages ></apex:pagemessages>
+    <div style="float:right">
+        <apex:commandButton value="Previous" action="{!step5}"/>
+        <apex:commandButton value="Next" action="{!step4}"/>
+    </div>
+        <apex:pageBlockSection columns="1">
+        Please change the new contact details where required:
+            <br></br>
+            <br></br>
+                contact:{!con.Name}
+            <br></br>       
+                Account:{!acc.Name}
+            <br></br>
+            <br></br>
+                New Contact Details:  
+            <apex:inputText label="Email" value="{!Email}" />           
+            <apex:inputText label="Phone" value="{!acc.Phone}"/>
+            <apex:inputText label="Street and No." value="{!acc.BillingStreet}"/>
+            <apex:inputText label="City" value="{!acc.BillingCity}"/>
+            <apex:inputText label="ZipCode" value="{!acc.BillingPostalCode}"/>
+             State:{!acc.BillingState}
+            <br></br>
+                Country:{!acc.BillingCountry}
+            <br></br>
+            <br></br>
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+    <div style="float:right">
+            <apex:commandButton value="Previous" action="{!step5}"/>
+            <apex:commandButton value="Next" action="{!step4}"/>
+    </div>
+</apex:pageBlock>
+</apex:outputPanel>
+</apex:form>
+</apex:page>

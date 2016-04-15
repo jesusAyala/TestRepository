@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to send notification if opportunity was created based on ServIS request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Notify Opportunity Owner and Key Account Manager</name>
+    <style>freeForm</style>
+    <subject>New Opportunity Notification - {!Opportunity.Id} - {!Opportunity.Account_Customer_Shortened_Name__c}</subject>
+    <textOnly>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dear {!Opportunity.OwnerFullName},
+
+
+
+
+This is to inform you about new business opportunity that has been assigned to your account in SalesForce.
+
+
+
+Details of the opportunity:
+
+
+
+Opportunity ID:  {!Opportunity.Link}
+
+Captured by: {!Opportunity.OwnerFullName} , {!Opportunity.Creator_Email__c}
+
+Creation Date: {!Opportunity.CreatedDate}
+
+Customer (End User): {!Opportunity.Account_End_User__c}
+
+
+
+THIS MESSAGE WAS GENERATED AUTOMATICALLY  BY SALESFORCE. PLEASE DO NOT REPLY.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</textOnly>
+    <type>html</type>
+</EmailTemplate>

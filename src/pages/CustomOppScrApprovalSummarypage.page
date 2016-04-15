@@ -1,0 +1,43 @@
+<!-- 
+    Apttus Approvals Management
+    CustomCaseApprovalSummary
+     
+    @2012-2013 Apttus Inc. 
+
+ -->
+<apex:page standardController="Apttus_Approval__Approval_Request__c"
+           extensions="CustomOppScrApprovalSummaryController"
+           showHeader="true" 
+           sidebar="true"
+           cache="false" 
+           tabstyle="Apttus_Approval__Approval_Request__c" >
+        
+    <apex:sectionHeader title="{!$Label.Apttus_Approval__ApprovalRequest}" 
+                        subtitle="{!$ObjectType.Opportunity_Screening__c.Label} {!Apttus_Approval__Approval_Request__c.Apttus_Approval__Object_Name__c}" />
+    
+    <apex:pageBlock title="{!$ObjectType.Opportunity_Screening__c.Label} {!$Label.Apttus_Approval__Information}">
+        <!--
+        <apex:pageBlockSection columns="1">
+            <apex:outputField value="{!CaseSO.CaseNumber}" />
+            <apex:outputField value="{!CaseSO.Subject}" />
+            <apex:outputField value="{!CaseSO.Type}"/>
+            <apex:outputField value="{!CaseSO.AccountId}" />
+            <apex:outputField value="{!CaseSO.OwnerId}" />
+            <apex:outputField value="{!CaseSO.Origin}" />
+            <apex:outputField value="{!CaseSO.Reason}" />
+            <apex:outputField value="{!CaseSO.Description}" />
+            <p/>&nbsp;  
+        </apex:pageBlockSection>
+        -->
+        <apex:outputField value="{!OpportunityScreeningSO.Division__c}" />
+        <apex:outputField value="{!OpportunityScreeningSO.Business_Unit__c}" />
+        <apex:outputField value="{!OpportunityScreeningSO.Product_Group__c}"/>
+        <apex:outputField value="{!OpportunityScreeningSO.Local_Business_Unit__c}" />
+        
+        <apex:include pageName="Apttus_Approval__ApprovalAction" />
+        
+    </apex:pageBlock>
+    
+    <apex:include pageName="Apttus_Approval__ApprovalRequestsList"/>
+        
+</apex:page>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This setting holds all SAP static strings, passwords, tokens etc.</description>
+    <enableFeeds>false</enableFeeds>
+        <fields>
+        <fullName>APTS_SAP_Call_Timeout_Millis__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP Call Timeout Millis</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+<fields>
+        <fullName>APTS_Base_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Bau_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Bau Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Block_in_SAP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Block in SAP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_ERP_Response_Culture__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Response Culture</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_End_Point__c</fullName>
+        <externalId>false</externalId>
+        <label>End Point</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Http_Header_Key__c</fullName>
+        <externalId>false</externalId>
+        <label>Http Header Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Key_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Key Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Key__c</fullName>
+        <externalId>false</externalId>
+        <label>Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_oAuth_Token__c</fullName>
+        <description>It holds oAuth Token URL</description>
+        <externalId>false</externalId>
+        <label>oAuth Token</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>SAP Integration Tokens</label>
+    <visibility>Public</visibility>
+</CustomObject>

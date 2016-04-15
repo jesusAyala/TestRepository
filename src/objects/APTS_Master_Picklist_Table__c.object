@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object to hold locale wise description for codes (used for incoterm, payment term etc.) used in SAP</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>APTS_Code_Description__c</fullName>
+        <description>Field to hold the description value for code.</description>
+        <externalId>false</externalId>
+        <label>Code Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Code_Used_For__c</fullName>
+        <description>Picklist field to determine that code in the record is being used for what.</description>
+        <externalId>false</externalId>
+        <label>Code Used For</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Country</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incoterm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Local Channel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment Term</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribution Channel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAP Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAP Sales Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Code__c</fullName>
+        <description>Code that is being used in SAP.</description>
+        <externalId>false</externalId>
+        <label>Code</label>
+        <length>20</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Reference_Id__c</fullName>
+        <description>This field will store the record id of LSOFieldEntries Table record.</description>
+        <externalId>false</externalId>
+        <label>Reference Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Locale__c</fullName>
+        <description>Field to hold value of Locale to determine that code and its description is for which locale.</description>
+        <externalId>false</externalId>
+        <label>Locale</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Row_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Row Status</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Master Picklist Table</label>
+    <listViews>
+        <fullName>APTS_Spain_Distribution_Channel</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Code__c</columns>
+        <columns>APTS_Code_Description__c</columns>
+        <columns>APTS_Locale__c</columns>
+        <columns>APTS_Code_Used_For__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Locale__c</field>
+            <operation>contains</operation>
+            <value>es</value>
+        </filters>
+        <filters>
+            <field>APTS_Code_Used_For__c</field>
+            <operation>equals</operation>
+            <value>Distribution Channel</value>
+        </filters>
+        <label>Spain Distribution Channel</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>APTS_Spain_Incoterms</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Code__c</columns>
+        <columns>APTS_Code_Description__c</columns>
+        <columns>APTS_Locale__c</columns>
+        <columns>APTS_Code_Used_For__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Locale__c</field>
+            <operation>contains</operation>
+            <value>es</value>
+        </filters>
+        <filters>
+            <field>APTS_Code_Used_For__c</field>
+            <operation>equals</operation>
+            <value>Incoterm</value>
+        </filters>
+        <label>Spain Incoterms</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>APTS_Spain_Local_Channels</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Code__c</columns>
+        <columns>APTS_Code_Description__c</columns>
+        <columns>APTS_Locale__c</columns>
+        <columns>APTS_Code_Used_For__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Locale__c</field>
+            <operation>contains</operation>
+            <value>es</value>
+        </filters>
+        <filters>
+            <field>APTS_Code_Used_For__c</field>
+            <operation>equals</operation>
+            <value>Local Channel</value>
+        </filters>
+        <label>Spain Local Channels</label>
+        <language>en_US</language>
+    </listViews>
+ <listViews>
+        <fullName>APTS_Spain_Payment_Terms</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Code__c</columns>
+        <columns>APTS_Code_Description__c</columns>
+        <columns>APTS_Locale__c</columns>
+        <columns>APTS_Code_Used_For__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Locale__c</field>
+            <operation>contains</operation>
+            <value>es</value>
+        </filters>
+        <filters>
+            <field>APTS_Code_Used_For__c</field>
+            <operation>equals</operation>
+            <value>Payment Term</value>
+        </filters>
+        <label>Spain Payment Terms</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>APTS_Spain_Sales_Office</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Code__c</columns>
+        <columns>APTS_Code_Description__c</columns>
+        <columns>APTS_Locale__c</columns>
+        <columns>APTS_Code_Used_For__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Code_Used_For__c</field>
+            <operation>equals</operation>
+            <value>Sales Office</value>
+        </filters>
+        <filters>
+            <field>APTS_Locale__c</field>
+            <operation>equals</operation>
+            <value>es_ES</value>
+        </filters>
+        <label>Spain Sales Office</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Master Picklist Table</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>APTS_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Locale__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Code_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Code_Used_For__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>APTS_Code__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Code_Description__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Code__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Code_Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Locale__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Code_Used_For__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>APTS_Code__c</searchFilterFields>
+        <searchFilterFields>APTS_Code_Description__c</searchFilterFields>
+        <searchFilterFields>APTS_Locale__c</searchFilterFields>
+        <searchFilterFields>APTS_Code_Used_For__c</searchFilterFields>
+        <searchResultsAdditionalFields>APTS_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Locale__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Code_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Code_Used_For__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Valid_Name_Format</fullName>
+        <active>true</active>
+        <description>Validation rule to enforce user to enter valid name for the record in the format of &quot;Code - Description&quot;, if code description is not blank. If it is blank, name should be code itself.</description>
+        <errorConditionFormula>IF( NOT( ISBLANK( APTS_Code_Description__c ) ) ,  Name  &lt;&gt;  APTS_Code__c  +  &apos; - &apos;  +  APTS_Code_Description__c ,  Name  &lt;&gt;  APTS_Code__c )</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Name should be in format of &quot;&lt;code&gt; - &lt;description&gt;&quot;. In case of blank description, name should be &lt;code&gt; itself.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>APTS_Back_To_Console</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Back To Console</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+
+
+var url = window.location.origin;
+parent.location.href = url + &apos;/apex/APTS_LocalCountryAdminConsole&apos;;</url>
+    </webLinks>
+</CustomObject>

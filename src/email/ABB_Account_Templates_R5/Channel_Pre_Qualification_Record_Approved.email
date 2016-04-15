@@ -1,0 +1,60 @@
+Dear {!Channel_Qualifications__c.OwnerFullName} , 
+</br></br>
+Below Channel Pre-Qualification is approved. Please login into Salesforce.com for additional information.
+
+</br>
+</br>
+
+<html><table height="250" width="700" border="1">
+<tr width="100" height="20">
+            <td>Account:</td>
+            <td> {!Channel_Qualifications__c.Account__c}</a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Country:</td>
+            <td> {!Channel_Qualifications__c.Primary_Address_Country__c}</a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Pre-Qualification Name: </td>
+            <td><a href = "{!Channel_Qualifications__c.Link}"> {!Channel_Qualifications__c.Name} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Primary Channel Class: </td>
+            <td>{!Channel_Qualifications__c.Primary_Channel_Class__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Division: </td>
+            <td>{!Channel_Qualifications__c.Division__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>ABB Product Lines discussed: </td>
+            <td>{!Channel_Qualifications__c.ABB_Product_Lines_discussed__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Total Weight Average: </td>
+            <td>{!Channel_Qualifications__c.Average__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Comments and overall impressions: </td>
+            <td>{!Channel_Qualifications__c.General_Comments__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Owner: </td>
+            <td>{!Channel_Qualifications__c.OwnerFullName}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Comments from Approver: </td>
+            <td>{!ApprovalRequest.Comments}</td>
+</tr>
+
+</table>
+</html>

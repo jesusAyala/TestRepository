@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <available>true</available>
+    <description>Created as part of R5 AWA</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Oppty Screening Approval Notification</name>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>350</minorNumber>
+        <namespace>Apttus_Approval</namespace>
+    </packageVersions>
+    <style>none</style>
+    <subject>Approval Request for Opportunity Screening &apos;&apos; has been submitted for your approval</subject>
+    <type>visualforce</type>
+</EmailTemplate>

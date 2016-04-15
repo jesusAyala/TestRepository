@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Instruction Article Expiration Notification</name>
+    <style>freeForm</style>
+    <subject>Your Article - {!Instruction__kav.Title}  is now expired</subject>
+    <textOnly>Hello {!FAQ__kav.CreatedBy},
+
+Your below article is now outdated. Kindly request you to either archive the article or update the validation status of article to Expired.
+
+Article Details:
+
+Article Summary: {!FAQ__kav.Summary}
+
+Current Validation Status: {!FAQ__kav.ValidationStatus}
+
+Article Link: {!FAQ__kav.Link}
+
+Thank you,
+Customer Support Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

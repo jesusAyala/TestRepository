@@ -1,0 +1,1050 @@
+<!--*************************************************************
+@Name: APTS_ConfigureProductsPage
+@Author: Ganga Vemula
+@CreateDate: 5th sep 2015.
+@Description: This is the custom product selection page where user can browse the products and add them to cart
+@UsedBy: 
+******************************************************************-->
+<apex:page showheader="false" controller="APTS_ConfigProductsCustomController" action="{!setCategoryList}">
+  <title>{!$Label.Apttus_Config2__PageCatalogName}</title>
+  
+  <!--libraries -->
+   <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'js/jquery-1.8.3.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'js/jquery-ui-1.9.2.custom.min.js')}"/>
+
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'css/smoothness/jquery-ui-1.9.2.custom.css')}"/>
+
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryCarousel)}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryTouchSwipeLibrary, 'TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryTouchSwipeLibrary, 'TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JSTreeLibrary, 'jstree-v.pre1.0/jquery.jstree.js')}"/>
+   
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__AptBreadCrumb, 'js/jquery.easing.1.3.js')}"/>   
+    <!--
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__AptBreadCrumb, 'js/aptBreadCrumb.js')}"/>
+    -->
+
+
+    <!--
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__ActionFunctionQueue)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__CPQColumnView)}"/>
+    -->
+    
+    <apex:stylesheet value="{!URLFOR($Resource.CPQPageResources,'CPQCommon.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.CPQPageResources,'BreadCrumb.css')}"/>    
+    <apex:stylesheet value="{!URLFOR($Resource.CPQPageResources,'CPQCatalog.css')}" />
+    <!--
+    <apex:includeScript value="{!$Resource.Apttus_Config2__CPQJSLibrary}"/>
+    <apex:includeScript value="{!$Resource.Apttus_Config2__CPQPricingJSLib}"/>
+    <apex:includeScript value="{!$Resource.Apttus_Config2__CPQCatalogJS}"/>
+    -->
+  
+  <!--End of libraries-->
+  
+
+<style type="text/css" id="vakata-stylesheet">
+#vakata-dragged {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 4px 4px 4px 24px;
+    position: absolute;
+    top: -2000px;
+    line-height: 16px;
+    z-index: 10000;
+}
+#vakata-contextmenu {
+    display: block;
+    visibility: hidden;
+    left: 0;
+    top: -200px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    min-width: 180px;
+    background: #ebebeb;
+    border: 1px solid silver;
+    z-index: 10000;
+*width:180px;
+}
+#vakata-contextmenu ul {
+    min-width: 180px;
+*width:180px;
+}
+#vakata-contextmenu ul, #vakata-contextmenu li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+}
+#vakata-contextmenu li {
+    line-height: 20px;
+    min-height: 20px;
+    position: relative;
+    padding: 0px;
+}
+#vakata-contextmenu li a {
+    padding: 1px 6px;
+    line-height: 17px;
+    display: block;
+    text-decoration: none;
+    margin: 1px 1px 0 1px;
+}
+#vakata-contextmenu li ins {
+    float: left;
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+    margin-right: 2px;
+}
+#vakata-contextmenu li a:hover, #vakata-contextmenu li.vakata-hover > a {
+    background: gray;
+    color: white;
+}
+#vakata-contextmenu li ul {
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+    background: #ebebeb;
+    border: 1px solid gray;
+}
+#vakata-contextmenu .right {
+    right: 100%;
+    left: auto;
+}
+#vakata-contextmenu .bottom {
+    bottom: -1px;
+    top: auto;
+}
+#vakata-contextmenu li.vakata-separator {
+    min-height: 0;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+    margin: 0 2px;
+    background: silver; /* border-top:1px solid #fefefe; */
+    padding: 0;
+}
+</style>
+  <style type="text/css" id="jstree-stylesheet">
+.jstree ul, .jstree li {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    list-style-type: none;
+}
+.jstree li {
+    display: block;
+    min-height: 18px;
+    line-height: 18px;
+    white-space: nowrap;
+    margin-left: 18px;
+    min-width: 18px;
+}
+.jstree-rtl li {
+    margin-left: 0;
+    margin-right: 18px;
+}
+.jstree > ul > li {
+    margin-left: 0px;
+}
+.jstree-rtl > ul > li {
+    margin-right: 0px;
+}
+.jstree ins {
+    display: inline-block;
+    text-decoration: none;
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+.jstree a {
+    display: inline-block;
+    line-height: 16px;
+    height: 16px;
+    color: black;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 1px 2px;
+    margin: 0;
+}
+.jstree a:focus {
+    outline: none;
+}
+.jstree a > ins {
+    height: 16px;
+    width: 16px;
+}
+.jstree a > .jstree-icon {
+    margin-right: 3px;
+}
+.jstree-rtl a > .jstree-icon {
+    margin-left: 3px;
+    margin-right: 0;
+}
+li.jstree-open > ul {
+    display: block;
+}
+li.jstree-closed > ul {
+    display: none;
+}
+#vakata-dragged ins {
+    display: block;
+    text-decoration: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 0;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+#vakata-dragged .jstree-ok {
+    background: green;
+}
+#vakata-dragged .jstree-invalid {
+    background: red;
+}
+#idSearchDiv {
+    float: left;
+    padding-top: 5px;
+    width: 600px;
+}
+#jstree-marker {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+    height: 12px;
+    width: 8px;
+    position: absolute;
+    top: -30px;
+    z-index: 10001;
+    background-repeat: no-repeat;
+    display: none;
+    background-color: transparent;
+    text-shadow: 1px 1px 1px white;
+    color: black;
+    line-height: 10px;
+}
+#jstree-marker-line {
+    padding: 0;
+    margin: 0;
+    line-height: 0%;
+    font-size: 1px;
+    overflow: hidden;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    z-index: 10000;
+    background-repeat: no-repeat;
+    display: none;
+    background-color: #456c43;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+    border-left: 0;
+    -moz-box-shadow: 0px 0px 2px #666;
+    -webkit-box-shadow: 0px 0px 2px #666;
+    box-shadow: 0px 0px 2px #666;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+}
+.jstree .jstree-real-checkbox {
+    display: none;
+}
+.jstree-themeroller .ui-icon {
+    overflow: visible;
+}
+.jstree-themeroller a {
+    padding: 0 2px;
+}
+.jstree-themeroller .jstree-no-icon {
+    display: none;
+}
+.jstree .jstree-wholerow-real {
+    position: relative;
+    z-index: 1;
+}
+.jstree .jstree-wholerow-real li {
+    cursor: pointer;
+}
+.jstree .jstree-wholerow-real a {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+.jstree .jstree-wholerow {
+    position: relative;
+    z-index: 0;
+    height: 0;
+}
+.jstree .jstree-wholerow ul, .jstree .jstree-wholerow li {
+    width: 100%;
+}
+.jstree .jstree-wholerow, .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li, .jstree .jstree-wholerow a {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.jstree .jstree-wholerow, .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li {
+    background: transparent !important;
+}
+.jstree .jstree-wholerow ins, .jstree .jstree-wholerow span, .jstree .jstree-wholerow input {
+    display: none !important;
+}
+.jstree .jstree-wholerow a, .jstree .jstree-wholerow a:hover {
+    text-indent: -9999px;
+!important;
+    width: 100%;
+    padding: 0 !important;
+    border-right-width: 0px !important;
+    border-left-width: 0px !important;
+}
+.jstree .jstree-wholerow-span {
+    position: absolute;
+    left: 0;
+    margin: 0px;
+    padding: 0;
+    height: 18px;
+    border-width: 0;
+    padding: 0;
+    z-index: 0;
+}
+#aptTopButtons {
+    float: left;
+    width: 98%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.aptProductRow {
+    margin: 14px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #DDD; 
+}
+
+.aptProductInfoFields {
+    width:86%!important;
+}
+#breadCrumbContainer a.aptListButton{
+ margin:7px 7px 7px 15px!important;   
+}
+
+.aptProductInfoFields span.aptSearchProductcheck{
+    float: left;
+    margin-right: 10px;
+}
+#rootMenuContainer{
+    margin-left: 5px;
+    margin-right: 5px;
+    width:auto!important;
+}
+.treeview li span:hover {
+    background: #e7f4f9;
+    border: 1px solid #d8f0fa;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #015ba7;
+}
+.treeview li span {
+    padding: 1px 2px;
+}
+#idSearchContainer{
+    margin-left: 315px;
+}
+.jstree div a {
+    text-align: right;
+    margin-left: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 3px 5px 3px 5px;
+}
+.idProductListPaginator{top: -2px!important;}
+.displayInline{
+    display: inline;
+}
+
+</style>
+             <apex:form id="toppanel" >
+             
+                <!--Search products on hitting enter key-->  
+                  <script type='text/javascript'> 
+                       function runOnEnter(ev) 
+                        { 
+                        if (window.event && window.event.keyCode == 13 || ev.which == 13)
+                          { 
+                           searchprodtRecs(); 
+                           return false; 
+                          } 
+                          else 
+                          { 
+                            return true; 
+                          } 
+                       } 
+                       
+                   </script> 
+                
+                    <div class="apt-page-header cartTable clearfix">
+                      <div class="apt-quote-panel apt-pull-left"><span class="apt-cart-head-label">
+                      <apex:outputlabel value="{!$Label.Apttus_Config2__Quote}:" rendered="{!ProdConfigSobj.Apttus_QPConfig__Proposald__c !=null}"/>
+                      <apex:outputlabel value="{!$Label.Apttus_Config2__Agreement}:" rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}"/>
+                      </span> &nbsp;<span ><a href="/{!quoteid}">{!Quotename}</a></span><span class="apt-location-text apt-cart-head-label">{!Proposalname}</span>
+                      <apex:outputlabel styleclass="apt-location-text apt-cart-head-label"  value="Number:" rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}"/>&nbsp;<span  rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}">{!agreementNumber}</span></div>
+                       
+                       <div class="apt-aprroval-panel apt-pull-left"><span class="apt-cart-head-label">Approval Status:</span><span class="approvalText"><span>{!ApprovalStatus}</span></span><span >&nbsp;</span> </div>
+                        <div id="aptGeneralSpinner"></div>
+                         <div id="aptAbandonBtn" style="float:right;padding-top:2px;">
+                           <div id="" style="text-align: right; padding-right: 4px;">
+                             <!--<input type="submit" value="Abandon" onclick="j$.APTTUS.showAbandonConfirmationDialog(); return false;" style="background-color:#657383;background-image:none;color:white;" class="btn">
+                             </input>-->
+                             <apex:commandButton value="Abandon"
+                                            action="{!DoAbandon}"
+                                            style="background-color:#657383;background-image:none;color:white;" 
+                                            reRender="dummy"
+                                            rendered="{!isPlaceHolderQuote=false}"> 
+                           </apex:commandButton>
+                           <apex:commandButton value="Abandon"
+                                            action="{!DoCancel}"
+                                            style="background-color:#657383;background-image:none;color:white;" 
+                                            reRender="dummy"
+                                            rendered="{!isPlaceHolderQuote}"> 
+                           </apex:commandButton>
+                           </div>
+                         </div>
+                       <div class="apt-headerPlacement apt-pull-right"> </div>
+                     <div class="apt-powered-logo"><img src="/resource/1440518445000/apttus_config2__CPQDelight/apt-logo.png" alt="Powered By Apttus" title="Powered By Apttus"></img></div>
+                    <!--<div class="dropdown apt-mini-cart-panel apt-pull-right">
+                     
+                     <apex:outputpanel id="Topborder">
+                          <div class="apt-dropdown-toggle" data-toggle="dropdown" id="apt-cartIcon" role="button">
+                             
+                         <div class="apt-pull-left icon-utility-cart" id="apt-miniCartPanel"></div>
+                             Cart (<span id="aptAddCartItemCount">{!CartSize}</span>) 
+                          </div>
+                      </apex:outputpanel>
+                      </div>-->
+                </div>
+            <br/>
+ 
+            <div>
+                <div style="text-align: center;" >
+                <apex:pagemessages id="pagemessages"/>
+                  <apex:outputPanel id="categoryprdt">
+                    
+                    <apex:commandButton id="idBulkUploadBtnTop" 
+                                                        value="Bulk Upload"
+                                                        action="{!bulkUpload}"
+                                                        styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        reRender="dummy"
+                                                        status="constraintRuleCancelStatus"
+                                                        rendered="{!NOT(isPlaceHolderQuote)}"/>
+                        
+                    <apex:commandButton id="idPromptAddBtn" 
+                                                        value="Go To Pricing"
+                                                        action="{!GotoCart}"
+                                                        styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        reRender="dummy"
+                                                        status="constraintRuleCancelStatus"> 
+                     </apex:commandButton>
+                   <apex:commandbutton value="Save and Exit" action="{!SyncwithOppportunity}"
+                                                         styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        reRender="dummy,pagemessages"
+                                                        status="constraintRuleCancelStatus"
+                                                        rendered="{!isPlaceHolderQuote}"/><!-- rendered="{!isPlaceHolderQuote}"-->
+                   
+                   <!-- Commenting Cancel button as part of R 3.1 Added by Chetan Date : 18-01-2016 -->                                          
+                   <!--
+                   <apex:commandbutton value="Cancel" action="{!doCancel}"
+                                                        styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        reRender="dummy"
+                                                        status="constraintRuleCancelStatus"
+                                                        rendered="{!isPlaceHolderQuote}"/> -->
+                     
+                    <apex:actionstatus id="constraintRuleCancelStatus">
+                      <apex:facet name="start"> <img class="constraintRuleCancelStatus" src="/img/loading.gif" /> </apex:facet>
+                      <apex:facet name="stop"> </apex:facet>
+                    </apex:actionstatus>
+                  </apex:outputPanel>
+                </div>
+              </div>
+              <br/>
+             <div></div>
+            <div class="clearfix" id="rootMenuContainer">
+            <div class="navbar">
+                <div class="navbar-inner">
+            <div class="clearfix" id="idSearchContainer">
+          
+      <div style="float:left;padding-top: 5px;" id="idSearchDiv" >
+            <apex:selectList id="idSearchClasses" 
+                                     size="1"
+                                     value="{!searchcategory}" 
+                                     multiselect="false"
+                                     styleClass="apt-idSearchClasses">
+              <apex:selectOptions value="{!searchCategoryItems}" />
+            </apex:selectList>
+            <div class="input-append">
+              <apex:inputText value="{!searchText}" styleClass="span2 apt-search-query" style="outline:none;" html-placeholder="Search here" onkeypress="return runOnEnter(event);"/>
+              <span id="clearSearch" styleClass="clearSearch" >x</span>
+              <apex:commandButton value="{!$Label.Apttus_Config2__Search}"
+                                                    action="{!doSearchProductsWithText}"
+                                                    styleClass="idDoSearchButton apt-doSearchButton"
+                                                    rerender="idProductlist,idNavigationPanel,idProductsHeader,resultssection,ButtonPanel,idResultStatsPanel"
+                                                    status="searchPageStatus"> 
+              </apex:commandButton>
+                                                 
+              <apex:actionStatus id="searchPageStatus" >
+                <apex:facet name="start"> <img style="vertical-align:middle;" src="/img/loading.gif"/> </apex:facet>
+                <apex:facet name="stop"> </apex:facet>
+              </apex:actionStatus>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+      </div>
+    <br/>  
+      
+    <!--Function to search products on hitting enter key-->  
+   <apex:actionFunction name="searchprodtRecs" action="{!doSearchProductsWithText}" status="searchPageStatus" reRender="idProductlist,idNavigationPanel,idProductsHeader,resultssection,ButtonPanel,idResultStatsPanel"/> 
+                  
+     <div class="clearfix two-column-view" style="padding-top:5px;margin-left: 5px;margin-right: 5px;">
+      <div style="width: 30%; float: left; " class="apt-treeView">
+        <div class="aptLeftColumn clearfix"> 
+            <!-- treeview goes here start-->
+            <script>
+                $(document).ready(function() {
+                    // The plugin shows the treecontrol after the
+                    // collapse, expand and toggle events are hooked up
+                    $("#treeview ul > li").addClass("closed");
+                    $("#treeview ul span[class=closed]").each(function(e, k){
+                        if($(k).html()==""){
+                            $(k).remove();
+                        }
+                    });
+                    // Just hide the links.
+                    $('#treecontrol a').hide();
+                
+                    // On click of your custom links, button, etc
+                    // Trigger the appropriate treecontrol click
+                    $('#expandAll').click(function() {        
+                        $('#treecontrol a:eq(1)').click();    
+                    });
+                    
+                    $('#collapseAll').click(function() {
+                        $('#treecontrol a:eq(0)').click();        
+                    });
+                
+                    // Render the treeview per usual.    
+                    $("#treeview").treeview({
+                        control: "#treecontrol",
+                        //persist: "cookie",
+                        cookieId: "treeview-black"
+                    });
+                });
+                
+                // to clear search bar when click on x icon
+                // clearSearch starts
+                $("#clearSearch").click(function() {
+                        $('.apt-search-query').val('');      
+                });
+                    
+                // clearSearch ends 
+            </script>
+           
+            <style type="text/css">
+                a img { border: none; }
+                .treeview, .treeview ul { 
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                }
+                .treeview ul {
+                    background-color: white;
+                    margin-top: 4px;
+                }
+                .treeview .hitarea {
+                    background: url({!$Resource.treeviewDefautImg}) -64px -25px no-repeat;
+                    height: 16px;
+                    width: 16px;
+                    margin-left: -16px;
+                    float: left;
+                    cursor: pointer;
+                }
+                .treeview li { 
+                    margin: 0;
+                    padding: 3px 0pt 3px 16px;
+                }
+                .treeview a.selected { background-color: #eee; }
+                #treecontrol { margin: 1em 0; display: none; }
+                .treeview li { background-repeat: no-repeat; }
+                .treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+                .treeview .expandable-hitarea { background-position: -80px -3px; }
+                .treeview li.last { background-position: 0 -1766px }
+                .treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url({!$Resource.treeviewDefautImg}); }  
+                .treeview li.lastCollapsable { background-position: 0 -111px }
+                .treeview li.lastExpandable { background-position: -32px -67px }
+                
+                .treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+            </style>
+            
+            
+            <apex:includeScript value="{!$Resource.jQueryCustom}"/>
+            <apex:includeScript value="{!$Resource.treeviewJSCustom}"/>
+            <apex:includeScript value="{!$Resource.treeviewCookie}"/>
+            
+               <div class="aptRoundedDiv" style="padding-right:0px;">
+                    <div class="aptProductListHeader" onclick="j$('#treeContainer').slideToggle(400);" style="cursor: pointer">
+                      <h2 class="labelBrowse" style="">Browse</h2>
+                    </div>
+                <div id="treeContainer" style="width: 100%; overflow: hidden; height: auto; display: block;">
+                            
+                <div class="tree-commands"><a id="expandAll" class="tree-commands" href="javascript:void(0);">Expand All</a><a id="collapseAll" class="tree-commands" href="javascript:void(0);">Collapse All</a></div>
+                <div class="treeContainer jstree jstree-1 jstree-focused jstree-default">
+                
+
+  
+        <!--Tree view goes here-->
+  
+      <ul id="treeview" class="treeview-black">
+                    <apex:repeat value="{!categorytreewrapperlist}" var="gparent">
+                        <li>
+                            <strong>{!gparent.gparentname}</strong><!-- LP Spain -->
+                                <!--level 1 category-->
+                                <apex:dataList value="{!gparent.parents}" var="parent">
+                                    
+                                    <apex:outputText styleClass="closed">
+                                        <!-- Conditional [if parent has child category] -->
+                                        <apex:outputpanel rendered="{!(parent.HasChildCategories)}" layout="none">
+                                            <span style="cursor: pointer;" class="displayInline">
+                                             <!-- 1.Hide "Es-Hierarchy" category as it is just a holder category-->
+                                             <!-- 2. Show Category code along with name for valid hierachy level, format is [Category Code]    [Category name]-->
+                                             <apex:outputtext value="{!if(CONTAINS(HierarchyLevel, '2'),CategoryCodeMap[parent.categoryid],'')}    {!parent.name}" rendered="{!parent.name!='ES - Hierarchy'}"/></span>
+                                            <apex:outputpanel layout="block" styleClass="displayInline">
+                                             <!--show "Add To Cart" button for valid hierarchy level based on country-->
+                                                <apex:commandlink value="Add To Cart" action="{!addStandaloneBundles}" rerender="Topborder,pagemessages"  status="status" rendered="{!CONTAINS(HierarchyLevel, '2')}" onClick="this.style.display = 'none';">
+                                                   <apex:param name="CategoryId"
+                                                                value="{!parent.CategoryId}"
+                                                                assignTo="{!CategoryId}"/>
+                                                 </apex:commandlink>
+                                            </apex:outputpanel>
+                                        </apex:outputpanel>
+                                        
+                                        <!--level 2 category-->
+                                        <apex:dataList value="{!parent.childcategories}" var="child" rendered="{!(parent.HasChildCategories)}">
+                                            <!--li class="closed"-->
+                                            <apex:outputText styleClass="closed">
+                                                <!-- Conditional [if child has child category] -->
+                                                <apex:outputpanel rendered="{!(child.HasChildCategories)}" layout="none">
+                                                   <!-- <span style="cursor:pointer;" class="displayInline"><apex:outputtext value="{!child.name}{!CategoryCodeMap[child.categoryId]}" /> </span>--><!-- Industrial -->
+                                                   <!-- Show Category code along with name for valid hierachy level, format is [Category Code]    [Category name]-->
+                                                    <span style="cursor:pointer;" class="displayInline"><apex:outputtext value="{!if(CONTAINS(HierarchyLevel, '3'),CategoryCodeMap[child.categoryid],'')}    {!child.name}"/> </span>
+                                                       
+                                                        <apex:outputpanel layout="block" styleClass="displayInline">
+                                                            <!--show "Add To Cart" button for valid hierarchy level based on country-->
+                                                            <apex:commandlink value="Add To Cart" action="{!addStandaloneBundles}" rerender="Topborder,pagemessages"  status="status" rendered="{!CONTAINS(HierarchyLevel, '3')}" onClick="this.style.display = 'none';">
+                                                                    <apex:param name="child" 
+                                                                    value="{!child.CategoryId}"
+                                                                    assignTo="{!CategoryId}"/>
+                                                            </apex:commandlink> 
+                                                       </apex:outputpanel>
+                                                       
+                                                </apex:outputpanel>
+                                                <!--level 3 category-->
+                                                <apex:dataList value="{!child.childcategories}" var="gchild" rendered="{!(child.HasChildCategories)}">
+                                                    <apex:outputText styleClass="closed">
+                                                    
+                                                        <!-- Conditional [if gchild has child category] -->
+                                                        <!-- Show Category code along with name for valid hierachy level, format is [Category Code]    [Category name]-->
+                                                        <apex:outputpanel styleClass="displayInline" rendered="{!(gchild.HasChildCategories)}">
+                                                            <apex:outputtext value="{!if(CONTAINS(HierarchyLevel, '4'),CategoryCodeMap[gchild.categoryid],'')}    {!gchild.name}" /><!-- ACCESORIOS COMPACT DESTOP -->
+                                                        </apex:outputpanel>
+                                                        
+                                                        <apex:outputpanel layout="block" styleClass="displayInline"  rendered="{!(gchild.HasChildCategories)}">
+                                                             <!--show "Add To Cart" button for valid hierarchy level based on country-->
+                                                            <apex:commandlink value="Add To Cart" action="{!addStandaloneBundles}" rerender="Topborder,pagemessages"  status="status" rendered="{!CONTAINS(HierarchyLevel, '4')}" ondblclick="return false;" onClick="this.style.display = 'none';">
+                                                               <apex:param name="gchild"
+                                                                            value="{!gchild.CategoryId}"
+                                                                            assignTo="{!CategoryId}"/>
+                                                            </apex:commandlink>
+                                                        </apex:outputpanel>
+            
+                                                        <!-- Conditional [if gchild doesn't have child category] -->
+                                                        <!-- Show Category code along with name for valid hierachy level, format is [Category Code]    [Category name]-->
+                                                        <apex:outputpanel styleClass="displayInline" onclick="passcategoryId('{!gchild.CategoryId}');" rendered="{!NOT(gchild.HasChildCategories)}">
+                                                            <apex:outputtext value="{!if(CONTAINS(HierarchyLevel, '4'),CategoryCodeMap[gchild.categoryid],'')}    {!gchild.Name}" escape="false"/><!-- ACCESORIOS COMPACT DESTOP -->
+                                                        </apex:outputpanel>
+                                                        
+                                                        <apex:outputpanel layout="block" styleClass="displayInline" rendered="{!NOT(gchild.HasChildCategories)}">
+                                                            <!--show "Add To Cart" button for valid hierarchy level based on country-->
+                                                            <apex:commandlink value="Add To Cart" action="{!addStandaloneBundles}" rerender="Topborder,pagemessages"  status="status" rendered="{!CONTAINS(HierarchyLevel, '4')}" ondblclick="return false;" onClick="this.style.display = 'none';">
+                                                                <apex:param name="gchild"
+                                                                        value="{!gchild.CategoryId}"
+                                                                        assignTo="{!CategoryId}"/>
+                                                            </apex:commandlink>
+                                                        </apex:outputpanel>
+                                                        
+                                                   
+                                                    </apex:outputText>
+                                                </apex:dataList>
+            
+                                                <!-- Conditional [if child doesn't have child category] -->
+                                                <!-- Show Category code along with name for valid hierachy level, format is [Category Code]    [Category name]-->
+                                                <apex:outputpanel styleClass="displayInline" onclick="passcategoryId('{!child.CategoryId}');" rendered="{!NOT(child.HasChildCategories)}">
+                                                    <apex:outputtext value="{!if(CONTAINS(HierarchyLevel, '3'),CategoryCodeMap[child.categoryid],'')}    {!child.Name}" escape="false"/><!-- Industrial -->
+                                                </apex:outputpanel>
+                                                
+                                                <apex:outputpanel layout="block" styleClass="displayInline" rendered="{!NOT(child.HasChildCategories)}">
+                                                    <!--show "Add To Cart" button for valid hierarchy level based on country-->
+                                                    <apex:commandlink value="Add To Cart" action="{!addStandaloneBundles}" rerender="Topborder,pagemessages"  status="status" rendered="{!CONTAINS(HierarchyLevel, '3')}" ondblclick="return false;" onClick="this.style.display = 'none';">
+                                                       <apex:param name="child"
+                                                                    value="{!child.CategoryId}"
+                                                                    assignTo="{!CategoryId}"/>
+                                                    </apex:commandlink>
+                                                </apex:outputpanel>
+                                            
+                                            </apex:outputText>
+                                        </apex:dataList>
+            
+                                        <!-- Conditional [if parent doesn't have child category] -->
+                                        <!-- Show Category code along with name for valid hierachy level, format is [Category Code]    [Category name]-->
+                                        <apex:outputpanel styleClass="displayInline" onclick="passcategoryId('{!parent.CategoryId}');" rendered="{!NOT(parent.HasChildCategories)}">
+                                             <!--Hide "Es-Hierarchy" category as it is just a holder category-->
+                                             <apex:outputtext value="{!if(CONTAINS(HierarchyLevel, '2'),CategoryCodeMap[parent.categoryid],'')}    {!parent.Name}" escape="false" rendered="{!parent.name!='ES - Hierarchy'}"/> <!-- Aparamenta Modular -->
+                                        </apex:outputpanel>
+                                        
+                                         <apex:outputpanel layout="block" styleClass="displayInline" rendered="{!NOT(parent.HasChildCategories) && parent.name!='ES - Hierarchy'}">
+                                                <!--show "Add To Cart" button for valid hierarchy level based on country-->
+                                                <apex:commandlink value="Add To Cart" action="{!addStandaloneBundles}" rerender="Topborder,pagemessages"  status="status" rendered="{!CONTAINS(HierarchyLevel, '2')}" ondblclick="return false;" onClick="this.style.display = 'none';">
+                                                   <apex:param name="parent"
+                                                                value="{!parent.CategoryId}"
+                                                                assignTo="{!CategoryId}"/>
+                                                </apex:commandlink>
+                                            </apex:outputpanel>
+                                    <!--/li-->
+                                    </apex:outputText>
+                                </apex:dataList>
+                            <!--/ul-->
+                        </li>
+                    </apex:repeat>
+                </ul>
+       
+ 
+
+ </div>
+              
+               <apex:actionFunction name="passcategoryId" reRender="idProductlist,idResultStatsPanel,resultssection,idNavigationPanel,ButtonPanel" action="{!getCategoryProductList}" status="status" oncomplete="onActionComplete();">
+                 <apex:param name="SelectedcategoryId" value="" assignTo="{!SelectedcategoryId}"/>
+               </apex:actionFunction>
+
+                <div id="treecontrol">
+                    <a href="#"></a><a href="#"></a><a href="#"></a>
+                </div>
+                 </div>
+            </div>
+            
+            <!-- Tree view ends here -->
+            
+        </div>
+      </div>
+      
+      <!--Catalog products display section starts here-->
+      
+      <div class="catalog-products-section" style="width: 69%; float:right;">
+        <div class="aptPageContainer" style="margin-bottom: 10px;">
+          <apex:outputPanel id="idProductsHeader" layout="block">
+            <div class="aptPageTitleBarPanel">
+              <div class="title" style="display:inline-block;"> Catalog Products {!browsestring} </div>
+            </div>
+          </apex:outputPanel>
+          <div class="aptPageBodyPanel">
+            
+          
+            <div  class="aptProductListHeader apt-results-panel">
+             <apex:outputpanel id="resultssection">
+              <div class="aptCatalogSearchHeader" style="width:51%;">
+                <h2><apex:outputLabel value="Result {!recordInfo}" id="resultssection2" rendered="{!wrapproductList.size !=null}"/></h2>
+              </div>
+              <div style="float:left;margin-top:8px;"><span ><span style="display: none"> <img src="/img/loading.gif"></img> </span><span ></span>
+              
+              </span> </div>
+              
+             
+              <apex:actionStatus id="status" style="vertical-align:middle;">
+                            <apex:facet name="start"> <img style="vertical-align:right;" src="/img/loading.gif"/> </apex:facet>
+                            <apex:facet name="stop"> </apex:facet>
+               </apex:actionStatus> 
+             
+          </apex:outputpanel>
+          
+         
+                
+               
+              <!--here pagination logic-->
+              
+              <apex:outputPanel id="idResultStatsPanel" 
+                                  styleClass="idProductListPaginator aptsPaginator"
+                                  layout="block"> 
+                                   
+              <apex:outputPanel id="idNavigationPanel" 
+                                  layout="inline" rendered="{!wrapproductList.size !=null}">
+                                
+                     <table width="100%"><tr><td >
+                       <div style="width:400px;">            
+                          
+                        <apex:outputPanel layout="none" >
+                            <span class="apt-select-wrap" style="top: 3px;">
+                              <apex:selectList value="{!limits}" size="1" onchange="changeLimit();return false;"> 
+                                <apex:selectOptions value="{!items}"/>                
+                              </apex:selectList>
+                            </span>          
+                        
+                            <span style="0px 50px 0px 20px">                
+                            <span style="margin: 0 3px;">                                      
+                                <apex:outputPanel rendered="{!firstOff}">                        
+                                   <img src="/s.gif" onclick="first();return false;" style="cursor:pointer; cursor:hand; background- image:Url('/img/paginationArrows.gif');background-position: 0 1px;background-repeat: no-repeat;height:10px;width: 9px"/>
+                                </apex:outputPanel>
+                               
+                                <apex:outputPanel rendered="{!(!firstOff)}">                        
+                                  <img src="/s.gif" style="cursor:text; background-image:url('/img/paginationArrows.gif');background-position: 0-10px;background-repeat: no-repeat;height: 10px;width: 9px;"/>                                       
+                                </apex:outputPanel>                
+                            </span>                
+                            
+                            <span style="margin: 0 3px;">                    
+                                <apex:outputPanel rendered="{!firstOff}">                        
+                                    <img class="prev" src="/s.gif" onclick="previous();return false;" style="cursor:pointer; cursor:hand;background-image:    url('/img/paginationArrows.gif'); background-position: -10px 1px;background-repeat: no-repeat;height: 10px;margin: 0; padding: 0;width: 9px;"/>                        
+                                </apex:outputPanel>                    
+                                
+                                <apex:outputPanel rendered="{!(!firstOff)}">                        
+                                    <img src="/s.gif" style="cursor:text; background-image: url('/img/paginationArrows.gif');background-position: -10px -10px;background-repeat: no-repeat;height: 10px;margin: 0;padding: 0;width: 9px;"/>                        
+                                <apex:outputLabel style="cursor:text; color: #A8A8A8"/>                    </apex:outputPanel>                </span>                
+                             
+                            <span style="margin: 0 3px;">   
+                             <span style="margin: 0 -5px;">                
+                             <apex:outputPanel layout="block" 
+                                               style="display:inline-block; position: relative;line-height: 0;top:-1px;">
+                                    <apex:outputText value="{!$Label.Apttus_Config2__Page}" style="vertical-align: middle;"/>
+                                    <apex:inputText id="idCurrentPageNumber" 
+                                                    value="{!pageNumber}" 
+                                                    styleClass="idCurrentPageNumber aptsPageInput"
+                                                    onkeypress="return j$.APTTUS.aptIgnoreEnterKey(event, invokeLoadPage);"                            
+                                                    >
+                                        
+                                    </apex:inputText>
+                                    <apex:outputText value="{!$Label.Apttus_Config2__OutOf} {!TotalPage}" style="vertical-align: middle;"/>
+                                </apex:outputPanel>           
+                            </span>                 
+                             
+                             <apex:outputPanel rendered="{!lastOff}">                        
+                                <img src="/s.gif" onclick="next();return false;" style="cursor:pointer; cursor:hand; background-image: url('/img/paginationArrows.gif');background-position: -17px 1px; background-repeat: no-repeat;height: 10px; width: 9px;"/>                    
+                             </apex:outputPanel>                  
+                              
+                              <apex:outputPanel rendered="{!(!lastOff)}">                        
+                                <img src="/s.gif" style="cursor:text; background-image: url('/img/paginationArrows.gif');background-position: -17px -10px;background-repeat: no-repeat;height: 10px;width: 9px;"/>                    
+                              </apex:outputPanel>                
+                             </span>                
+                             
+                             <span style="margin: 0 3px;">                    
+                              <apex:outputPanel rendered="{!lastOff}">                        
+                                <img src="/s.gif" onclick="last();return false;" style="cursor:pointer; cursor:hand; background-image: url('/img/paginationArrows.gif'); background-position: -27px 1px;background-repeat: no-repeat;height: 10px;width: 9px;"/>                    
+                              </apex:outputPanel>                    
+                              <apex:outputPanel rendered="{!(!lastOff)}">                        
+                                <img src="/s.gif" style="cursor:text; background-image: url('/img/paginationArrows.gif');background-position: -27px -10px;background-repeat: no-repeat;height: 10px;width: 9px; "/>                    
+                              </apex:outputPanel>                
+                             </span>            
+                            </span>            
+                          </apex:outputPanel> 
+                        </div>    
+                 </td>
+              </tr>
+            </table>                  
+       </apex:outputPanel>
+         
+   </apex:outputPanel> 
+   
+   
+   
+           
+  </div>
+            
+            <div id="breadCrumbContainer" class="ui-widget ui-widget-content">
+                
+              
+             <!-- Add multiple products to cart using this button-->
+                        <apex:outputPanel layout="inline" id="ButtonPanel">
+                            <apex:commandLink value="{!$Label.Apttus_Config2__AddToCart}"
+                                                styleClass="aptListButton"
+                                                action="{!addMultiProducts}"
+                                                id="idAddToCartButton"
+                                                status="AddmultiprdStatus"
+                                                rerender="idProductlist,Topborder,pagemessages"
+                                                rendered="{!wrapproductList.size != null}">
+                                                
+                                 </apex:commandLink>
+                              <apex:actionStatus id="AddmultiprdStatus" >
+                                <apex:facet name="start"> 
+                                
+                                <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;
+                       height: 100%;opacity:0.65;width:100%;"> 
+                    <div class="waitingHolder" style="top: 50%; width: 50%;">
+                        <img class="constraintRuleCancelStatus" src="/img/loading.gif" />  
+                    </div>
+                </div>
+                   </apex:facet>
+                                <apex:facet name="stop"> </apex:facet>
+                              </apex:actionStatus>
+                        </apex:outputPanel>
+                       <!-- </apex:actionRegion>-->
+            </div>
+            
+            <!--Display products section-->
+            
+            <div >
+              <div >
+                <div class="aptProductRowContainer">
+                  
+                   <apex:outputPanel id="idProductlist">
+                        
+                           <apex:actionFunction name="first" action="{!first}" status="status" reRender="idProductlist,resultssection,idNavigationPanel"/>        
+                           <apex:actionFunction name="last" action="{!last}" status="status" reRender="idProductlist,resultssection,idNavigationPanel"/>                         
+                           <apex:actionFunction name="next" action="{!next}" status="status" rerender="idProductlist,resultssection,idNavigationPanel"/>                           
+                           <apex:actionFunction name="previous" action="{!previous}" status="status" reRender="idProductlist,resultssection,idNavigationPanel"/>        
+                           <apex:actionFunction name="changeLimit" action="{!changeLimit}" status="status" reRender="idProductlist,resultssection,idNavigationPanel"/>               
+                           <apex:actionFunction name="callAction" action="{!pageNavigation}" status="status" reRender="idProductlist,resultssection,idNavigationPanel"/>      
+       
+                        <apex:outputPanel layout="block" >
+                             
+                                        <apex:repeat value="{!wrapproductList}" 
+                                                             var="productInfo">
+                                             
+                                            <apex:outputPanel layout="block" styleClass="aptProductRow apt-prod-row-{!productInfo.productId}">
+                                            <div class="aptProductCatalogLine clearfix " >
+                                               
+                                                <div class="aptProductInfoContainer" >
+                                                        
+                                                        <div class="aptProductInfoFields" >
+                                                            <div style="width:100%; float:left;">
+                                                              <span class="aptSearchProductcheck"> <apex:inputcheckbox value="{!productInfo.IsSelected}" disabled="{!productInfo.IsaddedtoCart}"/> </span>
+                                                                <span class="aptSearchProductName">
+                                                                    <apex:outputtext escape="false" value="{!productInfo.Productname}"/>
+                                                                </span>
+                                                            </div>
+                                                       </div>
+                                                           
+                                                           <div class="apt-added-indicator">                                                                
+                                                                <apex:outputPanel styleClass="prodCheckedIndicator_{!productInfo.productId}" style="white-space: nowrap" rendered="{!productInfo.IsaddedtoCart}">
+                                                                        <img src="{!$Resource.Apttus_Config2__Image_Sprite}"/>
+                                                                        <label style="font-weight: bold; font-size: 1em;">{!$Label.Apttus_Config2__Selected}</label>
+                                                                </apex:outputPanel>
+                                                           </div>
+                                                          
+                                                        </div>
+                                                       <!-- <div class="aptProductButttons apt-prod-btn-{!productInfo.productId}">-->
+                                                        
+                                                         <!-- select button -->                                                        
+                                                       <!-- <apex:actionRegion >
+                                                        <apex:outputPanel layout="inline">
+                                                            <apex:commandLink value="{!$Label.Apttus_Config2__AddToCart}"
+                                                                                styleClass="aptListButton"
+                                                                                action="{!addStandaloneBundles}"
+                                                                                id="idAddToCartButton"
+                                                                                rerender="idProductlist,Topborder"
+                                                                                status="AddprdStatus">
+                                                                <apex:param name="standAloneBundleId" value="{!productInfo.productId}" assignTo="{!standAloneBundleId}"/>
+                                                                <apex:actionStatus id="AddprdStatus" >
+                                                                    <apex:facet name="start"> <img style="vertical-align:middle;" src="/img/loading.gif"/> </apex:facet>
+                                                                    <apex:facet name="stop"> </apex:facet>
+                                                                 </apex:actionStatus>
+                                                            </apex:commandLink>
+                                                        </apex:outputPanel>
+                                                        </apex:actionRegion>-->
+                                                                                                          
+                                                   <!-- </div>-->
+                                                   </div>  
+                                                </apex:outputPanel>    
+                                            </apex:repeat>
+                                       
+                                        <apex:outputPanel style="margin:14px;margin-top:10px;margin-bottom:10px;width:767px;float:left;">
+                                            <apex:outputText value="{!$Label.Apttus_Config2__NoRecordsToDisplay}"
+                                                             rendered="{!wrapproductList.size=0 || wrapproductList.size=null}" />
+                                            </apex:outputPanel>
+                                            
+                                        </apex:outputPanel>       
+                         
+                    
+                    </apex:outputPanel>
+                  
+                </div>
+              </div>
+              <span style="margin:14px;margin-top:10px;margin-bottom:10px;width:767px;float:left;"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <!--bottom section-->
+      <div class="idCommands clearfix apt-page-footer">
+          <div id="idCommandButtonsSection">
+            <div class="apt-button-action-spinner" style="display:none;"><img src="/img/loading.gif"></img></div>
+            <ul class="pageButtons centerPageButtons">
+                
+                <li id="bulkUpload" class="aptSpinnerBtn">
+                    
+                <apex:commandButton id="idBulkUploadBtnBottom" 
+                                                        value="Bulk Upload"
+                                                        action="{!bulkUpload}"
+                                                        styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        reRender="dummy"
+                                                        status="constraintRuleCancelStatus" 
+                                                        rendered="{!NOT(isPlaceHolderQuote)}"/>
+               
+               </li>
+               
+              <li id="GoToPricing" class="aptSpinnerBtn"> 
+              
+                    <apex:commandButton value="Go To Pricing"
+                                                        action="{!GotoCart}"
+                                                        styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        reRender="dummy"
+                                                        status="Bottompanel"> 
+                     </apex:commandButton>
+                     
+                   <apex:commandbutton value="Save and Exit" action="{!SyncwithOppportunity}" 
+                                                             rendered="{!isPlaceHolderQuote}"
+                                                             styleClass="aptListButton"                                                    
+                                                             style="margin-top: 3px; margin-bottom: 3px;"
+                                                             reRender="dummy,pagemessages"
+                                                             status="constraintRuleCancelStatus"/>
+                   <!-- Commenting Cancel button as part of R 3.1 Added by Chetan Date : 18-01-2016 -->                                          
+                   <!--
+                   <apex:commandbutton value="Cancel" action="{!doCancel}" 
+                                                      rendered="{!isPlaceHolderQuote}"
+                                                      styleClass="aptListButton"                                                    
+                                                      style="margin-top: 3px; margin-bottom: 3px;"
+                                                      reRender="dummy"
+                                                      status="constraintRuleCancelStatus"/> -->
+                     
+                     </li>
+                     <apex:actionstatus id="Bottompanel">
+                      <apex:facet name="start"> <img class="constraintRuleCancelStatus" src="/img/loading.gif" /> </apex:facet>
+                      <apex:facet name="stop"> </apex:facet>
+                    </apex:actionstatus>
+             </ul>
+          </div>
+     </div>
+
+      
+    </apex:form>
+
+</apex:page>

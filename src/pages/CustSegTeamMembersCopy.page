@@ -1,0 +1,16 @@
+<!-- 
+/**
+ * VFPage - CustSegTeamMembersCopy
+ * Controller - ClsCustSegTeamMembersCopy
+ * 
+ * Copy Account Team Members from the Account Team along with their roles in to the Customer Segmentation Team
+ * Release R5
+ * @author  Indhu Selvi Ramalingam (Accenture)
+ * @created 2016-01-07
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Customer_Segmentation__c" extensions="ClsCustSegTeamMembersCopy" action="{!copyAccountTeamMember}">
+
+</apex:page>

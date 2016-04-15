@@ -1,0 +1,14 @@
+<!--
+* Apex Page - SharingPermission
+* Controller Class - ClsSharingPermission
+* Description - The Records can be created only either by Account Owner, Account Team Member and ABB Basic Admin Profile User.
+                Else, through a warning message.
+                
+* Created By - Indhu Selvi Ramalingam(Accenture)
+* Created Date - 2016-02-08
+-->
+
+<apex:page sidebar="false" controller="ClsSharingPermission" action="{!accessPermission}" id="page">
+<apex:pageMessages id="pm"></apex:pageMessages>
+
+</apex:page>

@@ -1,0 +1,12 @@
+<!-- 
+    Apttus Approvals Management
+    CustomCustomOppScrApprovalHistory
+     
+    @2012-2013 Apttus Inc. 
+
+ -->
+<apex:page standardController="Opportunity_Screening__c" >
+
+    <Apttus_Approval:ApprovalHistory ctxObjectId="{!$CurrentPage.parameters.id}" />
+
+</apex:page>

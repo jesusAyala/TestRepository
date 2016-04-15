@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>34.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>R3v1 - Canvas app implementation for Quote edit</description>
+    <label>EditQuote</label>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>88</minorNumber>
+        <namespace>Apttus_Proposal</namespace>
+    </packageVersions>
+</ApexPage>

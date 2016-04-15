@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R4 - This refers to Opportunity Screening Approved</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Opportunity Screening Approved Alert2</name>
+    <style>none</style>
+    <subject>Opportunity Screening {!Opportunity_Screening__c.Name} Approval Notification</subject>
+    <textOnly>Dear {!Opportunity_Screening__c.CreatedBy}  Please be informed that Opportunity Screening approval for {!Opportunity_Screening__c.Opportunity__c} is completed.  Link to Opportunity Screening: {!Opportunity_Screening__c.Name}  Best Regards,  Your Salesforce Team  *** This is an automatically generated email, please do not reply ***</textOnly>
+    <type>custom</type>
+</EmailTemplate>

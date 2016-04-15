@@ -1,0 +1,19 @@
+<!--*************************************************************
+@Name: APTS_SAPPricingIntegration
+@Author: Ganga Vemula
+@CreateDate: 16th sep 2015.
+@Description: This page is to call the controller where we are getting SAP pricing.
+@UsedBy: 
+******************************************************************-->
+<apex:page controller="APTS_SAPPricingIntegrationController" 
+           action="{!init}">
+           
+  <apex:form >
+       <apex:pageblock >
+           <apex:pagemessages />
+           <apex:pageblockbuttons location="bottom">
+               <apex:commandbutton value="Back To Cart" action="{!BacktoCart}"/>
+           </apex:pageblockbuttons>
+       </apex:pageblock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This setting is to decide whether hierarchy pricing is On/Off</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Hierarchy_Pricing_ON__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Hierarchy Pricing ON?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Json_Body_Variable1__c</fullName>
+        <externalId>false</externalId>
+        <label>Json Body Variable1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Json_Body_Variable2__c</fullName>
+        <externalId>false</externalId>
+        <label>Json Body Variable2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Hierarchy Pricing Properties</label>
+    <visibility>Public</visibility>
+</CustomObject>

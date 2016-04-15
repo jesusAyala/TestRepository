@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - RFP Processing</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Assigned_Bid_manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>RFQ Responsible</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Processings2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rfp_Processing__r.Rfp_Opportunity__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_A1__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>A1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Approval_Status__c</fullName>
+        <description>R5 - created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>FCM Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approval in Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Posting Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Approved_To_Issue_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Approved To Issue Name</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Processings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Approved_to_Issue_Date__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Approved to Issue Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Approved_to_Issue__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Approved to Issue</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Comment__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Comments__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Complete_1__c</fullName>
+        <description>R5 - Created as part of Req 2461</description>
+        <externalId>false</externalId>
+        <label>Complete 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Complete_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Complete 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Complete_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Complete 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Complete_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Complete 4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Response_Received_1__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Response Received 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Response_Received_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Response Received 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Response_Received_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Response Received 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Response_Received_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Response Received 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Sent_To_Supplier_1__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Sent To Supplier 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Sent_To_Supplier_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Sent To Supplier 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Sent_To_Supplier_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Sent To Supplier 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Date_Sent_To_Supplier_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Date Sent To Supplier 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Email_Was_Sent_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Created as part of Req 2461</description>
+        <externalId>false</externalId>
+        <label>Email Was Sent By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Processings1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Email_Was_Sent__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Email Was Sent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Export_Control_review__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Has this been reviewed by export control</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Format_Structure_Review__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Format / Structure Review</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Price_Review__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Price Review</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Priority_1__c</fullName>
+        <description>Priority - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Priority 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Priority_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Priority 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Priority_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Priority 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Priority_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Priority 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Processing_Order__c</fullName>
+        <description>R5 - created as part of Req 2461</description>
+        <externalId>false</externalId>
+        <label>Processing Order</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Processing__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>RFQ</label>
+        <referenceTo>RFP__c</referenceTo>
+        <relationshipLabel>Processings</relationshipLabel>
+        <relationshipName>Processings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Rfp_Proposal_Number__c</fullName>
+        <description>Proposal Number - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Quotation Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Proposal_Status_Comments__c</fullName>
+        <description>Proposal Status / Comments - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Quotation Status/Comments</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Q1__c</fullName>
+        <defaultValue>&quot;Has this been reviewed by export control?&quot;</defaultValue>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Q1</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Status__c</fullName>
+        <description>Status - Created as part of  R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Issued</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Audit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting On Full Cost Model Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Quality Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Configuration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Contact_1__c</fullName>
+        <description>Supplier Contact - Created as part of R5  Req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Contact 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Contact_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Contact 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Contact_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Contact 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Contact_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Contact 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Name_1__c</fullName>
+        <description>Supplier Name/Location - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Name/Location 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Name_Location_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Name/Location 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Name_Location_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Name/Location 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Supplier_Name_Location_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Supplier Name/Location 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Technical_Review__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Technical Review</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Text_For_Email__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Text For Email</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Tracking_Number_1__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Tracking Number 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Tracking_Number_2__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Tracking Number 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Tracking_Number_3__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Tracking Number 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Tracking_Number_4__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Tracking Number 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Value_Of_Proposal__c</fullName>
+        <description>R5 - Created as part of 2461</description>
+        <externalId>false</externalId>
+        <label>Value Of Quotation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Processing</label>
+    <nameField>
+        <displayFormat>PRC-{YY}-{0000}</displayFormat>
+        <label>Processing Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Processings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>New_Processing</fullName>
+        <availability>online</availability>
+        <description>R5 - Created as part of req 2461</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Processing</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var result1 = sforce.connection.query(&quot;Select Id,Name from Rfp_Processing__c where Rfp_Processing__c = &apos;{!RFP__c.Id}&apos; &quot;); 
+var records1 = result1.getArray(&quot;records&quot;);
+var flag1 = false;
+
+if(records1.length&gt;0){
+flag1 = true;
+alert(&apos;Only one processing record per RFQ is allowed.&apos;);
+}
+
+
+result = sforce.connection.query(&quot;Select Id,Name,Team_Role__c,User__c,Access_Level__c from RFP_Team__c where Access_Level__c = &apos;Read/Write&apos; &quot;); 
+records = result.getArray(&quot;records&quot;); 
+var flag = false; 
+
+var redurl = &apos;{!$Label.System_Processings}e?CF{!$Label.System_Processings_ID}={!RFP__c.Name}&amp;CF{!$Label.System_Processings_ID}_lkid={!RFP__c.Id}&amp;retURL=/{!RFP__c.Id}&apos; 
+
+for (var i=0; i&lt; records.length; i++) { 
+var record = records[i];
+var teamUser = record.User__c; 
+var teamUserId = teamUser.substring(0,15); 
+ 
+if(teamUserId == &apos;{!$User.Id}&apos;){ 
+flag = true; 
+}
+}
+
+if(&apos;{!$User.Id}&apos; == &apos;{!RFP__c.OwnerId}&apos; || &apos;{!$Profile.Name}&apos; == &apos;System Administrator&apos; || &apos;{!$User.Id}&apos; == &apos;{!RFP__c.Rfp_Account_Manager__c}&apos; || flag == true){ 
+if(flag1 == false)
+{
+window.open(redurl,&apos;_top&apos;);
+} 
+}
+else{ 
+alert(&apos;Insufficient Privileges to create Processing records.&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

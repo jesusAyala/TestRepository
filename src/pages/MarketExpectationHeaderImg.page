@@ -1,0 +1,4 @@
+<apex:page standardController="Market_Expectation__c" showHeader="false" sidebar="false" id="page">
+  <center><apex:image id="image" url="{!$Resource.MarketAndBudgetImg}"/></center>
+
+</apex:page>

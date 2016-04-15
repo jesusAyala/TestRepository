@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hello {!Routing_Table__kav.CreatedBy},<div><br></div><div>Your below article is now outdated. Kindly request you to either archive the article or update the validation status of article to Expired.</div><div><br></div><div>Article Details:</div><div><br></div><div>Article Summary:&nbsp;{!Routing_Table__kav.Summary}</div><div><br></div><div>Current Validation Status:&nbsp;{!Routing_Table__kav.ValidationStatus}</div><div><br></div><div>Article Link:&nbsp;{!Routing_Table__kav.Link}</div><div><br></div><div>Thank you,</div><div>Customer Support Team</div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,136 @@
+<apex:page id="pg" standardController="Customer_Segmentation__c" extensions="ClsCustSegEdit">
+<script type="text/javascript" src="/canvas/sdk/js/33.0/controller.js" />
+<script type="text/javascript">
+  
+  //Object to pass to VF controller
+  function PISNode() {
+     this.cid = null;
+     this.englishDescription = null;
+     this.languageSpecificDescription = null;
+  }
+
+  //Set to true for enhanced JavaScript debugging output 
+  var dbgMode = false;
+
+  //Utility function; to be deleted
+  function addText(text) {
+    if (dbgMode == true) {
+      document.getElementById("AppOutput").value += text + '\n';
+    }
+  }
+
+  //Utility function; to be deleted
+  function cleanText() {
+    if (dbgMode == true) {
+      document.getElementById("AppOutput").value = '';
+    }
+  }
+
+  // Set timeout at page level
+  Visualforce.remoting.timeout = 30000;
+
+  //Holds all products to be added
+  var productToEdit;
+  var opptyID = '';
+  var lineItemID = "{!ParentId}";
+  var returnLink = "/{!ParentId}";
+  
+  //handle the response from 
+  function returnHandler(result, event) { 
+      if (event.status) {
+        addText('Result: ' + result.success + '[Success/Failed] : [' + result.processed + '/' + result.failed +']');
+        //window.location.href = '/' + result.lineItemId;
+        
+        if (result.success == true) { 
+            window.location.href = returnLink;
+        } else {
+            alert(result.errorMsg);
+             window.location.href = returnLink;
+        }
+        
+        
+      } else if (event.type == 'exception') {
+          addText('Exception: ' + event.message);
+          addText('Result: ' + result.success + '[Success/Failed] : [' + success.processed + '/' + success.failed +']');
+          if (confirm('Exception: ' + result.failedProducts.cid +'.\n\nBack to Budget?')) {
+            window.location.href = returnLink;
+          }
+      } else {
+          addText('Other: ' + event.message);
+          addText(result);
+      }
+  }
+
+  // function that uses APEX controller extentsion to save products to opportunity
+  function handleProducts() { 
+  Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.ClsCustSegEdit.replaceProduct}', 
+          lineItemID,
+          productToEdit,
+          returnHandler, 
+        {escape: true}
+    );
+  }
+ 
+ //Receives the Canvas APP event with the product to modify
+ Sfdc.canvas(function() {  
+        Sfdc.canvas.controller.subscribe(
+            {name : 'pis.sendProducts', 
+                onData : function (data) {                 
+                  cleanText();
+                  var parsedInput = JSON.parse(data.value);
+                 
+                  if (parsedInput.Type == 'Apply') {
+                    addText('pis.sendProducts: Apply event.');
+                    
+                    if (parsedInput.Nodes.length != 1) {
+                      alert('Unexpected number of products: ' + parsedInput.Nodes.length);
+                    }
+                    cleanText();
+                    addText('Data.value: ' + data.value);
+                    addText('parsedInput: ' + parsedInput);
+                    
+                    productToEdit = new PISNode();
+                    productToEdit.cid = 'init';
+                    addText('init: ' + productToEdit.cid);
+                    productToEdit.cid = parsedInput.Nodes[0].Cid;
+                    productToEdit.englishDescription = parsedInput.Nodes[0].EnglishDescription;
+                    productToEdit.languageSpecificDescription = parsedInput.Nodes[0].LanguageSpecificDescription;
+                    addText('productToEdit.cid: ' + productToEdit.cid);
+                    addText('productToEdit.englishDescription: ' + productToEdit.englishDescription);
+                    addText('productToEdit.languageSpecificDescription: ' + productToEdit.languageSpecificDescription);
+                    handleProducts();
+                  } else if (parsedInput.Type == 'Cancel') { 
+                      addText('pis.sendProducts: Cancel event.');                      
+                      window.location.href = returnLink;
+                    } else {
+                      addText('pis.sendProducts: unknown event: ' + parsedInput.Type);
+                      if (confirm('Back to Channel Market Coverage? \n')){
+                        window.location.href = returnLink;
+                      }
+                    }
+                 }
+            }
+        );
+    });   
+ </script>
+              
+ <apex:form id="frm" >
+    <apex:outputPanel id="pnl" rendered="{!showErrmsg}">
+        <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+        <table id="tbl" width='100%'>    
+        <tr><td align='center'><apex:commandButton title="Back" value="Back" action="{!GoBack}"/>  </td></tr>
+        </table>
+    </apex:outputPanel>
+</apex:form>             
+ <apex:canvasApp id="canvasapp" rendered="{!ShowCanvas}" applicationName="{!$Label.PIS_TreeView_Canvas}"
+                      parameters="{filterCountry:'',
+                      GARID:'{!$Setup.PIS__c.extSystemId__c}',
+                      configKey:'{!$Setup.PIS__c.configKey__c}',
+                      mode:'edit',
+                      CID:'{!Customer_Segmentation__c.Product__r.cid__c}'
+                      }"
+                      width="900" height="600"/>
+                              
+              
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Please leverage that email template to download an article in PDF format</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Download Article</name>
+    <style>freeForm</style>
+    <subject>Download article from {!Case.CaseNumber}</subject>
+    <textOnly>Please find attached the attached articles to the case in PDF format:
+{!Case.Articles_as_PDFs}</textOnly>
+    <type>html</type>
+</EmailTemplate>

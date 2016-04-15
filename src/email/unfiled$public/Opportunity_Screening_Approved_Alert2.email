@@ -1,0 +1,11 @@
+Dear {!Opportunity_Screening__c.CreatedBy},
+</br></br>
+Please be informed that Opportunity Screening approval for {!Opportunity_Screening__c.Opportunity__c} is completed.
+</br></br>
+Link to Opportunity Screening: <a href ='{!Opportunity_Screening__c.Link}'>{!Opportunity_Screening__c.Name}</a>
+</br></br></br>
+Best Regards,
+</br>
+Your Salesforce Team
+</br></br> 
+*** This is an automatically generated email, please do not reply ***

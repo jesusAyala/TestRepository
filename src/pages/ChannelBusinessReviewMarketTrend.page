@@ -1,0 +1,26 @@
+<!-- 
+/**
+ * VFPage - ChannelBusinessReviewMarketTrend
+ * Controller - ClsChannelBusinessReviewMarketTrend
+ * 
+ * User able to copy all the existing information by using an single button click.
+             This will prefill the Focussed Industry from the Channel Market Coverage into the Channel Business Review Market Trend.
+ * Release R5
+ * @author  Abiramasundari Radha (Accenture)
+ * @created 2015-12-29
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Channel_Business_Review__c" extensions="ClsChannelBusinessReviewMarketTrend" action="{!createChannelBusinessReviewMarketTrend}" id="page">
+
+<apex:form id="frm" >
+    <apex:outputPanel id="pnl" rendered="{!showErrmsg}">
+        <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+        <table id="tbl" width='100%'>    
+        <tr><td align='center'><apex:commandButton title="Back" value="Back" action="{!GoBack}"/>  </td></tr>
+        </table>
+    </apex:outputPanel>
+</apex:form>
+
+</apex:page>

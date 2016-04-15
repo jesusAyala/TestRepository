@@ -1,0 +1,16 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span style="font-family: Arial, sans-serif;">Dear&nbsp;{!Opportunity.OwnerFullName},</span><span style="font-size: 9pt; line-height: 107%; font-family: Arial, sans-serif; background: rgb(227, 243, 255);"><o:p></o:p></span></p><p class="MsoNormal"><span style="font-family: Arial, sans-serif;">ServIS
+Opportunity Owner Email and Se ServIS Opportunity Creator Email are not
+identical.<o:p></o:p></span></p><p class="MsoNormal"><span style="font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-family: Arial, sans-serif;">Best regards,<o:p></o:p></span></p><p class="MsoNormal">
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-family: Arial, sans-serif;">ABB<o:p></o:p></span></p>]]></td>
+</tr>
+</table>

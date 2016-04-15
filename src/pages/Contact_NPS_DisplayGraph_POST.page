@@ -1,0 +1,98 @@
+<apex:page standardController="Contact" id="page">
+<apex:includeScript id="is1" value="/soap/ajax/28.0/apex.js"/>
+<apex:includeScript id="is2" value="/soap/ajax/28.0/connection.js"/>
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  sforce.connection.sessionId = "{!$Api.Session_ID}";
+  window.onload = function(){  
+   var contactid = '{!Id}';
+   var query = "select id, salutation, firstName, lastName, Related_Account_GUID__c, Preferred_Language__c, MailingCountry, RelatedtoGIS__c,Email from Contact where id=\'"+ contactid  +"\'";
+   var result = sforce.connection.query(query);
+   var records = result.getArray("records"); 
+   
+   //Current User
+   var userid = '{!$User.Id}'; 
+   var queryUser = "select id, firstName, lastName, email from User where id=\'"+ userid  +"\'";
+   var resultUser = sforce.connection.query(queryUser);
+   var recordsUser = resultUser.getArray("records");
+   
+   var loopCheck = records[0].Related_Account_GUID__c;
+   var countryCheck= records[0].MailingCountry;
+ 
+   if(loopCheck && countryCheck){
+
+       var form = document.createElement("form");
+       form.setAttribute("method", "post");
+       form.setAttribute("action", "https://node2.cust-rel.e.abb.com/sfdc-SfDev/client/#/participant");
+            //Salutation
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "participantSalutation");
+            hiddenField.setAttribute("value", records[0].salutation);
+            form.appendChild(hiddenField);
+            
+            //FirstName
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "participantFirstName");
+            hiddenField.setAttribute("value", records[0].firstName);
+            form.appendChild(hiddenField);
+            
+            //LastName
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "participantLastName");
+            hiddenField.setAttribute("value", records[0].lastName);
+            form.appendChild(hiddenField);
+            
+            //Email
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "participantEmail");
+            hiddenField.setAttribute("value", records[0].Email);
+            form.appendChild(hiddenField);
+            
+            //Language
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "participantLanguage");
+            hiddenField.setAttribute("value", records[0].Preferred_Language__c);
+            form.appendChild(hiddenField);
+            
+            //Country
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "participantCountry");
+            hiddenField.setAttribute("value", records[0].MailingCountry);
+            form.appendChild(hiddenField);
+            
+            //User FirstName
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "userFirstName");
+            hiddenField.setAttribute("value", recordsUser[0].firstName);
+            form.appendChild(hiddenField);
+            
+            //User Last Name
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "userLastName");
+            hiddenField.setAttribute("value", recordsUser[0].lastName);
+            form.appendChild(hiddenField);
+            
+            //User email
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "userEmail");
+            hiddenField.setAttribute("value", recordsUser[0].email );
+            form.appendChild(hiddenField);
+            
+            
+       document.body.appendChild(form);
+       form.submit();
+   }else{
+   }
+   }
+</script>
+<apex:outputLabel id="outputlabel" value="This contact is not conected to a GIS Approved account or it is missing a Country Name" rendered="{!OR(IsNull(Contact.Related_Account_GUID__c), IsNull(Contact.MailingCountry))}"/>
+</apex:page>

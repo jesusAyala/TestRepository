@@ -1,0 +1,27 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Dear&nbsp;{!Case.OwnerFullName}<br>
+Thanks you for contacting the ABB Customer Service Center. For all concerning
+your Current issue , Please Refer SupportLine Case
+Number&nbsp;&nbsp;{!Case.CaseNumber}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Your case is currently
+being worked on by:&nbsp; {!Case.OwnerFullName} Group.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">You can view the Details
+of your Case at:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><u><span style="font-size: 12pt; font-family: Arial, sans-serif;"><a href="http://supportline.us.abb.com/public/index.cfm?fuseaction=viewCall&amp;call_id=%7b@call_id%7d&amp;caller_id=%7b@caller_id%7d"><span style="color:black">http://supportline.us.abb.com/public/index.cfm?fuseaction=viewCall&amp;call_id={!Case.CaseNumber}&amp;caller_id={!Case.CaseNumber}</span></a><o:p></o:p></span></u></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Your Caller ID is :
+{!Case.CaseNumber}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Please refer to your
+caller Id when calling ABB.&nbsp; This will allow us to bypass most of the data
+entry process and expedite your service.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Best Regards,<br>
+ABB Customer Service Centre.<o:p></o:p></span></p></div><div><p class="MsoNormal">&nbsp;</p><p class="MsoNormal"><br></p><p class="MsoNormal"><br></p><p class="MsoNormal"><o:p></o:p></p></div>]]></td>
+</tr>
+</table>

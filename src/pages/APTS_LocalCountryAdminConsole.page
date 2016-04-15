@@ -1,0 +1,31 @@
+<apex:page controller="APTS_LocalCountryAdminConsoleController">
+    
+<apex:form >
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <style>
+        .fa {
+            
+            font-size: 48px;
+        }
+    </style>
+    <apex:sectionHeader title="Welcome {!$User.FirstName} {!$User.LastName}" subtitle="Local Country Admin Console"/>
+    <apex:pageMessages id="messages"/>
+    
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="4">
+        
+        <apex:outputLink value="{!discountsConfigURL}" target="_blank"><i class="fa fa-cog"></i><br/><br/><h1>Discounts Config</h1></apex:outputLink><br/>
+        <apex:outputLink value="{!delegateApproverURL}" target="_blank"><i class="fa fa-hand-o-up"></i><br/><br/><h1>Delegate Approvers</h1></apex:outputLink><br/>
+        <apex:outputLink value="{!templateURL}" target="_blank"><i class="fa fa-file-word-o"></i><br/><br/><h1>Templates</h1></apex:outputLink><br/>
+        <apex:outputLink value="{!masterPicklistTableURL}" target="_blank"><i class="fa fa-table"></i><br/><br/><h1>Master Picklist Table</h1></apex:outputLink><br/>
+        <apex:outputLink value="{!approvalRuleMatrixURL}" target="_blank"><i class="fa fa-th"></i><br/><br/><h1>Approval Rule Matrix</h1></apex:outputLink><br/>
+        <apex:outputLink value="{!agreementSAPSettingURL}" target="_blank"><i class="fa fa-arrows-alt"></i><br/><br/><h1>Agreement SAP Setting</h1></apex:outputLink><br/>
+            
+        </apex:pageBlockSection>
+        
+        
+        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

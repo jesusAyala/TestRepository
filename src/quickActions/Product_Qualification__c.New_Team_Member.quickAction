@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>R4 SF1 Action for Product Qualifcation Team New Team Member</description>
+    <height>250</height>
+    <label>New_Team_Member</label>
+    <page>AddProductQualificationTeam</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

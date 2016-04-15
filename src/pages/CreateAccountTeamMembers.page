@@ -1,0 +1,26 @@
+<!-- 
+/**
+ * VFPage -  
+ * Controller - ClsCreateAccTeamMember
+ * 
+ * Release R5
+ * @author  Ayiravalli Arasu (Accenture)
+ * @created 2015-12-31
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Account_Plan__c"  extensions="ClsCreateAccTeamMember" action="{!copyAccountTeamMember}" id="page" >
+<apex:pagemessages id="msgs"/>
+<apex:form id="form"> 
+<table width="100%">
+<tr>
+<td align="center">
+<apex:outputPanel id="pnl" style="align:centre;" rendered="{!showErrmsg}">
+<apex:commandButton title="Back" value="Back" action="{!GoBack}"/>
+</apex:outputPanel>
+</td>
+</tr>
+</table>
+</apex:form>
+</apex:page>

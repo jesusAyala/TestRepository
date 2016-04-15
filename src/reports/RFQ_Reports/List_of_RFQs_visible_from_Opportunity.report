@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.RFP__r$Rfp_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Processings__r$Rfp_Proposal_Number__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Processings__r$Assigned_Bid_manager__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r$Actual_Completion_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r.Processings__r$Rfp_Value_Of_Proposal__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.RFP__r$Rfp_Proposal_Not_Issued__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Shows List of RFQs Visible from Opportunity</description>
+    <format>Tabular</format>
+    <name>List of RFQs visible from Opportunity</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Active_RFQs__c</reportType>
+    <roleHierarchyFilter>ABB_Global</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

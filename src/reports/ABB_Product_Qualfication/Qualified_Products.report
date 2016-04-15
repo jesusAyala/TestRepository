@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Product_Qualification__c.Initiative_Status__c</field>
+    </columns>
+    <columns>
+        <field>Product_Qualification__c.Product_Name__c</field>
+    </columns>
+    <columns>
+        <field>Product_Qualification__c.Source_Location__c</field>
+    </columns>
+    <columns>
+        <field>Product_Qualification__c.Product_Group__c</field>
+    </columns>
+    <columns>
+        <field>Product_Qualification__c.Product_Commercial_Name__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Report Shows the Qualified Products list</description>
+    <filter>
+        <criteriaItems>
+            <column>Product_Qualification__c.Initiative_Status__c</column>
+            <operator>equals</operator>
+            <value>Closed Qualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Qualified Products</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Product_Qualification__c@Product_Qualification__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Product_Qualification__c.Actual_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

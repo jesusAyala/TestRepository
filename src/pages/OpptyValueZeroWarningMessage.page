@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" id="page">
+<apex:pagemessage summary="{!$Label.OpptyValueZeroForPursuitStage}" severity="warning" strength="1" 
+rendered="{!AND(ISPICKVAL($User.Division_DIV__c,'EP'),Opportunity.Opportunity_Value__c == 0, Opportunity.StageName == 'Opportunity Pursuit')}"/>
+<apex:pagemessage summary="{!$Label.OpptyValueZeroForPursuitStage1}" severity="warning" strength="1" 
+rendered="{!AND(NOT(ISPICKVAL($User.Division_DIV__c,'EP')),Opportunity.Opportunity_Value__c == 0, Opportunity.Product_Group__c ==null, Opportunity.StageName == 'Opportunity Pursuit')}"/>
+<apex:pagemessage summary="{!$Label.OpptyValueZeroForPursuitStage2}" severity="warning" strength="1" 
+rendered="{!AND(NOT(ISPICKVAL($User.Division_DIV__c,'EP')),Opportunity.Opportunity_Value__c != 0, Opportunity.Product_Group__c ==null, Opportunity.StageName == 'Opportunity Pursuit')}"/>
+<apex:pagemessage summary="{!$Label.OpptyValueZeroForPursuitStage3}" severity="warning" strength="1" 
+rendered="{!AND(NOT(ISPICKVAL($User.Division_DIV__c,'EP')),Opportunity.Opportunity_Value__c == 0, Opportunity.Product_Group__c !=null, Opportunity.StageName == 'Opportunity Pursuit')}"/>
+</apex:page>

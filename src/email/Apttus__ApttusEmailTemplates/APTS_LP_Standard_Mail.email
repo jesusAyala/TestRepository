@@ -1,0 +1,12 @@
+Dear Sir/Madam,
+
+Your MSPA "{!Apttus__APTS_Agreement__c.Apttus__Description__c}"  has reached 80% or more of it's allowed Order limit.
+
+https://abb--sf1rapt.cs17.my.salesforce.com/{!Apttus__APTS_Agreement__c.Id} 
+
+Max order amount : {!Apttus__APTS_Agreement__c.APTS_LP_Max_Order_Amount__c}
+Residual order amount  : {!Apttus__APTS_Agreement__c.APTS_LP_Residual_Amount__c}
+
+Thank you 
+
+ABB Team

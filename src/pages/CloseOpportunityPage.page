@@ -1,0 +1,8 @@
+<apex:page standardController="Opportunity" action="{!updateRecordType}" extensions="ClsCloseOpportunity">
+<apex:form id="form">
+    <apex:pageBlock id="block">
+        <apex:pageMessages id="messages"></apex:pageMessages>
+        <apex:commandButton value="Back" action="{!Cancel}" id="button"/>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

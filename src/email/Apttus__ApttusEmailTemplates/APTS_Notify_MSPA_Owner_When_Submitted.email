@@ -1,0 +1,21 @@
+<messaging:emailTemplate subject="MSPA {!relatedTo.APTS_SAP_Reference_No__c} has been submitted for approval" recipientType="User" relatedToType="Apttus__APTS_Agreement__c" language="{!recipient.LanguageLocaleKey}">
+<messaging:htmlEmailBody >
+<html>
+<body>
+
+<apex:outputText value="{!relatedTo.APTS_LP_AccountCustomer__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_LP_Account_End_User__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_LP_Sales_Organization__c}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_Distribution_Channel__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_Local_Channel__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_Incoterms__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_LP_Sales_Person__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_Sales_Office__r.Name}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_LP_Max_Order_Amount__c}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_LP_MaximumSubstituteDiscount__c}" rendered="false" />
+<apex:outputText value="{!relatedTo.APTS_Sales_Office_LP__r.Name}" rendered="false" />
+<c:APTS_MaxCriticalDiscountComponent agreementSO="{!relatedTo}"/>
+</body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

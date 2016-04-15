@@ -1,0 +1,7 @@
+<apex:page id="pg" standardController="Product_Qualification__c" extensions="ProductQualificationLevelRecordCount" action="{!recordCount}">
+<apex:form id="frm" >
+<apex:pagemessages id="pgmsg" > </apex:pagemessages>
+<center> 
+<apex:commandButton title="Back" value="Back" action="{!GoBack}" /></center>
+</apex:form>
+</apex:page>

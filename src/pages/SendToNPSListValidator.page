@@ -1,0 +1,59 @@
+<apex:page standardController="Lead" extensions="SendToNPSListController" action="{!validator}" id="page">
+<style type="text/css">
+    .errorMsg{
+        width:159px;
+    }
+   .custPopup{
+       background-color: white;
+       border-width: 3px;
+       border-style: solid;
+       z-index: 9999;
+       left: 38%;
+       padding:10px;
+       position: absolute;
+       width: 700px;
+       //margin-left: -80px;
+       top:100px;
+       margin-left: -170px;
+       //top:305px;           
+      border-radius: 4px;
+   }
+   .popupBackground{
+       background-color:black;
+       opacity: 0.20;
+       filter: alpha(opacity = 20);
+       position: absolute;
+       width: 100%;           
+       height: 100%;
+       top: 0;
+       left: 0;
+       z-index: 9998;
+   }
+   a.actionlink:hover{
+       text-decoration:underline;
+   }
+   .customactionLink {
+        color: #015BA7;
+        font-weight: normal;
+        text-decoration: none;
+    } 
+ </style> 
+ <apex:enhancedList id="el" type="Lead" height="600" rowsPerPage="25"/>
+<script src="/soap/ajax/28.0/connection.js" type="text/javascript"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript" src="/canvas/sdk/js/33.0/controller.js" />
+<script type="text/javascript" src="/soap/ajax/31.0/connection.js"/>
+<script src="/support/console/28.0/integration.js" type="text/javascript" />  
+<apex:form id="form" >
+    <apex:outputPanel id="SubmitPopup">      
+        <apex:outputPanel id="outputpanel" styleClass="popupBackground" layout="block" />
+            <apex:outputPanel id="outputpanel1" styleClass="custPopup" layout="block">   
+                <apex:pageMessages id="pm" ></apex:pageMessages>
+                
+
+                <apex:commandButton id="cb" value="Back" action="{!back}"/>
+        </apex:outputPanel>
+    </apex:outputPanel> 
+</apex:form>
+<!--<apex:canvasApp applicationName="Test"  width="1000px" height="6000" parameters="{!CCRPParameters}" scrolling="yes"/>  -->
+</apex:page>

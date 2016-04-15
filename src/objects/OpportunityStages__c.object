@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This Custom Setting holds the relation of opportunity stages to record types</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Chevron_Base_Color__c</fullName>
+        <defaultValue>&quot;255,193,0,0&quot;</defaultValue>
+        <description>Please enter the chevron base color, which is applicable for the stage. Please enter in the format: 
+rgba(255,255,255,0.6)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the chevron base color, which is applicable for the stage. Please enter in the format: 
+rgba(255,255,255,0.6)</inlineHelpText>
+        <label>Chevron Base Color</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordType_Names__c</fullName>
+        <description>This field specifies one or a list of record types, where the stage is available. Please use the developer name and separate the names by komma</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field specifies one or a list of record types, where the stage is available. Please use the developer name and separate the names by komma</inlineHelpText>
+        <label>RecordType Names</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sorter__c</fullName>
+        <description>This sorts the stages in the correct order</description>
+        <externalId>false</externalId>
+        <label>Sorter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isClosed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines, whether this stage is a closed status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines, whether this stage is a closed status</inlineHelpText>
+        <label>isClosed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isWon__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isWon</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>OpportunityStages</label>
+    <visibility>Protected</visibility>
+</CustomObject>

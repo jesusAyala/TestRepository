@@ -1,0 +1,24 @@
+<!-- 
+/**
+ * VFPage -  JointBusinessPlanMarketCoverage
+ * Controller - ClsJBPMarketCoverage
+ * 
+ * Release R5
+ * @author  Ayiravalli Arasu (Accenture)
+ * @created 2015-12-30
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Joint_Business_Plan__c"  extensions="ClsJBPMarketCoverage" action="{!createJBPMarketCoverageRec}">
+
+<apex:form id="frm" >
+    <apex:outputPanel id="pnl" rendered="{!showErrmsg}">
+        <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+        <table id="tbl" width='100%'>    
+        <tr><td align='center'><apex:commandButton title="Back" value="Back" action="{!goBack}"/>  </td></tr>
+        </table>
+    </apex:outputPanel>
+</apex:form>
+
+</apex:page>

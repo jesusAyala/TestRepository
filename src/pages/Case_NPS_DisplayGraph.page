@@ -1,0 +1,28 @@
+<apex:page standardController="Case" id="page">
+<apex:includeScript id="is1" value="/soap/ajax/28.0/apex.js"/>
+<apex:includeScript id="is2" value="/soap/ajax/28.0/connection.js"/>
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  sforce.connection.sessionId = "{!$Api.Session_ID}";
+  window.onload = function(){  
+   var caseid = '{!Id}';
+   var query = "select id, NPS_ID__c from Case where id=\'"+ caseid  +"\'";
+   var result = sforce.connection.query(query);
+   var records = result.getArray("records");   
+   var surveyOngoing = records[0].NPS_ID__c;
+    if(surveyOngoing){    
+       var form = document.createElement("form");
+       form.setAttribute("method", "post");
+       form.setAttribute("action", " https://node2.cust-rel.e.abb.com/sfdc-SfDev/client/#/tssurvey");
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "surveyId");
+            hiddenField.setAttribute("value", records[0].NPS_ID__c);
+            form.appendChild(hiddenField);
+       document.body.appendChild(form);
+       form.submit();
+    }
+   }
+</script>
+<apex:outputLabel id="outputlabel" value="No NPS Survey initiated for this Case" rendered="{!IsNull(Case.NPS_ID__c)}"/>    
+</apex:page>

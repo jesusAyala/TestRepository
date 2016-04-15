@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - New Custom object - Channel Pre-Qualification Team</description>
+    <enableActivities>true</enableActivities>
+	<enableSearch>true</enableSearch>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Access__c</fullName>
+        <description>R5 -Access</description>
+        <externalId>false</externalId>
+        <label>Access</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Read/Write</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BU__c</fullName>
+        <description>R5 - Copies BU from User.</description>
+        <externalId>false</externalId>
+        <formula>LEFT(TEXT(User__r.Business_Unit_BU__c), 4)</formula>
+        <label>BU</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Pre_Qualification__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Pre-Qualification</label>
+        <referenceTo>Channel_Qualifications__c</referenceTo>
+        <relationshipName>Channel_Pre_Qualification_Teams</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Channel_Qualification_OwnerID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID( Channel_Pre_Qualification__r.OwnerId )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Qualification OwnerID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Qualification_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (OR( ISPICKVAL( Channel_Pre_Qualification__r.Status__c , &apos;Obsolete&apos;), ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Declined&apos;), 
+ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Completed&apos;) ), &apos;Closed&apos;, TEXT(Channel_Pre_Qualification__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Qualification Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>R5 - Copies Country from User.</description>
+        <externalId>false</externalId>
+        <formula>User__r.Country</formula>
+        <label>Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Team_Role__c</fullName>
+        <description>R5 - Team Role</description>
+        <externalId>false</externalId>
+        <label>Team Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GAM/SAM Account Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Engineer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Channel Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Service Responsible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive Sponsor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Qualifier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pre-Sales Consultant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Unique_User_Check__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R5 Check the duplicate User in the Channel Pre-Qualification Team.</description>
+        <externalId>false</externalId>
+        <label>Unique User Check</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - User</description>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Channel_Pre_Qualification_Teams</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Channel Partner Pre-Qualification Team</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Channel_Pre_Qualification__c</columns>
+        <columns>User__c</columns>
+        <columns>Team_Role__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>Team Member - {0000}</displayFormat>
+        <label>Channel Pre-Qualification Team</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Channel Partner Pre-Qualification Team</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Channel_Pre_Qualification__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Team_Role__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Access__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Channel_Pre_Qualification__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>User__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Team_Role__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Access__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Channel_Pre_Qualification__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>User__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Team_Role__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Access__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Channel_Pre_Qualification__c</searchFilterFields>
+        <searchFilterFields>User__c</searchFilterFields>
+        <searchFilterFields>Team_Role__c</searchFilterFields>
+        <searchFilterFields>Access__c</searchFilterFields>
+        <searchResultsAdditionalFields>Channel_Pre_Qualification__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Team_Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Access__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Channel_PreQualification_Team_CloseCheck</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Partner Pre Qualification  Status is Obsolete/Declined/Completed, then the user should not edit the Channel partner pre qualification team</description>
+        <errorConditionFormula>OR( ISPICKVAL( Channel_Pre_Qualification__r.Status__c , &apos;Obsolete&apos;),  ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Declined&apos;),
+ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Completed&apos;) )</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Pre Qualification is Closed</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Channel_Pre_Qualification_Team_Member</fullName>
+        <availability>online</availability>
+        <description>R5 - New Channel Pre-Qualification Team Member</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Channel Pre-Qualification Team Member</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/AddChannelPreQualTeam?Id={! Channel_Qualifications__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Copy_Account_Team_Members</fullName>
+        <availability>online</availability>
+        <description>R5 Copy Account Team Members from Account Team to Channel Pre-Qualification Team</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Copy Account Team Members</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/ChannelPreQualTeamMembersCopy?Id={!Channel_Qualifications__c.Id}</url>
+    </webLinks>
+</CustomObject>

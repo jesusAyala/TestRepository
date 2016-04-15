@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Migration_ID__c</fullName>
+        <description>R5</description>
+        <externalId>true</externalId>
+        <label>Migration ID</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overdue__c</fullName>
+        <externalId>false</externalId>
+        <formula>ActivityDate &lt; TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Overdue</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Activity_Date_Approaching__c</fullName>
+        <description>This is used to identify Leads with Activities with due dates approaching within 30 days</description>
+        <externalId>false</externalId>
+        <formula>TODAY() + 30 &gt;  ActivityDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Activity Date Approaching</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Duration__c</fullName>
+        <description>This field tracks the duration for the task in hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field tracks the duration for the task in hours</inlineHelpText>
+        <label>Duration Effort (Minutes)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_towards__c</fullName>
+        <externalId>false</externalId>
+        <label>Task towards</label>
+        <picklist>
+            <picklistValues>
+                <fullName>To Our Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>To Competitors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>To Customers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>To Champions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+     </fields>   
+     <fields>    
+        <fullName>APTS_External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+</CustomObject>

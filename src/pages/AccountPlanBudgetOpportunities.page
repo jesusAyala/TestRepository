@@ -1,0 +1,405 @@
+<apex:page standardController="Account_Plan__c" extensions="ClsAccPlanBudgetOppyList" recordSetVar="Oppts">
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"/>
+  
+    <script type="text/javascript">
+    
+         var selectedId = [];
+         var addedId = [];
+         var selectIdStr;
+         var sel = [];
+        
+      
+        function doCheckboxChange(cb,itemId){ 
+           
+            if(cb.checked == true){
+                
+                if($.inArray(itemId,selectedId)<0){
+                    selectedId.push(itemId);
+                }
+                if($.inArray(itemId,sel)<0){
+                    sel.push(itemId);
+                }
+                
+            }
+            else{
+              
+                if($.inArray(itemId,selectedId)>=0){
+                     var r = $.inArray(itemId,selectedId);
+                     selectedId.splice(r, 1);
+                }
+                if($.inArray(itemId,sel)>=0){
+                     var k = $.inArray(itemId,sel);
+                     sel.splice(k, 1);
+                }
+            }
+            console.log(selectedId);
+        }
+        
+        function previousJS() {
+            
+            selectIdStr = selectedId.toString();  
+            previous(selectIdStr);
+        }
+        
+        function nextJS() {
+            
+            selectIdStr = selectedId.toString();  
+            next(selectIdStr);
+        }
+        
+        function firstJS() {
+            
+            selectIdStr = selectedId.toString();  
+            first(selectIdStr);
+        }
+        
+        function lastJS() {
+            
+            selectIdStr = selectedId.toString();  
+            last(selectIdStr);
+        }
+        
+        function save() {  
+           
+            if (sel.length< 1){
+                alert('Please select atleast one row');
+            } else {
+                addedId = selectedId;
+                selectIdStr = selectedId.toString();
+                sel.splice(0, sel.length);
+                //window.location = '/apex/selectedChannelPreQualPage?selectedChannelIds='+selectIdStr ;
+                $('.modal').show();
+                console.log('::selectIdStr::'+selectIdStr);
+                SaveFunction(selectIdStr);
+                
+            }
+        }
+        
+        function search() {
+            selectedId = [];
+            sel = [];
+            SearchFunction();
+        }
+        
+        function displayRecord() {
+             
+             displayRecordAction(selectedId.toString());
+        }
+   
+    
+    </script>
+    
+    <style type="text/css">
+     .modal {
+            position:   fixed;
+            z-index:    1000;
+            top:        0;
+            left:       0;
+            height:     100%;
+            width:      100%;
+            background: rgba( 255, 255, 255, .8 ) 
+                        url('/img/loading.gif') 
+                        50% 50% 
+                        no-repeat;  
+        }  
+    </style>
+     
+    <apex:form id="frm" >
+    
+     <div class = "modal" style = "display:none;">  
+            <p style="position: fixed; padding-top: 25%;font-weight: bold;color: black;padding-left: 46%;font-size: 19px;" id="msgBlock"><b> Processing...</b></p>
+        </div>
+        
+     <apex:pageBlock id="Find" title="{!$Label.Budgeted_Opportunity_Title}">
+             <apex:pageMessages ></apex:pageMessages>
+                
+                <apex:panelGrid columns="1" style="background-color: #cccccc; width:100%;height:100px;">
+                    <apex:panelGrid columns="4" style="background-color: #cccccc;  width:100%;height:100px;">
+                         
+                          <apex:outputPanel >  
+                             <apex:outputText value="Product Group"  style="margin-right:25px;font-weight: bolder"/>    
+                             <apex:inputText value="{!prodGrp}"/> 
+                         </apex:outputPanel>
+                         
+                         <apex:outputPanel >  
+                             <apex:outputText value="Opportunity Name"  style="margin-right:10px;font-weight: bolder"/>    
+                             <apex:inputText value="{!oppName}"/> 
+                         </apex:outputPanel>
+                         
+                         <apex:outputPanel >  
+                             <apex:outputText value="DIV"  style="font-weight: bolder;margin-right:10px;"/>    
+                             <apex:selectList multiselect="false" size="1" value="{!divs}" id="divId" style="width:150px;">
+                                <apex:selectOptions value="{!DivItems}"/>
+                            </apex:selectList>
+                         </apex:outputPanel> 
+                         
+                         <apex:outputPanel >  
+                             <apex:outputText value="BU"  style="margin-right:18px;font-weight: bolder"/>    
+                             <apex:selectList multiselect="false" size="1" value="{!bus}" id="buId" style="width:150px;">
+                                <apex:selectOptions value="{!BUitems}"/>
+                            </apex:selectList> 
+                         </apex:outputPanel>
+                         
+                         <apex:outputPanel >  
+                              <apex:outputText value="ABB Sales Stage"  style="margin-right:10px;font-weight: bolder"/>    
+                              <apex:inputField value="{!opp1.StageName}" required="false" style="width:172px;"/>
+                         </apex:outputPanel>
+                         
+                         <apex:outputPanel >  
+                             <apex:outputText value="Expected Award Date (From)"  style="margin-right:10px;font-weight: bolder"/>   
+                            
+                             <apex:inputField value="{!opp1.CloseDate}" required="false"/>
+                         </apex:outputPanel>
+                         
+                         <apex:outputPanel >  
+                             <apex:outputText value="Expected Award Date (To)"  style="margin-right:10px;font-weight: bolder"/>   
+                            
+                             <apex:inputField value="{!opp2.CloseDate}" required="false"/>
+                         </apex:outputPanel>
+                         
+                         <apex:outputPanel > 
+                         </apex:outputPanel> 
+                         
+                         <apex:outputPanel > 
+                             <apex:outputText value="Display"  style="margin-right:66px;font-weight: bolder"/>    
+                             <apex:selectList multiselect="false" size="1" value="{!selectedOpt }" id="disp" onchange="displayRecord();" style="width:170px;">
+                                <apex:selectOptions value="{!displayOpt }"/>
+                            </apex:selectList>
+                         </apex:outputPanel>
+                         
+                         <input type="button" onclick="search();" class="btn" value="Search" />
+                         
+                        
+                    </apex:panelGrid>
+                 </apex:panelGrid>
+            </apex:pageBlock>
+            
+            <apex:pageBlock title="{!$Label.Budgeted_Opportunity_Title1}">
+            
+                  <apex:outputPanel id="callMM" >                    
+                    <apex:pageMessages ></apex:pageMessages>
+                    <apex:outputPanel rendered="{!isSavehBtnClicked && NOT(isAnyError)}">
+                        <script type="text/javascript">                  
+                        redirectToAnotherVF();                    
+                        </script>
+                    </apex:outputPanel>
+                 </apex:outputPanel>
+                 
+                 
+                 <apex:pageBlockButtons >
+                     
+                      <input type="button" onclick="save();" class="btn" value="Submit" />
+                      <apex:commandButton action="{!cancel}" value="{!$Label.System_Cancel}"/>
+                
+                 </apex:pageBlockButtons>
+            
+                <apex:pageBlockTable value="{!opportunities}" var="oppy">
+                    <apex:column style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}" >                    
+                        <apex:inputCheckbox disabled="{!oppy.isAlreadyExists}" value="{!oppy.selected}" onchange="doCheckboxChange(this, '{!oppy.oppty.Id}')"></apex:inputCheckbox>         
+                    </apex:column>
+                    
+                    <apex:column style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}" >
+                        <apex:outputLink value="/{!oppy.oppty.id}">{!oppy.oppty.Name}</apex:outputlink>
+                        <apex:facet name="header"> 
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Opportunity Name {!IF(sortingColumn=='Name',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Name" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column Value="{!oppy.oppty.AccountId}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                     <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Account Customer{!IF(sortingColumn=='Account.Name',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Account.Name" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                     <apex:column Value="{!oppy.oppty.Account.Primary_Address_Country__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                     <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Country{!IF(sortingColumn=='Account.Primary_Address_Country__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Account.Primary_Address_Country__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    
+                    <apex:column value="{!oppy.oppty.StageName}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}" >
+                        <apex:facet name="header"> 
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="ABB Sales Stage {!IF(sortingColumn=='StageName',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="StageName" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column value="{!oppy.oppty.CloseDate}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}"> 
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Expected Award Date {!IF(sortingColumn=='CloseDate',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="CloseDate" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Product Group" value="{!oppy.oppty.Product_Group__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Product Group {!IF(sortingColumn=='Product_Group__r.Name',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Product_Group__r.Name" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Opportunity Value" value="{!oppy.oppty.Opportunity_Value__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                    
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Opportunity Value {!IF(sortingColumn=='Opportunity_Value__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Opportunity_Value__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Opportunity Value (USD)" value="{!oppy.oppty.Technical_Amount_USD__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Opportunity Value (USD) {!IF(sortingColumn=='Technical_Amount_USD__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Opportunity_Value__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Target" Value="{!oppy.oppty.Target__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Target {!IF(sortingColumn=='Target__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Target__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Commit" Value="{!oppy.oppty.Commit__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Commit{!IF(sortingColumn=='Commit__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Commit__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="End User Project" Value="{!oppy.oppty.End_User_Project__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="End User Project{!IF(sortingColumn=='End_User_Project__r.Name',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="End_User_Project__r.Name" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Confidence Level" Value="{!oppy.oppty.Confidence_Level__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Confidence Level{!IF(sortingColumn=='Confidence_Level__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Confidence_Level__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="BU" Value="{!oppy.oppty.Business_Unit__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="BU{!IF(sortingColumn=='Business_Unit__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Business_Unit__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column headervalue="DIV" Value="{!oppy.oppty.Division__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="DIV{!IF(sortingColumn=='Division__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Division__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column headervalue="Alternative Opportunity" Value="{!oppy.oppty.Alternative_Opportunity_To__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                         <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Alternative Opportunity{!IF(sortingColumn=='Alternative_Opportunity_To__r.Name',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Alternative_Opportunity_To__r.Name" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column Value="{!oppy.oppty.Sales_Pursuit_Progress__c}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                     <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Sales Pursuit Progress{!IF(sortingColumn=='Sales_Pursuit_Progress__c',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Sales_Pursuit_Progress__c" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    <apex:column Value="{!oppy.oppty.Probability}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">
+                     <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Probability (%){!IF(sortingColumn=='Probability',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Probability" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    
+                    
+                  
+                    
+                    <apex:column headervalue="Opportunity Owner" Value="{!oppy.oppty.Owner.Name}" style="{!IF (oppy.isAlreadyExists, 'background-color:#ffffb3', '')}">                    
+                     <apex:facet name="header">
+                            <apex:commandLink action="{!sortRecordsByColumn}" status="ProcessStatus" value="Opportunity Owner{!IF(sortingColumn=='Owner.Name',IF(sortDirection='ASC','▲','▼'),'')}" reRender="frm">
+                                <apex:param name="sortingColumn" value="Owner.Name" assignTo="{!sortingColumn}"/>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+                
+                <apex:outputPanel rendered="{!Opportunities.size > 0}">
+                    <br/>
+                    <div style="float:right;"> <b>Total records: {!setCon.ResultSize}</b></div>
+                    
+                    <b>Page # : &nbsp;<apex:outputLabel value="{!pageNumber} of "/><apex:outputLabel value="{!TotalPages}"/>  </b>
+                    
+                    <apex:outputPanel style="margin-left:20px;">
+                    <a href="javascript:firstJS()"> First </a> &nbsp;&nbsp;
+                    <apex:outputPanel rendered="{!hasPrevious}"> <a href="javascript:previousJS()"> Previous </a> </apex:outputPanel>&nbsp;&nbsp;
+                    <apex:outputLabel style="color:#918989" rendered="{!NOT(hasPrevious)}" value="Previous" />&nbsp;&nbsp;
+                    <apex:outputPanel rendered="{!hasNext}"> <a href="javascript:nextJS();"> Next </a> </apex:outputPanel>&nbsp;&nbsp;
+                    <apex:outputLabel style="color:#918989"  rendered="{!NOT(hasNext)}" value="Next" />&nbsp;&nbsp;
+                    </apex:outputPanel>
+                    <a href="javascript:lastJS()"> Last </a> &nbsp;&nbsp;
+                    <br/>
+               </apex:outputPanel>
+        </apex:pageblock>  
+        
+        
+       
+         
+        <apex:actionFunction name="SaveFunction" id="SaveFunction" action="{!SaveBudget}" reRender="callMM">
+             <apex:param name="selectedOppId" value="" assignTo="{!selectedOppId}"/>
+        </apex:actionFunction> 
+        
+        <apex:actionFunction status="ProcessStatus" id="redirectToAnotherVF" name="redirectToAnotherVF" action="{!goToAccPlan}"/>
+        
+         <apex:actionFunction name="displayRecordAction" status="ProcessStatus" id="displayRecordAction" action="{!changeDisplayingRecords}" reRender="frm">
+                      <apex:param name="selectedOppId" value="" assignTo="{!selectedOppId}"/>
+        </apex:actionFunction>
+            
+        <apex:actionFunction name="SearchFunction" status="ProcessStatus" id="SearchFunction" action="{!SearchOppRecords}" reRender="frm">
+        </apex:actionFunction>
+        
+        <apex:actionFunction name="previous" status="ProcessStatus" id="previous" action="{!doPrevious}" reRender="frm">
+            <apex:param name="selectedOppId" value="" assignTo="{!selectedOppId}"/>
+        </apex:actionFunction>
+       
+         <apex:actionFunction name="next" status="ProcessStatus" id="next" action="{!doNext}" reRender="frm">
+            <apex:param name="selectedOppId" value="" assignTo="{!selectedOppId}"/>
+        </apex:actionFunction>
+        
+         <apex:actionFunction name="first" status="ProcessStatus" id="first" action="{!first}" reRender="frm">
+            <apex:param name="selectedOppId" value="" assignTo="{!selectedOppId}"/>
+        </apex:actionFunction>
+       
+         <apex:actionFunction name="last" status="ProcessStatus" id="last" action="{!last}" reRender="frm">
+            <apex:param name="selectedOppId" value="" assignTo="{!selectedOppId}"/>
+        </apex:actionFunction>
+        
+        <apex:actionStatus onstart=" $('.modal').show();" onstop="$('.modal').hide();" id="ProcessStatus"/>
+          
+            
+       </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<!--*************************************************************
+@Name: APTS_SampleBulkUploadCSVFile
+@Author: Axaykumar Varu
+@CreateDate: 31st Oct 2015
+@Description: This page will generate sample CSV file that contains all the CSV file with sample data
+@UsedBy: Processes L4 – SAL04-02-01 Perform bulk upload for line items with in the Cart for Quotation and MSPA
+******************************************************************-->
+<apex:page controller="APTS_BulkUploadProductsController" showHeader="false" sidebar="false" showChat="false" standardStylesheets="false" contentType="text/csv#SampleBulkUploadFile.csv">Product Hierarchy,Product,Quantity,Discount Type,% Discount,Net Price
+<apex:repeat value="{!lstCSVSampleData}" var="sample">
+    {!sample.prodHierarchyCode},{!sample.prodCode},{!sample.quantity},{!sample.discountType},{!sample.discountPercent},{!sample.netPrice}
+    </apex:repeat>
+</apex:page>

@@ -1,0 +1,59 @@
+<apex:page id="pg" standardController="Opportunity_Screening__c" extensions="ClsOpportunityScreeningChartG1" showHeader="false" sidebar="false"  >
+
+
+<table width="100%" border="0" >
+<tr>
+<td width="50%" align="center" >
+ <apex:chart legend="True" height="250" width="450" data="{!pieData}">    
+        <apex:axis type="Category" position="left"  fields="name"   title="Gate 1">
+            <apex:chartLabel font="9px Helvetica, sans-serif"  />
+        </apex:axis>
+        <apex:axis type="Numeric" steps="3"    position="top"  minimum="0" maximum="100" fields="data"  title="Group Scores (%)">
+            <apex:chartLabel font="9px Helvetica, sans-serif"  />
+        </apex:axis>        
+        <apex:barSeries title="Gate 1"  showInLegend="True" orientation="horizontal" axis="left"  xField="data" yField="name">
+        <apex:chartTips valueField="tip" height="20" width="300"/>
+    </apex:barSeries>
+    </apex:chart>   
+</td>
+<td align="center" width="50%">
+<table>
+<tr>
+<td height="20px">
+</td>
+</tr>
+</table>
+<table border="1px" bordercolor="#00000" cellspacing="0px" >
+<tr>
+<td height="10px" width="290px"  style="font-size: 10px;" bgcolor="#8CD1FF" ><b>Opportunity Qualification and Tender Screening Bid/No Bid</b></td>
+</tr>
+</table>
+<table>
+<tr>
+<td height="10px">
+</td>
+</tr>
+</table>
+<table  width="250px" height="200px"  cellspacing="0px" border="1px" bordercolor="#00000"  bgcolor="#8CD1FF" >
+<tr >
+<td colspan="4" align="center" style="font-size: 10px;" ><b>Category scores</b></td><td align="center" style="font-size: 10px;" ><b>Level of completeness</b></td>
+</tr>
+<tr>
+<td  ></td><td align="center"  style="font-size: 10px;" ><b>Gate 1</b></td><td  align="center" style="font-size: 10px;"><b>Gate 2</b></td><td></td><td></td>
+</tr>
+<tr >
+<td   align="center" bgcolor="#47B5FF"  style="font-size: 14px;"  >WILL</td><td align="center" bgcolor="#47B5FF" style="font-size: 10px;" >{!WillGate1}</td><td align="center" bgcolor="#47B5FF" style="font-size: 10px;" >{!WillGate2}</td><td  bgcolor="#47B5FF" style="font-size: 10px;" >Will the end user realize the opportunity?</td><td rowspan="3" style="font-size: 10px;" width="100px" wrap="False" ><b>Gate 1: {!Gate1Per}<br/><br/><br/><br/><br/><br/>Gate 2: {!Gate2Per}</b></td>
+</tr>
+<tr >
+<td  align="center" bgcolor="#8CD1FF"  style="font-size: 14px;" >FIT</td><td align="center"  bgcolor="#8CD1FF" style="font-size: 10px;" >{!FitGate1}</td><td align="center" bgcolor="#8CD1FF" style="font-size: 10px;" >{!FitGate2}</td><td  bgcolor="#8CD1FF" style="font-size: 10px;">Attractiveness of the opportunity / FIT with strategy?</td>
+</tr>
+<tr>
+<td  align="center" bgcolor="#CCEBF5" style="font-size: 14px;" >GET</td><td align="center" bgcolor="#CCEBF5" style="font-size: 10px;" >{!GetGate1}</td><td align="center" bgcolor="#CCEBF5" style="font-size: 10px;" >{!GetGate2}</td><td  bgcolor="#CCEBF5" style="font-size: 10px;" >Ability of ABB to GET/win the opportunity</td>
+</tr>
+</table>
+</td>
+
+
+</tr>
+</table>
+</apex:page>

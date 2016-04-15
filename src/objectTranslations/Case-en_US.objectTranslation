@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Sub Case</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Sub Cases</value>
+        </caseValues>
+        <name>child_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Case Type</value>
+        </caseValues>
+        <name>type_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Channel Class Level1 --></label>
+        <name>Channel_Class_Level1__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT - Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU - Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS - Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC - Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM - Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN - System Integrator</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Class Level2 --></label>
+        <name>Channel_Class_Level2__c</name>
+        <picklistValues>
+            <masterLabel>ALCEN</masterLabel>
+            <translation>ALCEN - ABB Logistic Centre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APBLD</masterLabel>
+            <translation>APBLD - ABB Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTDIS</masterLabel>
+            <translation>BTDIS - Building Trade Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIST - Electrical Wholesalers / Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY</masterLabel>
+            <translation>DIY - Retail &amp; Do it yourself (DIY)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ELW</masterLabel>
+            <translation>ELW - Electrical Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBDIS</masterLabel>
+            <translation>IBDIS - Internet Based Distributors, Ecommerce Distributors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCC</masterLabel>
+            <translation>MCC - Panel Builder (Motor Control Centre)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PABL</masterLabel>
+            <translation>PABL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POEM</masterLabel>
+            <translation>POEM - Project OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSHO</masterLabel>
+            <translation>RSHO - Repairshop</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOEM</masterLabel>
+            <translation>SOEM - Serial OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>SPRO - Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITCH</masterLabel>
+            <translation>SWITCH - Panel Builder (Switchboard)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINLB</masterLabel>
+            <translation>SYINLB - Line Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINMB</masterLabel>
+            <translation>SYINMB - Machine Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>TDIS - Technical Distributor</translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Closed Feed-based Case Layout</layout>
+        <sections>
+            <label><!-- Case Tracking --></label>
+            <section>Case Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Closure Details --></label>
+            <section>Closure Details</section>
+        </sections>
+        <sections>
+            <label><!-- Order Information --></label>
+            <section>Order Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Feed-based Case Layout</layout>
+        <sections>
+            <label><!-- Case Classification --></label>
+            <section>Case Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Case Tracking --></label>
+            <section>Case Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Order Information --></label>
+            <section>Order Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>STS Request</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Closed Case --></label>
+        <name>Closed_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- STS Request --></label>
+        <name>STS_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Services --></label>
+        <name>Services</name>
+    </recordTypes>
+</CustomObjectTranslation>

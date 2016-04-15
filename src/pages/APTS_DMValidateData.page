@@ -1,0 +1,39 @@
+<apex:page controller="APTS_DMValidateDataController">
+    <apex:form >
+        <apex:pageBlock title="1. Select Object For Data Migration" id="pageblockid">
+            <apex:pageMessages ></apex:pageMessages>
+            
+            <apex:pageBlockSection columns="1"> 
+                <apex:pageBlockSectionItem id="migrationOptionSection">
+                    <apex:selectRadio id="radioSelection" value="{!selectedObject}" layout="pageDirection">
+                        <apex:selectOptions value="{!items}"/>
+                        <apex:actionSupport event="onchange" action="{!checkSelectedObject}" rerender="pbSection"/>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+            
+        <apex:pageBlock title="2. Validate OR Load Object" id="validateLoadBlockId">
+            <apex:pageBlockSection columns="1" id="pbSection">
+                <apex:pageBlockSectionItem id="buttonSection">
+                	<apex:outputPanel layout="none">
+                    	<apex:commandButton value="Validate" action="{!test}" rerender="pageblockid" />&nbsp;&nbsp;&nbsp;
+                    	<apex:commandButton value="Load" action="{!load}" rerender="pageblockid" disabled="{!isDisabled}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>            
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="3. View Reports" id="reppageblockid">
+            <apex:pageBlockSection columns="1" id="pbSection1">
+                <apex:pageBlockSectionItem id="buttonSection1">
+                	<apex:outputPanel layout="none">
+                        <apex:commandButton value="Validation Report" action="{!findValidateReport}"/>&nbsp;&nbsp;&nbsp;
+                        <apex:commandButton value="Validation Error Report" action="{!findValidateErrorReport}"/>&nbsp;&nbsp;&nbsp;
+                        <apex:commandButton value="Reconciliation Report" action="{!findReconciliationReport}"/>
+					</apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+     </apex:form>
+</apex:page>

@@ -1,0 +1,62 @@
+<!-- 
+VF Page - AddAccountPlanTeam
+Controller - 
+Copy the Account Plan team members from Standard Account Team
+
+
+-->
+
+
+<apex:page standardController="Account_Plan__c" extensions="AddAccountPlanTeam" id="pageId1" standardStylesheets="false">
+    <br />
+    <apex:form title="Add Account Plan Team" id="pageId2">
+     <apex:outputPanel id="pnl" rendered="true">
+    <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+    
+    <center> 
+<apex:commandButton title="Back" value="Back" action="{!GoBack}"  rendered="{!showBack}"/></center>
+    </apex:outputPanel>
+   
+  <apex:pageBlock title="New Account Plan Team" id="pageId4" rendered="{!showCanvas}" >
+  
+  <table>
+    <tr>
+    <td><apex:outputText value="User" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Team Role" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Access Level" style="color:red;font-weight:bold"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!accountPlanTeam1.User__c}" required="true" id="value1"/></td>
+    <td><apex:inputField value="{!accountPlanTeam1.Team_Role__c}" required="true" id="value2"/></td>
+    <td><apex:inputField value="{!accountPlanTeam1.Access__c}" required="true" id="value3"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!accountPlanTeam2.User__c}"/></td>
+    <td><apex:inputField value="{!accountPlanTeam2.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!accountPlanTeam2.Access__c}"/></td> 
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!accountPlanTeam3.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!accountPlanTeam3.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!accountPlanTeam3.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!accountPlanTeam4.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!accountPlanTeam4.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!accountPlanTeam4.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!accountPlanTeam5.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!accountPlanTeam5.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!accountPlanTeam5.Access__c}"/></td>
+    </tr>
+  </table>
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!saveRecord}" value="Save"/>
+    <apex:commandButton action="{!saveMoreRecord}" value="Save & More" />
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form> 
+
+</apex:page>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - Joint Business Plan Actions</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Responsible__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 -ABB Responsible</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB person responsible to execute, support and/or follow-up this action</inlineHelpText>
+        <label>ABB Responsible</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Joint_Business_Plan_Actions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Action_Description__c</fullName>
+        <description>R5 - Action Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is a good practice to add 2-4 sentences to describe the details of the action. The description can be updated later if necessary</inlineHelpText>
+        <label>Action Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Actual_End_Date__c</fullName>
+        <description>R5 - Actual End Date</description>
+        <externalId>false</externalId>
+        <label>Actual End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments1__c</fullName>
+        <description>It is created for X-Author Temple</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description on status etc. on the level practical</inlineHelpText>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>R5 - Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional description relative to action status, progress, etc.</inlineHelpText>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Deadline__c</fullName>
+        <description>R5 - Deadline</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Targeted due date for the action. Can be updated as mutually agreed.</inlineHelpText>
+        <label>Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <description>R5 - Master-Detail Relationship to Joint Business Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business plan this market scope is connected to</inlineHelpText>
+        <label>Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipName>Joint_Business_Plan_Actions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Late__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Deadline__c &lt; Today(), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Late</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Market_Development_Fund_Action__c</fullName>
+        <description>R5 - Market Development Fund Action</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select Yes in case this action is defined as part of market development fund. (Not available in all businesses and/ or all countries)</inlineHelpText>
+        <label>Market Development Fund Action</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Responsible__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 -. Partner Responsible</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner responsible to execute, support and/or follow-up this action</inlineHelpText>
+        <label>Partner Responsible</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Joint_Business_Plan_Actions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Country__c</fullName>
+        <description>R5 - Copies Primary Address Country from Account .</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Joint_Business_Plan__r.Account__r.Primary_Address_Country__c )</formula>
+        <label>Primary Address Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <description>R5 - Priority</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose priority of this action compared to other actions. Helps allocating resources.</inlineHelpText>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Registered__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <description>R5 -Registered</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date this action was originally registered into the tool</inlineHelpText>
+        <label>Registered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>R5 - Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;On Hold&quot; - action is parked (Specify why under &quot;Comments&quot; section); &quot;Completed&quot; - action completed; &quot;Cancelled&quot; - Specify why under &quot;Comments&quot; section</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Action</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Joint_Business_Plan__c</columns>
+        <columns>Status__c</columns>
+        <columns>ABB_Responsible__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Action Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Actions</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Focused_sales</fullName>
+        <active>true</active>
+        <description>Sales actions focusing on a specific customer</description>
+        <label>1.Sales</label>
+        <picklistValues>
+            <picklist>Market_Development_Fund_Action__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>General_sales</fullName>
+        <active>true</active>
+        <description>Campaigns, preparation of sales support material, specifictions and homologation etc.</description>
+        <label>2. Marketing and Promotion</label>
+        <picklistValues>
+            <picklist>Market_Development_Fund_Action__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Marketing</fullName>
+        <active>true</active>
+        <description>Trade fairs, road shows, technical lunches or other events arranged or attended in relation to ABB offering</description>
+        <label>3. Events</label>
+        <picklistValues>
+            <picklist>Market_Development_Fund_Action__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Other</fullName>
+        <active>true</active>
+        <description>Any other type of Actions</description>
+        <label>5. Other</label>
+        <picklistValues>
+            <picklist>Market_Development_Fund_Action__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Training</fullName>
+        <active>true</active>
+        <description>Action related to training,personal authorization or company authorization or company audit</description>
+        <label>4. Training &amp; Authorization</label>
+        <picklistValues>
+            <picklist>Market_Development_Fund_Action__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Joint_Business_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Action_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ABB_Responsible__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Joint_Business_Plan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Action_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Registered__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Deadline__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ABB_Responsible__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Partner_Responsible__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LAST_UPDATE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>RECORDTYPE</lookupFilterFields>
+        <lookupFilterFields>Joint_Business_Plan__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>Registered__c</lookupFilterFields>
+        <lookupFilterFields>Deadline__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Joint_Business_Plan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Action_Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Registered__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Deadline__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ABB_Responsible__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Partner_Responsible__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LAST_UPDATE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>Joint_Business_Plan__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Registered__c</searchFilterFields>
+        <searchFilterFields>Deadline__c</searchFilterFields>
+        <searchFilterFields>ABB_Responsible__c</searchFilterFields>
+        <searchFilterFields>Priority__c</searchFilterFields>
+        <searchFilterFields>LAST_UPDATE</searchFilterFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Joint_Business_Plan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Action_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Registered__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Deadline__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ABB_Responsible__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Partner_Responsible__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ActualEndDategreaterthan_Registered_Date</fullName>
+        <active>true</active>
+        <description>R5 Actual End Date greater than registered date</description>
+        <errorConditionFormula>Actual_End_Date__c &lt; Registered__c</errorConditionFormula>
+        <errorDisplayField>Actual_End_Date__c</errorDisplayField>
+        <errorMessage>Actual End Date must be greater than Registered Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Deadline_greater_than_Registered_Date</fullName>
+        <active>true</active>
+        <description>R5 - Deadline must be always greater than Registered Date.</description>
+        <errorConditionFormula>Deadline__c  &lt;  Registered__c</errorConditionFormula>
+        <errorDisplayField>Deadline__c</errorDisplayField>
+        <errorMessage>Deadline must be greater than Registered Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>JBP_Status_Closed_Check_Actions</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Partner Business Plan Status is Closed/Obsolete, then the user should not edit the Action record</description>
+        <errorConditionFormula>OR(ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Closed&apos;), 
+ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Obsolete&apos;) 
+)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Business Plan is Closed/Obsolete</errorMessage>
+    </validationRules>
+</CustomObject>

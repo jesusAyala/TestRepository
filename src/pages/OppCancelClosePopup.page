@@ -1,0 +1,21 @@
+<apex:page id="page" standardController="Opportunity" extensions="ClsCancelOpportunity" standardStylesheets="false">
+    <apex:pageBlock title="Please choose the applicable stage" >
+        <apex:outputpanel id="out" style="font-size: 11px;">
+            <apex:pageMessages id="pageMessage" showDetail="false"/>
+        </apex:outputpanel>
+        <apex:form id="form"> 
+            <apex:selectRadio id="selectRadio" value="{!Stage}" layout="{!$Label.Page_Direction}" styleClass="{!$Label.Radio_Class}"> 
+                <apex:selectOptions id="selectOptions" value="{!items}"/>
+                    <apex:actionsupport event="onclick" rerender="out" action="{!checkInfo}"/>
+            </apex:selectRadio><p/> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp; 
+            <apex:commandButton id="commandButton" style="{!$Label.CL00208}" value="{!$Label.Confirm}" action="{!Confirm}"/>
+            &nbsp;&nbsp;&nbsp; 
+            <apex:commandButton id="commandButton2" style="{!$Label.CL00209}" value="{!$Label.System_Cancel}" action="{!goBack}"/>
+        </apex:form>
+        <style>
+            input[type=radio] { margin-left: 100px;margin-top:20px;}
+            .radioClass { margin-left: -100px; }
+        </style>
+    </apex:pageBlock>
+</apex:page>

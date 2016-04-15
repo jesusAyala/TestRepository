@@ -1,0 +1,6 @@
+<apex:page standardController="Apttus_Proposal__Proposal__c">
+    
+    <apex:include pageName="APTS_CustomRelatedListScript" />
+    <apex:relatedList list="ActivityHistories" title="" pageSize="1000"/>
+    
+</apex:page>

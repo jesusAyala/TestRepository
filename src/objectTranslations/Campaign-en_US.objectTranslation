@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Expected Sales</value>
+        </caseValues>
+        <name>expected_revenue_campaign</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Campaign Members Targeted</value>
+        </caseValues>
+        <name>num_sent_campaign</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Business Partner Segment Level1 --></label>
+        <name>ABB_Business_Partner_Segment_Level1__c</name>
+        <picklistValues>
+            <masterLabel>A05</masterLabel>
+            <translation>A05 - Agriculture and Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A10</masterLabel>
+            <translation>A10 - Food and Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A15</masterLabel>
+            <translation>A15 - Utilities, Electric</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A17</masterLabel>
+            <translation>A17 - Utilities, Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A20</masterLabel>
+            <translation>A20 - Buildings and Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25</masterLabel>
+            <translation>A25 - Automotive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A30</masterLabel>
+            <translation>A30 - Manufacturing of Electric/Electronic Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A32</masterLabel>
+            <translation>A32 - Manufacturing of Machinery</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A34</masterLabel>
+            <translation>A34 - Manufacturing of Transport Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A36</masterLabel>
+            <translation>A36 - Manufacturing of Other Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A40</masterLabel>
+            <translation>A40 - Cement, Minerals and Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A45</masterLabel>
+            <translation>A45 - Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A50</masterLabel>
+            <translation>A50 - Oil and Gas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A55</masterLabel>
+            <translation>A55 - Petrochemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A60</masterLabel>
+            <translation>A60 - Chemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A65</masterLabel>
+            <translation>A65 - Pharmaceuticals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A70</masterLabel>
+            <translation>A70 - Pulp and Paper</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A75</masterLabel>
+            <translation>A75 - Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A80</masterLabel>
+            <translation>A80 - Wholesale and Retail Trade</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A83</masterLabel>
+            <translation>A83 - Engineering, Procurement and Construction (EPC)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A85</masterLabel>
+            <translation>A85 - Printing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A90</masterLabel>
+            <translation>A90 - Education</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B10</masterLabel>
+            <translation>B10 - Textiles</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B15</masterLabel>
+            <translation>B15 - Public Administration and Defence</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B20</masterLabel>
+            <translation>B20 - Environmental Quality</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B25</masterLabel>
+            <translation>B25 - Post and Telecommunications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B30</masterLabel>
+            <translation>B30 - Organizations</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B35</masterLabel>
+            <translation>B35 - Recreational, Cultural and Sporting Activities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B40</masterLabel>
+            <translation>B40 - Financial Intermediation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B45</masterLabel>
+            <translation>B45 - Health and Social Work</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B50</masterLabel>
+            <translation>B50 - Hotels and Restaurants</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B55</masterLabel>
+            <translation>B55 - Insurance and Pension Funding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B60</masterLabel>
+            <translation>B60 - Real Estate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B65</masterLabel>
+            <translation>B65 - Services</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C01</masterLabel>
+            <translation>C01 - None Classified</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Partner Segment Level2 --></label>
+        <name>ABB_Business_Partner_Segment_Level2__c</name>
+        <picklistValues>
+            <masterLabel>-</masterLabel>
+            <translation>None</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>00.0</masterLabel>
+            <translation>00.0 - None Classified</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01.0</masterLabel>
+            <translation>01.0 - Agriculture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02.0</masterLabel>
+            <translation>02.0 - Forestry, Lumber and Wood Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11.0</masterLabel>
+            <translation>11.0 - Oil and Gas Exploration and Production</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13.0</masterLabel>
+            <translation>13.0 - Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13.1</masterLabel>
+            <translation>13.1 - Potash, Soda and Borate Minerals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15.1</masterLabel>
+            <translation>15.1 - Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15.2</masterLabel>
+            <translation>15.2 - Food</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15.3</masterLabel>
+            <translation>15.3 - Malt Beverages</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15.4</masterLabel>
+            <translation>15.4 - Bottled and Canned Soft Drinks and Canned Waters</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15.5</masterLabel>
+            <translation>15.5 - Dairy Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15.6</masterLabel>
+            <translation>15.6 - Sugar and Confectionery Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17.0</masterLabel>
+            <translation>17.0 - Textiles</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19.1</masterLabel>
+            <translation>19.1 - Leather and Leather Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21.0</masterLabel>
+            <translation>21.0 - Pulp and Paper</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22.0</masterLabel>
+            <translation>22.0 - Printing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23.1</masterLabel>
+            <translation>23.1 - Gas Processing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23.2</masterLabel>
+            <translation>23.2 - Oil Refining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24.1</masterLabel>
+            <translation>24.1 - Petrochemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24.2</masterLabel>
+            <translation>24.2 - Pharmaceuticals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24.3</masterLabel>
+            <translation>24.3 - Other Chemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24.4</masterLabel>
+            <translation>24.4 - Personal and Household Care Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24.5</masterLabel>
+            <translation>24.5 - Alkalies and Chlorine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24.6</masterLabel>
+            <translation>24.6 - Biotechnology</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25.1</masterLabel>
+            <translation>25.1 - Plastic and Miscellaneous Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25.2</masterLabel>
+            <translation>25.2 - Manufacture of Carbon and Graphite Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26.1</masterLabel>
+            <translation>26.1 - Cement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26.2</masterLabel>
+            <translation>26.2 - Glass and Glass Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26.3</masterLabel>
+            <translation>26.3 - Stone, Clay and Concrete Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27.1</masterLabel>
+            <translation>27.1 - Steel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27.2</masterLabel>
+            <translation>27.2 - Aluminum</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27.3</masterLabel>
+            <translation>27.3 - Other Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29.1</masterLabel>
+            <translation>29.1 - Machinery and Equipment (General Purpose)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29.2</masterLabel>
+            <translation>29.2 - Machinery and Equipment (Household Appliances)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29.3</masterLabel>
+            <translation>29.3 - Engines and Turbines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29.4</masterLabel>
+            <translation>29.4 - Paper Industries Machinery</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29.5</masterLabel>
+            <translation>29.5 - Machinery and Equipment for Food and Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29.6</masterLabel>
+            <translation>29.6 - Machinery and Equipment for Wind Power Generation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30.0</masterLabel>
+            <translation>30.0 - Computers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31.1</masterLabel>
+            <translation>31.1 - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31.2</masterLabel>
+            <translation>31.2 - Electrical Machinery and Apparatus</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>32.1</masterLabel>
+            <translation>32.1 - Electronic Equipment (Semiconductor)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>32.2</masterLabel>
+            <translation>32.2 - Electronic Equipment (Telecommunication)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>32.3</masterLabel>
+            <translation>32.3 - Electronic Equipment (Entertainment)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>33.1</masterLabel>
+            <translation>33.1 - Measurement, Test, Analyze, Control and Automation Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>34.1</masterLabel>
+            <translation>34.1 - Automotive (Vehicles - OEM)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>34.2</masterLabel>
+            <translation>34.2 - Automotive (Parts - Tier1)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35.1</masterLabel>
+            <translation>35.1 - Ship</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35.2</masterLabel>
+            <translation>35.2 - Aerospace</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35.3</masterLabel>
+            <translation>35.3 - Tramway/Railway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35.4</masterLabel>
+            <translation>35.4 - Two Wheeler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35.5</masterLabel>
+            <translation>35.5 - Other Transport Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>36.0</masterLabel>
+            <translation>36.0 - Manufacture of Furniture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>36.1</masterLabel>
+            <translation>36.1 - Metal Products and Services</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>39.1</masterLabel>
+            <translation>39.1 - Sports and Athletic Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>39.2</masterLabel>
+            <translation>39.2 - Miscellaneous Manufacturing Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.1</masterLabel>
+            <translation>40.1 - Electric Utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.2</masterLabel>
+            <translation>40.2 - Gas Utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.4</masterLabel>
+            <translation>40.4 - Multi Utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.5</masterLabel>
+            <translation>40.5 - Water Utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.6</masterLabel>
+            <translation>40.6 - Other Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.7</masterLabel>
+            <translation>40.7 - Utility Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40.8</masterLabel>
+            <translation>40.8 - Biomass Convertion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45.1</masterLabel>
+            <translation>45.1 - Building Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45.2</masterLabel>
+            <translation>45.2 - Other Heavy Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51.1</masterLabel>
+            <translation>51.1 - Wholesale and Distribution</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51.2</masterLabel>
+            <translation>51.2 - Retail Sale</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>55.0</masterLabel>
+            <translation>55.0 - Hotels and Restaurants</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60.0</masterLabel>
+            <translation>60.0 - Land Transport</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>61.0</masterLabel>
+            <translation>61.0 - Water Transport</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>62.0</masterLabel>
+            <translation>62.0 - Air Transport</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>63.1</masterLabel>
+            <translation>63.1 - Supporting and Auxiliary Transport Activities - Land</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>63.2</masterLabel>
+            <translation>63.2 - Supporting and Auxiliary Transport Activities - Water</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>63.3</masterLabel>
+            <translation>63.3 - Supporting and Auxiliary Transport Activities - Air</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>63.4</masterLabel>
+            <translation>63.4 - Transportation Overall Services</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>64.0</masterLabel>
+            <translation>64.0 - Post and Telecommunications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>65.0</masterLabel>
+            <translation>65.0 - Financial Except Insurance and Pension Funds</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>65.1</masterLabel>
+            <translation>65.1 - Investments, Trusts and Holdings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>66.0</masterLabel>
+            <translation>66.0 - Insurance and Pension Funds</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>67.0</masterLabel>
+            <translation>67.0 - Data Center Management</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>67.1</masterLabel>
+            <translation>67.1 - Business Services</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>67.2</masterLabel>
+            <translation>67.2 - Other Services</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>67.3</masterLabel>
+            <translation>67.3 - Personnel Related Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70.0</masterLabel>
+            <translation>70.0 - Real Estate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>74.0</masterLabel>
+            <translation>74.0 - Engineering, Procurement and Construction (EPC)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>74.1</masterLabel>
+            <translation>74.1 - Wind Park Developers and EPC for Wind Power</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75.1</masterLabel>
+            <translation>75.1 - Government (Military)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75.2</masterLabel>
+            <translation>75.2 - Government (Other)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80.0</masterLabel>
+            <translation>80.0 - Education</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>85.0</masterLabel>
+            <translation>85.0 - Health and Social Work</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>85.1</masterLabel>
+            <translation>85.1 - Administration of Environmental Quality</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>92.0</masterLabel>
+            <translation>92.0 - Entertainment and Culture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99.0</masterLabel>
+            <translation>99.0 - Extra-territorial Organizations</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99.1</masterLabel>
+            <translation>99.1 - Membership Organizations</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used). --></help>
+	<label><!-- Industry Usage Level1 --></label>
+        <name>ABB_Industry_Usage_Level1__c</name>
+        <picklistValues>
+            <masterLabel>BLD</masterLabel>
+            <translation>BLD - Building</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND</masterLabel>
+            <translation>IND - Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA</masterLabel>
+            <translation>TRA - Transport and Transportation Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation>UT - Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY</masterLabel>
+            <translation>XY - Usage unknown</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used). --></help>
+        <label><!-- Industry Usage Level2 --></label>
+        <name>ABB_Industry_Usage_Level2__c</name>
+        <picklistValues>
+            <masterLabel>BLD.10</masterLabel>
+            <translation>BLD.10 - Industrial Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.8</masterLabel>
+            <translation>BLD.8 - Residential Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9</masterLabel>
+            <translation>BLD.9 - Commercial &amp; institutional Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1</masterLabel>
+            <translation>IND.1 - Automotive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10</masterLabel>
+            <translation>IND.10 - Mining and Minerals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11</masterLabel>
+            <translation>IND.11 - Cement and Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12</masterLabel>
+            <translation>IND.12 - Oil and Gas Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.13</masterLabel>
+            <translation>IND.13 - Pharmaceutical and Cosmetics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.14</masterLabel>
+            <translation>IND.14 - Pulp and Paper</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15</masterLabel>
+            <translation>IND.15 - Rubber and Plastics Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16</masterLabel>
+            <translation>IND.16 - Other Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17</masterLabel>
+            <translation>IND.17 - Agriculture and Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18</masterLabel>
+            <translation>IND.18 - Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2</masterLabel>
+            <translation>IND.2 - Chemical</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.3</masterLabel>
+            <translation>IND.3 - Petrochemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4</masterLabel>
+            <translation>IND.4 - Food and Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5</masterLabel>
+            <translation>IND.5 - Printing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.6</masterLabel>
+            <translation>IND.6 - Textile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7</masterLabel>
+            <translation>IND.7 - Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8</masterLabel>
+            <translation>IND.8 - Electronics and Semiconductors (3C)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1</masterLabel>
+            <translation>TRA.1 - Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2</masterLabel>
+            <translation>TRA.2 - Railway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3</masterLabel>
+            <translation>TRA.3 - Air Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4</masterLabel>
+            <translation>TRA.4 - Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5</masterLabel>
+            <translation>TRA.5 - Land Transport Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.6</masterLabel>
+            <translation>TRA.6 - E-Vehicle Charging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.7</masterLabel>
+            <translation>TRA.7 - Logistics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1</masterLabel>
+            <translation>UT.1 - Electric Utility - Power Generation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.2</masterLabel>
+            <translation>UT.2 - Electric Distribution (&lt;60 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.3</masterLabel>
+            <translation>UT.3 - Electric Transmission (&gt;170 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4</masterLabel>
+            <translation>UT.4 - Water and Wastewater</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.5</masterLabel>
+            <translation>UT.5 - Gas Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.7</masterLabel>
+            <translation>UT.7 - Other Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.8</masterLabel>
+            <translation>UT.8 - Electric Sub Transmission (60-170 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.9</masterLabel>
+            <translation>UT.9 - Waste and Recycling utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1</masterLabel>
+            <translation>XY.1 - End Usage Unknown</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used). --></help>
+        <label><!-- Industry Usage Level3 --></label>
+        <name>ABB_Industry_Usage_Level3__c</name>
+        <picklistValues>
+            <masterLabel>IND.1.1</masterLabel>
+            <translation>IND.1.1 - Automotive (Vehicles - OEM)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.2</masterLabel>
+            <translation>IND.1.2 - Automotives (Parts - Tier1)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.2</masterLabel>
+            <translation>IND.10.2 - Underground Mining including Hoisting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.3</masterLabel>
+            <translation>IND.10.3 - Open Pit Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.4</masterLabel>
+            <translation>IND.10.4 - Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.5</masterLabel>
+            <translation>IND.10.5 - Mineral Processing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.1</masterLabel>
+            <translation>IND.11.1 - Cement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.2</masterLabel>
+            <translation>IND.11.2 - Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.1</masterLabel>
+            <translation>IND.12.1 - Oil and Gas - Offshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.2</masterLabel>
+            <translation>IND.12.2 - Oil and Gas - Onshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.3</masterLabel>
+            <translation>IND.12.3 - Refining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.4</masterLabel>
+            <translation>IND.12.4 - Oil and Gas - Midstream and Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.7</masterLabel>
+            <translation>IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.1</masterLabel>
+            <translation>IND.17.1 - Agriculture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.2</masterLabel>
+            <translation>IND.17.2 - Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.3</masterLabel>
+            <translation>IND.17.3 - Irrigation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.1</masterLabel>
+            <translation>IND.18.1 - AC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.2</masterLabel>
+            <translation>IND.18.2 - DC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.1</masterLabel>
+            <translation>IND.4.1 - Ingredients</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.2</masterLabel>
+            <translation>IND.4.2 - Sugar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.3</masterLabel>
+            <translation>IND.4.3 - Bakery &amp; Confectionery</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.4</masterLabel>
+            <translation>IND.4.4 - Fruit &amp; Vegetables</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.5</masterLabel>
+            <translation>IND.4.5 - Dairy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.6</masterLabel>
+            <translation>IND.4.6 - Meat, Poultry, Seafood</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.7</masterLabel>
+            <translation>IND.4.7 - Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.8</masterLabel>
+            <translation>IND.4.8 - Other Food &amp; Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.1</masterLabel>
+            <translation>IND.7.1 - Aluminium</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.2</masterLabel>
+            <translation>IND.7.2 - Steel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.3</masterLabel>
+            <translation>IND.7.3 - Other Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.3</masterLabel>
+            <translation>TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.4</masterLabel>
+            <translation>TRA.1.4 - Cruise and Ferry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.6</masterLabel>
+            <translation>TRA.1.6 - Other Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.7</masterLabel>
+            <translation>TRA.1.7 - Oil and Gas Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.8</masterLabel>
+            <translation>TRA.1.8 - Merchant Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.9</masterLabel>
+            <translation>TRA.1.9 - Naval (military) Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.1</masterLabel>
+            <translation>TRA.2.1 - Railway Rolling Stock</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.2</masterLabel>
+            <translation>TRA.2.2 - Railway AC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.3</masterLabel>
+            <translation>TRA.2.3 - Railway DC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.1</masterLabel>
+            <translation>UT.1.1 - Power Generation - Gas/Oil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.10</masterLabel>
+            <translation>UT.1.10 - Power Generation - Oil/Diesel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.11</masterLabel>
+            <translation>UT.1.11 - Power Generation - Waste to Energy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.12</masterLabel>
+            <translation>UT.1.12 - Power Generation - Wind (on shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.3</masterLabel>
+            <translation>UT.1.3 - Power Generation - Nuclear</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.4</masterLabel>
+            <translation>UT.1.4 - Power Generation - Hydro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.5</masterLabel>
+            <translation>UT.1.5 - Power Generation - Wind (off shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.6</masterLabel>
+            <translation>UT.1.6 - Power Generation - Solar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.7</masterLabel>
+            <translation>UT.1.7 - Power Generation - Biomass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.8</masterLabel>
+            <translation>UT.1.8 - Power Generation - Coal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.9</masterLabel>
+            <translation>UT.1.9 - Power Generation - Other Sources</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Class --></label>
+        <name>Channel_Class__c</name>
+        <picklistValues>
+            <masterLabel>Direct Sales to End Customer / End User</masterLabel>
+            <translation><!-- Direct Sales to End Customer / End User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor - Service Provider</masterLabel>
+            <translation><!-- Distributor - Service Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor - Technical Distributor</masterLabel>
+            <translation><!-- Distributor - Technical Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electrical Wholesalers/Distributor</masterLabel>
+            <translation><!-- Electrical Wholesalers/Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering, Procurement &amp; Construction</masterLabel>
+            <translation><!-- Engineering, Procurement &amp; Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installer</masterLabel>
+            <translation><!-- Installer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal ABB Sales</masterLabel>
+            <translation><!-- Internal ABB Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Equipment Manufacturer</masterLabel>
+            <translation><!-- Original Equipment Manufacturer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panel Builder</masterLabel>
+            <translation><!-- Panel Builder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator</masterLabel>
+            <translation><!-- System Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator - Line Builder</masterLabel>
+            <translation><!-- System Integrator - Line Builder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator - Machine Builder</masterLabel>
+            <translation><!-- System Integrator - Machine Builder --></translation>
+        </picklistValues>
+    </fields>	
+    <fields>
+        <help><!-- Channel classification of the Campaign. --></help>
+        <label><!-- Channel Class Level1 --></label>
+        <name>Channel_Class_Level1__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT - Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU - Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS - Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC - Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM - Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN - System Integrator</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Channel classification of the Campaign --></help>
+        <label><!-- Channel Class Level2 --></label>
+        <name>Channel_Class_Level2__c</name>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIST - Electrical Wholesalers / Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>SPRO - Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINLB</masterLabel>
+            <translation>SYINLB - Line Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINMB</masterLabel>
+            <translation>SYINMB - Machine Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>TDIS - Technical Distributor</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry Usage --></label>
+        <name>Industry_Usage__c</name>
+        <picklistValues>
+            <masterLabel>BLD - Building</masterLabel>
+            <translation><!-- BLD - Building --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.10 - Industrial Buildings</masterLabel>
+            <translation><!-- BLD.10 - Industrial Buildings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.8 - Residential Buildings</masterLabel>
+            <translation><!-- BLD.8 - Residential Buildings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9 - Commercial &amp; institutional Buildings</masterLabel>
+            <translation><!-- BLD.9 - Commercial &amp; institutional Buildings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND - Industry</masterLabel>
+            <translation><!-- IND - Industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1 - Automotive</masterLabel>
+            <translation><!-- IND.1 - Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.1 - Automotive (Vehicles - OEM)</masterLabel>
+            <translation><!-- IND.1.1 - Automotive (Vehicles - OEM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.2 - Automotives (Parts - Tier1)</masterLabel>
+            <translation><!-- IND.1.2 - Automotives (Parts - Tier1) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10 - Mining and Minerals</masterLabel>
+            <translation><!-- IND.10 - Mining and Minerals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.2 - Underground Mining including Hoisting</masterLabel>
+            <translation><!-- IND.10.2 - Underground Mining including Hoisting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.3 - Open Pit Mining</masterLabel>
+            <translation><!-- IND.10.3 - Open Pit Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.4 - Grinding</masterLabel>
+            <translation><!-- IND.10.4 - Grinding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.5 - Mineral Processing</masterLabel>
+            <translation><!-- IND.10.5 - Mineral Processing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11 - Cement and Glass</masterLabel>
+            <translation><!-- IND.11 - Cement and Glass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.1 - Cement</masterLabel>
+            <translation><!-- IND.11.1 - Cement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.2 - Glass</masterLabel>
+            <translation><!-- IND.11.2 - Glass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12 - Oil and Gas Industry</masterLabel>
+            <translation><!-- IND.12 - Oil and Gas Industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.1 - Oil and Gas - Offshore Upstream</masterLabel>
+            <translation><!-- IND.12.1 - Oil and Gas - Offshore Upstream --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.2 - Oil and Gas - Onshore Upstream</masterLabel>
+            <translation><!-- IND.12.2 - Oil and Gas - Onshore Upstream --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.3 - Refining</masterLabel>
+            <translation><!-- IND.12.3 - Refining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.4 - Oil and Gas - Midstream and Transportation</masterLabel>
+            <translation><!-- IND.12.4 - Oil and Gas - Midstream and Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units</masterLabel>
+            <translation><!-- IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.13 - Pharmaceutical and Cosmetics</masterLabel>
+            <translation><!-- IND.13 - Pharmaceutical and Cosmetics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.14 - Pulp and Paper</masterLabel>
+            <translation><!-- IND.14 - Pulp and Paper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15 - Rubber and Plastics Products</masterLabel>
+            <translation><!-- IND.15 - Rubber and Plastics Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16 - Other Industries</masterLabel>
+            <translation><!-- IND.16 - Other Industries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17 - Agriculture and Forestry</masterLabel>
+            <translation><!-- IND.17 - Agriculture and Forestry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.1 - Agriculture</masterLabel>
+            <translation><!-- IND.17.1 - Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.2 - Forestry</masterLabel>
+            <translation><!-- IND.17.2 - Forestry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.3 - Irrigation</masterLabel>
+            <translation><!-- IND.17.3 - Irrigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18 - Data Centers</masterLabel>
+            <translation><!-- IND.18 - Data Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.1 - AC Data Centers</masterLabel>
+            <translation><!-- IND.18.1 - AC Data Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.2 - DC Data Centers</masterLabel>
+            <translation><!-- IND.18.2 - DC Data Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2 - Chemical</masterLabel>
+            <translation><!-- IND.2 - Chemical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.3 - Petrochemicals</masterLabel>
+            <translation><!-- IND.3 - Petrochemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4 - Food and Beverage</masterLabel>
+            <translation><!-- IND.4 - Food and Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.1 - Ingredients</masterLabel>
+            <translation><!-- IND.4.1 - Ingredients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.2 - Sugar</masterLabel>
+            <translation><!-- IND.4.2 - Sugar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.3 - Bakery &amp; Confectionery</masterLabel>
+            <translation><!-- IND.4.3 - Bakery &amp; Confectionery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.4 - Fruit &amp; Vegetables</masterLabel>
+            <translation><!-- IND.4.4 - Fruit &amp; Vegetables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.5 -Dairy</masterLabel>
+            <translation><!-- IND.4.5 -Dairy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.6 - Meat, Poultry, Seafood</masterLabel>
+            <translation><!-- IND.4.6 - Meat, Poultry, Seafood --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.7 - Beverage</masterLabel>
+            <translation><!-- IND.4.7 - Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.8 - Other Food &amp; Beverage</masterLabel>
+            <translation><!-- IND.4.8 - Other Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5 - Printing</masterLabel>
+            <translation><!-- IND.5 - Printing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.6 - Textile</masterLabel>
+            <translation><!-- IND.6 - Textile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7 - Metals</masterLabel>
+            <translation><!-- IND.7 - Metals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.1 - Aluminium</masterLabel>
+            <translation><!-- IND.7.1 - Aluminium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.2 - Steel</masterLabel>
+            <translation><!-- IND.7.2 - Steel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.3 - Other Metals</masterLabel>
+            <translation><!-- IND.7.3 - Other Metals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8 - Electronics and Semiconductors (3C)</masterLabel>
+            <translation><!-- IND.8 - Electronics and Semiconductors (3C) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA - Transport and Transportation Infrastructure</masterLabel>
+            <translation><!-- TRA - Transport and Transportation Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1 - Marine</masterLabel>
+            <translation><!-- TRA.1 - Marine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities</masterLabel>
+            <translation><!-- TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.4 - Cruise and Ferry</masterLabel>
+            <translation><!-- TRA.1.4 - Cruise and Ferry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.6 - Other Marine</masterLabel>
+            <translation><!-- TRA.1.6 - Other Marine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.7 - Oil and Gas Vessels</masterLabel>
+            <translation><!-- TRA.1.7 - Oil and Gas Vessels --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.8 - Merchant Vessels</masterLabel>
+            <translation><!-- TRA.1.8 - Merchant Vessels --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.9 - Naval (military) Vessels</masterLabel>
+            <translation><!-- TRA.1.9 - Naval (military) Vessels --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2 - Railway</masterLabel>
+            <translation><!-- TRA.2 - Railway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.1 - Railway Rolling Stock</masterLabel>
+            <translation><!-- TRA.2.1 - Railway Rolling Stock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.2 - Railway AC Infrastructure</masterLabel>
+            <translation><!-- TRA.2.2 - Railway AC Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.3 - Railway DC Infrastructure</masterLabel>
+            <translation><!-- TRA.2.3 - Railway DC Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3 - Air Transportation</masterLabel>
+            <translation><!-- TRA.3 - Air Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4 - Cranes</masterLabel>
+            <translation><!-- TRA.4 - Cranes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5 - Land Transport Infrastructure</masterLabel>
+            <translation><!-- TRA.5 - Land Transport Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.6 - E-Vehicle Charging</masterLabel>
+            <translation><!-- TRA.6 - E-Vehicle Charging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.7 - Logistics</masterLabel>
+            <translation><!-- TRA.7 - Logistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT - Utilities</masterLabel>
+            <translation><!-- UT - Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1 - Electric Utility - Power Generation</masterLabel>
+            <translation><!-- UT.1 - Electric Utility - Power Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.1 - Power Generation - Gas/Oil</masterLabel>
+            <translation><!-- UT.1.1 - Power Generation - Gas/Oil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.10 - Power Generation - Oil/Diesel</masterLabel>
+            <translation><!-- UT.1.10 - Power Generation - Oil/Diesel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.11 - Power Generation - Waste to Energy</masterLabel>
+            <translation><!-- UT.1.11 - Power Generation - Waste to Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.12 - Power Generation - Wind (on shore)</masterLabel>
+            <translation><!-- UT.1.12 - Power Generation - Wind (on shore) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.3 - Power Generation - Nuclear</masterLabel>
+            <translation><!-- UT.1.3 - Power Generation - Nuclear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.4 - Power Generation - Hydro</masterLabel>
+            <translation><!-- UT.1.4 - Power Generation - Hydro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.5 - Power Generation - Wind (off shore)</masterLabel>
+            <translation><!-- UT.1.5 - Power Generation - Wind (off shore) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.6 - Power Generation - Solar</masterLabel>
+            <translation><!-- UT.1.6 - Power Generation - Solar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.7 - Power Generation - Biomass</masterLabel>
+            <translation><!-- UT.1.7 - Power Generation - Biomass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.8 - Power Generation - Coal</masterLabel>
+            <translation><!-- UT.1.8 - Power Generation - Coal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.9 - Power Generation - Other Sources</masterLabel>
+            <translation><!-- UT.1.9 - Power Generation - Other Sources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.2 - Electric Distribution (&lt;60 kV)</masterLabel>
+            <translation><!-- UT.2 - Electric Distribution (&lt;60 kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.3 - Electric Transmission (&gt;170 kV)</masterLabel>
+            <translation><!-- UT.3 - Electric Transmission (&gt;170 kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4 - Water and Wastewater</masterLabel>
+            <translation><!-- UT.4 - Water and Wastewater --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.5 - Gas Utilities</masterLabel>
+            <translation><!-- UT.5 - Gas Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.7 - Other Utilities</masterLabel>
+            <translation><!-- UT.7 - Other Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.8 - Electric Sub Transmission (60-170 kV)</masterLabel>
+            <translation><!-- UT.8 - Electric Sub Transmission (60-170 kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.9 - Waste and Recycling utility</masterLabel>
+            <translation><!-- UT.9 - Waste and Recycling utility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY - Usage Unknown</masterLabel>
+            <translation><!-- XY - Usage Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1 - End Usage Unknown</masterLabel>
+            <translation><!-- XY.1 - End Usage Unknown --></translation>
+        </picklistValues>
+    </fields>	
+    <layouts>
+        <layout>Campaign Layout</layout>
+        <sections>
+            <label><!-- Campaign Feedback --></label>
+            <section>Campaign Feedback</section>
+        </sections>
+        <sections>
+            <label><!-- Targeted Audience --></label>
+            <section>Targeted Audience</section>
+        </sections>
+        <sections>
+            <label><!-- Trigger Events --></label>
+            <section>Trigger Events</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

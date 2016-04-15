@@ -1,0 +1,70 @@
+<apex:page id="page" Controller="ClsChannelPreQualificCompareController">
+
+    
+    
+    <apex:form id="form" >
+    
+        <apex:pageBlock id="pageBlock" title="{!$Label.Business_Selected_Channel_Qualification_Title}" >
+        
+            <apex:pageBlockButtons id="pageBlockButtons" >
+                <apex:commandButton id="commandButton" action="{!backToDisplay}" value="{!$Label.Back}"/>
+                <!--<apex:commandButton action="{!cancel}" value="Back to Account"/>-->
+            </apex:pageBlockButtons>
+            
+           
+            <apex:pageBlockTable id="pageBlockTable" value="{!selectedchannelPQs}" var="cpq" rendered="{!NOT(selectedchannelPQs.Empty)}">
+                
+                <apex:column id="column" headervalue="" value="{!cpq.row}"/>
+                
+                <apex:column id="column2" headervalue="Channel Qualification">
+                    <apex:outputlink id="outputlink" value="/{!cpq.preQuals.Id}" target="_blank" >{!cpq.preQuals.Name}</apex:outputlink>
+                </apex:column>
+                <apex:column id="column3" headervalue="Account" value="{!cpq.preQuals.Account__c}"/>
+                
+                <apex:column id="column4" headervalue="General Score" value="{!cpq.preQuals.General_Score__c}"/>
+                
+                <apex:column id="column5" headervalue="Market Score" value="{!cpq.preQuals.Market_Score__c}"/>
+                
+                <apex:column id="column6" headervalue="Portfolio Score" value="{!cpq.preQuals.Portfolio_Score__c}"/>
+                
+                <apex:column id="column7" headervalue="Organization Score" value="{!cpq.preQuals.Organization_Score__c}"/>
+                
+                <apex:column id="column8" headervalue="Attitude Score" value="{!cpq.preQuals.Attitude_Score__c}"/>
+                
+                <apex:column id="column9" headervalue="Business Score" value="{!cpq.preQuals.Business_Score__c}"/>
+            </apex:pageBlockTable>
+            
+            <br/>
+            
+        
+        <!--  <apex:chart name="AnnualRecurringRevenue" data="{!chartDataList}" width="100%" height="400"
+                colorSet="#156F9E,#FF9123,#6BAE4A,#A0D7E5,#A4A4A4,#C67F7F,#759DA7" resizable="true">
+                
+                <apex:legend position="left"/>
+
+                <apex:axis type="Numeric" position="left" grid="true" title="Score" dashSize="2"
+                        fields="generalScore,marketScore,portfolioScore,organizationScore,attitudeScore,businessScore" minimum="0" maximum="10"/>
+                <apex:axis type="Category" position="bottom" grid="false" title="Channel Qualification"
+                        fields="row" >
+                       
+                </apex:axis>
+                <apex:barSeries orientation="vertical" axis="left" xField="row" yField="generalScore,marketScore,portfolioScore,organizationScore,attitudeScore,businessScore"
+                    stacked="true" showInLegend="true" colorsProgressWithinSeries="true" title="General Score, Market Score, Portfolio Score,Organization Score, Attitude Score,Business Score"/>
+            </apex:chart>-->
+           
+            
+            <apex:chart id="chart" data="{!data1}"  height="400" width="80%">
+            <apex:legend id="legend" position="bottom" />    
+            <apex:axis id="axis" type="Category" position="bottom"  title="Channel Partner Pre-Qualification" grid="false" fields="name"  dashSize="2" >
+            <apex:chartLabel id="chartLabel" font="9px Helvetica, sans-serif"  />
+            </apex:axis>
+            <apex:axis id="axis2"  type="Numeric"  position="left" title="Score" fields="name" grid="false" minimum="0" maximum="10" steps="9"  >
+            <apex:chartLabel id="chartLabel2" font="9px Helvetica, sans-serif" rotate="0"/>
+            </apex:axis>
+            <apex:barSeries id="barSeries" showInLegend="true" stacked="false" orientation="vertical" colorSet="#156F9E,#FF9123,#6BAE4A,#A0D7E5,#A4A4A4,#C67F7F" axis="left" yField="{!fields}" xField="name" title="{!titles}" >
+            <apex:chartTips id="chartTips" valueField="data" labelField="lbl"   height="30" width="550"  />        
+            </apex:barSeries>
+        </apex:chart>
+        </apex:pageblock>     
+    </apex:form>
+</apex:page>

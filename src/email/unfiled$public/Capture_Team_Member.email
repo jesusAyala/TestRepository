@@ -1,0 +1,27 @@
+Dear {!Capture_Team_Member__c.User__c},
+</br></br>
+You are now a member of the below Capture Team. Please login into Salesforce.com for additional information.. 
+</br>
+</br>
+<html><table height="250" width="700" border="1">
+<tr width="100" height="20">
+            <td>Account Name: </td>
+            <td>{!Capture_Team_Member__c.Account_Capture_Team_Member__c} </a></td>
+</tr>
+<tr width="100" height="20">
+            <td>Capture Team Name: </td>
+            <td><a href = "{!Capture_Team__c.Link}"> {!Capture_Team__c.Name} </a></td>
+</tr>
+<tr width="100" height="20">
+            <td>Role: </td>
+            <td>{!Capture_Team_Member__c.Team_Role__c}</td>
+</tr>
+<tr width="100" height="20">
+            <td>Access Level: </td>
+            <td>{!Capture_Team_Member__c.Access_Level__c}</td>
+</tr>
+</table>
+</html>
+</br>
+Regards,</br>
+Capture Team Selling

@@ -1,0 +1,6 @@
+<apex:page id="page" standardController="Opportunity" showHeader="false" sidebar="false"> 
+<apex:pagemessage id="message1" summary="Please fill all mandatory fields. Click on Edit to view all mandatory fields." severity="warning" strength="1" 
+rendered="{!AND(OR(Opportunity.ABB_Industry_Usage_Level1__c == null,Opportunity.Account_End_User__c == null),OR(Opportunity.StageName == 'Bidding',Opportunity.StageName == 'Negotiation'))}"/>
+<apex:pagemessage id="message" summary="{!$Label.Oppty_Closed_Quotes_warning_message}" severity="warning" strength="1" 
+rendered="{!AND(Opportunity.All_Quotes_Closed__c == true,Opportunity.StageName != '{!$Label.ClosedLost_Cancelled}', Opportunity.StageName != '{!$Label.Closed_Lost}',Opportunity.StageName != '{!$Label.Closed_Lost_Without_ABB_Bid}',Opportunity.StageName != '{!$Label.Closed_Won1}')}"/>
+</apex:page>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Customized template for: Quotation expiration notice</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Quotation expired notice</name>
+    <style>freeForm</style>
+    <subject>Quotation {!Apttus_Proposal__Proposal__c.APTS_SAP_Reference_No__c} got expired</subject>
+    <textOnly>Hello ABB Quotation Owner, 
+
+The following quotation is expired. Please contact to renew.
+
+Quotation Name : {!Apttus_Proposal__Proposal__c.Name}
+Quotation Description : {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Proposal_Name__c}
+Account Customer: {!Apttus_Proposal__Proposal__c.APTS_LP_AccountCustomer__c}
+Sales Office: {!Apttus_Proposal__Proposal__c.APTS_Sales_Office_Code__c}
+Opportunity: {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Opportunity__c}
+Valid From : {!Apttus_Proposal__Proposal__c.Apttus_Proposal__ExpectedStartDate__c}
+Valid Until Date  : {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Valid_Until_Date__c}
+
+
+Link to Quotation record in SFDC: {!Apttus_Proposal__Proposal__c.Link}
+
+
+Regards,
+
+ABB System Notification
+
+ABB Switzerland Ltd | Brown Boveri Strasse 6 | 5400 Baden
+web | www.abb.ch   twitter | @abb  office | 020 7434 2111</textOnly>
+    <type>html</type>
+</EmailTemplate>

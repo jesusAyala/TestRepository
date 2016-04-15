@@ -1,0 +1,61 @@
+<!-- 
+VF Page - AddCustomerSegmentTeam
+Controller - ClsAddCustomerSegmentTeam
+Create the Customer Segmentation team members from Standard Account Team
+
+-->
+
+
+<apex:page standardController="Customer_Segmentation__c" extensions="ClsAddCustomerSegmentTeam" id="pageId1" standardStylesheets="false">
+    <br />
+    <apex:form title="{!$Label.Add_Customer_Segmentation_Team}" id="pageId2">
+     <apex:outputPanel id="pnl" rendered="true">
+    <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+    
+    <center> 
+<apex:commandButton title="{!$Label.Back}" value="Back" action="{!GoBack}"  rendered="{!showBack}" id="cmdbut"/></center>
+    </apex:outputPanel>
+   
+  <apex:pageBlock title="{!$Label.New_Customer_Segmentation_Team}" id="pageId4" rendered="{!showCanvas}" >
+  
+  <table>
+    <tr>
+    <td><apex:outputText value="User" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Team Role" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Access Level" style="color:red;font-weight:bold"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!customerSegTeam1.User__c}" required="true" id="value1"/></td>
+    <td><apex:inputField value="{!customerSegTeam1.Team_Role__c}" required="true" id="value2"/></td>
+    <td><apex:inputField value="{!customerSegTeam1.Access__c}" required="true" id="value3"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!customerSegTeam2.User__c}"/></td>
+    <td><apex:inputField value="{!customerSegTeam2.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!customerSegTeam2.Access__c}"/></td> 
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!customerSegTeam3.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!customerSegTeam3.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!customerSegTeam3.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!customerSegTeam4.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!customerSegTeam4.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!customerSegTeam4.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!customerSegTeam5.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!customerSegTeam5.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!customerSegTeam5.Access__c}"/></td>
+    </tr>
+  </table>
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!saveRecord}" value="Save"/>
+    <apex:commandButton action="{!saveMoreRecord}" value="Save & More" />
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form> 
+
+</apex:page>

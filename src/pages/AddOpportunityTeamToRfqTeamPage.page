@@ -1,0 +1,27 @@
+<apex:page standardController="RFP__c"  extensions="ClsAddOpportunityTeamToRfqTeam" action="{!updateRfqTeam}" sidebar="false" showHeader="false">
+
+<script>
+var _parentul = document.referrer; 
+var urlarr = _parentul.split('?');
+//alert(_parentul );
+//alert(urlarr );
+//alert(urlarr.length);
+
+if(urlarr.length == 1)
+{
+    var recid = '{!RFP__c.Id}';
+    var redurl = "{!$Label.System_RFP_001}"+recid+'?Reloaded=Yes';
+    parent.parent.window.location.replace(redurl);
+    parent.parent.window.location.reload(true);
+}
+
+if(urlarr.length == 2 && urlarr[1] != 'Reloaded=Yes' )
+{
+    var recid = '{!RFP__c.Id}';
+    var redurl = "{!$Label.System_RFP_001}"+recid+'?Reloaded=Yes';
+    parent.parent.window.location.replace(redurl);
+    parent.parent.window.location.reload(true);
+}
+
+</script>
+</apex:page>

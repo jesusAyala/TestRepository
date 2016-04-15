@@ -1,0 +1,2564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Migration_ID__c</fullName>
+        <description>R5</description>
+        <externalId>true</externalId>
+        <label>Migration ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_User_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R4</description>
+        <externalId>false</externalId>
+        <label>End User Project</label>
+        <referenceTo>End_User_Project__c</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+	 <fields>
+        <fullName>Business_Partner_Segment__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Partner Segment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>00.0 - None Classified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>01.0 - Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>02.0 - Forestry, Lumber and Wood Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11.0 - Oil and Gas Exploration and Production</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13.0 - Mining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13.1 - Potash, Soda and Borate Minerals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.1 - Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.2 - Food</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.3 - Malt Beverages</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.4 - Bottled and Canned Soft Drinks and Canned Waters</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.5 - Dairy Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.6 - Sugar and Confectionery Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17.0 - Textiles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19.1 - Leather and Leather Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>21.0 - Pulp and Paper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>22.0 - Printing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23.1 - Gas Processing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23.2 - Oil Refining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.1 - Petrochemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.2 - Pharmaceuticals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.3 - Other Chemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.4 - Personal and Household Care Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.5 - Alkalies and Chlorine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.6 - Biotechnology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25.1 - Plastic and Miscellaneous Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25.2 - Manufacture of Carbon and Graphite Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26.1 - Cement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26.2 - Glass and Glass Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26.3 - Stone, Clay and Concrete Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27.1 - Steel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27.2 - Aluminum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27.3 - Other Metals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.1 - Machinery and Equipment (General Purpose)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.2 - Machinery and Equipment (Household Appliances)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.3 - Engines and Turbines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.4 - Paper Industries Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.5 - Machinery and Equipment for Food and Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.6 - Machinery and Equipment for Wind Power Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30.0 - Computers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>31.1 - Panel Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>31.2 - Electrical Machinery and Apparatus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32.1 - Electronic Equipment (Semiconductor)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32.2 - Electronic Equipment (Telecommunication)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32.3 - Electronic Equipment (Entertainment)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>33.1 - Measurement, Test, Analyze, Control and Automation Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>34.1 - Automotive (Vehicles - OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>34.2 - Automotive (Parts - Tier1)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.1 - Ship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.2 - Aerospace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.3 - Tramway/Railway</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.4 - Two Wheeler</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.5 - Other Transport Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>36.0 - Manufacture of Furniture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>36.1 - Metal Products and Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>39.1 - Sports and Athletic Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>39.2 - Miscellaneous Manufacturing Industries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.1 - Electric Utility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.2 - Gas Utility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.4 - Multi Utility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.5 - Water Utility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.6 - Other Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.7 - Utility Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.8 - Biomass Convertion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45.1 - Building Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45.2 - Other Heavy Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>51.1 - Wholesale and Distribution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>51.2 - Retail Sale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>55.0 - Hotels and Restaurants</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60.0 - Land Transport</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>61.0 - Water Transport</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>62.0 - Air Transport</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.1 - Supporting and Auxiliary Transport Activities - Land</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.2 - Supporting and Auxiliary Transport Activities - Water</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.3 - Supporting and Auxiliary Transport Activities - Air</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.4 - Transportation Overall Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>64.0 - Post and Telecommunications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>65.0 - Financial Except Insurance and Pension Funds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>65.1 - Investments, Trusts and Holdings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>66.0 - Insurance and Pension Funds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.0 - Data Center Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.1 - Business Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.2 - Other Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.3 - Personnel Related Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>70.0 - Real Estate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>74.0 - Engineering, Procurement and Construction (EPC)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>74.1 - Wind Park Developers and EPC for Wind Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75.1 - Government (Military)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75.2 - Government (Other)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>80.0 - Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>85.0 - Health and Social Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>85.1 - Administration of Environmental Quality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>92.0 - Entertainment and Culture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>99.0 - Extra-territorial Organizations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>99.1 - Membership Organizations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Industry_UsageD__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Usage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BLD - Building</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.8 - Residential Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.9 - Commercial Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.9.1 - HVAC (Commercial Buildings)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.10 - Industrial Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.10.1 - HVAC (Industrial Buildings)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1 - Automotive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1.1 - Automotive (Vehicles - OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1.1.1 - Automotive (Auto OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1.2 - Automotives (Parts - Tier1)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.2 - Chemical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.2.12 - Chemical Intermediates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.2.13 - Consumer and Fine Chemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.3 - Petrochemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4 - Food and Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.1 - Ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.2 - Sugar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.3 - Bakery &amp; Confectionery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.4 - Fruit &amp; Vegetables</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.5 - Dairy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.6 - Meat , Poultry , Seafood</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.7 - Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.8 - Other Food &amp; Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.5 - Printing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.5.10 - Paper and Paper Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.6 - Textile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7 - Metals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.1 - Aluminium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.2 - Steel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.3 - Other Metals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.8 - Electronics and Semiconductors (3C)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.8.1 - Consumer Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9 - Manufacturing of Machinery and Electrical Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.1 - Foundry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.2 - Machine Tools</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.3 - Material Handling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.4 - Manufacturing of Pumps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.5 - Manufacturing of Compressors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.6 - Manufacturing of UPS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.7 - Manufacturing of Solar Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.8 - Manufacturing of Wind Turbines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.9 - Manufacturing of Electrical Vehicle Charger</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.10 - Manufacturing of HVAC Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.11 - Manufacturing of Refrigeration Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.12 - Manufacturing of Gen Set / Turbines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.13 - Manufacturing of Generators</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.14 - Manufacturing of ATS (Automatic Transfer Switch)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.9.15 - Manufacturing of Drives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10 - Mining and Minerals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.2 - Underground Mining including Hoisting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.3 - Open Pit Mining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.4 - Grinding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.5 - Mineral Processing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11 - Cement and Glass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11.1 - Cement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11.2 - Glass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12 - Oil and Gas Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.1 - Oil and Gas - Offshore Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.2 - Oil and Gas - Onshore Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.3 - Refining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.4 - Oil and Gas - Midstream and Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.13 - Pharmaceutical and Cosmetics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.14 - Pulp and Paper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.15 - Rubber and Plastics Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.15.10 - Plastics and Rubber (General Industry)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.16 - Other Industries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.16.1 - Sawmill Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.16.2 - Recreation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.16.3 - Other Industries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17 - Agriculture and Forestry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.1 - Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.10 - Agriculture, Hunting and Forestry; Fishing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.11 - Wood, Products of Wood and Cork</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.2 - Forestry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.3 - Irrigation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18 - Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18.1 - AC Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18.2 - DC Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - Transport and Transportation Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1 - Marine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.4 - Cruise and Ferry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.6 - Other Marine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.7 - Oil and Gas Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.8 - Merchant Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2 - Railway</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.1 - Railway Rolling Stock</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.2 - Railway AC Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.3 - Railway DC Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.3 - Air Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.3.1 - Airport Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.4 - Cranes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.4.1 - Cranes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.5 - Land Transport Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.5.1 - Bridge,Tunnel and Highway</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.6 - E-Vehicle Charging</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1 - Electric Utility - Power Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.1 - Power Generation - Gas/Oil</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.10 - Power Generation - Oil/Diesel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.11 - Power Generation - Waste to Energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.12 - Power Generation - Wind (on shore)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.3 - Power Generation - Nuclear</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.4 - Power Generation - Hydro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.5 - Power Generation - Wind (off shore)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.6 - Power Generation - Solar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.7 - Power Generation - Biomass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.8 - Power Generation - Coal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.9 - Power Generation - Other Sources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.2 - Electric Distribution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.3 - Electric Transmission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4 - Water and Wastewater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4.1 - Water Desalination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4.2 - Water Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4.3 - Water Distribution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4.4 - Water Treatment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4.5 - Wastewater Treatment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4.6 - Water and Wastewater - Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.5 - Gas Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.7 - Other Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY - Usage Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY.1 - End Usage Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY.1.1 - Stock order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+<fields>
+        <fullName>ABB_Business_Partner_Segment_Level1__c</fullName>
+        <description>R4.1 - New picklist field created to replace &quot;Leading Business Partner Segment&quot;</description>
+        <externalId>false</externalId>
+        <label>Business Partner Segment Level1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A05</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A32</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A34</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A36</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A40</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A45</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A55</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A60</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A65</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A70</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A75</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A80</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A83</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A85</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A90</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B35</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B40</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B45</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B55</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B60</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B65</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C01</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Business_Partner_Segment_Level2__c</fullName>
+        <description>R4.1 - New dependent picklist field created for Business Partner Segment Level 1 to replace &quot;Leading Business Partner Segment&quot; 
+Picklist containing the Business Partner Segment level2 Values</description>
+        <externalId>false</externalId>
+        <label>Business Partner Segment Level2</label>
+        <picklist>
+            <controllingField>ABB_Business_Partner_Segment_Level1__c</controllingField>
+            <picklistValues>
+                <fullName>00.0</fullName>
+                <controllingFieldValues>C01</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>01.0</fullName>
+                <controllingFieldValues>A05</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>02.0</fullName>
+                <controllingFieldValues>A05</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11.0</fullName>
+                <controllingFieldValues>A50</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13.0</fullName>
+                <controllingFieldValues>A40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13.1</fullName>
+                <controllingFieldValues>A40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.1</fullName>
+                <controllingFieldValues>A10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.2</fullName>
+                <controllingFieldValues>A10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.3</fullName>
+                <controllingFieldValues>A10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.4</fullName>
+                <controllingFieldValues>A10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.5</fullName>
+                <controllingFieldValues>A10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15.6</fullName>
+                <controllingFieldValues>A10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17.0</fullName>
+                <controllingFieldValues>B10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19.1</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>21.0</fullName>
+                <controllingFieldValues>A70</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>22.0</fullName>
+                <controllingFieldValues>A85</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23.1</fullName>
+                <controllingFieldValues>A50</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23.2</fullName>
+                <controllingFieldValues>A50</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.1</fullName>
+                <controllingFieldValues>A55</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.2</fullName>
+                <controllingFieldValues>A65</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.3</fullName>
+                <controllingFieldValues>A60</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.4</fullName>
+                <controllingFieldValues>A60</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.5</fullName>
+                <controllingFieldValues>A60</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24.6</fullName>
+                <controllingFieldValues>A65</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25.1</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25.2</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26.1</fullName>
+                <controllingFieldValues>A40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26.2</fullName>
+                <controllingFieldValues>A40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26.3</fullName>
+                <controllingFieldValues>A40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27.1</fullName>
+                <controllingFieldValues>A45</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27.2</fullName>
+                <controllingFieldValues>A45</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27.3</fullName>
+                <controllingFieldValues>A45</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.1</fullName>
+                <controllingFieldValues>A32</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.2</fullName>
+                <controllingFieldValues>A32</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.3</fullName>
+                <controllingFieldValues>A32</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.4</fullName>
+                <controllingFieldValues>A32</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.5</fullName>
+                <controllingFieldValues>A32</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>29.6</fullName>
+                <controllingFieldValues>A32</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30.0</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>31.1</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>31.2</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32.1</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32.2</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32.3</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>33.1</fullName>
+                <controllingFieldValues>A30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>34.1</fullName>
+                <controllingFieldValues>A25</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>34.2</fullName>
+                <controllingFieldValues>A25</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.1</fullName>
+                <controllingFieldValues>A34</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.2</fullName>
+                <controllingFieldValues>A34</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.3</fullName>
+                <controllingFieldValues>A34</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.4</fullName>
+                <controllingFieldValues>A34</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35.5</fullName>
+                <controllingFieldValues>A34</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>36.0</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>36.1</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>39.1</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>39.2</fullName>
+                <controllingFieldValues>A36</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.1</fullName>
+                <controllingFieldValues>A15</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.2</fullName>
+                <controllingFieldValues>A17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.4</fullName>
+                <controllingFieldValues>A17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.5</fullName>
+                <controllingFieldValues>A17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.6</fullName>
+                <controllingFieldValues>A17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.7</fullName>
+                <controllingFieldValues>A17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40.8</fullName>
+                <controllingFieldValues>A17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45.1</fullName>
+                <controllingFieldValues>A20</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45.2</fullName>
+                <controllingFieldValues>A20</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>51.1</fullName>
+                <controllingFieldValues>A80</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>51.2</fullName>
+                <controllingFieldValues>A80</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>55.0</fullName>
+                <controllingFieldValues>B50</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60.0</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>61.0</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>62.0</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.1</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.2</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.3</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>63.4</fullName>
+                <controllingFieldValues>A75</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>64.0</fullName>
+                <controllingFieldValues>B25</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>65.0</fullName>
+                <controllingFieldValues>B40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>65.1</fullName>
+                <controllingFieldValues>B40</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>66.0</fullName>
+                <controllingFieldValues>B55</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.0</fullName>
+                <controllingFieldValues>B65</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.1</fullName>
+                <controllingFieldValues>B65</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.2</fullName>
+                <controllingFieldValues>B65</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>67.3</fullName>
+                <controllingFieldValues>B65</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>70.0</fullName>
+                <controllingFieldValues>B60</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>74.0</fullName>
+                <controllingFieldValues>A83</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>74.1</fullName>
+                <controllingFieldValues>A83</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75.1</fullName>
+                <controllingFieldValues>B15</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75.2</fullName>
+                <controllingFieldValues>B15</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>80.0</fullName>
+                <controllingFieldValues>A90</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>85.0</fullName>
+                <controllingFieldValues>B45</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>85.1</fullName>
+                <controllingFieldValues>B20</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>92.0</fullName>
+                <controllingFieldValues>B35</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>99.0</fullName>
+                <controllingFieldValues>B30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>99.1</fullName>
+                <controllingFieldValues>B30</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Industry_Usage_Level1__c</fullName>
+        <description>R4.1 - New picklist field created to replace &quot;Industry usage&quot;. 
+Picklist containing the Industry Usage level1 Values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used).</inlineHelpText>
+        <label>Industry Usage Level1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BLD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Industry_Usage_Level2__c</fullName>
+        <description>R4.1 - New dependent picklist field created for Industry usage level 1 to replace &quot;Industry usage&quot; 
+Picklist containing the Industry Usage level2 Values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used).</inlineHelpText>
+        <label>Industry Usage Level2</label>
+        <picklist>
+            <controllingField>ABB_Industry_Usage_Level1__c</controllingField>
+            <picklistValues>
+                <fullName>BLD.8</fullName>
+                <controllingFieldValues>BLD</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.9</fullName>
+                <controllingFieldValues>BLD</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.10</fullName>
+                <controllingFieldValues>BLD</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.2</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.3</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.5</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.6</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.8</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.13</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.14</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.15</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.16</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18</fullName>
+                <controllingFieldValues>IND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.3</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.4</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.5</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.6</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.7</fullName>
+                <controllingFieldValues>TRA</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.2</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.3</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.5</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.7</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.8</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.9</fullName>
+                <controllingFieldValues>UT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY.1</fullName>
+                <controllingFieldValues>XY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Industry_Usage_Level3__c</fullName>
+        <description>R4.1 - New dependent picklist field created for Industry usage level 2 to replace &quot;Industry usage&quot; 
+Picklist containing the Industry Usage level3 Values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used).</inlineHelpText>
+        <label>Industry Usage Level3</label>
+        <picklist>
+            <controllingField>ABB_Industry_Usage_Level2__c</controllingField>
+            <picklistValues>
+                <fullName>IND.1.1</fullName>
+                <controllingFieldValues>IND.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1.2</fullName>
+                <controllingFieldValues>IND.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.1</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.2</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.3</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.4</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.5</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.6</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.7</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.8</fullName>
+                <controllingFieldValues>IND.4</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.1</fullName>
+                <controllingFieldValues>IND.7</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.2</fullName>
+                <controllingFieldValues>IND.7</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.3</fullName>
+                <controllingFieldValues>IND.7</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.2</fullName>
+                <controllingFieldValues>IND.10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.3</fullName>
+                <controllingFieldValues>IND.10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.4</fullName>
+                <controllingFieldValues>IND.10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.5</fullName>
+                <controllingFieldValues>IND.10</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11.1</fullName>
+                <controllingFieldValues>IND.11</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11.2</fullName>
+                <controllingFieldValues>IND.11</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.1</fullName>
+                <controllingFieldValues>IND.12</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.2</fullName>
+                <controllingFieldValues>IND.12</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.3</fullName>
+                <controllingFieldValues>IND.12</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.4</fullName>
+                <controllingFieldValues>IND.12</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.7</fullName>
+                <controllingFieldValues>IND.12</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.1</fullName>
+                <controllingFieldValues>IND.17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.2</fullName>
+                <controllingFieldValues>IND.17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.3</fullName>
+                <controllingFieldValues>IND.17</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18.1</fullName>
+                <controllingFieldValues>IND.18</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18.2</fullName>
+                <controllingFieldValues>IND.18</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.3</fullName>
+                <controllingFieldValues>TRA.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.4</fullName>
+                <controllingFieldValues>TRA.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.6</fullName>
+                <controllingFieldValues>TRA.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.7</fullName>
+                <controllingFieldValues>TRA.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.8</fullName>
+                <controllingFieldValues>TRA.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.9</fullName>
+                <controllingFieldValues>TRA.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.1</fullName>
+                <controllingFieldValues>TRA.2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.2</fullName>
+                <controllingFieldValues>TRA.2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.3</fullName>
+                <controllingFieldValues>TRA.2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.1</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.3</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.4</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.5</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.6</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.7</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.8</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.9</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.10</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.11</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.12</fullName>
+                <controllingFieldValues>UT.1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Class_Level1__c</fullName>
+        <description>R4.1 - New picklist field created to replace &quot;Channel class&quot; 
+Picklist containing the values for differing ABB Channel Class.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Channel classification of the Campaign.</inlineHelpText>
+        <label>Channel Class Level1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ABBINT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OEM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PBL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SYIN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Class_Level2__c</fullName>
+        <description>R4.1 - New dependent picklist field created for Channel Class Level1. 
+Picklist containing the values for differing ABB Channel Class.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Channel classification of the Campaign</inlineHelpText>
+        <label>Channel Class Level2</label>
+        <picklist>
+            <controllingField>Channel_Class_Level1__c</controllingField>
+            <picklistValues>
+                <fullName>DIST</fullName>
+                <controllingFieldValues>DIS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SPRO</fullName>
+                <controllingFieldValues>DIS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TDIS</fullName>
+                <controllingFieldValues>DIS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SYINLB</fullName>
+                <controllingFieldValues>SYIN</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SYINMB</fullName>
+                <controllingFieldValues>SYIN</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Class__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Direct Sales to End Customer / End User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering, Procurement &amp; Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal ABB Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Original Equipment Manufacturer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Integrator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributor - Service Provider</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributor - Technical Distributor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Panel Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Integrator - Line Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Integrator - Machine Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electrical Wholesalers/Distributor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+     <fields>
+        <fullName>Industry_Usage__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Usage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BLD - Building</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.8 - Residential Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.9 - Commercial &amp; institutional Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD.10 - Industrial Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1 - Automotive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1.1 - Automotive (Vehicles - OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.1.2 - Automotives (Parts - Tier1)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.2 - Chemical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.3 - Petrochemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4 - Food and Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.5 - Printing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.6 - Textile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7 - Metals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.1 - Aluminium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.2 - Steel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.7.3 - Other Metals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.8 - Electronics and Semiconductors (3C)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10 - Mining and Minerals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.2 - Underground Mining including Hoisting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.3 - Open Pit Mining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.4 - Grinding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.10.5 - Mineral Processing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11 - Cement and Glass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11.1 - Cement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.11.2 - Glass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12 - Oil and Gas Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.1 - Oil and Gas - Offshore Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.2 - Oil and Gas - Onshore Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.3 - Refining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.4 - Oil and Gas - Midstream and Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.13 - Pharmaceutical and Cosmetics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.14 - Pulp and Paper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.15 - Rubber and Plastics Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.16 - Other Industries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17 - Agriculture and Forestry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.1 - Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.2 - Forestry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.17.3 - Irrigation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18 - Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18.1 - AC Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.18.2 - DC Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - Transport and Transportation Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1 - Marine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.4 - Cruise and Ferry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.6 - Other Marine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.7 - Oil and Gas Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.8 - Merchant Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.1.9 - Naval (military) Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2 - Railway</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.1 - Railway Rolling Stock</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.2 - Railway AC Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.2.3 - Railway DC Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.3 - Air Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.4 - Cranes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.5 - Land Transport Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.6 - E-Vehicle Charging</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1 - Electric Utility - Power Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.1 - Power Generation - Gas/Oil</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.10 - Power Generation - Oil/Diesel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.11 - Power Generation - Waste to Energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.12 - Power Generation - Wind (on shore)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.3 - Power Generation - Nuclear</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.4 - Power Generation - Hydro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.5 - Power Generation - Wind (off shore)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.6 - Power Generation - Solar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.7 - Power Generation - Biomass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.8 - Power Generation - Coal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.1.9 - Power Generation - Other Sources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.2 - Electric Distribution (&lt;60 kV)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.3 - Electric Transmission (&gt;170 kV)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.4 - Water and Wastewater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.5 - Gas Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.7 - Other Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY - Usage Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY.1 - End Usage Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.1 - Ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.2 - Sugar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.3 - Bakery &amp; Confectionery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.4 - Fruit &amp; Vegetables</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.5 -Dairy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.6 - Meat, Poultry, Seafood</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.7 - Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND.4.8 - Other Food &amp; Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA.7 - Logistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.8 - Electric Sub Transmission (60-170 kV)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT.9 - Waste and Recycling utility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>   
+</CustomObject>

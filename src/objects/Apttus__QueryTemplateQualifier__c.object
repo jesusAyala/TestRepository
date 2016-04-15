@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Apttus__SObjectLabel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the object to query</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The object to query</inlineHelpText>
+        <label>Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Agreement</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quote/Proposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Apttus__SObjectType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the type of the object to query.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The object type to query</inlineHelpText>
+        <label>SObject Type</label>
+        <picklist>
+            <controllingField>Apttus__SObjectLabel__c</controllingField>
+            <picklistValues>
+                <fullName>Apttus__APTS_Agreement__c</fullName>
+                <controllingFieldValues>Agreement</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User</fullName>
+                <controllingFieldValues>User</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization</fullName>
+                <controllingFieldValues>Organization</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apttus_Proposal__Proposal__c</fullName>
+                <controllingFieldValues>Quote/Proposal</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+</CustomObject>

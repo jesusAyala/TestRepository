@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <content>ProductTreeSelectionPage</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ABB_Location__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Location lookup added as part of R5-2343.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the Manufacturing, Service or Project Execution unit (Business Activity Location - BAL) that will manufacture products and/or provide services either for installed products and systems or order related system integration including project mgmt.</inlineHelpText>
+        <label>ABB Location - Source Location</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 6 AND 3 AND 7 AND 4 AND 5 AND 8 AND 9</booleanFilter>
+            <filterItems>
+                <field>$Source.Product_Group__c</field>
+                <operation>equals</operation>
+                <valueField>ABB_Location__c.Product_Group_Number__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.BU__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.DIV__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Deleted__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Data_Load_Year__c</field>
+                <operation>notEqual</operation>
+                <value>2015</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.BU__c</field>
+                <operation>notEqual</operation>
+                <value>ZCCO, ZCRE, ZCVA</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.DIV__c</field>
+                <operation>notEqual</operation>
+                <value>ZC</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Activity__c</field>
+                <operation>notEqual</operation>
+                <value>Admin/Corporate, Other, R&amp;D, Warehouse or Logistics, Training</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Activity__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ABB_Location__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Local_Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(PricebookEntry.Product2.RecordType.Name=&apos;Local Products&apos; || PricebookEntry.Product2.RecordType.Name=&apos;Local Hierarchy&apos;,True,False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Local Product?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__Approval_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approval Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CPQ_Quotation_Number__c</fullName>
+        <description>To be filled in upon creation of a quote; can be common for all scope line items in case the quote is created for the opportunity or the quotation number can be on a scope line item basis if a quote is created for a scope line item.</description>
+        <externalId>false</externalId>
+        <label>CPQ Quotation Number</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Values coming from SevIS</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>ICV_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ICV Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Please ensure that an Account of Type &quot;ABB ICV&quot; is selected.</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>ABB ICV</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Transfer_Price__c</fullName>
+        <description>Contains the price for the internal transfer.</description>
+        <externalId>false</externalId>
+        <label>Internal Transfer Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Migration_ID__c</fullName>
+        <description>R5</description>
+        <externalId>true</externalId>
+        <label>Migration ID</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Close Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Opportunity_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Source__c</fullName>
+        <description>ServIS Integration</description>
+        <externalId>false</externalId>
+        <label>Opportunity Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ServIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServISPLAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FIBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offline tool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Product_Group__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R3v1 - Define primary product group for respective opportunity, if it is selected current product group will be mapped to respective opportunity&apos;s PG</description>
+        <externalId>false</externalId>
+        <label>Primary Product Group</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Probability__c</fullName>
+        <description>Opportunity Line Item Probabiltiy - %</description>
+        <externalId>false</externalId>
+        <label>Probability</label>
+        <picklist>
+            <picklistValues>
+                <fullName>10%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>70%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>80%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>90%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100%</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>0%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>R3v1- Captures Product Group</description>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type_Code__c</fullName>
+        <description>Contains unique product codes.</description>
+        <externalId>true</externalId>
+        <label>Product Type Code</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Related_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Related_Product_Group__r.Business_Unit__c</formula>
+        <label>Related Business Unit</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Division__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Related_Product_Group__r.Division__c</formula>
+        <label>Related Division</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Serial_Number__c</fullName>
+        <description>This field will be populated when an Opportunity is created from ServIS</description>
+        <externalId>false</externalId>
+        <label>Serial Number</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServIS_Creator_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>ServIS Creator Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServIS_Opp_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>ServIS Opp Id</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ServIS_Response_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>ServIS Response Feedback</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Site_Id__c</fullName>
+        <description>This field will be populated when an Opportunity is created from ServIS</description>
+        <externalId>false</externalId>
+        <label>Site Id</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Name__c</fullName>
+        <description>This Field will be populated when an opportunity is created from ServIS</description>
+        <externalId>false</externalId>
+        <label>Site Name</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Total_Internal_Transfer_Price__c</fullName>
+        <description>Calculates the total value of the internal transfer price.</description>
+        <externalId>false</externalId>
+        <formula>Quantity *  Internal_Transfer_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Internal Transfer Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <description>R5 Integration</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <validationRules>
+        <fullName>Primary_Product_Selection_Check</fullName>
+        <active>true</active>
+        <description>R4.2 Local products. Primary Product Group should not be TRUE If Is Local Product? is TRUE</description>
+        <errorConditionFormula>IF($Profile.Name =$Label.Label_Sales_Standard_Profile_Name, AND(APTS_Is_Local_Product__c = TRUE, Primary_Product_Group__c = TRUE),FALSE)</errorConditionFormula>
+        <errorMessage>Primary Product Selection is only for Global Products.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Global_Products</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Products</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)}
+
+var Pisurl = &apos;/apex/AddProductsPIS?addTo={!Opportunity.Id}&apos;;
+Pisurl = Pisurl +&apos;&amp;retURL={!Opportunity.Id}&amp;id={!Opportunity.Id}&apos;;
+window.location.href = Pisurl;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Product</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Product</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var Pisurl = &apos;/apex/AddProductsPIS?addTo={!Opportunity.Id}&apos;; 
+Pisurl = Pisurl +&apos;&amp;retURL={!Opportunity.Id}&amp;id={!Opportunity.Id}&apos;;
+var oppclosedate = new Date(&apos;{!Opportunity.CloseDate}&apos;);
+var TodayDate = new Date(&apos;{!Today()}&apos;);
+if(oppclosedate &lt; TodayDate ){
+   alert(&apos;Opportunity expected award date cannot be past date.&apos;);
+}else{   
+      parent.parent.window.location.replace(Pisurl);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Change_Product</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Change Product</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var oppclosedate = new Date(&apos;{!Opportunity.CloseDate}&apos;); 
+var TodayDate = new Date(&apos;{!Today()}&apos;); 
+
+if(&apos;{!OpportunityLineItem.Primary_Product_Group__c}&apos; == true)
+{
+alert(&apos;Please switch the primary line item flag to a different line item before changing the product.&apos;); 
+}
+else{
+if(oppclosedate &lt; TodayDate ) 
+{ 
+alert(&apos;Opportunity expected award date cannot be past date.&apos;); 
+} 
+else 
+{ 
+if(&apos;{!OpportunityLineItem.APTS_Is_Local_Product__c}&apos; == 1)
+{
+var user = sforce.connection.getUserInfo(); 
+var userrec = sforce.connection.query(&quot;SELECT Id, Name, Division_DIV__c FROM user where id =&apos;&quot;+user.userId+&quot;&apos;&quot;); 
+var records = userrec.getArray(&quot;records&quot;); 
+
+if(records[0].Division_DIV__c == &apos;{!$Label.System_UserDivisionEP}&apos;) 
+{ 
+var opporid = &apos;{!Opportunity.Id}&apos;; 
+var Proposalrec = sforce.connection.query(&quot;Select id, APTS_IS_PlaceHolder_Quote__c  from Apttus_Proposal__Proposal__c where APTS_IS_PlaceHolder_Quote__c = True and Apttus_Proposal__Opportunity__c =&apos;&quot;+opporid+&quot;&apos; limit 1&quot;); 
+var recs = Proposalrec.getArray(&quot;records&quot;); 
+if(recs != null &amp;&amp; recs.length &gt;0)
+{
+var quoteid = recs[0].Id;
+var ProdSeltnurl = &apos;/apex/Apttus_QPConfig__ProposalConfiguration?id=&apos;+quoteid+&apos;&amp;useAdvancedApproval=true&amp;flow=LocalProducts&apos;; 
+parent.parent.window.location.replace(ProdSeltnurl); 
+}
+else
+{
+alert(&apos;Apttus PlaceHolder Quote not available for this Opportunity.&apos;); 
+}
+} 
+else 
+{ 
+alert(&apos;Only LP users can modify this Opportunity Product, please contact your Opportunity owner.&apos;); 
+} 
+
+}
+else
+{
+var pisediturl = &apos;/apex/EditProductsPIS?id={!OpportunityLineItem.Id}&apos;; 
+parent.parent.window.location.replace(pisediturl); 
+}
+
+}
+}</url>
+    </webLinks>
+</CustomObject>

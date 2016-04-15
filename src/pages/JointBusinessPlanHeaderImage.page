@@ -1,0 +1,75 @@
+<apex:page id="page" standardcontroller="Joint_Business_Plan__c" showHeader="false" sidebar="false">
+    
+    <style> 
+        .graphic{
+            width:100%;
+            height:20px;
+            color:#000;
+            font-weight:bold;
+            font-size:12px;
+            border-radius:20px;
+            -moz-border-radius:20px;
+            text-align:center;
+            line-height:20px;
+            /* text-shadow: -1px 0px #333;
+            box-shadow: 2px 2px 5px #ccc; */
+            position:relative;
+        }
+        .red{
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 0%, #cc4646 58%, #9e2323 90%, #d60000 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(58%,#cc4646), color-stop(90%,#9e2323), color-stop(100%,#d60000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#cc4646 58%,#9e2323 90%,#d60000 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 0%,#cc4646 58%,#9e2323 90%,#d60000 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 0%,#cc4646 58%,#9e2323 90%,#d60000 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 0%,#cc4646 58%,#9e2323 90%,#d60000 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d60000',GradientType=0 ); /* IE6-9 */
+        }
+        .orange{
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 0%, #c98032 58%, #cc6f3d 90%, #d88500 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(58%,#c98032), color-stop(90%,#cc6f3d), color-stop(100%,#d88500)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#c98032 58%,#cc6f3d 90%,#d88500 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 0%,#c98032 58%,#cc6f3d 90%,#d88500 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 0%,#c98032 58%,#cc6f3d 90%,#d88500 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 0%,#c98032 58%,#cc6f3d 90%,#d88500 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d88500',GradientType=0 ); /* IE6-9 */
+        }
+        .green{
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 0%, #47cc62 58%, #249c3c 90%, #007f0c 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(58%,#47cc62), color-stop(90%,#249c3c), color-stop(100%,#007f0c)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#47cc62 58%,#249c3c 90%,#007f0c 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 0%,#47cc62 58%,#249c3c 90%,#007f0c 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 0%,#47cc62 58%,#249c3c 90%,#007f0c 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 0%,#47cc62 58%,#249c3c 90%,#007f0c 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#007f0c',GradientType=0 ); /* IE6-9 */
+        }
+        .grey{
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 0%, #5e5e5e 58%, #94948e 90%, #bababa 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(58%,#5e5e5e), color-stop(90%,#94948e), color-stop(100%,#bababa)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#5e5e5e 58%,#94948e 90%,#bababa 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 0%,#5e5e5e 58%,#94948e 90%,#bababa 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 0%,#5e5e5e 58%,#94948e 90%,#bababa 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 0%,#5e5e5e 58%,#94948e 90%,#bababa 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bababa',GradientType=0 ); /* IE6-9 */
+            color:#333 !important;
+            text-shadow:0px 0px 0px #333 !important;
+        }
+        .yellow{
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 0%, #f5e31e 58%, #e1e817 90%, #ba9e00 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(58%,#f5e31e), color-stop(90%,#e1e817), color-stop(100%,#ba9e00)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#f5e31e 58%,#e1e817 90%,#ba9e00 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 0%,#f5e31e 58%,#e1e817 90%,#ba9e00 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 0%,#f5e31e 58%,#e1e817 90%,#ba9e00 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 0%,#f5e31e 58%,#e1e817 90%,#ba9e00 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ba9e00',GradientType=0 ); /* IE6-9 */
+        }
+    </style>
+   <!--  <div class="graphic yellow">{!$Label.GIS_Update_in_Progress}</div> -->  
+    <apex:outputPanel id="outputPanel" layout="block" styleClass="graphic yellow" >{!$Label.JointBusinessPlanHeaderMessage}</apex:outputPanel>
+    <!--<apex:outputPanel rendered="{!IF(Joint_Business_Plan__c.Status__c=$Label.JBP_Status_Closed,'TRUE','FALSE')}" layout="block" styleClass="graphic yellow" >{!$Label.JointBusinessPlanHeaderMessage}</apex:outputPanel>
+    <apex:outputPanel rendered="{!IF(AND(Account.Company_Status__c='Changed',Account.Active__c =false ),'TRUE','FALSE')}" layout="block" styleClass="graphic yellow" >{!$Label.Pending_GIS_Deactivation}</apex:outputPanel> -->
+</apex:page>

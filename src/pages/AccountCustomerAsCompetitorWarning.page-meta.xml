@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Created as part of R5-2347 to display a warning message on Opportunity record whenever the user tries to set the current Account Customer or  as the Opportunity Winner</description>
+    <label>AccountCustomerAsCompetitorWarning</label>
+</ApexPage>

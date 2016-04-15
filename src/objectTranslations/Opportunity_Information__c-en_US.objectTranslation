@@ -1,0 +1,3849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Information</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Information</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account End User --></label>
+        <name>Account_End_User_m__c</name>
+        <relationshipLabel><!-- Opportunity Information (Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Customer --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Opportunity Information --></relationshipLabel>
+    </fields>
+        <fields>
+	<label><!-- Industry Usage Level1 --></label>
+        <name>ABB_Industry_Usage_Level1__c</name>
+        <picklistValues>
+            <masterLabel>BLD</masterLabel>
+            <translation>BLD - Building</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND</masterLabel>
+            <translation>IND - Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA</masterLabel>
+            <translation>TRA - Transport and Transportation Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation>UT - Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY</masterLabel>
+            <translation>XY - Usage unknown</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry Usage Level2 --></label>
+        <name>ABB_Industry_Usage_Level2__c</name>
+        <picklistValues>
+            <masterLabel>BLD.10</masterLabel>
+            <translation>BLD.10 - Industrial Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.8</masterLabel>
+            <translation>BLD.8 - Residential Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9</masterLabel>
+            <translation>BLD.9 - Commercial &amp; institutional Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1</masterLabel>
+            <translation>IND.1 - Automotive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10</masterLabel>
+            <translation>IND.10 - Mining and Minerals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11</masterLabel>
+            <translation>IND.11 - Cement and Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12</masterLabel>
+            <translation>IND.12 - Oil and Gas Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.13</masterLabel>
+            <translation>IND.13 - Pharmaceutical and Cosmetics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.14</masterLabel>
+            <translation>IND.14 - Pulp and Paper</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15</masterLabel>
+            <translation>IND.15 - Rubber and Plastics Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16</masterLabel>
+            <translation>IND.16 - Other Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17</masterLabel>
+            <translation>IND.17 - Agriculture and Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18</masterLabel>
+            <translation>IND.18 - Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2</masterLabel>
+            <translation>IND.2 - Chemical</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.3</masterLabel>
+            <translation>IND.3 - Petrochemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4</masterLabel>
+            <translation>IND.4 - Food and Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5</masterLabel>
+            <translation>IND.5 - Printing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.6</masterLabel>
+            <translation>IND.6 - Textile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7</masterLabel>
+            <translation>IND.7 - Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8</masterLabel>
+            <translation>IND.8 - Electronics and Semiconductors (3C)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9</masterLabel>
+            <translation>IND.9 - Manufacturing of Machinery and Electrical Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1</masterLabel>
+            <translation>TRA.1 - Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2</masterLabel>
+            <translation>TRA.2 - Railway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3</masterLabel>
+            <translation>TRA.3 - Air Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4</masterLabel>
+            <translation>TRA.4 - Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5</masterLabel>
+            <translation>TRA.5 - Land Transport Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.6</masterLabel>
+            <translation>TRA.6 - E-Vehicle Charging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1</masterLabel>
+            <translation>UT.1 - Electric Utility - Power Generation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.2</masterLabel>
+            <translation>UT.2 - Electric Distribution</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.3</masterLabel>
+            <translation>UT.3 - Electric Transmission</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4</masterLabel>
+            <translation>UT.4 - Water and Wastewater</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.5</masterLabel>
+            <translation>UT.5 - Gas Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.7</masterLabel>
+            <translation>UT.7 - Other Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1</masterLabel>
+            <translation>XY.1 - End Usage Unknown</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry Usage Level3 --></label>
+        <name>ABB_Industry_Usage_Level3__c</name>
+        <picklistValues>
+            <masterLabel>BLD.10.1</masterLabel>
+            <translation>BLD.10.1 - HVAC (Industrial Buildings)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9.1</masterLabel>
+            <translation>BLD.9.1 - HVAC (Commercial Buildings)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.1</masterLabel>
+            <translation>IND.1.1 - Automotive (Vehicles - OEM)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.2</masterLabel>
+            <translation>IND.1.2 - Automotives (Parts - Tier1)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.2</masterLabel>
+            <translation>IND.10.2 - Underground Mining including Hoisting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.3</masterLabel>
+            <translation>IND.10.3 - Open Pit Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.4</masterLabel>
+            <translation>IND.10.4 - Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.5</masterLabel>
+            <translation>IND.10.5 - Mineral Processing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.1</masterLabel>
+            <translation>IND.11.1 - Cement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.2</masterLabel>
+            <translation>IND.11.2 - Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.1</masterLabel>
+            <translation>IND.12.1 - Oil and Gas - Offshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.2</masterLabel>
+            <translation>IND.12.2 - Oil and Gas - Onshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.3</masterLabel>
+            <translation>IND.12.3 - Refining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.4</masterLabel>
+            <translation>IND.12.4 - Oil and Gas - Midstream and Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.7</masterLabel>
+            <translation>IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15.10</masterLabel>
+            <translation>IND.15.10 - Plastics and Rubber (General Industry)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.1</masterLabel>
+            <translation>IND.16.1 - Sawmill Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.2</masterLabel>
+            <translation>IND.16.2 - Recreation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.3</masterLabel>
+            <translation>IND.16.3 - Other Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.3.4</masterLabel>
+            <translation>IND.16.3.4 - Waste and Recycling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.1</masterLabel>
+            <translation>IND.17.1 - Agriculture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.10</masterLabel>
+            <translation>IND.17.10 - Agriculture, Hunting and Forestry; Fishing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.11</masterLabel>
+            <translation>IND.17.11 - Wood, Products of Wood and Cork</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.2</masterLabel>
+            <translation>IND.17.2 - Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.3</masterLabel>
+            <translation>IND.17.3 - Irrigation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.1</masterLabel>
+            <translation>IND.18.1 - AC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.2</masterLabel>
+            <translation>IND.18.2 - DC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2.12</masterLabel>
+            <translation>IND.2.12 - Chemical Intermediates</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2.13</masterLabel>
+            <translation>IND.2.13 - Consumer and Fine Chemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.1</masterLabel>
+            <translation>IND.4.1 - Ingredients</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.2</masterLabel>
+            <translation>IND.4.2 - Sugar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.3</masterLabel>
+            <translation>IND.4.3 - Bakery &amp; Confectionery</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.4</masterLabel>
+            <translation>IND.4.4 - Fruit &amp; Vegetables</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.5</masterLabel>
+            <translation>IND.4.5 - Dairy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.6</masterLabel>
+            <translation>IND.4.6 - Meat, Poultry, Seafood</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.7</masterLabel>
+            <translation>IND.4.7 - Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.8</masterLabel>
+            <translation>IND.4.8 - Other Food &amp; Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5.10</masterLabel>
+            <translation>IND.5.10 - Paper and Paper Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.1</masterLabel>
+            <translation>IND.7.1 - Aluminium</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.2</masterLabel>
+            <translation>IND.7.2 - Steel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.3</masterLabel>
+            <translation>IND.7.3 - Other Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8.1</masterLabel>
+            <translation>IND.8.1 - Consumer Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.1</masterLabel>
+            <translation>IND.9.1 - Foundry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.10</masterLabel>
+            <translation>IND.9.10 - Manufacturing of HVAC Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.11</masterLabel>
+            <translation>IND.9.11 - Manufacturing of Refrigeration Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.12</masterLabel>
+            <translation>IND.9.12 - Manufacturing of Gen Set / Turbines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.13</masterLabel>
+            <translation>IND.9.13 - Manufacturing of Generators</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.14</masterLabel>
+            <translation>IND.9.14 - Manufacturing of ATS (Automatic Transfer Switch)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.15</masterLabel>
+            <translation>IND.9.15 - Manufacturing of Drives</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.2</masterLabel>
+            <translation>IND.9.2 - Machine Tools</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.3</masterLabel>
+            <translation>IND.9.3 - Material Handling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.3.2</masterLabel>
+            <translation>IND.9.3.2 - Logistics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.4</masterLabel>
+            <translation>IND.9.4 - Manufacturing of Pumps</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.5</masterLabel>
+            <translation>IND.9.5 - Manufacturing of Compressors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.6</masterLabel>
+            <translation>IND.9.6 - Manufacturing of UPS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.7</masterLabel>
+            <translation>IND.9.7 - Manufacturing of Solar Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.8</masterLabel>
+            <translation>IND.9.8 - Manufacturing of Wind Turbines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.9</masterLabel>
+            <translation>IND.9.9 - Manufacturing of Electrical Vehicle Charger</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.3</masterLabel>
+            <translation>TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.4</masterLabel>
+            <translation>TRA.1.4 - Cruise and Ferry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.6</masterLabel>
+            <translation>TRA.1.6 - Other Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.7</masterLabel>
+            <translation>TRA.1.7 - Oil and Gas Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.8</masterLabel>
+            <translation>TRA.1.8 - Merchant Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.9</masterLabel>
+            <translation>TRA.1.9 - Naval (military) Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.1</masterLabel>
+            <translation>TRA.2.1 - Railway Rolling Stock</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.2</masterLabel>
+            <translation>TRA.2.2 - Railway AC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.3</masterLabel>
+            <translation>TRA.2.3 - Railway DC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3.1</masterLabel>
+            <translation>TRA.3.1 - Airport Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4.1</masterLabel>
+            <translation>TRA.4.1 - Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5.1</masterLabel>
+            <translation>TRA.5.1 - Bridge,Tunnel and Highway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.1</masterLabel>
+            <translation>UT.1.1 - Power Generation - Gas/Oil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.10</masterLabel>
+            <translation>UT.1.10 - Power Generation - Oil/Diesel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.11</masterLabel>
+            <translation>UT.1.11 - Power Generation - Waste to Energy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.12</masterLabel>
+            <translation>UT.1.12 - Power Generation - Wind (on shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.3</masterLabel>
+            <translation>UT.1.3 - Power Generation - Nuclear</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.4</masterLabel>
+            <translation>UT.1.4 - Power Generation - Hydro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.5</masterLabel>
+            <translation>UT.1.5 - Power Generation - Wind (off shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.6</masterLabel>
+            <translation>UT.1.6 - Power Generation - Solar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.7</masterLabel>
+            <translation>UT.1.7 - Power Generation - Biomass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.8</masterLabel>
+            <translation>UT.1.8 - Power Generation - Coal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.9</masterLabel>
+            <translation>UT.1.9 - Power Generation - Other Sources</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.1</masterLabel>
+            <translation>UT.4.1 - Water Desalination</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.2</masterLabel>
+            <translation>UT.4.2 - Water Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.3</masterLabel>
+            <translation>UT.4.3 - Water Distribution</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.4</masterLabel>
+            <translation>UT.4.4 - Water Treatment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.5</masterLabel>
+            <translation>UT.4.5 - Wastewater Treatment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.6</masterLabel>
+            <translation>UT.4.6 - Water and Wastewater - Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1.1</masterLabel>
+            <translation>XY.1.1 - Stock order</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+        <picklistValues>
+            <masterLabel>AP.301 Automatic Gate, Beam, Barrier or Door</masterLabel>
+            <translation><!-- AP.301 Automatic Gate, Beam, Barrier or Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.302 Cable Car - Ski Lift</masterLabel>
+            <translation><!-- AP.302 Cable Car - Ski Lift --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.303 Calander Line</masterLabel>
+            <translation><!-- AP.303 Calander Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.304 Centrifuge</masterLabel>
+            <translation><!-- AP.304 Centrifuge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.305 Coating Machine</masterLabel>
+            <translation><!-- AP.305 Coating Machine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.306 Compressor</masterLabel>
+            <translation><!-- AP.306 Compressor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.307 Conveyer</masterLabel>
+            <translation><!-- AP.307 Conveyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.308 Crusher</masterLabel>
+            <translation><!-- AP.308 Crusher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.309 Cutting, Shear, Saw</masterLabel>
+            <translation><!-- AP.309 Cutting, Shear, Saw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.310 Drilling</masterLabel>
+            <translation><!-- AP.310 Drilling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.311 Drum</masterLabel>
+            <translation><!-- AP.311 Drum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.313 Elevator or Lift</masterLabel>
+            <translation><!-- AP.313 Elevator or Lift --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.314 Extruder</masterLabel>
+            <translation><!-- AP.314 Extruder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.315 Fan</masterLabel>
+            <translation><!-- AP.315 Fan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.316 Flat Rolling Machine</masterLabel>
+            <translation><!-- AP.316 Flat Rolling Machine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.317 Grinding</masterLabel>
+            <translation><!-- AP.317 Grinding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.318 Household Machinery or Equipment</masterLabel>
+            <translation><!-- AP.318 Household Machinery or Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.319 Hydro Turbine</masterLabel>
+            <translation><!-- AP.319 Hydro Turbine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.320 Induction Heating</masterLabel>
+            <translation><!-- AP.320 Induction Heating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.321 Kiln</masterLabel>
+            <translation><!-- AP.321 Kiln --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.322 Machine Tools</masterLabel>
+            <translation><!-- AP.322 Machine Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.323 Mixer, Stirrer</masterLabel>
+            <translation><!-- AP.323 Mixer, Stirrer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.324 Packaging Machine</masterLabel>
+            <translation><!-- AP.324 Packaging Machine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.325 Paper Machine</masterLabel>
+            <translation><!-- AP.325 Paper Machine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.326 Partner/Distributor Stock</masterLabel>
+            <translation><!-- AP.326 Partner/Distributor Stock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.327 Power Electronics</masterLabel>
+            <translation><!-- AP.327 Power Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.328 Processing Line</masterLabel>
+            <translation><!-- AP.328 Processing Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.329 Profile Rolling</masterLabel>
+            <translation><!-- AP.329 Profile Rolling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.330 Propulsion</masterLabel>
+            <translation><!-- AP.330 Propulsion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.331 Pump</masterLabel>
+            <translation><!-- AP.331 Pump --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.332 Roller Table</masterLabel>
+            <translation><!-- AP.332 Roller Table --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.333 Rolling Mill</masterLabel>
+            <translation><!-- AP.333 Rolling Mill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.334 Separator</masterLabel>
+            <translation><!-- AP.334 Separator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.335 Solar Tracker</masterLabel>
+            <translation><!-- AP.335 Solar Tracker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.336 Solar, Commercial or Industrial Use</masterLabel>
+            <translation><!-- AP.336 Solar, Commercial or Industrial Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.337 Solar, Large Power Plant</masterLabel>
+            <translation><!-- AP.337 Solar, Large Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.338 Solar, Residential Use</masterLabel>
+            <translation><!-- AP.338 Solar, Residential Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.339 Spinning</masterLabel>
+            <translation><!-- AP.339 Spinning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.340 Testbench</masterLabel>
+            <translation><!-- AP.340 Testbench --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.341 Thruster</masterLabel>
+            <translation><!-- AP.341 Thruster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.342 Winch</masterLabel>
+            <translation><!-- AP.342 Winch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.343 Winder</masterLabel>
+            <translation><!-- AP.343 Winder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.344 Wind Turbine</masterLabel>
+            <translation><!-- AP.344 Wind Turbine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.345 Yaw System</masterLabel>
+            <translation><!-- AP.345 Yaw System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.346 Robotics Applications</masterLabel>
+            <translation><!-- AP.346 Robotics Applications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.347 Crane</masterLabel>
+            <translation><!-- AP.347 Crane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.348 Electric Vehicle</masterLabel>
+            <translation><!-- AP.348 Electric Vehicle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.349 Printing Machine</masterLabel>
+            <translation><!-- AP.349 Printing Machine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.350 Recreational and Sports Equipment</masterLabel>
+            <translation><!-- AP.350 Recreational and Sports Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.351 Other Application</masterLabel>
+            <translation><!-- AP.351 Other Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.352 Gas Turbine</masterLabel>
+            <translation><!-- AP.352 Gas Turbine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.353 Steam Turbine</masterLabel>
+            <translation><!-- AP.353 Steam Turbine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.354 Diesel or Gas Engines (Reciprocating)</masterLabel>
+            <translation><!-- AP.354 Diesel or Gas Engines (Reciprocating) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.355 Electric Vehicle Charger</masterLabel>
+            <translation><!-- AP.355 Electric Vehicle Charger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.356 Fuel Cells</masterLabel>
+            <translation><!-- AP.356 Fuel Cells --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.357 Tidal or River Turbine</masterLabel>
+            <translation><!-- AP.357 Tidal or River Turbine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.358 UPS</masterLabel>
+            <translation><!-- AP.358 UPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.359 Power Quality</masterLabel>
+            <translation><!-- AP.359 Power Quality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.360 High Power Rectifier</masterLabel>
+            <translation><!-- AP.360 High Power Rectifier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.361 Excitation and Synchronizing</masterLabel>
+            <translation><!-- AP.361 Excitation and Synchronizing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.362 DC Wayside Equipment</masterLabel>
+            <translation><!-- AP.362 DC Wayside Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.363 Traction Propulsion or Auxiliary Converter</masterLabel>
+            <translation><!-- AP.363 Traction Propulsion or Auxiliary Converter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.364 Battery Energy Storage</masterLabel>
+            <translation><!-- AP.364 Battery Energy Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.365 Pumped Hydro Energy Storage</masterLabel>
+            <translation><!-- AP.365 Pumped Hydro Energy Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.366 Shore to Ship</masterLabel>
+            <translation><!-- AP.366 Shore to Ship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.367 Rail Intertie</masterLabel>
+            <translation><!-- AP.367 Rail Intertie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.368 Statcom</masterLabel>
+            <translation><!-- AP.368 Statcom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.369 Static Frequency Conversion</masterLabel>
+            <translation><!-- AP.369 Static Frequency Conversion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.370 HVAC</masterLabel>
+            <translation><!-- AP.370 HVAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.401 Assembling</masterLabel>
+            <translation><!-- AP.401 Assembling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.401 Assembly</masterLabel>
+            <translation><!-- AP.401 Assembly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.402 Mounting</masterLabel>
+            <translation><!-- AP.402 Mounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.403 Inserting</masterLabel>
+            <translation><!-- AP.403 Inserting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.404 Painting</masterLabel>
+            <translation><!-- AP.404 Painting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.405 Enamelling</masterLabel>
+            <translation><!-- AP.405 Enamelling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.406 Sealing</masterLabel>
+            <translation><!-- AP.406 Sealing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.407 Gluing</masterLabel>
+            <translation><!-- AP.407 Gluing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.408 Spraying</masterLabel>
+            <translation><!-- AP.408 Spraying --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.409 Dispensing</masterLabel>
+            <translation><!-- AP.409 Dispensing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.409 Other Dispensing</masterLabel>
+            <translation><!-- AP.409 Other Dispensing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.410 Inspection</masterLabel>
+            <translation><!-- AP.410 Inspection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.411 Forging</masterLabel>
+            <translation><!-- AP.411 Forging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.412 Stamping</masterLabel>
+            <translation><!-- AP.412 Stamping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.413 Pressing</masterLabel>
+            <translation><!-- AP.413 Pressing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.414 Machine Tool</masterLabel>
+            <translation><!-- AP.414 Machine Tool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.415 Metal Casting</masterLabel>
+            <translation><!-- AP.415 Metal Casting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.416 Plastic Moulding</masterLabel>
+            <translation><!-- AP.416 Plastic Moulding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.417 Material Handling</masterLabel>
+            <translation><!-- AP.417 Material Handling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.418 New Application</masterLabel>
+            <translation><!-- AP.418 New Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.418 Robot Application</masterLabel>
+            <translation><!-- AP.418 Robot Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.419 Packing</masterLabel>
+            <translation><!-- AP.419 Packing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.420 Palletizing</masterLabel>
+            <translation><!-- AP.420 Palletizing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.421 Picking/Placing</masterLabel>
+            <translation><!-- AP.421 Picking/Placing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.422 Laser Cutting</masterLabel>
+            <translation><!-- AP.422 Laser Cutting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.423 Mechanical Cutting</masterLabel>
+            <translation><!-- AP.423 Mechanical Cutting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.424 Deburring</masterLabel>
+            <translation><!-- AP.424 Deburring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.425 Grinding</masterLabel>
+            <translation><!-- AP.425 Grinding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.426 Finishing/Polishing</masterLabel>
+            <translation><!-- AP.426 Finishing/Polishing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.427 Trimming</masterLabel>
+            <translation><!-- AP.427 Trimming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.428 Other Removal</masterLabel>
+            <translation><!-- AP.428 Other Removal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.428 Removal</masterLabel>
+            <translation><!-- AP.428 Removal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.429 Waterjet Cutting</masterLabel>
+            <translation><!-- AP.429 Waterjet Cutting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.430 Arc Welding</masterLabel>
+            <translation><!-- AP.430 Arc Welding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.431 Laser Welding</masterLabel>
+            <translation><!-- AP.431 Laser Welding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.432 Soldering</masterLabel>
+            <translation><!-- AP.432 Soldering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.433 Other Welding</masterLabel>
+            <translation><!-- AP.433 Other Welding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.433 Welding</masterLabel>
+            <translation><!-- AP.433 Welding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.434 Spot Welding</masterLabel>
+            <translation><!-- AP.434 Spot Welding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.435 Plasma Cutting</masterLabel>
+            <translation><!-- AP.435 Plasma Cutting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.436 Flame Treatment</masterLabel>
+            <translation><!-- AP.436 Flame Treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.437 Industrial Service</masterLabel>
+            <translation><!-- AP.437 Industrial Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.441 Service</masterLabel>
+            <translation><!-- AP.441 Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.442 Machine Tending</masterLabel>
+            <translation><!-- AP.442 Machine Tending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.443 Stud Welding</masterLabel>
+            <translation><!-- AP.443 Stud Welding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.444 Hemming</masterLabel>
+            <translation><!-- AP.444 Hemming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.445 Clinching</masterLabel>
+            <translation><!-- AP.445 Clinching --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.446 Washing</masterLabel>
+            <translation><!-- AP.446 Washing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.500 Semi Sub&apos;s, Drill Ships and Well Intervention</masterLabel>
+            <translation><!-- AP.500 Semi Sub&apos;s, Drill Ships and Well Intervention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.501 Jack Up Drilling Rigs</masterLabel>
+            <translation><!-- AP.501 Jack Up Drilling Rigs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.502 Tugs</masterLabel>
+            <translation><!-- AP.502 Tugs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.503 Offshore Supply Vessel</masterLabel>
+            <translation><!-- AP.503 Offshore Supply Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.504 Liquified Natural Gas</masterLabel>
+            <translation><!-- AP.504 Liquified Natural Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.505 Tankers</masterLabel>
+            <translation><!-- AP.505 Tankers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.506 Cruise</masterLabel>
+            <translation><!-- AP.506 Cruise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.507 Ferries</masterLabel>
+            <translation><!-- AP.507 Ferries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.508 Yachts</masterLabel>
+            <translation><!-- AP.508 Yachts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.509 Ice Breakers and Ice Breaking OSV</masterLabel>
+            <translation><!-- AP.509 Ice Breakers and Ice Breaking OSV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.510 Container Vessel</masterLabel>
+            <translation><!-- AP.510 Container Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.511 Dredgers</masterLabel>
+            <translation><!-- AP.511 Dredgers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.512 Heavy Lift Carrier</masterLabel>
+            <translation><!-- AP.512 Heavy Lift Carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.513 Offshore Construction Vessel</masterLabel>
+            <translation><!-- AP.513 Offshore Construction Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.514 Windmill Installation Vessel</masterLabel>
+            <translation><!-- AP.514 Windmill Installation Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.515 Navy and Research Vessel</masterLabel>
+            <translation><!-- AP.515 Navy and Research Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.516 Bulkers</masterLabel>
+            <translation><!-- AP.516 Bulkers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.517 Rubber Tyred Gantry Crane (RTG)</masterLabel>
+            <translation><!-- AP.517 Rubber Tyred Gantry Crane (RTG) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.518 Ship to Shore Crane (STS)</masterLabel>
+            <translation><!-- AP.518 Ship to Shore Crane (STS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.519 Grab Ship Unloader (GSU)</masterLabel>
+            <translation><!-- AP.519 Grab Ship Unloader (GSU) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.520 Slewing Cranes (SLW)</masterLabel>
+            <translation><!-- AP.520 Slewing Cranes (SLW) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.521 Rail Mounted Railway Crane (RMRC)</masterLabel>
+            <translation><!-- AP.521 Rail Mounted Railway Crane (RMRC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.522 Slab Handling Crane</masterLabel>
+            <translation><!-- AP.522 Slab Handling Crane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.523 Multi Purpose Crane (MPC)</masterLabel>
+            <translation><!-- AP.523 Multi Purpose Crane (MPC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.524 Rail Mounted Gantry Cranes (RMG)</masterLabel>
+            <translation><!-- AP.524 Rail Mounted Gantry Cranes (RMG) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.525 Auto Rail Mounted Gantry Cranes (ARMG)</masterLabel>
+            <translation><!-- AP.525 Auto Rail Mounted Gantry Cranes (ARMG) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.526 Automatic Stacking Cranes (ASC)</masterLabel>
+            <translation><!-- AP.526 Automatic Stacking Cranes (ASC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.527 Ship Yard Crane (SYG)</masterLabel>
+            <translation><!-- AP.527 Ship Yard Crane (SYG) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.528 Electric Overhead Traveling Crane (EOT)</masterLabel>
+            <translation><!-- AP.528 Electric Overhead Traveling Crane (EOT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.529 Double Trolley Ship to Shore Crane</masterLabel>
+            <translation><!-- AP.529 Double Trolley Ship to Shore Crane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.530 Double Hoist Ship to Shore Cranes</masterLabel>
+            <translation><!-- AP.530 Double Hoist Ship to Shore Cranes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.531 Doubble Hoist / Doubble Trolley Ship to Shore Cranes</masterLabel>
+            <translation><!-- AP.531 Doubble Hoist / Doubble Trolley Ship to Shore Cranes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.532 Barge Feeder Crane (BFCr)</masterLabel>
+            <translation><!-- AP.532 Barge Feeder Crane (BFCr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.533 Continuous Ship Unloader (CSLr)</masterLabel>
+            <translation><!-- AP.533 Continuous Ship Unloader (CSLr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.534 Level Luffing Crane (LLCr)</masterLabel>
+            <translation><!-- AP.534 Level Luffing Crane (LLCr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.535 Ship Board Gantry Crane (SBGr)</masterLabel>
+            <translation><!-- AP.535 Ship Board Gantry Crane (SBGr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.536 Ship Loader (SLr)</masterLabel>
+            <translation><!-- AP.536 Ship Loader (SLr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.537 Floating Slewing Crane (FSLr)</masterLabel>
+            <translation><!-- AP.537 Floating Slewing Crane (FSLr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.538 Stacker Reclaimer (SRr)</masterLabel>
+            <translation><!-- AP.538 Stacker Reclaimer (SRr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.539 EPG Baseload</masterLabel>
+            <translation><!-- AP.539 EPG Baseload --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.540 EPG Industrial</masterLabel>
+            <translation><!-- AP.540 EPG Industrial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.541 EPG Back-up</masterLabel>
+            <translation><!-- AP.541 EPG Back-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.542 EPG Stand-by</masterLabel>
+            <translation><!-- AP.542 EPG Stand-by --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.543 Nuclear</masterLabel>
+            <translation><!-- AP.543 Nuclear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.544 Bio Gas</masterLabel>
+            <translation><!-- AP.544 Bio Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.545 Waste Gas</masterLabel>
+            <translation><!-- AP.545 Waste Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.546 Off Highway Trucks</masterLabel>
+            <translation><!-- AP.546 Off Highway Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.547 Gas Compression</masterLabel>
+            <translation><!-- AP.547 Gas Compression --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.548 Auxiliaries</masterLabel>
+            <translation><!-- AP.548 Auxiliaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.549 Coastal and River Shipping</masterLabel>
+            <translation><!-- AP.549 Coastal and River Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.550 Long Haul Locos</masterLabel>
+            <translation><!-- AP.550 Long Haul Locos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.551 Shunting Locos</masterLabel>
+            <translation><!-- AP.551 Shunting Locos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.552 Onshore Drilling</masterLabel>
+            <translation><!-- AP.552 Onshore Drilling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.553 Multi Purpose Support/Diving/Remotely Operated Vessel</masterLabel>
+            <translation><!-- AP.553 Multi Purpose Support/Diving/Remotely Operated Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.554 Accommodation Ship</masterLabel>
+            <translation><!-- AP.554 Accommodation Ship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.555 Heavy Construction and Installation Vessel</masterLabel>
+            <translation><!-- AP.555 Heavy Construction and Installation Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.556 Pipe Layer/Cable Layer</masterLabel>
+            <translation><!-- AP.556 Pipe Layer/Cable Layer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.557 Floating, Storage and Offloading Unit</masterLabel>
+            <translation><!-- AP.557 Floating, Storage and Offloading Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.558 Floating, Production, Storage and Offloading</masterLabel>
+            <translation><!-- AP.558 Floating, Production, Storage and Offloading --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.559 Floating, Storage and Regasification Unit</masterLabel>
+            <translation><!-- AP.559 Floating, Storage and Regasification Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.560 Platform Supply Vessel</masterLabel>
+            <translation><!-- AP.560 Platform Supply Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.561 Anchor Handling Tug and Supply Vessel</masterLabel>
+            <translation><!-- AP.561 Anchor Handling Tug and Supply Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.562 Emergency Response and Rescue Vessel</masterLabel>
+            <translation><!-- AP.562 Emergency Response and Rescue Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.563 Other Support Vessel</masterLabel>
+            <translation><!-- AP.563 Other Support Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.564 Jack-Up</masterLabel>
+            <translation><!-- AP.564 Jack-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.565 Semi-Sub</masterLabel>
+            <translation><!-- AP.565 Semi-Sub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.566 Drillship</masterLabel>
+            <translation><!-- AP.566 Drillship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.567 Well Intervention</masterLabel>
+            <translation><!-- AP.567 Well Intervention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.568 Seismic/Geophysical Survey Vessel</masterLabel>
+            <translation><!-- AP.568 Seismic/Geophysical Survey Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.569 Hydrographic/Oceanographic Vessel</masterLabel>
+            <translation><!-- AP.569 Hydrographic/Oceanographic Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.570 Cruise Liner</masterLabel>
+            <translation><!-- AP.570 Cruise Liner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.571 Road Ferry (Double Ended)</masterLabel>
+            <translation><!-- AP.571 Road Ferry (Double Ended) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.572 RO-PAX</masterLabel>
+            <translation><!-- AP.572 RO-PAX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.573 Fast Ferry</masterLabel>
+            <translation><!-- AP.573 Fast Ferry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.574 Yacht</masterLabel>
+            <translation><!-- AP.574 Yacht --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.575 Bulk Carrier</masterLabel>
+            <translation><!-- AP.575 Bulk Carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.576 Container Carrier</masterLabel>
+            <translation><!-- AP.576 Container Carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.577 LNG carrier</masterLabel>
+            <translation><!-- AP.577 LNG carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.578 LPG carrier</masterLabel>
+            <translation><!-- AP.578 LPG carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.579 Crude Oil Tanker</masterLabel>
+            <translation><!-- AP.579 Crude Oil Tanker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.580 Product/Chemical Tanker</masterLabel>
+            <translation><!-- AP.580 Product/Chemical Tanker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.581 Shuttle Tanker</masterLabel>
+            <translation><!-- AP.581 Shuttle Tanker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.582 Multipurpose/General Cargo</masterLabel>
+            <translation><!-- AP.582 Multipurpose/General Cargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.583 RORO/Pure Car Carrier</masterLabel>
+            <translation><!-- AP.583 RORO/Pure Car Carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.584 Dredger</masterLabel>
+            <translation><!-- AP.584 Dredger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.585 Fishing Vessel</masterLabel>
+            <translation><!-- AP.585 Fishing Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.586 Icebreaker</masterLabel>
+            <translation><!-- AP.586 Icebreaker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.587 Tug</masterLabel>
+            <translation><!-- AP.587 Tug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.588 Heavy Lift</masterLabel>
+            <translation><!-- AP.588 Heavy Lift --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.589 Other Vessel</masterLabel>
+            <translation><!-- AP.589 Other Vessel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.600 Microgrid</masterLabel>
+            <translation><!-- AP.600 Microgrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.601 Communication for Mining</masterLabel>
+            <translation><!-- AP.601 Communication for Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.602 Communication for Oil &amp; Gas</masterLabel>
+            <translation><!-- AP.602 Communication for Oil &amp; Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.603 Communication for Transportation</masterLabel>
+            <translation><!-- AP.603 Communication for Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.604 Communication for Electricity Distribution</masterLabel>
+            <translation><!-- AP.604 Communication for Electricity Distribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.605 Communication for Electricity Transmission</masterLabel>
+            <translation><!-- AP.605 Communication for Electricity Transmission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.606 Communication - General</masterLabel>
+            <translation><!-- AP.606 Communication - General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.607 Enterprise Software for Chemicals &amp; Refining</masterLabel>
+            <translation><!-- AP.607 Enterprise Software for Chemicals &amp; Refining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.608 Enterprise Software for Communications</masterLabel>
+            <translation><!-- AP.608 Enterprise Software for Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.609 Enterprise Software for Defence</masterLabel>
+            <translation><!-- AP.609 Enterprise Software for Defence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.610 Enterprise Software for Mining</masterLabel>
+            <translation><!-- AP.610 Enterprise Software for Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.611 Enterprise Software for Oil &amp; Gas</masterLabel>
+            <translation><!-- AP.611 Enterprise Software for Oil &amp; Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.612 Enterprise Software for Transportation &amp; Infrastructure</masterLabel>
+            <translation><!-- AP.612 Enterprise Software for Transportation &amp; Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.613 Enterprise Software for Power Generation</masterLabel>
+            <translation><!-- AP.613 Enterprise Software for Power Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.614 Enterprise Software for Electricity Distribution</masterLabel>
+            <translation><!-- AP.614 Enterprise Software for Electricity Distribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.615 Enterprise Software for Electricity Transmission</masterLabel>
+            <translation><!-- AP.615 Enterprise Software for Electricity Transmission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.616 Substation Automation for Oil &amp; Gas</masterLabel>
+            <translation><!-- AP.616 Substation Automation for Oil &amp; Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.617 Substation Automation for Mining</masterLabel>
+            <translation><!-- AP.617 Substation Automation for Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.618 Substation Automation for Transportation</masterLabel>
+            <translation><!-- AP.618 Substation Automation for Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.619 Substation Automation for Metals Processing</masterLabel>
+            <translation><!-- AP.619 Substation Automation for Metals Processing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.620 Substation Automation for Distribution (&lt; 60kV)</masterLabel>
+            <translation><!-- AP.620 Substation Automation for Distribution (&lt; 60kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.621 Substation Automation for Subtransmission (60-170kV)</masterLabel>
+            <translation><!-- AP.621 Substation Automation for Subtransmission (60-170kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.622 Substation Automation for Transmission (&gt; 170kV)</masterLabel>
+            <translation><!-- AP.622 Substation Automation for Transmission (&gt; 170kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.623 Power Transmission (&gt;170kV), Utility S/S</masterLabel>
+            <translation><!-- AP.623 Power Transmission (&gt;170kV), Utility S/S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.624 Power Sub-Transmission (60-170kV), Utility S/S</masterLabel>
+            <translation><!-- AP.624 Power Sub-Transmission (60-170kV), Utility S/S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.625 Power Distribution (&lt;60kV), Utility S/S</masterLabel>
+            <translation><!-- AP.625 Power Distribution (&lt;60kV), Utility S/S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.626 Industrial Power supply (&gt;170kV)</masterLabel>
+            <translation><!-- AP.626 Industrial Power supply (&gt;170kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.627 Industrial Power supply (60-170kV)</masterLabel>
+            <translation><!-- AP.627 Industrial Power supply (60-170kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.628 Industrial Power supply (&lt;60kV)</masterLabel>
+            <translation><!-- AP.628 Industrial Power supply (&lt;60kV) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.629 Grid connection -Renewables</masterLabel>
+            <translation><!-- AP.629 Grid connection -Renewables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.630 Grid connection -Conventional generation</masterLabel>
+            <translation><!-- AP.630 Grid connection -Conventional generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.631 Battery Energy Storage (BES)</masterLabel>
+            <translation><!-- AP.631 Battery Energy Storage (BES) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.632 Data center Electrification</masterLabel>
+            <translation><!-- AP.632 Data center Electrification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.633 Port Electrification and Shore to ship power</masterLabel>
+            <translation><!-- AP.633 Port Electrification and Shore to ship power --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.634 AC Traction power supply</masterLabel>
+            <translation><!-- AP.634 AC Traction power supply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.635 DC Traction power supply</masterLabel>
+            <translation><!-- AP.635 DC Traction power supply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.636 Braking Energy recuperation in Transportation </masterLabel>
+            <translation><!-- AP.636 Braking Energy recuperation in Transportation  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.637 Transmission line power transfer capacity increase</masterLabel>
+            <translation><!-- AP.637 Transmission line power transfer capacity increase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.638 Voltage stability improvement</masterLabel>
+            <translation><!-- AP.638 Voltage stability improvement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.639 Flicker mitigation</masterLabel>
+            <translation><!-- AP.639 Flicker mitigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.640 Power factor Improvement</masterLabel>
+            <translation><!-- AP.640 Power factor Improvement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.641 City center infeed</masterLabel>
+            <translation><!-- AP.641 City center infeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.642 Connecting Offshore Oil &amp; Gas platforms</masterLabel>
+            <translation><!-- AP.642 Connecting Offshore Oil &amp; Gas platforms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.643 Connecting remote generation</masterLabel>
+            <translation><!-- AP.643 Connecting remote generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.644 Connecting remote loads</masterLabel>
+            <translation><!-- AP.644 Connecting remote loads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.645 DC links in AC grids</masterLabel>
+            <translation><!-- AP.645 DC links in AC grids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.646 Interconnecting grids</masterLabel>
+            <translation><!-- AP.646 Interconnecting grids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.647 Offshore Wind connections</masterLabel>
+            <translation><!-- AP.647 Offshore Wind connections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.648 Power from shore</masterLabel>
+            <translation><!-- AP.648 Power from shore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.649 Undergrounding by high-voltage cables</masterLabel>
+            <translation><!-- AP.649 Undergrounding by high-voltage cables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.650 Consulting</masterLabel>
+            <translation><!-- AP.650 Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.651 Semiconductors - Industry</masterLabel>
+            <translation><!-- AP.651 Semiconductors - Industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.652 Semiconductors - Power T&amp;D</masterLabel>
+            <translation><!-- AP.652 Semiconductors - Power T&amp;D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.653 Semiconductors - Renewables</masterLabel>
+            <translation><!-- AP.653 Semiconductors - Renewables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.654 Semiconductors - Traction</masterLabel>
+            <translation><!-- AP.654 Semiconductors - Traction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.662 Coal Fired Power Plant</masterLabel>
+            <translation><!-- AP.662 Coal Fired Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.663 Combined Cycle Power Plant (CCGT)</masterLabel>
+            <translation><!-- AP.663 Combined Cycle Power Plant (CCGT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.664 Diesel / Gas Engine Power Plants</masterLabel>
+            <translation><!-- AP.664 Diesel / Gas Engine Power Plants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.665 District Heating / Cooling Power Plant</masterLabel>
+            <translation><!-- AP.665 District Heating / Cooling Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.666 Geothermal Power Plant</masterLabel>
+            <translation><!-- AP.666 Geothermal Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.667 Hydro Power Plant</masterLabel>
+            <translation><!-- AP.667 Hydro Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.668 Nuclear Power Plant</masterLabel>
+            <translation><!-- AP.668 Nuclear Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.669 Simple Cycle Power Plant (OCGT)</masterLabel>
+            <translation><!-- AP.669 Simple Cycle Power Plant (OCGT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.670 Solar PV</masterLabel>
+            <translation><!-- AP.670 Solar PV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.671 Waste to Energy / Biomass Power Plant</masterLabel>
+            <translation><!-- AP.671 Waste to Energy / Biomass Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.672 Wind Power Plant</masterLabel>
+            <translation><!-- AP.672 Wind Power Plant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.700 Digital Substation</masterLabel>
+            <translation><!-- AP.700 Digital Substation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>City Center Infeed</masterLabel>
+            <translation><!-- City Center Infeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Combustion Instruments</masterLabel>
+            <translation><!-- Combustion Instruments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Buildings</masterLabel>
+            <translation><!-- Commercial Buildings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecting Remote Generation</masterLabel>
+            <translation><!-- Connecting Remote Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecting Remote Loads</masterLabel>
+            <translation><!-- Connecting Remote Loads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connection Remote Offshore Wind</masterLabel>
+            <translation><!-- Connection Remote Offshore Wind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyber Security</masterLabel>
+            <translation><!-- Cyber Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC Links in AC Grids</masterLabel>
+            <translation><!-- DC Links in AC Grids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMPC based solutions (Excitation, Synchronization)</masterLabel>
+            <translation><!-- DMPC based solutions (Excitation, Synchronization) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EBoP Systems</masterLabel>
+            <translation><!-- EBoP Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy Efficiency</masterLabel>
+            <translation><!-- Energy Efficiency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution 800xA</masterLabel>
+            <translation><!-- Evolution 800xA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution Advant</masterLabel>
+            <translation><!-- Evolution Advant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution Harmony</masterLabel>
+            <translation><!-- Evolution Harmony --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution Melody</masterLabel>
+            <translation><!-- Evolution Melody --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution Other</masterLabel>
+            <translation><!-- Evolution Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution P13</masterLabel>
+            <translation><!-- Evolution P13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution P14</masterLabel>
+            <translation><!-- Evolution P14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evolution S+</masterLabel>
+            <translation><!-- Evolution S+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GCB Systems</masterLabel>
+            <translation><!-- GCB Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generator Control</masterLabel>
+            <translation><!-- Generator Control --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Check Services</masterLabel>
+            <translation><!-- Health Check Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hydro Generator Service</masterLabel>
+            <translation><!-- Hydro Generator Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Data Centres</masterLabel>
+            <translation><!-- Industry - Data Centres --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Discrete Manufacturing</masterLabel>
+            <translation><!-- Industry - Discrete Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Metals, Mining and Minerals</masterLabel>
+            <translation><!-- Industry - Metals, Mining and Minerals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - O&amp;G</masterLabel>
+            <translation><!-- Industry - O&amp;G --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Other Process Industries</masterLabel>
+            <translation><!-- Industry - Other Process Industries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interconnecting Grids</masterLabel>
+            <translation><!-- Interconnecting Grids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance Contract (Incl. Sentinel)</masterLabel>
+            <translation><!-- Maintenance Contract (Incl. Sentinel) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power - Hydro</masterLabel>
+            <translation><!-- Power - Hydro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power - Others</masterLabel>
+            <translation><!-- Power - Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power - Smart Grids</masterLabel>
+            <translation><!-- Power - Smart Grids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power - Solar</masterLabel>
+            <translation><!-- Power - Solar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power - Wind</masterLabel>
+            <translation><!-- Power - Wind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power from Shore</masterLabel>
+            <translation><!-- Power from Shore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Protection Systems</masterLabel>
+            <translation><!-- Protection Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remote Services Renewables</masterLabel>
+            <translation><!-- Remote Services Renewables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Grid (incl. Sentinel)</masterLabel>
+            <translation><!-- Service Grid (incl. Sentinel) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spare Parts</masterLabel>
+            <translation><!-- Spare Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation - Emobility</masterLabel>
+            <translation><!-- Transportation - Emobility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation - Others</masterLabel>
+            <translation><!-- Transportation - Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation - Rail</masterLabel>
+            <translation><!-- Transportation - Rail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation - S2S</masterLabel>
+            <translation><!-- Transportation - S2S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utility - Direct Sales</masterLabel>
+            <translation><!-- Utility - Direct Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utility - via EPC Sales</masterLabel>
+            <translation><!-- Utility - via EPC Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water Services</masterLabel>
+            <translation><!-- Water Services --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- ABB classification of application based on the main process activity of the delivered product, service, solution. The selectable options are product group specific --></help>
+        <label><!-- Description BU --></label>
+        <name>BU__c</name>
+        <picklistValues>
+            <masterLabel>All other BU&apos;s</masterLabel>
+            <translation><!-- All other BU&apos;s --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMDR</masterLabel>
+            <translation><!-- DMDR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMMG</masterLabel>
+            <translation><!-- DMMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMPC</masterLabel>
+            <translation><!-- DMPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMRO</masterLabel>
+            <translation><!-- DMRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAMA</masterLabel>
+            <translation><!-- PAMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PATU</masterLabel>
+            <translation><!-- PATU --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Channel classification of the Opportunity information --></help>
+        <label><!-- Channel Class Level1 --></label>
+        <name>Channel_Class_Level1__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT - Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU - Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS - Electrical Distributor / Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC - Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM - Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL - Panel Builder and Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN - System Integrator</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Channel Classification for Level 2 of Opportunity Information is Optional --></help>
+        <label><!-- Channel Class Level2 --></label>
+        <name>Channel_Class_Level2__c</name>
+        <picklistValues>
+            <masterLabel>ALCEN</masterLabel>
+            <translation>ALCEN - ABB Logistic Centre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APBLD</masterLabel>
+            <translation>APBLD - ABB Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTDIS</masterLabel>
+            <translation>BTDIS - Building Trade Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIST - Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY</masterLabel>
+            <translation>DIY - Retail &amp; Do it yourself (DIY)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ELW</masterLabel>
+            <translation>ELW - Electrical Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBDIS</masterLabel>
+            <translation>IBDIS - Internet Based Distributors, Ecommerce Distributors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCC</masterLabel>
+            <translation>MCC - Panel Builder (Motor Control Centre)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PABL</masterLabel>
+            <translation>PABL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POEM</masterLabel>
+            <translation>POEM - Project OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSHO</masterLabel>
+            <translation>RSHO - Repairshop</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOEM</masterLabel>
+            <translation>SOEM - Serial OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>SPRO - Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITCH</masterLabel>
+            <translation>SWITCH - Panel Builder (Switchboard)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINLB</masterLabel>
+            <translation>SYINLB - Line Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINMB</masterLabel>
+            <translation>SYINMB - Machine Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>TDIS - Technical Distributor</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Class --></label>
+        <name>Channel_Class_m__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALCEN</masterLabel>
+            <translation>ABBINT Internal ABB Sales - ALCEN ABB Logistic Centre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APBLD</masterLabel>
+            <translation>ABBINT Internal ABB Sales - APBLD ABB Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - BTDIS Building Trade Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIS Distributor - DIST Electrical Wholesalers / Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - DIY Retail &amp; Do it yourself (DIY)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Sales to End Customer / End User</masterLabel>
+            <translation><!-- Direct Sales to End Customer / End User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation>Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor - Electrical Wholesalers / Distributor</masterLabel>
+            <translation>Distributor - Electrical Wholesalers / Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor - Service Provider</masterLabel>
+            <translation>Distributor - Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor - Technical Distributor</masterLabel>
+            <translation>Distributor - Technical Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ELW</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - ELW Electrical Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electrical Distributor / Wholesaler</masterLabel>
+            <translation><!-- Electrical Distributor / Wholesaler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering, Procurement and Construction</masterLabel>
+            <translation><!-- Engineering, Procurement and Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - IBDIS Internet Based Distributors, Ecommerce Distributors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installer</masterLabel>
+            <translation>Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal ABB Sales</masterLabel>
+            <translation><!-- Internal ABB Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCC</masterLabel>
+            <translation>PBL Panel Builder and Installer - MCC Panel Builder (Motor Control Centre)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Equipment Manufacturer</masterLabel>
+            <translation><!-- Original Equipment Manufacturer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PABL</masterLabel>
+            <translation>PBL Panel Builder and Installer - PABL Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer - POEM Project OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panel Builder</masterLabel>
+            <translation>Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panel Builder and Installer</masterLabel>
+            <translation><!-- Panel Builder and Installer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSHO</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - RSHO Repairshop</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer - SOEM Serial OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>DIS Distributor - SPRO Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITCH</masterLabel>
+            <translation>PBL Panel Builder and Installer - SWITCH Panel Builder (Switchboard)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN System Integrator</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINLB</masterLabel>
+            <translation>SYIN System Integrator - SYINLB Line Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINMB</masterLabel>
+            <translation>SYIN System Integrator - SYINMB Machine Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator</masterLabel>
+            <translation><!-- System Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator - Line Builder</masterLabel>
+            <translation>System Integrator - Line Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Integrator - Machine Builder</masterLabel>
+            <translation>System Integrator - Machine Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>DIS Distributor - TDIS Technical Distributor</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End User Project Site Country --></label>
+        <name>End_User_Project_Site_Country_m__c</name>
+        <picklistValues>
+            <masterLabel>AD</masterLabel>
+            <translation>Andorra</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AE</masterLabel>
+            <translation>United Arab Emirates</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AF</masterLabel>
+            <translation>Afghanistan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AG</masterLabel>
+            <translation>Antigua and Barbuda</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AI</masterLabel>
+            <translation>Anguilla</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation>Albania</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AM</masterLabel>
+            <translation>Armenia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AO</masterLabel>
+            <translation>Angola</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AQ</masterLabel>
+            <translation>Antarctica</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation>Argentina</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AT</masterLabel>
+            <translation>Austria</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AU</masterLabel>
+            <translation>Australia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AW</masterLabel>
+            <translation>Aruba</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AX</masterLabel>
+            <translation>Aland Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation>Azerbaijan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation>Bosnia and Herzegovina</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BB</masterLabel>
+            <translation>Barbados</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD</masterLabel>
+            <translation>Bangladesh</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BE</masterLabel>
+            <translation>Belgium</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BF</masterLabel>
+            <translation>Burkina Faso</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BG</masterLabel>
+            <translation>Bulgaria</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BH</masterLabel>
+            <translation>Bahrain</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI</masterLabel>
+            <translation>Burundi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BJ</masterLabel>
+            <translation>Benin</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL</masterLabel>
+            <translation>Saint Barthélemy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BM</masterLabel>
+            <translation>Bermuda</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BN</masterLabel>
+            <translation>Brunei Darussalam</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BO</masterLabel>
+            <translation>Bolivia, Plurinational State of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BQ</masterLabel>
+            <translation>Bonaire, Sint Eustatius and Saba</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BR</masterLabel>
+            <translation>Brazil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BS</masterLabel>
+            <translation>Bahamas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BT</masterLabel>
+            <translation>Bhutan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BV</masterLabel>
+            <translation>Bouvet Island</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BW</masterLabel>
+            <translation>Botswana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BY</masterLabel>
+            <translation>Belarus</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BZ</masterLabel>
+            <translation>Belize</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation>Canada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC</masterLabel>
+            <translation>Cocos (Keeling) Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CD</masterLabel>
+            <translation>Congo, the Democratic Republic of the</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CF</masterLabel>
+            <translation>Central African Republic</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CG</masterLabel>
+            <translation>Congo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CH</masterLabel>
+            <translation>Switzerland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI</masterLabel>
+            <translation>Cote d&apos;Ivoire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CK</masterLabel>
+            <translation>Cook Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL</masterLabel>
+            <translation>Chile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM</masterLabel>
+            <translation>Cameroon</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CN</masterLabel>
+            <translation>China</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation>Colombia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CR</masterLabel>
+            <translation>Costa Rica</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CU</masterLabel>
+            <translation>Cuba</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CV</masterLabel>
+            <translation>Cape Verde</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation>Curaçao</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CX</masterLabel>
+            <translation>Christmas Island</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CY</masterLabel>
+            <translation>Cyprus</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CZ</masterLabel>
+            <translation>Czech Republic</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation>Germany</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DJ</masterLabel>
+            <translation>Djibouti</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DK</masterLabel>
+            <translation>Denmark</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM</masterLabel>
+            <translation>Dominica</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DO</masterLabel>
+            <translation>Dominican Republic</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DZ</masterLabel>
+            <translation>Algeria</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EC</masterLabel>
+            <translation>Ecuador</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EE</masterLabel>
+            <translation>Estonia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EG</masterLabel>
+            <translation>Egypt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EH</masterLabel>
+            <translation>Western Sahara</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ER</masterLabel>
+            <translation>Eritrea</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES</masterLabel>
+            <translation>Spain</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ET</masterLabel>
+            <translation>Ethiopia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FI</masterLabel>
+            <translation>Finland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FJ</masterLabel>
+            <translation>Fiji</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FK</masterLabel>
+            <translation>Falkland Islands (Malvinas)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FO</masterLabel>
+            <translation>Faroe Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR</masterLabel>
+            <translation>France</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation>Gabon</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GB</masterLabel>
+            <translation>United Kingdom</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GD</masterLabel>
+            <translation>Grenada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GE</masterLabel>
+            <translation>Georgia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GF</masterLabel>
+            <translation>French Guiana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GG</masterLabel>
+            <translation>Guernsey</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GH</masterLabel>
+            <translation>Ghana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GI</masterLabel>
+            <translation>Greenland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL</masterLabel>
+            <translation>Gambia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM</masterLabel>
+            <translation>Guinea</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GN</masterLabel>
+            <translation>Guadeloupe</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GP</masterLabel>
+            <translation>Equatorial Guinea</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GQ</masterLabel>
+            <translation>Greece</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GR</masterLabel>
+            <translation>South Georgia and the South Sandwich Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS</masterLabel>
+            <translation>Guatemala</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GT</masterLabel>
+            <translation>Guinea-Bissau</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GW</masterLabel>
+            <translation>Guyana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GY</masterLabel>
+            <translation>Hong Kong</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HK</masterLabel>
+            <translation>Heard Island and McDonald Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HM</masterLabel>
+            <translation>Honduras</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HN</masterLabel>
+            <translation>Croatia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR</masterLabel>
+            <translation>Haiti</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HT</masterLabel>
+            <translation>Hungary</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HU</masterLabel>
+            <translation>Indonesia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation>Ireland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE</masterLabel>
+            <translation>Israel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation>Isle of Man</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IM</masterLabel>
+            <translation>Isle of Man</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation>India</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO</masterLabel>
+            <translation>British Indian Ocean Territory</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IQ</masterLabel>
+            <translation>Iraq</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IR</masterLabel>
+            <translation>Iran, Islamic Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IS</masterLabel>
+            <translation>Iceland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation>Italy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JE</masterLabel>
+            <translation>Jersey</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JM</masterLabel>
+            <translation>Jamaica</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JO</masterLabel>
+            <translation>Jordan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JP</masterLabel>
+            <translation>Japan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KE</masterLabel>
+            <translation>Kenya</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KG</masterLabel>
+            <translation>Kyrgyzstan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KH</masterLabel>
+            <translation>Cambodia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KI</masterLabel>
+            <translation>Kiribati</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM</masterLabel>
+            <translation>Comoros</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KN</masterLabel>
+            <translation>Saint Kitts and Nevis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KP</masterLabel>
+            <translation>Korea, Democratic People&apos;s Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KR</masterLabel>
+            <translation>Korea, Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KW</masterLabel>
+            <translation>Kuwait</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation>Cayman Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KZ</masterLabel>
+            <translation>Kazakhstan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation>Lao People&apos;s Democratic Republic</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LB</masterLabel>
+            <translation>Lebanon</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LC</masterLabel>
+            <translation>Saint Lucia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LI</masterLabel>
+            <translation>Liechtenstein</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LK</masterLabel>
+            <translation>Sri Lanka</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LR</masterLabel>
+            <translation>Liberia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LS</masterLabel>
+            <translation>Lesotho</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LT</masterLabel>
+            <translation>Lithuania</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LU</masterLabel>
+            <translation>Luxembourg</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LV</masterLabel>
+            <translation>Latvia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LY</masterLabel>
+            <translation>Libyan Arab Jamahiriya</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation>Morocco</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC</masterLabel>
+            <translation>Monaco</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation>Moldova, Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation>Montenegro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF</masterLabel>
+            <translation>Saint Martin (French part)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation>Madagascar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MK</masterLabel>
+            <translation>Macedonia, the former Yugoslav Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ML</masterLabel>
+            <translation>Mali</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MM</masterLabel>
+            <translation>Myanmar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation>Mongolia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation>Macao</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MQ</masterLabel>
+            <translation>Martinique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MR</masterLabel>
+            <translation>Mauritania</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation>Montserrat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation>Malta</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MU</masterLabel>
+            <translation>Mauritius</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MV</masterLabel>
+            <translation>Maldives</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MW</masterLabel>
+            <translation>Malawi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MX</masterLabel>
+            <translation>Mexico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MY</masterLabel>
+            <translation>Malaysia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MZ</masterLabel>
+            <translation>Mozambique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation>Namibia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation>New Caledonia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation>Niger</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NF</masterLabel>
+            <translation>Norfolk Island</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NG</masterLabel>
+            <translation>Nigeria</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NI</masterLabel>
+            <translation>Nicaragua</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NL</masterLabel>
+            <translation>Netherlands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation>Norway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NP</masterLabel>
+            <translation>Nepal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR</masterLabel>
+            <translation>Nauru</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NU</masterLabel>
+            <translation>Niue</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NZ</masterLabel>
+            <translation>New Zealand</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OM</masterLabel>
+            <translation>Oman</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation>Panama</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE</masterLabel>
+            <translation>Peru</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PF</masterLabel>
+            <translation>French Polynesia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PG</masterLabel>
+            <translation>Papua New Guinea</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH</masterLabel>
+            <translation>Philippines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PK</masterLabel>
+            <translation>Pakistan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PL</masterLabel>
+            <translation>Poland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PM</masterLabel>
+            <translation>Saint Pierre and Miquelon</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN</masterLabel>
+            <translation>Pitcairn</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS</masterLabel>
+            <translation>Palestinian Territory, Occupied</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PT</masterLabel>
+            <translation>Portugal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PY</masterLabel>
+            <translation>Paraguay</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA</masterLabel>
+            <translation>Qatar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RE</masterLabel>
+            <translation>Reunion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO</masterLabel>
+            <translation>Romania</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS</masterLabel>
+            <translation>Serbia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RU</masterLabel>
+            <translation>Russian Federation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RW</masterLabel>
+            <translation>Rwanda</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA</masterLabel>
+            <translation>Saudi Arabia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB</masterLabel>
+            <translation>Solomon Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation>Seychelles</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation>Sudan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE</masterLabel>
+            <translation>Sweden</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SG</masterLabel>
+            <translation>Singapore</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SH</masterLabel>
+            <translation>Saint Helena, Ascension and Tristan da Cunha</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SI</masterLabel>
+            <translation>Slovenia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SJ</masterLabel>
+            <translation>Svalbard and Jan Mayen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SK</masterLabel>
+            <translation>Slovakia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SL</masterLabel>
+            <translation>Sierra Leone</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SM</masterLabel>
+            <translation>San Marino</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN</masterLabel>
+            <translation>Senegal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SO</masterLabel>
+            <translation>Somalia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SR</masterLabel>
+            <translation>Suriname</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS</masterLabel>
+            <translation>South Sudan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST</masterLabel>
+            <translation>Sao Tome and Principe</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SV</masterLabel>
+            <translation>El Salvador</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SX</masterLabel>
+            <translation>Sint Maarten (Dutch part)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SY</masterLabel>
+            <translation>Syrian Arab Republic</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SZ</masterLabel>
+            <translation>Swaziland</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TC</masterLabel>
+            <translation>Turks and Caicos Islands</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TD</masterLabel>
+            <translation>Chad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TF</masterLabel>
+            <translation>French Southern Territories</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TG</masterLabel>
+            <translation>Togo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TH</masterLabel>
+            <translation>Thailand</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TJ</masterLabel>
+            <translation>Tajikistan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TK</masterLabel>
+            <translation>Tokelau</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TL</masterLabel>
+            <translation>Timor-Leste</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TM</masterLabel>
+            <translation>Turkmenistan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation>Tunisia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TO</masterLabel>
+            <translation>Tonga</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TR</masterLabel>
+            <translation>Turkey</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TT</masterLabel>
+            <translation>Trinidad and Tobago</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV</masterLabel>
+            <translation>Tuvalu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TW</masterLabel>
+            <translation>Chinese Taipei</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TZ</masterLabel>
+            <translation>Tanzania, United Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UA</masterLabel>
+            <translation>Ukraine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UG</masterLabel>
+            <translation>Uganda</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation>United States</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UY</masterLabel>
+            <translation>Uruguay</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UZ</masterLabel>
+            <translation>Uzbekistan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation>Holy See (Vatican City State)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VC</masterLabel>
+            <translation>Saint Vincent and the Grenadines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VE</masterLabel>
+            <translation>Venezuela, Bolivarian Republic of</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VG</masterLabel>
+            <translation>Virgin Islands, British</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VN</masterLabel>
+            <translation>Viet Nam</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VU</masterLabel>
+            <translation>Vanuatu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WF</masterLabel>
+            <translation>Wallis and Futuna</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WS</masterLabel>
+            <translation>Samoa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YE</masterLabel>
+            <translation>Yemen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YT</masterLabel>
+            <translation>Mayotte</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZA</masterLabel>
+            <translation>South Africa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZM</masterLabel>
+            <translation>Zambia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZW</masterLabel>
+            <translation>Zimbabwe</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End User Project --></label>
+        <name>End_User_Project__c</name>
+        <relationshipLabel><!-- Opportunity Information --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Industry Usage --></label>
+        <name>Industry_Usage__c</name>
+        <picklistValues>
+            <masterLabel>BLD</masterLabel>
+            <translation>BLD Building</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.10</masterLabel>
+            <translation>BLD.10 Industrial Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.10.1</masterLabel>
+            <translation>BLD.10.1 HVAC (Industrial Buildings)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.8</masterLabel>
+            <translation>BLD.8 Residential Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9</masterLabel>
+            <translation>BLD.9 Commercial &amp; institutional Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9.1</masterLabel>
+            <translation>BLD.9.1 HVAC (Commercial Buildings)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND</masterLabel>
+            <translation>IND Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1</masterLabel>
+            <translation>IND.1 Automotive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.1</masterLabel>
+            <translation>IND.1.1 Automotive (Vehicles - OEM)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.2</masterLabel>
+            <translation>IND.1.2 Automotives (Parts - Tier1)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10</masterLabel>
+            <translation>IND.10 Mining and Minerals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.2</masterLabel>
+            <translation>IND.10.2 Underground Mining including Hoisting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.3</masterLabel>
+            <translation>IND.10.3 Open Pit Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.4</masterLabel>
+            <translation>IND.10.4 Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.5</masterLabel>
+            <translation>IND.10.5 Mineral Processing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11</masterLabel>
+            <translation>IND.11 Cement and Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.1</masterLabel>
+            <translation>IND.11.1 Cement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.2</masterLabel>
+            <translation>IND.11.2 Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12</masterLabel>
+            <translation>IND.12 Oil and Gas Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.1</masterLabel>
+            <translation>IND.12.1 Oil and Gas - Offshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.2</masterLabel>
+            <translation>IND.12.2 Oil and Gas - Onshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.3</masterLabel>
+            <translation>IND.12.3 Refining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.4</masterLabel>
+            <translation>IND.12.4 Oil and Gas - Midstream and Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.7</masterLabel>
+            <translation>IND.12.7 Oil and Gas - Offshore Upstream / Floating Production Units</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.13</masterLabel>
+            <translation>IND.13 Pharmaceutical and Cosmetics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.14</masterLabel>
+            <translation>IND.14 Pulp and Paper</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15</masterLabel>
+            <translation>IND.15 Rubber and Plastics Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15.10</masterLabel>
+            <translation>IND.15.10 Plastics and Rubber (General Industry)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16</masterLabel>
+            <translation>IND.16 Other Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.1</masterLabel>
+            <translation>IND.16.1 Sawmill Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.2</masterLabel>
+            <translation>IND.16.2 Recreation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.3</masterLabel>
+            <translation>IND.16.3 Other Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.3.4</masterLabel>
+            <translation>IND.16.3.4 Waste and Recycling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17</masterLabel>
+            <translation>IND.17 Agriculture and Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.1</masterLabel>
+            <translation>IND.17.1 Agriculture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.10</masterLabel>
+            <translation>IND.17.10 Agriculture, Hunting and Forestry; Fishing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.11</masterLabel>
+            <translation>IND.17.11 Wood, Products of Wood and Cork</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.2</masterLabel>
+            <translation>IND.17.2 Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.3</masterLabel>
+            <translation>IND.17.3 Irrigation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18</masterLabel>
+            <translation>IND.18 Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.1</masterLabel>
+            <translation>IND.18.1 AC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.2</masterLabel>
+            <translation>IND.18.2 DC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2</masterLabel>
+            <translation>IND.2 Chemical</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2.12</masterLabel>
+            <translation>IND.2.12 Chemical Intermediates</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2.13</masterLabel>
+            <translation>IND.2.13 Consumer and Fine Chemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.3</masterLabel>
+            <translation>IND.3 Petrochemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4</masterLabel>
+            <translation>IND.4 Food and Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.1</masterLabel>
+            <translation>IND.4.1 - Ingredients</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.2</masterLabel>
+            <translation>IND.4.2 - Sugar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.3</masterLabel>
+            <translation>IND.4.3 - Bakery &amp; Confectionery</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.4</masterLabel>
+            <translation>IND.4.4 - Fruit &amp; Vegetables</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.5</masterLabel>
+            <translation>IND.4.5 -Dairy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.6</masterLabel>
+            <translation>IND.4.6 - Meat, Poultry, Seafood</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.7</masterLabel>
+            <translation>IND.4.7 - Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4.8</masterLabel>
+            <translation>IND.4.8 - Other Food &amp; Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5</masterLabel>
+            <translation>IND.5 Printing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5.10</masterLabel>
+            <translation>IND.5.10 Paper and Paper Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.6</masterLabel>
+            <translation>IND.6 Textile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7</masterLabel>
+            <translation>IND.7 Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.1</masterLabel>
+            <translation>IND.7.1 Aluminium</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.2</masterLabel>
+            <translation>IND.7.2 Steel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.3</masterLabel>
+            <translation>IND.7.3 Other Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8</masterLabel>
+            <translation>IND.8 Electronics and Semiconductors (3C)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8.1</masterLabel>
+            <translation>IND.8.1 Consumer Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9</masterLabel>
+            <translation>IND.9 Manufacturing of Machinery and Electrical Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.1</masterLabel>
+            <translation>IND.9.1 Foundry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.10</masterLabel>
+            <translation>IND.9.10 Manufacturing of HVAC Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.11</masterLabel>
+            <translation>IND.9.11 Manufacturing of Refrigeration Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.12</masterLabel>
+            <translation>IND.9.12 Manufacturing of Gen Set / Turbines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.13</masterLabel>
+            <translation>IND.9.13 Manufacturing of Generators</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.14</masterLabel>
+            <translation>IND.9.14 Manufacturing of ATS (Automatic Transfer Switch)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.15</masterLabel>
+            <translation>IND.9.15 Manufacturing of Drives</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.2</masterLabel>
+            <translation>IND.9.2 Machine Tools</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.3</masterLabel>
+            <translation>IND.9.3 Material Handling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.3.2</masterLabel>
+            <translation>IND.9.3.2 Logistics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.4</masterLabel>
+            <translation>IND.9.4 Manufacturing of Pumps</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.5</masterLabel>
+            <translation>IND.9.5 Manufacturing of Compressors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.6</masterLabel>
+            <translation>IND.9.6 Manufacturing of UPS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.7</masterLabel>
+            <translation>IND.9.7 Manufacturing of Solar Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.8</masterLabel>
+            <translation>IND.9.8 Manufacturing of Wind Turbines</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.9</masterLabel>
+            <translation>IND.9.9 Manufacturing of Electrical Vehicle Charger</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA</masterLabel>
+            <translation>TRA Transport and Transportation Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1</masterLabel>
+            <translation>TRA.1 Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.3</masterLabel>
+            <translation>TRA.1.3 Harbor Infrastructure Incl. Shore to Ship Activities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.4</masterLabel>
+            <translation>TRA.1.4 Cruise and Ferry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.6</masterLabel>
+            <translation>TRA.1.6 Other Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.7</masterLabel>
+            <translation>TRA.1.7 Oil and Gas Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.8</masterLabel>
+            <translation>TRA.1.8 Merchant Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.9</masterLabel>
+            <translation>TRA.1.9 Naval (military) Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2</masterLabel>
+            <translation>TRA.2 Railway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.1</masterLabel>
+            <translation>TRA.2.1 Railway Rolling Stock</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.2</masterLabel>
+            <translation>TRA.2.2 Railway AC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.3</masterLabel>
+            <translation>TRA.2.3 Railway DC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3</masterLabel>
+            <translation>TRA.3 Air Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3.1</masterLabel>
+            <translation>TRA.3.1 Airport Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4</masterLabel>
+            <translation>TRA.4 Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4.1</masterLabel>
+            <translation>TRA.4.1 Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5</masterLabel>
+            <translation>TRA.5 Land Transport Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5.1</masterLabel>
+            <translation>TRA.5.1 Bridge,Tunnel and Highway</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.6</masterLabel>
+            <translation>TRA.6 E-Vehicle Charging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.7</masterLabel>
+            <translation>TRA.7 - Logistics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation>UT Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1</masterLabel>
+            <translation>UT.1 Electric Utility - Power Generation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.1</masterLabel>
+            <translation>UT.1.1 Power Generation - Gas/Oil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.10</masterLabel>
+            <translation>UT.1.10 Power Generation - Oil/Diesel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.11</masterLabel>
+            <translation>UT.1.11 Power Generation - Waste to Energy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.12</masterLabel>
+            <translation>UT.1.12 Power Generation - Wind (on shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.3</masterLabel>
+            <translation>UT.1.3 Power Generation - Nuclear</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.4</masterLabel>
+            <translation>UT.1.4 Power Generation - Hydro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.5</masterLabel>
+            <translation>UT.1.5 Power Generation - Wind (off shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.6</masterLabel>
+            <translation>UT.1.6 Power Generation - Solar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.7</masterLabel>
+            <translation>UT.1.7 Power Generation - Biomass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.8</masterLabel>
+            <translation>UT.1.8 Power Generation - Coal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.9</masterLabel>
+            <translation>UT.1.9 Power Generation - Other Sources</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.2</masterLabel>
+            <translation>UT.2 - Electric Distribution (&lt;60 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.3</masterLabel>
+            <translation>UT.3 - Electric Transmission (&gt;170 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4</masterLabel>
+            <translation>UT.4 Water and Wastewater</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.1</masterLabel>
+            <translation>UT.4.1 Water Desalination</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.2</masterLabel>
+            <translation>UT.4.2 Water Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.3</masterLabel>
+            <translation>UT.4.3 Water Distribution</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.4</masterLabel>
+            <translation>UT.4.4 Water Treatment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.5</masterLabel>
+            <translation>UT.4.5 Wastewater Treatment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.6</masterLabel>
+            <translation>UT.4.6 Water and Wastewater - Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.5</masterLabel>
+            <translation>UT.5 Gas Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.7</masterLabel>
+            <translation>UT.7 Other Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.8</masterLabel>
+            <translation>UT.8 - Electric Sub Transmission (60-170 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.9</masterLabel>
+            <translation>UT.9 - Waste and Recycling utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY</masterLabel>
+            <translation>XY Usage Unknown</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1</masterLabel>
+            <translation>XY.1 End Usage Unknown</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1.1</masterLabel>
+            <translation>XY.1.1 Stock order</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>Lead_Source__c</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Center</masterLabel>
+            <translation><!-- Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Provider</masterLabel>
+            <translation><!-- External Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Public Relations</masterLabel>
+            <translation><!-- Partner Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar &amp; Internal</masterLabel>
+            <translation><!-- Seminar &amp; Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar &amp; Partner</masterLabel>
+            <translation><!-- Seminar &amp; Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Field Personnel</masterLabel>
+            <translation><!-- Service Field Personnel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>servIS</masterLabel>
+            <translation><!-- servIS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Local Business Unit --></label>
+        <name>Local_Business_Unit__c</name>
+        <relationshipLabel><!-- Opportunity Information --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Currency --></label>
+        <name>Opportunity_Currency_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity_Name_m__c</name>
+        <relationshipLabel><!-- Opportunity Information --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Owner --></label>
+        <name>Opportunity_Owner_m__c</name>
+        <relationshipLabel><!-- Opportunity Information --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Group --></label>
+        <name>Product_Group__c</name>
+        <relationshipLabel><!-- Opportunity Information --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Pursuit Progress --></label>
+        <name>Sales_Pursuit_Progress__c</name>
+        <picklistValues>
+            <masterLabel>ABB Preferred &amp; Shows Clear Signals</masterLabel>
+            <translation><!-- ABB Preferred &amp; Shows Clear Signals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bid Submitted</masterLabel>
+            <translation><!-- Bid Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bidding</masterLabel>
+            <translation><!-- Bidding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget Proposal Submitted</masterLabel>
+            <translation><!-- Budget Proposal Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget Proposal Submitted (Bidding)</masterLabel>
+            <translation><!-- Budget Proposal Submitted (Bidding) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLOSED Cancelled</masterLabel>
+            <translation><!-- CLOSED Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLOSED Lost</masterLabel>
+            <translation><!-- CLOSED Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLOSED Lost Without ABB Bid</masterLabel>
+            <translation><!-- CLOSED Lost Without ABB Bid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLOSED Won</masterLabel>
+            <translation><!-- CLOSED Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clear Buying Signal To ABB</masterLabel>
+            <translation><!-- Clear Buying Signal To ABB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Buying Preference To Competitor</masterLabel>
+            <translation><!-- Customer Buying Preference To Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Is Neutral To Supplier</masterLabel>
+            <translation><!-- Customer Is Neutral To Supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Position Is Neutral</masterLabel>
+            <translation><!-- Customer Position Is Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Preference To ABB</masterLabel>
+            <translation><!-- Customer Preference To ABB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Preference To Competitor</masterLabel>
+            <translation><!-- Customer Preference To Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOI To ABB</masterLabel>
+            <translation><!-- LOI To ABB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOI To Competitor</masterLabel>
+            <translation><!-- LOI To Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation</masterLabel>
+            <translation><!-- Negotiation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold (Bidding)</masterLabel>
+            <translation><!-- On Hold (Bidding) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold (Negotiation)</masterLabel>
+            <translation><!-- On Hold (Negotiation) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold (Pursuit)</masterLabel>
+            <translation><!-- On Hold (Pursuit) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity Is Captured</masterLabel>
+            <translation><!-- Opportunity Is Captured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity Pursuit</masterLabel>
+            <translation><!-- Opportunity Pursuit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFQ Received</masterLabel>
+            <translation><!-- RFQ Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Presented To Customer</masterLabel>
+            <translation><!-- Solution Presented To Customer --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Opportunity Information Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer / End User --></label>
+            <section>Customer / End User</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

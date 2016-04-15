@@ -1,0 +1,49 @@
+Dear Approver,
+</br></br>
+Product Qualification is submitted for your approval. Please login into Salesforce.com for additional information.
+
+</br>
+</br>
+
+<html><table height="250" width="700" border="1">
+<tr width="100" height="20">
+            <td>Account :</td>
+            <td> {!Product_Qualification__c.Account__c} </a></td>
+</tr>
+<tr width="100" height="20">
+            <td>Product Qualification Name : </td>
+            <td><a href = "{!Product_Qualification__c.Link}"> {!Product_Qualification__c.Name} </a></td>
+</tr>
+<tr width="100" height="20">
+            <td>Product Qualification Initiative Status : </td>
+            <td>{!Product_Qualification__c.Initiative_Status__c} </td>
+</tr>
+<tr width="100" height="20">
+            <td>Strategic Reason : </td>
+            <td>{!Product_Qualification__c.Initiative_Strategic_Reason__c}</td>
+</tr>
+</tr>
+<tr width="100" height="20">
+            <td>Customer Country : </td>
+            <td>{!Product_Qualification__c.Customer_Country__c}</td>
+</tr>
+</tr>
+<tr width="100" height="20">
+            <td>Product Name : </td>
+            <td>{!Product_Qualification__c.Product_Name__c} </td>
+</tr>
+<tr width="100" height="20">
+            <td>Source Location : </td>
+            <td>{!Product_Qualification__c.Source_Location__c} </td>
+</tr>
+<tr width="100" height="20">
+            <td>Available Market Total USD : </td>
+            <td>{!Product_Qualification__c.Available_Market_Total__c}  </td>
+</tr>
+<tr width="100" height="20">
+            <td>Estimated Cost USD : </td>
+            <td>{!Product_Qualification__c.Estimated_Cost_USD__c} </td>
+</tr>
+
+</table>
+</html>

@@ -1,0 +1,43 @@
+<apex:page Controller="FlowController1" showHeader="false" sidebar="false">
+   
+    <flow:interview name="Visit_report_from_Event" interview="{!myflow}" finishLocation="{!returnURL}" >
+        <apex:param name="eventID" value="{!$CurrentPage.parameters.Id}"/>
+    </flow:interview>
+    
+<!--
+<apex:page Controller="FlowController1" showHeader="false" sidebar="false">
+    <flow:interview name="Visit_report_from_Event" interview="{!myflow}" finishLocation="forceclose"  >
+    </flow:interview>
+
+    TEST AREA for v2; purpose is to return the user to the newly created record:
+    
+    this line does send the user to the correct record but only when the ID is hardcoded:
+    <flow:interview name="Visit_report_from_Event" interview="{!myflow}" finishLocation="{!URLFOR('/a0Hg000000FLEznEAH')}">
+
+    this line throws an record visit_attendee creation error as (for unknown reason thus far) it does not retain the variable values:
+    <flow:interview name="Visit_report_from_Event" interview="{!myflow}" finishLocation="{!returnURL}">
+
+    DISPLAY SECTION for debugging:
+
+    <apex:outputText >        
+    >> myflow.InviteeCollection: >>
+    {!myflow.InviteeCollection}
+    </apex:outputText>
+    <br/>
+    <br/>
+
+    <apex:outputText >        
+    >> returnURL: >>
+    {!returnURL}
+    </apex:outputText>
+    <br/>
+    <br/>
+    <apex:outputText >        
+    >> ApexNewVisitReportID: >>
+    {!ApexNewVisitReportID}
+    </apex:outputText>
+    <br/>
+    <br/>
+-->
+   
+</apex:page>

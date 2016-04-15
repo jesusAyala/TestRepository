@@ -1,0 +1,22 @@
+<apex:page standardController="Opportunity" id="pg" action="{!Pageloadfn}" extensions="ClsProductTreeSelectionController"> 
+ <apex:form id="frm" > 
+        <apex:outputPanel id="pnl" rendered="{!isErrorDisplay}">
+        <apex:pagemessages id="pgMSG" > </apex:pagemessages>  
+        <table id="tbl" width='100%'>    
+        <tr><td align='center'><apex:commandButton title="Back" value="Back" action="{!GoBack}"/>  </td></tr>
+        </table>
+        </apex:outputPanel> 
+        
+        <apex:pageBlock id="pgblk" title="Add Products" rendered="{!isPanelDisplay}" mode="view">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Add Products" action="{!AddProducts}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Add Products" columns="2" >
+                <apex:selectRadio value="{!country}" layout="pagedirection">
+                    <apex:selectOptions value="{!items}"/>
+                </apex:selectRadio>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>      
+</apex:page>

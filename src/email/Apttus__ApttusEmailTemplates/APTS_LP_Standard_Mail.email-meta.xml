@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Mail is send to User if Residual amount is greater than Max amount</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>APTS_LP Max Order Amount Notification</name>
+    <style>none</style>
+    <subject>Residual order amount of MSPA {!Apttus__APTS_Agreement__c.Name}  is above 80% of Max order</subject>
+    <type>text</type>
+</EmailTemplate>

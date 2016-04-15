@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>APTS_MSPABlockNotification</name>
+    <style>freeForm</style>
+    <subject>MSPA Blocked Successfully in SAP</subject>
+    <textOnly>Your MSPA Block in SAP was successful .
+
+Name               : {!Apttus__APTS_Agreement__c.Name}
+
+MSPA Number: {!Apttus__APTS_Agreement__c.APTS_SAP_Reference_No__c}
+
+MSPA Status   : {!Apttus__APTS_Agreement__c.Apttus__Status__c}
+
+SAP Customer Id: {!Apttus__APTS_Agreement__c.APTS_SAP_Customer_ID__c}
+
+
+Please click on below link to access MSPA directly:
+{!Apttus__APTS_Agreement__c.Link}
+
+
+
+
+
+** This is a system generated email. Please DO NOT REPLY **</textOnly>
+    <type>html</type>
+</EmailTemplate>

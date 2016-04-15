@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FAQ__ka$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>FAQ__ka.FAQ__kav$Title</field>
+    </columns>
+    <columns>
+        <field>FAQ__ka.FAQ__kav$Summary</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Published FAQ articles which were not  sent for Approval</description>
+    <filter>
+        <criteriaItems>
+            <column>FAQ__ka.FAQ__kav$Was_Sent_for_Approval__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FAQ__ka.FAQ__kav$PublishStatus</column>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FAQ__ka.FAQ__kav$IsLatestVersion</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Published FAQ Articles</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FAQ_Articles__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FAQ__ka$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

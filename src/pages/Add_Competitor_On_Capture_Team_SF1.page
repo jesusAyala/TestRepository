@@ -1,0 +1,144 @@
+<apex:page standardController="Competitor_Capture_Team__c" extensions="addCompetitorOnCaptureTeamSF1" standardStylesheets="true" id="page">
+<style>
+ 
+#popupcontent{
+   position: fixed;
+   top: 10%;
+   left: 25%;
+   width: 50%;
+   height: 80%;
+   display: none;
+   overflow: auto;
+   border:3px solid #585858;
+   background-color:white;
+   //border:1px solid #333;
+   z-index:100;
+   padding:5px;
+   line-height:20px;
+}
+#opaque {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    background-color: gray;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    -moz-opacity:0.8;
+    -khtml-opacity:0.8
+}
+* html #opaque {
+    position: absolute;
+}
+</style>
+<apex:form id="frm">
+
+ <div id="opaque"/>
+   <div id="popupcontent">          
+     <div style="width 100%">
+         <apex:pageBlock title="{!$Label.Search_Competitor}" id="block">
+           
+          <apex:pageBlockSection id="section" columns="3">
+              Enter search text and click Go<br/>
+              <apex:inputText value="{!query}" id="query"/> 
+              <apex:commandButton value="{!$Label.Go}" id="cb" action="{!runQuery}"/ >
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock id="pb">
+          
+              <apex:pageBlockTable value="{!otherCompetitors}" var="competitor" columnsWidth="250px,600px,600px" id="pbt">
+                <apex:column headerValue="Name" id="col">
+                  <apex:outputLink value="#" onclick="fillIn('{!competitor.Name}', '{!competitor.id}')" id="opl">{!competitor.Name}</apex:outputLink>   
+                </apex:column>
+                <apex:column headerValue="Account Name" value="{!competitor.competitor__r.name}" id="col1"/>
+                <apex:column headerValue="Opportunity Name" value="{!competitor.opportunity__r.name}" id="col2"/>
+              </apex:pageBlockTable>    
+              <button type="button" onclick="hidepopup();">Close Window</button>      
+        </apex:pageBlock>
+     </div>
+ </div>
+
+  <!--<apex:pageBlock >-->
+  <apex:pageMessage summary="{!$Label.CT_Competitor_Addition}" severity="info" rendered="{!competitors.empty}" id="pm">
+  </apex:pageMessage>
+  <apex:pageMessage summary="{!$Label.CQP_Empty_Competitor_Addition}" severity="warning" rendered="{!selectedComptId.empty}" id="pm1">
+  </apex:pageMessage>
+  
+  <apex:pageBlock title="{!$Label.Select_Competitor}" id="pb1">
+  <apex:pageBlockSection columns="3" id="pbs">
+  <apex:commandButton value="{!$Label.Add_Selected_Competitors}" action="{!addSelectedCompetitors}" rendered="{!!competitors.empty}" id="cb"/>
+  <apex:commandButton value="{!$Label.Back}" action="{!back}" id="cb1"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockTable value="{!competitors}" var="comp" id="tblCompetitors" columnsWidth="50px,150px,300px,300px" rendered="{!!competitors.empty}">
+        <apex:column id="col3">
+            <apex:facet name="header"> 
+            <apex:inputCheckbox id="chk" onclick="checkAll(this)">                        
+            </apex:inputCheckbox>
+            </apex:facet>
+         <apex:inputCheckbox value="{!comp.selected}" id="checkedone"></apex:inputCheckbox>         
+        </apex:column>
+        <apex:column headervalue="Name" id="col4">
+        <apex:outputLink value="/{!comp.compt.id}" id="opl1">{!comp.compt.Name}</apex:outputlink>
+        </apex:column>
+        <apex:column headervalue="Account" value="{!comp.compt.Competitor__r.Name}" id="col5"/>
+        <apex:column headervalue="Opportunity" value="{!comp.compt.Opportunity__r.Name}" id="col6"/> 
+  </apex:pageBlockTable>
+  
+  </apex:pageBlock>
+  <apex:pageBlock title="{!$Label.Select_Other_Competitor}" id="pb2">
+      <apex:pageBlockSection columns="1" id="pbs1">  
+        <apex:pageBlockSectionitem >
+          <apex:outputLabel value="{!$Label.Add_Other_Competitor}" id="outputlabel"/>
+          <apex:outputPanel id="outputlabel1" >
+            <apex:inputHidden id="targetId" value="{!selectedComptId}"/>
+            <apex:inputText size="30" id="targetName" onFocus="this.blur()" disabled="false"/> <a href="#" onclick="openLookupPopup('{!$Component.targetName}', '{!$Component.targetId}'); return false"><apex:image id="theImage" value="{!$Resource.LookupIcon}" style="vertical-align: top"/></a>
+          </apex:outputPanel>
+        </apex:pageBlockSectionitem>
+        <apex:pageBlockSectionitem >
+      <apex:commandButton value="Add Other Competitor" action="{!addCompetitor}"/>
+      </apex:pageBlockSectionitem>
+      </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:form>
+
+<script>
+function checkAll(cb){
+    var inputElem = document.getElementsByTagName("input");
+        for(var i=0; i<inputElem.length; i++)    
+        {
+            if(inputElem[i].id.indexOf("checkedone")!=-1)        
+            {
+              inputElem[i].checked = cb.checked;      
+            }        
+        }       
+    }
+
+    var newWin=null;
+    function openLookupPopup(name, id)
+    {
+        /*var url="/apex/LookupPopup?namefield=" + name + "&idfield=" + id;
+        newWin=window.open(url, 'Popup','height=500,width=600,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
+        if (window.focus) 
+        {
+            newWin.focus();
+        }
+            
+        return false;*/
+      var popUp = document.getElementById("popupcontent");
+      popUp.style.display = "none";
+      document.getElementById('opaque').style.display='none';
+    }
+                  
+    function hidepopup()
+   {
+      var popUp = document.getElementById("popupcontent");
+      popUp.style.display = "none";
+      document.getElementById('opaque').style.display='none';
+   }
+    
+</script>
+</apex:page>

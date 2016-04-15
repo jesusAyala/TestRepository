@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>AddProductsQualificationPIS</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R4 - Custom Object Qualification Products List</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Location_Available__c</fullName>
+        <description>R4 ABB Loaction Available status</description>
+        <externalId>false</externalId>
+        <formula>IF (  ABB_Location__c  = NULL,
+IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;ABB Location Not Available&quot;) &amp; &quot;ABB Location is Not Available - Please Add&quot; ,
+IMAGE(&quot;/img/samples/flag_green.gif&quot;, &quot;ABB Location Available&quot;) &amp; &quot; ABB Location Available&quot;)</formula>
+        <label>ABB Location Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+ <fields>
+        <fullName>ABB_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R4 ABB Location field should display only the ABB location belongs to the this  product group</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Copy the Product Group Code and Enter the Product Group Code in to the Lookup Filter Search</inlineHelpText>
+        <label>ABB Location</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8</booleanFilter>
+            <errorMessage>Only Active ABB Locations can be added</errorMessage>
+            <filterItems>
+                <field>ABB_Location__c.Deleted__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Data_Load_Year__c</field>
+                <operation>notEqual</operation>
+                <value>2015</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.DIV__c</field>
+                <operation>notEqual</operation>
+                <value>ZC</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.DIV__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.BU__c</field>
+                <operation>notEqual</operation>
+                <value>ZCCO, ZCRE, ZCVA</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.BU__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Activity__c</field>
+                <operation>notEqual</operation>
+                <value>Admin/Corporate, Other, R&amp;D, Warehouse or Logistics, Training</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Activity__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ABB_Location__c</referenceTo>
+        <relationshipLabel>Qualification Product</relationshipLabel>
+        <relationshipName>Qualification_Products_Lists</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit_Name__c</fullName>
+        <description>R4 Business Unit Name</description>
+        <externalId>false</externalId>
+        <label>Business Unit Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>R4 Business Unit</description>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commercial_Name__c</fullName>
+        <description>R4 - Commercial Name</description>
+        <externalId>false</externalId>
+        <label>Commercial Name</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Division_Name__c</fullName>
+        <description>R4 Division Name</description>
+        <externalId>false</externalId>
+        <label>Division Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>R4 Division</description>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_IsProductChanged__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Hidden_IsProductChanged</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>R4 Product Group</description>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Qualification__c</fullName>
+        <description>R4 - Product Qualification</description>
+        <externalId>false</externalId>
+        <label>Product Qualification</label>
+        <referenceTo>Product_Qualification__c</referenceTo>
+        <relationshipName>Qualification_Products_Lists</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R4 - Product lookup</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipName>Qualification_Products_Lists</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Qualification Product</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>QUALIF-PRD-LIST-{0000}</displayFormat>
+        <label>Qualification Products List</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Qualification Product</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ABB_Location_Product_Group_Check</fullName>
+        <active>false</active>
+        <description>R4 ABB_Location_Product_Group_Check - Checks the value of ABB_Location__r.Product_Group__c with Product__r.Product_Group__c</description>
+        <errorConditionFormula>If(ABB_Location__c  &lt;&gt;  NULL,
+(If((LEFT(ABB_Location__r.Product_Group__c, 4)== Text(Product__r.Product_Group__c ) ), False, True)), False )</errorConditionFormula>
+        <errorDisplayField>ABB_Location__c</errorDisplayField>
+        <errorMessage>ABB Location Choosen is not supplying this product. Please choose a different one</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Target_End_Date_cannot_be_Past_Date</fullName>
+        <active>true</active>
+        <description>R4 Check the Product Qualification Target End Date cannot be entered as a past date</description>
+        <errorConditionFormula>AND(NOT($User.AccountMerge_Override__c),NOT($Setup.Validation_Override__c.Account_Merge_Override__c) , Product_Qualification__r.Target_End_Date__c &lt; TODAY())</errorConditionFormula>
+        <errorMessage>The Product Qualification Target End Date cannot be entered as a past date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Lock_Check</fullName>
+        <active>true</active>
+        <description>R4 Record Lock Check based on Initiative Status value</description>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;, IF(OR(ISPICKVAL(Product_Qualification__r.Initiative_Status__c, &quot;Closed Qualified&quot;),ISPICKVAL(Product_Qualification__r.Initiative_Status__c,&quot;Closed Not Qualified&quot;)) ,true, false))</errorConditionFormula>
+        <errorMessage>You cannot save the changes as Product Qualification Status is Closed.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Product</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Product</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var CanvasUrl = &apos;https://abb--sf2r4.cs17.my.salesforce.com/apex/AddProductsQualificationPIS?retURL=%2Fa0ng00000026ZKd&apos;;
+var ParentId = &apos;{!Qualification_Products_List__c.Product_QualificationId__c}&apos;;
+alert(CanvasUrl);
+window.open(CanvasUrl);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Change_Product</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Change Product</masterLabel>
+        <openType>noSidebar</openType>
+        <page>EditProductsQualificationPIS</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template for Presenting Proposals</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>APTS_LP_Email Template for presenting Quotation</name>
+    <style>freeForm</style>
+    <subject>Proposal from {!Apttus_Proposal__Proposal__c.OwnerFullName}</subject>
+    <textOnly>Dear {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Primary_Contact__c},
+
+
+Thank you for your interest in our products and services.
+
+
+We are pleased to present this proposal for your review. Please let me know if it meets your expectations.
+
+
+Best Regards,
+
+
+{!Apttus_Proposal__Proposal__c.CreatedBy}</textOnly>
+    <type>html</type>
+</EmailTemplate>

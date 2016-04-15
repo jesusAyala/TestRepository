@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+<webLinks>
+        <fullName>New_Competitor</fullName>
+        <availability>online</availability>
+        <description>R4 Competitor Custom Button</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Competitor</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Competitor_Product_Qualification__c
+&amp;Product_Qualification__c={!Product_Qualification__c.Name}
+&amp;ID_Product_Qualification__c={!Product_Qualification__c.Id}
+&amp;saveURL=%2F{!Product_Qualification__c.Id}
+&amp;retURL=%2F{!Product_Qualification__c.Id}</url>
+    </webLinks>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R4 Competitor Product Qualification</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>R4Account</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Competitor_PQ</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>R4 Comments</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Qualification__c</fullName>
+        <description>R4 Product Qualification</description>
+        <externalId>false</externalId>
+        <label>Product Qualification</label>
+        <referenceTo>Product_Qualification__c</referenceTo>
+        <relationshipName>Competitor_PQ</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Product_Qualification_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( OR (ISPICKVAL(Product_Qualification__r.Initiative_Status__c, &apos;Closed Qualified&apos;), ISPICKVAL(Product_Qualification__r.Initiative_Status__c, &apos;Closed Not Qualified&apos;)), &apos;Closed&apos;, TEXT(Product_Qualification__r.Initiative_Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Qualification Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unique_Check__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R4 field used in workflow field update Unique Check competitor.
+Check the Account Product Qualification.</description>
+        <externalId>false</externalId>
+        <label>Unique Account Check</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Competitor</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Comp PQ - {0000}</displayFormat>
+        <label>Competitor Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Competitors</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Competitor_Account_Name_Check</fullName>
+        <active>true</active>
+        <description>R4 - Not allow the Same Customer added in the Product Qualification again as a competitor . Same customer cannot be a competitor.</description>
+        <errorConditionFormula>CONTAINS(Account__r.Name,  Product_Qualification__r.Account__r.Name)</errorConditionFormula>
+        <errorMessage>You cannot add the Same Customer as Competitor.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Lock_Check</fullName>
+        <active>true</active>
+        <description>R4 Record Lock Check based on Initiative Status value</description>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,IF(OR(ISPICKVAL(Product_Qualification__r.Initiative_Status__c, &quot;Closed Qualified&quot;),ISPICKVAL(Product_Qualification__r.Initiative_Status__c,&quot;Closed Not Qualified&quot;)) ,true, false))</errorConditionFormula>
+        <errorMessage>You cannot save the changes as Product Qualification Status is Closed.</errorMessage>
+    </validationRules>
+</CustomObject>

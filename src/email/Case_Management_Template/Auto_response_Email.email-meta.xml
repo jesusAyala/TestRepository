@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used in Auto Response to customer in Email-2-Case</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Auto response Email</name>
+    <style>freeForm</style>
+    <subject>ABB Case # {!Case.CaseNumber}:  {!Case.Subject}     [{!Case.Thread_Id}]</subject>
+    <textOnly>Dear {!Case.SuppliedName},
+
+Thank you for submitting your inquiry.
+
+A new Case number : {!Case.CaseNumber} has been created with subject: {!Case.Subject}.
+
+Please use {!Case.CaseNumber} in subsequent communications to identify your case.
+
+To reply to this email, please select &apos;Reply&apos; without changing the subject and validate that the size of the email is not bigger than 25 MB so that the reply can be efficiently processed by our system.
+
+If you prefer, you can also contact our Customer Support Team via phone during support hours.
+
+Thank you,
+Customer Support Team
+
+International Contact Centers
+http://www.abb.com/contactcenters
+
+[{!Case.Thread_Id}]</textOnly>
+    <type>html</type>
+</EmailTemplate>

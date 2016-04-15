@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R4V1-This object refers to data.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ABB_CTS_Portal__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://inside.abb.com/cawp/gad00050/4c2273ee1b1e63dcc12575ef003560c3.aspx&quot;, &quot;Portal Link&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ABB CTS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Migration_ID__c</fullName>
+        <description>R5</description>
+        <externalId>true</externalId>
+        <label>Migration ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Capture_Team__c</fullName>
+        <description>R4 - Capture Team</description>
+        <externalId>false</externalId>
+        <formula>End_User_Project__r.Account_End_User__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Capture Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+		<fullName>CTS_eLearning__c</fullName>
+        <description>R4.1 CTS Link</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://www100.abb.com/TPOnline/NET/Public%20Course.aspx?COURSENO=COUR2013081512132901640083&quot;, &quot;Click here to access CTS e-Learning&quot;,&quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CTS e-Learning</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Background__c</fullName>
+        <externalId>false</externalId>
+		<inlineHelpText>Explain our past undertakings and/or relation with the customer.</inlineHelpText>
+        <label>Customer Background</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Detailed_Scope__c</fullName>
+        <externalId>false</externalId>
+		<inlineHelpText>Describe the products/solution that ABB is going to propose for this project. Be specific and clear.</inlineHelpText>
+        <label>Detailed Scope</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EndUserProject_Manager__c</fullName>
+        <description>R4 - End user project Manager</description>
+        <externalId>false</externalId>
+        <formula>End_User_Project__r.Account_Manager__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EndUserProject Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndUserProject_Owner__c</fullName>
+        <description>R4 - End user Project Owner field</description>
+        <externalId>false</externalId>
+        <formula>End_User_Project__r.OwnerId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EndUserProject Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_User_Project__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>End User Project</label>
+        <referenceTo>End_User_Project__c</referenceTo>
+        <relationshipLabel>Capture Teams</relationshipLabel>
+        <relationshipName>Capture_Teams</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+	<fields>
+        <fullName>Funding_Status__c</fullName>
+        <externalId>false</externalId>
+		<inlineHelpText>Is money released for this project and what is the status e.g. reserved, approved etc.</inlineHelpText>
+        <label>Funding Status</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Future_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If ABB wins the order, what is the expected incremental sale we can do in the years to come. This can be service, spare parts additional sales etc.</inlineHelpText>
+        <label>Future Revenue</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Order Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName + &quot; &quot; + Owner:User.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Player_Map_Portal__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://www.playermapxray.com/session/new&quot;, &quot;Portal Link&quot;)</formula>
+        <label>Player Map</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Driver__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical or business reason why the customer is doing the project e.g. increase production, lower cost.</inlineHelpText>
+        <label>Project Driver</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Selection_Criteria_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the 4 most important selection criterias as you understand it today. Pls. notice that this shall reflect the real customer view and not how ABB &quot;thinks&quot; it should be.</inlineHelpText>
+        <label>Selection Criteria 2</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Selection_Criteria_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the 4 most important selection criterias as you understand it today. Pls. notice that this shall reflect the real customer view and not how ABB &quot;thinks&quot; it should be.</inlineHelpText>
+        <label>Selection Criteria 3</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Selection_Criteria_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the 4 most important selection criterias as you understand it today. Pls. notice that this shall reflect the real customer view and not how ABB &quot;thinks&quot; it should be.</inlineHelpText>
+        <label>Selection Criteria 4</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Selection_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the 4 most important selection criterias as you understand it today. Pls. notice that this shall reflect the real customer view and not how ABB &quot;thinks&quot; it should be.</inlineHelpText>
+        <label>Selection Criteria 1</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Solution__c</fullName>
+        <externalId>false</externalId>
+        <label>Business case</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Order Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Capture Team</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Capture Team Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Capture Teams</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>End_User_Project__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Order_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Owner__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Solution__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Value__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>End_User_Project__c</searchFilterFields>
+        <searchFilterFields>Order_Date__c</searchFilterFields>
+        <searchFilterFields>Owner__c</searchFilterFields>
+        <searchFilterFields>Solution__c</searchFilterFields>
+        <searchFilterFields>Value__c</searchFilterFields>
+        <searchResultsAdditionalFields>End_User_Project__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Order_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Owner__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Solution__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Value__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>New_Capture_Team</fullName>
+        <availability>online</availability>
+        <description>R4 - New Capture Team button</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Capture Team</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)}
+
+var redurl = &apos;{!$Label.System_CL00044}e?CF{!$Label.System_CL00099}={!JSENCODE(End_User_Project__c.Name)}&amp;CF{!$Label.System_CL00099}_lkid={!End_User_Project__c.Id}&amp;retURL=/{!End_User_Project__c.Id}&apos;     
+
+if(&apos;{!$User.Id}&apos; == &apos;{!End_User_Project__c.OwnerId}&apos; || &apos;{!$Profile.Name}&apos; == &apos;System Administrator&apos; || &apos;{!$User.Email}&apos; == &apos;{!End_User_Project__c.Account_Manager__c}&apos;){
+		window.open(redurl,&apos;_top&apos;);
+}else{
+		alert(&apos;You do not have permission to create Capture Team.&apos;);
+}</url>
+    </webLinks>
+</CustomObject>

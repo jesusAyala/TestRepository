@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - New Custom object Competitors</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <!--fields>
+        <fullName>Focused_Industry__c</fullName>
+        <description>R5 - Focused Industry -Combination of Industry usage level1 ,level2 and level3</description>
+        <externalId>false</externalId>
+        <label>Focused Industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Building - Residential Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Building - Commercial &amp; institutional Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Building - Industrial Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Automotive - Automotive (Vehicles - OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Automotive - Automotives (Parts - Tier1)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Chemical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Petrochemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Ingredients</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Sugar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Bakery &amp; Confectionery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Fruit &amp; Vegetables</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Dairy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Meat, Poultry, Seafood</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Food and Beverage - Other Food &amp; Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Printing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Textile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Metals - Aluminium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Metals - Steel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Metals - Other Metals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Electronics and Semiconductors (3C)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Mining and Minerals - Underground Mining including Hoisting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Mining and Minerals - Open Pit Mining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Mining and Minerals - Grinding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Mining and Minerals - Mineral Processing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Cement and Glass - Cement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Cement and Glass - Glass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Oil and Gas Industry -Oil and Gas - Offshore Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Oil and Gas Industry -Oil and Gas - Onshore Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Oil and Gas Industry - Refining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Oil and Gas Industry -Oil and Gas - Midstream and Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Oil and Gas Industry - Oil and Gas - Offshore Upstream / Floating Production Units</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Pharmaceutical and Cosmetics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Pulp and Paper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Rubber and Plastics Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Other Industries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Agriculture and Forestry - Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Agriculture and Forestry - Forestry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Agriculture and Forestry - Irrigation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Data Centers - AC Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry - Data Centers - DC Data Centers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Marine - Harbor Infrastructure Incl. Shore to Ship Activities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Marine - Cruise and Ferry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Marine - Other Marine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Marine - Oil and Gas Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Marine - Merchant Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Marine - Naval (military) Vessels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Railway - Railway Rolling Stock</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Railway - Railway AC Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Railway - Railway DC Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Air Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Cranes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Land Transport Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - E-Vehicle Charging</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport and Transportation Infrastructure - Logistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Gas/Oil</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Nuclear</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Hydro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Wind (off shore)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Solar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Biomass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Coal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Other Sources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Oil/Diesel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Waste to Energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Utility - Power Generation - Power Generation - Wind (on shore)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Distribution (&lt;60 kV)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Transmission (&gt;170 kV)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Water and Wastewater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Gas Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Other Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Electric Sub Transmission (60-170 kV)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities - Waste and Recycling utility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Usage unknown - End Usage Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields-->
+    <fields>
+        <fullName>Channel_Partner_Business_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( (TEXT(Joint_Business_Plan__r.Status__c) == &apos;Closed&apos; || TEXT(Joint_Business_Plan__r.Status__c) == &apos;Obsolete&apos;), &apos;Closed&apos;, TEXT(Joint_Business_Plan__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Partner Business Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <description>R5 - Joint Business Plan</description>
+        <externalId>false</externalId>
+        <label>Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipLabel>Competitors</relationshipLabel>
+        <relationshipName>Competitors</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Main_Competitive_Products__c</fullName>
+        <description>R5 - Main competitive products</description>
+        <externalId>false</externalId>
+        <label>Main Competitive Products</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Main_Competitors__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Main Competitors</description>
+        <externalId>false</externalId>
+        <label>Main Competitors</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Competitors</relationshipLabel>
+        <relationshipName>Competitors2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <description>R5 - Notes</description>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Partner_Weaknesses_against_competitor__c</fullName>
+        <description>R5 - Partner Weaknesses against competitor</description>
+        <externalId>false</externalId>
+        <label>Partner Weaknesses against competitor</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strengths__c</fullName>
+        <description>R5 - Strengths</description>
+        <externalId>false</externalId>
+        <label>Competitor Strengths</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strengths_against_this_competitor__c</fullName>
+        <description>R5 - Strengths against this competitor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner&apos;s strengths when competing against this competitor</inlineHelpText>
+        <label>Partner Strengths against competitor</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Unique_Competitors_Value__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R5 - Unique competitor value used in workflow rule</description>
+        <externalId>false</externalId>
+        <label>Unique Competitors Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Weaknesses__c</fullName>
+        <description>R5 - Weaknesses</description>
+        <externalId>false</externalId>
+        <label>Competitor Weaknesses</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Competitor</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Joint_Business_Plan__c</columns>
+        <columns>Focused_Industry__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>COMPET-NAME-{0000}</displayFormat>
+        <label>Competitors  Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Competitors</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Joint_Business_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Focused_Industry__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Main_Competitive_Products__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Focused_Industry__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Main_Competitive_Products__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Strengths_against_this_competitor__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Focused_Industry__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Focused_Industry__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Main_Competitive_Products__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Strengths_against_this_competitor__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Focused_Industry__c</searchFilterFields>
+        <searchResultsAdditionalFields>Focused_Industry__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Main_Competitive_Products__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Strengths_against_this_competitor__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Account_Unique_Check_JBP_Competitors</fullName>
+        <active>true</active>
+        <description>R5 -Account duplicate check</description>
+        <errorConditionFormula>IF( Joint_Business_Plan__r.Account__c  ==  Main_Competitors__c ,true, false)</errorConditionFormula>
+        <errorDisplayField>Main_Competitors__c</errorDisplayField>
+        <errorMessage>Same account cannot be added</errorMessage>
+    </validationRules>
+</CustomObject>

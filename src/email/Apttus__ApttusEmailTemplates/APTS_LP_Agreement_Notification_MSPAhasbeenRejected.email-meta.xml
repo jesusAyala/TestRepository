@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>APTS_LP_Agreement_Notification_MSPAhasbeenRejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>APTS_LP_Agreement Notification_MSPAhasbeenRejected</name>
+    <style>freeForm</style>
+    <subject>MSPA {!Apttus__APTS_Agreement__c.APTS_SAP_Reference_No__c} has been rejected</subject>
+    <textOnly>Hi,
+
+Your request for creating MSPA N#{!Apttus__APTS_Agreement__c.Apttus__FF_Agreement_Number__c} - &apos;{!Apttus__APTS_Agreement__c.Name}&apos; has been cancelled.
+
+Agreement details:
+
+Agreement Number: {!Apttus__APTS_Agreement__c.Apttus__FF_Agreement_Number__c}
+Account Customer: {!Apttus__APTS_Agreement__c.APTS_LP_AccountCustomer__c}
+Account - End User: {!Apttus__APTS_Agreement__c.APTS_Account_End_User__c}
+Sales Organization: {!Apttus__APTS_Agreement__c.APTS_LP_Sales_Organization__c}
+Distribution Channel: {!Apttus__APTS_Agreement__c.APTS_Distribution_Channel__c}
+Local Channel: {!Apttus__APTS_Agreement__c.APTS_Local_Channel__c}
+Incoterms: {!Apttus__APTS_Agreement__c.APTS_Incoterms__c}
+Sales Person: {!Apttus__APTS_Agreement__c.APTS_LP_Sales_Person__c}
+Sales Office: {!Apttus__APTS_Agreement__c.APTS_Sales_Office_LP__c}
+Max Order Amount: {!Apttus__APTS_Agreement__c.APTS_LP_Max_Order_Amount__c}
+Residual Amount: {!Apttus__APTS_Agreement__c.APTS_LP_Residual_Amount__c}
+Maximum Substitute Discount: {!Apttus__APTS_Agreement__c.APTS_LP_Max_LI_Discount__c} %
+
+Click here to go to MSPA Agreement: {!Apttus__APTS_Agreement__c.Link}
+
+Best Regards,
+Sales Team.
+
+ABB Switzerland Ltd | Brown Boveri Strasse 6 | 5400 Baden
+
+web | www.abb.ch twitter | @abb office | 020 7434 2111</textOnly>
+    <type>html</type>
+</EmailTemplate>

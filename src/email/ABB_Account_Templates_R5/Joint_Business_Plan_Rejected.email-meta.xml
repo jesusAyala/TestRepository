@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - Joint Business Plan Rejected</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Joint Business Plan Rejected</name>
+    <style>none</style>
+    <subject>Channel Partner Business Plan has been rejected by the approver.</subject>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used in Closure Emails to Customer.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Case Closure Alert</name>
+    <style>freeForm</style>
+    <subject>Case Closure Notification: {!Case.CaseNumber}</subject>
+    <textOnly>Dear Customer
+
+This is to notify that your case with reference {!Case.CaseNumber} has been closed recently.
+
+
+Thanks
+Support Center</textOnly>
+    <type>html</type>
+</EmailTemplate>

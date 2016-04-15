@@ -1,0 +1,16 @@
+<!-- 
+/**
+ * VFPage -  ChannelQualEditPage
+ * Controller - ClsChannelQualEditPage.
+ * VF Page used to redirect the edit page of Channel Pre Qualification
+ * 
+ * Release R5
+ * @author  Abiramasundari Radha (Accenture)
+ * @created 2015-12-16
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Channel_Qualifications__c" extensions="ClsChannelQualEditPage" action="{!editPageChange}" id="page">
+
+</apex:page>

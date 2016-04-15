@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Instruction__ka$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>Instruction__ka.Instruction__kav$Title</field>
+    </columns>
+    <columns>
+        <field>Instruction__ka.Instruction__kav$Summary</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Published Instruction Articles which were not  sent for Approval</description>
+    <filter>
+        <criteriaItems>
+            <column>Instruction__ka.Instruction__kav$Was_Sent_for_Approval__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Instruction__ka.Instruction__kav$PublishStatus</column>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Instruction__ka.Instruction__kav$IsLatestVersion</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Published Instruction Articles</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Instruction_Articles__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Instruction__ka$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

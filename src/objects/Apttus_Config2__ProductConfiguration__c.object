@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>APTS_Is_Place_Holder_Quote__c</fullName>
+        <description>If Config is for Proposal - check the Is place holder quote for quote header field, else it would always be false.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Apttus_Config2__BusinessObjectType__c, &quot;Proposal&quot;) ,  Apttus_QPConfig__Proposald__r.APTS_Is_Placeholder_Quote__c , false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Place Holder Quote?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+<fields>
+        <fullName>APTS_Hierarchy_Discounts__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ISPICKVAL( Apttus_Config2__BusinessObjectType__c, &quot;Agreement&quot;),  TEXT(Apttus_CMConfig__AgreementId__r.APTS_Hierarchy_Discounts__c), 
+IF(ISPICKVAL( Apttus_Config2__BusinessObjectType__c, &quot;Proposal&quot;),  TEXT(Apttus_QPConfig__Proposald__r.APTS_Hierarchy_Discounts__c), NULL ))</formula>
+        <label>Hierarchy Discounts</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Discounts__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+ISPICKVAL( Apttus_Config2__BusinessObjectType__c, &quot;Agreement&quot;), TEXT(Apttus_CMConfig__AgreementId__r.APTS_Product_Discounts__c), 
+IF(ISPICKVAL( Apttus_Config2__BusinessObjectType__c, &quot;Proposal&quot;), TEXT(Apttus_QPConfig__Proposald__r.APTS_Product_Discounts__c), NULL ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Discounts</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+<fields>
+        <fullName>APTS_Cart_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Cart Size</label>
+        <summaryFilterItems>
+            <field>Apttus_Config2__LineItem__c.Apttus_Config2__LineType__c</field>
+            <operation>equals</operation>
+            <value>Product/Service</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Apttus_Config2__LineItem__c.Apttus_Config2__IsPrimaryLine__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Apttus_Config2__LineItem__c.Apttus_Config2__ConfigurationId__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Distribution_Channel_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ISPICKVAL(Apttus_Config2__BusinessObjectType__c,&quot;Agreement&quot;), Apttus_CMConfig__AgreementId__r.APTS_Distribution_Channel__r.APTS_Code__c,
+IF(ISPICKVAL(Apttus_Config2__BusinessObjectType__c,&quot;Proposal&quot;),  Apttus_QPConfig__Proposald__r.APTS_Distribution_Channel__r.APTS_Code__c,NULL))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Distribution Channel Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Level__c</fullName>
+        <description>Formula field to hold &quot;Hierarchy Level&quot; value of Quote or Agreement based on Business Object Type (from where configuration is created).</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT( Apttus_Config2__BusinessObjectType__c ) = &quot;Agreement&quot;,  Apttus_CMConfig__AgreementId__r.APTS_Hierarchy_level__c , IF( TEXT( Apttus_Config2__BusinessObjectType__c ) = &quot;Proposal&quot;,  Apttus_QPConfig__Proposald__r.APTS_Hierarchy_level__c , &quot;&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hierarchy Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Business_Object_Record_Type__c</fullName>
+        <description>This field will pick the value of Record Type from Agreement or Quote/Proposal record based on its Business Object Type value.</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT( Apttus_Config2__BusinessObjectType__c )  = &quot;Agreement&quot;,   Apttus_CMConfig__AgreementId__r.RecordType.Name  ,  IF( TEXT( Apttus_Config2__BusinessObjectType__c )  = &quot;Proposal&quot;,   Apttus_QPConfig__Proposald__r.RecordType.Name  , &quot;&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Object Record Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Distribution_Channel_Product__c</fullName>
+        <description>This field will pick the value of Distribution Channel (product) from Agreement or Quote/Proposal object based on its Business Object Type value.</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT( Apttus_Config2__BusinessObjectType__c ) = &quot;Agreement&quot; ,  TEXT(  Apttus_CMConfig__AgreementId__r.APTS_LP_Distribution_Channel_Product__c ) ,  IF( TEXT( Apttus_Config2__BusinessObjectType__c )  = &quot;Proposal&quot;,   Apttus_QPConfig__Proposald__r.APTS_Distribution_Channel_Product__c  , &quot;&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Distribution Channel (Product)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Finalize_Cart__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If this value is true a trigger will be fired which will call API to finalize cart</description>
+        <externalId>false</externalId>
+        <label>Finalize Cart</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Max_LI_Discount__c</fullName>
+        <description>Max. LI Discount</description>
+        <externalId>false</externalId>
+        <label>Max. LI Discount</label>
+        <summarizedField>Apttus_Config2__LineItem__c.Apttus_Config2__AdjustmentAmount__c</summarizedField>
+        <summaryForeignKey>Apttus_Config2__LineItem__c.Apttus_Config2__ConfigurationId__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Sales_Organization__c</fullName>
+        <description>This field will pick the value of Sales Organization from Agreement or Quote/Proposal object based on its Business Object Type value.</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT( Apttus_Config2__BusinessObjectType__c )  = &quot;Agreement&quot;,  Apttus_CMConfig__AgreementId__r.APTS_LP_Sales_Organization__c ,  IF( TEXT( Apttus_Config2__BusinessObjectType__c ) = &quot;Proposal&quot;,  Apttus_QPConfig__Proposald__r.APTS_LP_Sales_Organization__c , &quot;&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Organization</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Total_Adjustment_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Adjustment Amount</label>
+        <summarizedField>Apttus_Config2__LineItem__c.Apttus_Config2__AdjustmentAmount__c</summarizedField>
+        <summaryForeignKey>Apttus_Config2__LineItem__c.Apttus_Config2__ConfigurationId__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_CQApprov__Approval_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The approval status of the cart</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The approval status of the cart</inlineHelpText>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approval Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approval Triggered</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved but Action Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Config2__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The current status of the configuration</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready For Approvals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready For Finalization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finalized</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Superseded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Abandoned</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approval Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved but Action Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+</CustomObject>

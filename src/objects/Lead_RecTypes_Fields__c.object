@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Contact_Center_RecordType__c</fullName>
+        <defaultValue>&apos;Contact Center&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Contact Center RecordType</label>
+        <length>30</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Existing_Account__c</fullName>
+        <defaultValue>&apos;00N20000009cSiW&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Related Existing Account</label>
+        <length>30</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Existing_Contact__c</fullName>
+        <defaultValue>&apos;00N20000009cSiX&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Related Existing Contact</label>
+        <length>30</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Marketing_RecordType__c</fullName>
+        <defaultValue>&apos;Sales &amp; Marketing&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales &amp; Marketing RecordType</label>
+        <length>30</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Lead RecTypes and Fields</label>
+    <visibility>Protected</visibility>
+</CustomObject>

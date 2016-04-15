@@ -1,0 +1,3 @@
+<apex:page controller="JointBusinessPlanRecordTypeController" action="{!redirect}" id="page">
+<apex:pageMessages id="pm"></apex:pageMessages>
+</apex:page>

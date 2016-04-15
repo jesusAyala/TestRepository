@@ -1,0 +1,11 @@
+Dear {!End_User_Project__c.CreatedBy},
+</br></br>
+Please be informed that End user project approval for {!End_User_Project__c.Name} is completed.
+</br></br>
+Link to End user project: <a href ='{!End_User_Project__c.Link}'>{!End_User_Project__c.Name}</a>
+</br></br></br>
+Best Regards,
+</br>
+Your Salesforce Team
+</br></br> 
+*** This is an automatically generated email, please do not reply ***

@@ -1,0 +1,20 @@
+<!--   
+* VF Page - RemoveProductBudgetPIS    
+* Controller - ClsRemoveProductBudget
+* Remove only the Product. This page is a part of Budget page layout.
+* Release R5
+*  
+* @author  Indhu Selvi Ramalingam (Accenture)
+* @created 2016-01-11
+* @version 1.0
+*
+* - Created
+-->
+
+
+<apex:page id="pg" standardController="Budget__c" extensions="ClsRemoveProductBudget" action="{!removeProduct}">
+        <apex:Pagemessages id="Pagemessages" /> 
+        <apex:outputPanel rendered="{!IsError}">
+             <apex:outputLink value="/{!Budget__c.Id}" styleClass="btn" style="margin-left:20px;text-decoration:none;">Back</apex:outputLink>
+         </apex:outputPanel>
+</apex:page>

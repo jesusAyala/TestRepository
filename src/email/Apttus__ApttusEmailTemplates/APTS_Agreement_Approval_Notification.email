@@ -1,0 +1,104 @@
+<messaging:emailTemplate subject="{!$Label.Apttus_Approval__ApprovalRequestForAgreement}(MSPA) with Name {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_SAP_Reference_No__c}, Account {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_AccountCustomer__r.Name} {!$Label.Apttus_Approval__HasBeenSubmittedForApproval}" 
+                                  recipientType="User" 
+                                  relatedToType="Apttus_Approval__Approval_Request__c" 
+                                  language="{!recipient.LanguageLocaleKey}"
+                                 replyTo="{!$Label.APTS_ApprovalEmailService}">
+    <messaging:htmlEmailBody >
+        <html>
+        <style type="text/css">
+        
+        div {font-color : #FF0000;}
+        .idSize {font-size: 10px;}
+        
+        </style>
+        <body>
+
+        <div style="float:right">
+        
+        <apex:variable value="{!LEFT($Api.Partner_Server_URL_260, FIND( '/services', $Api.Partner_Server_URL_260))}" var="hostUrl"/>
+        <apex:variable value="servlet/servlet.ImageServer?id=" var="staticUrl_1"/>
+        <apex:variable value="&oid=" var="staticUrl_2"/>
+        <apex:variable value="{!$Organization.Id}" var="orgId"/>
+        
+        <apex:image value="{!hostUrl}{!staticUrl_1}{!$Setup.APTS_EmailTemplateLogoId__c.APTS_Document_Id__c}{!staticUrl_2}{!orgId}" />
+        
+        <!--
+        <apex:image url="https://abb--sf1rapt--c.cs17.content.force.com/servlet/servlet.ImageServer?id=015g0000000vFcF&oid=00Dg0000006TaEI&lastMod=1446732354000" alt="" height="42" width="170" style="align=right;"/>
+        -->
+        </div>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        <b><apex:outputText > PLEASE FILL IN REJECTION COMMENTS, WHEN REJECTING THE AGREEMENT(MSPA). THE REJECTION COMMENTS NEED TO BE ENTERED IN A NEW LINE AFTER WRITING THE WORDS ‘Rejected’ OR ‘Reject’ or ‘No’</apex:outputText></b>
+        <br/><br/>
+        Dear {!recipient.Name},
+        <br/><br/>
+        {!$Label.Apttus_Approval__ApprovalRequestForAgreement} with Name '{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_SAP_Reference_No__c}', Account '{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_AccountCustomer__r.Name}' {!$Label.Apttus_Approval__HasBeenSubmittedForApproval}.
+        <br/><br/>
+         
+         <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))}apex/Apttus_Approval__AgreementApprovalSummary?id={!relatedTo.Id}&pageMode=approveReject&actionName=agreement_approval_summary">Approve/Reject</apex:outputLink><br/>
+         <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))}apex/Apttus_Approval__AgreementApprovalSummary?id={!relatedTo.Id}&pageMode=addComment&actionName=agreement_approval_summary">Add Comments</apex:outputLink><br/>
+         <br/>         
+         <!--  required fields -->
+      <!--          <b>Approval Request ID:</b> <apex:outputText value="{!relatedTo.ID}" rendered="true" /><br/>
+                <b>Approval User ID:</b> <apex:outputText value="{!relatedTo.Apttus_Approval__Assigned_To_Id__c}" rendered="true" /><br/> -->
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Object_Type__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Object_Id__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Approval_Status__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Date__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Assigned_To_Name__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__PrevAssignedToName__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Request_Comments__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Approver_Comments__c}" rendered="false" />  
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Step_Name__c}" rendered="false" />    
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.Name}" rendered="false" />
+                
+                <b><apex:OutputLabel value="Sales Rep : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.CreatedBy.Name}"/><br/>
+                <b><apex:OutputLabel value="Account Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_AccountCustomer__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Account End-User : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_Account_End_User__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Primary Partner Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Account_End_User__r.Name}"/><br/> 
+                <b><apex:OutputLabel value="Sales Office : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_Sales_Office_LP__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Local Channel : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_Local_Channel__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Valid From : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.Apttus__Contract_Start_Date__c}"/><br/>
+                <b><apex:OutputLabel value="Valid To : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.Apttus__Contract_End_Date__c}"/><br/>
+                <b><apex:OutputLabel value="Apply Reason : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_MSPA_title__c}"/><br/>
+                <b><apex:OutputLabel value="Max Order Amount : "/></b>
+    <!--        <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.CurrencyIsoCode}"/>-->
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.CurrencyIsoCode} {!SUBSTITUTE(TEXT(relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Max_Order_Amount__c),'.',',')}" rendered="{!NOT(ISNULL(relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Max_Order_Amount__c))}"/>
+            <!--    <apex:outputText value=" {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Max_Order_Amount__c}"/><br/>  -->               
+               
+                <br/>
+                <c:APTPS_AgreementApprovalComponent AgreementId="{!relatedTo.Apttus_Approval__Related_Agreement__c}" ReqId="{!relatedTo.id}" AgreementName="{!relatedTo.Apttus_Approval__Related_Agreement__r.Name}" currencyCode="{!relatedTo.Apttus_Approval__Related_Agreement__r.CurrencyIsoCode}"/>           
+                <br/>
+                               
+               <br/>
+                <b><apex:OutputLabel value="Requestor's Comments : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__SubmissionComment1__c}" rendered="{!IF(relatedTo.Apttus_Approval__SubmissionComment1__c == null, false, true)}"/>
+                <apex:outputText value="None" rendered="{!IF(relatedTo.Apttus_Approval__SubmissionComment1__c == null, true, false)}"/>
+                <br/>
+                <br/>
+                
+                <b><apex:outputText value="System Requirements (DO NOT DELETE)" styleClass="idSize"/></b><br/>
+                <b><apex:outputText value="Approval Request ID:" styleClass="idSize"/></b>
+                <apex:outputText value="{!relatedTo.ID}" rendered="true" styleClass="idSize"/><br/>
+                <b><apex:outputText value="Approval User ID:" styleClass="idSize"/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Assigned_To_Id__c}" rendered="true" styleClass="idSize"/><br/>
+                
+
+</body>
+
+</html>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

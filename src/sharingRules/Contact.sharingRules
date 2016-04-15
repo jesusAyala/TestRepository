@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>ABB_External_to_ABB_Contact_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB External to ABB Contact Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB_External</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ABB_External_to_ABB_Global_Contact_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB External to ABB Global Contact Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB_External</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ABB_Global_to_ABB_Contact_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB Global to ABB Contact Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ABB_Global_to_ABB_Global_Contact_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB Global to ABB Global Contact Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ABB_to_ABB_Contact_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB to ABB Contact Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ABB_to_ABB_Global_Contact_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB to ABB Global Contact Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

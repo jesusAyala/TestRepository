@@ -1,0 +1,35 @@
+<!-- 
+@Name: APTS_AgreementNew
+@Author: Chetan Patel
+@CreateDate: 11 Jan 2016
+@Description: used to  override Agreement standard new page.
+@UsedBy: VF-Page is invoked when user creates new agreement from standard New/save & New button.
+@ModifiedBy: NA
+@ModifiedDate: NA
+@ChangeDescription: A brief description of what was modified.
+PS: @ModifiedBy and @ChangeDescription can be repeated multiple time, based on number of changes made to the original process. -->
+
+<apex:page standardController="Apttus__APTS_Agreement__c" extensions="APTS_AgreementNewController">
+<apex:form >
+    <apex:sectionHeader title="New MSPA"/>
+
+    <apex:pageBlock title="Account Customer">
+        
+            <apex:pageMessages />
+            
+            
+            <apex:pageBlockSection title="Select Account Customer">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel for="account_customer" value="Account Customer" />
+                    <apex:inputField id="account_customer" value="{!agreement.APTS_LP_AccountCustomer__c}" required="true"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+                
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton action="{!Next}" value="Next" />
+                <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true" />
+                
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+</apex:form>  
+</apex:page>

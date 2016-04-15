@@ -1,0 +1,6 @@
+<apex:page standardController="Lead" extensions="MassUncheckforNPSController" action="{!validator}">
+   <apex:pageMessages ></apex:pageMessages>
+<apex:form >
+<apex:commandButton value="{!$Label.INTEG_MassUncheckNPS_Back}" action="{!back}"/>
+</apex:form>
+</apex:page>

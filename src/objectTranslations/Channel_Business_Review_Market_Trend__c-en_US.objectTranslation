@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Market trend detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Market trend details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Focused Industry --></label>
+        <name>Focussed_Industry__c</name>
+        <picklistValues>
+            <masterLabel>Building - Commercial &amp; institutional Buildings</masterLabel>
+            <translation>Building - Commercial &amp; institutional Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Building - Industrial Buildings</masterLabel>
+            <translation>Building - Industrial Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Building - Residential Buildings</masterLabel>
+            <translation>Building - Residential Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Agriculture and Forestry - Agriculture</masterLabel>
+            <translation>Industry - Agriculture and Forestry - Agriculture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Agriculture and Forestry - Forestry</masterLabel>
+            <translation>Industry - Agriculture and Forestry - Forestry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Agriculture and Forestry - Irrigation</masterLabel>
+            <translation>Industry - Agriculture and Forestry - Irrigation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Automotive - Automotive (Vehicles - OEM)</masterLabel>
+            <translation>Industry - Automotive - Automotive (Vehicles - OEM)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Automotive - Automotives (Parts - Tier1)</masterLabel>
+            <translation>Industry - Automotive - Automotives (Parts - Tier1)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Cement and Glass - Cement</masterLabel>
+            <translation>Industry - Cement and Glass - Cement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Cement and Glass - Glass</masterLabel>
+            <translation>Industry - Cement and Glass - Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Chemical</masterLabel>
+            <translation>Industry - Chemical</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Data Centers - AC Data Centers</masterLabel>
+            <translation>Industry - Data Centers - AC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Data Centers - DC Data Centers</masterLabel>
+            <translation>Industry - Data Centers - DC Data Centers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Electronics and Semiconductors (3C)</masterLabel>
+            <translation>Industry - Electronics and Semiconductors (3C)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Bakery &amp; Confectionery</masterLabel>
+            <translation>Industry - Food and Beverage - Bakery &amp; Confectionery</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Beverage</masterLabel>
+            <translation>Industry - Food and Beverage - Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Dairy</masterLabel>
+            <translation>Industry - Food and Beverage - Dairy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Fruit &amp; Vegetables</masterLabel>
+            <translation>Industry - Food and Beverage - Fruit &amp; Vegetables</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Ingredients</masterLabel>
+            <translation>Industry - Food and Beverage - Ingredients</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Meat, Poultry, Seafood</masterLabel>
+            <translation>Industry - Food and Beverage - Meat, Poultry, Seafood</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Other Food &amp; Beverage</masterLabel>
+            <translation>Industry - Food and Beverage - Other Food &amp; Beverage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Food and Beverage - Sugar</masterLabel>
+            <translation>Industry - Food and Beverage - Sugar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Metals - Aluminium</masterLabel>
+            <translation>Industry - Metals - Aluminium</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Metals - Other Metals</masterLabel>
+            <translation>Industry - Metals - Other Metals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Metals - Steel</masterLabel>
+            <translation>Industry - Metals - Steel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Mining and Minerals - Grinding</masterLabel>
+            <translation>Industry - Mining and Minerals - Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Mining and Minerals - Mineral Processing</masterLabel>
+            <translation>Industry - Mining and Minerals - Mineral Processing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Mining and Minerals - Open Pit Mining</masterLabel>
+            <translation>Industry - Mining and Minerals - Open Pit Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Mining and Minerals - Underground Mining including Hoisting</masterLabel>
+            <translation>Industry - Mining and Minerals - Underground Mining including Hoisting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Oil and Gas Industry - Oil and Gas - Offshore Upstream / Floating Production Units</masterLabel>
+            <translation>Industry - Oil and Gas Industry - Oil and Gas - Offshore Upstream / Floating Production Units</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Oil and Gas Industry - Refining</masterLabel>
+            <translation>Industry - Oil and Gas Industry - Refining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Oil and Gas Industry -Oil and Gas - Midstream and Transportation</masterLabel>
+            <translation>Industry - Oil and Gas Industry -Oil and Gas - Midstream and Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Oil and Gas Industry -Oil and Gas - Offshore Upstream</masterLabel>
+            <translation>Industry - Oil and Gas Industry -Oil and Gas - Offshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Oil and Gas Industry -Oil and Gas - Onshore Upstream</masterLabel>
+            <translation>Industry - Oil and Gas Industry -Oil and Gas - Onshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Other Industries</masterLabel>
+            <translation>Industry - Other Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Petrochemicals</masterLabel>
+            <translation>Industry - Petrochemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Pharmaceutical and Cosmetics</masterLabel>
+            <translation>Industry - Pharmaceutical and Cosmetics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Printing</masterLabel>
+            <translation>Industry - Printing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Pulp and Paper</masterLabel>
+            <translation>Industry - Pulp and Paper</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Rubber and Plastics Products</masterLabel>
+            <translation>Industry - Rubber and Plastics Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry - Textile</masterLabel>
+            <translation>Industry - Textile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Air Transportation</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Air Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Cranes</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - E-Vehicle Charging</masterLabel>
+            <translation>Transport and Transportation Infrastructure - E-Vehicle Charging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Land Transport Infrastructure</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Land Transport Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Logistics</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Logistics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Marine - Cruise and Ferry</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Marine - Cruise and Ferry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Marine - Harbor Infrastructure Incl. Shore to Ship Activities</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Marine - Harbor Infrastructure Incl. Shore to Ship Activities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Marine - Merchant Vessels</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Marine - Merchant Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Marine - Naval (military) Vessels</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Marine - Naval (military) Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Marine - Oil and Gas Vessels</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Marine - Oil and Gas Vessels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Marine - Other Marine</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Marine - Other Marine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Railway - Railway AC Infrastructure</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Railway - Railway AC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Railway - Railway DC Infrastructure</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Railway - Railway DC Infrastructure</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Transportation Infrastructure - Railway - Railway Rolling Stock</masterLabel>
+            <translation>Transport and Transportation Infrastructure - Railway - Railway Rolling Stock</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usage unknown - End Usage Unknown</masterLabel>
+            <translation>Usage unknown - End Usage Unknown</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Distribution (&lt;60 kV)</masterLabel>
+            <translation>Utilities - Electric Distribution (&lt;60 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Sub Transmission (60-170 kV)</masterLabel>
+            <translation>Utilities - Electric Sub Transmission (60-170 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Transmission (&gt;170 kV)</masterLabel>
+            <translation>Utilities - Electric Transmission (&gt;170 kV)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Biomass</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Biomass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Coal</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Coal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Gas/Oil</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Gas/Oil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Hydro</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Hydro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Nuclear</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Nuclear</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Oil/Diesel</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Oil/Diesel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Other Sources</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Other Sources</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Solar</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Solar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Waste to Energy</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Waste to Energy</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Wind (off shore)</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Wind (off shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Electric Utility - Power Generation - Power Generation - Wind (on shore)</masterLabel>
+            <translation>Utilities - Electric Utility - Power Generation - Power Generation - Wind (on shore)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Gas Utilities</masterLabel>
+            <translation>Utilities - Gas Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Other Utilities</masterLabel>
+            <translation>Utilities - Other Utilities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Waste and Recycling utility</masterLabel>
+            <translation>Utilities - Waste and Recycling utility</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities - Water and Wastewater</masterLabel>
+            <translation>Utilities - Water and Wastewater</translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

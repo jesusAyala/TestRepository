@@ -1,0 +1,13 @@
+Dear Approver,
+</br></br>
+An opportunity screening has been conducted for the opportunity {!Opportunity_Screening__c.Opportunity__c} and is pending your approval. 
+</br></br>
+Please click on the link below to view the details of this opportunity screening, where the complete approval history can be found.
+</br></br>
+Link to Opportunity Screening: <a href ='{!Opportunity_Screening__c.Link}'>{!Opportunity_Screening__c.Name}</a>
+</br></br></br>
+Best Regards,
+</br>
+Your Salesforce Team
+ </br></br> 
+*** This is an automatically generated email, please do not reply ***

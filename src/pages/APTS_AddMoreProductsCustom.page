@@ -1,0 +1,10 @@
+<!--*************************************************************
+@Name: APTS_AddMoreProductsCustom
+@Author: Ganga Vemula
+@CreateDate: 10th sep 2015.
+@Description: This page is to redirect the user from cart page to custom catalog page
+@UsedBy: 
+******************************************************************-->
+<apex:page controller="APTS_AddMoreProductsCustomController" 
+           action="{!GotoCatalog}">
+</apex:page>

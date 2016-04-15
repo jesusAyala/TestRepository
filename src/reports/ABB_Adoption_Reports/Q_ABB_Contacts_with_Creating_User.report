@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User.Contact$CreatedById$Account</field>
+    </columns>
+    <columns>
+        <field>User.Contact$CreatedById$Name</field>
+    </columns>
+    <columns>
+        <field>User$Email</field>
+    </columns>
+    <columns>
+        <field>User$Phone</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Last 120 Days</description>
+    <filter>
+        <criteriaItems>
+            <column>User$Name</column>
+            <operator>notEqual</operator>
+            <value>Data Migration</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User*User$Division_DIV__c</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$CreatedDate</column>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:120</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>User.Contact$CreatedById$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User*User$Division_DIV__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Contact$CreatedById$MailingCountryCode</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Q-ABB # Contacts with Creating User</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Creating_User__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Contact$CreatedById$CreatedDate</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

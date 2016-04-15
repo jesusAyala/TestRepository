@@ -1,0 +1,8 @@
+<apex:page standardController="Visit_Report__c" action="{!updateVisitTeam}" extensions="ClsAddAccountTeamToVisitTeam" id="page">
+<apex:form id="form">
+    <apex:pageBlock id="block">
+        <apex:pageMessages id="messages"></apex:pageMessages>
+        <apex:commandButton value="{!$Label.Back}" action="{!Cancel}" id="button"/>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

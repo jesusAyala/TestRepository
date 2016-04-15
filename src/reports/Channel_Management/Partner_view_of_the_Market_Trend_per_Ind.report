@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Joint_Business_Plan__c$Name</field>
+    </columns>
+    <columns>
+        <field>Joint_Business_Plan__c.Channel_Reviews__r$Name</field>
+    </columns>
+    <columns>
+        <field>Joint_Business_Plan__c.Channel_Reviews__r.Channel_Business_Review_Market_Trends__r$Name</field>
+    </columns>
+    <crossFilters>
+        <operation>with</operation>
+        <primaryTableColumn>Joint_Business_Plan__c.Channel_Reviews__r$Id</primaryTableColumn>
+        <relatedTable>Channel_Business_Review_Market_Trend__c</relatedTable>
+        <relatedTableJoinColumn>Channel_Business_Review__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>EUR</currency>
+    <description>Partner view of the Market Trend per Industry</description>
+    <filter>
+        <criteriaItems>
+            <column>Joint_Business_Plan__c.Channel_Reviews__r$Status__c</column>
+            <operator>equals</operator>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Joint_Business_Plan__c$Primary_Address_Country__c</column>
+            <operator>equals</operator>
+            <value>Finland</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Joint_Business_Plan__c.Channel_Reviews__r.Channel_Business_Review_Market_Trends__r$Focussed_Industry__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Joint_Business_Plan__c.Channel_Reviews__r.Channel_Business_Review_Market_Trends__r$Feedback__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Partner view of the Market Trend per Ind</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Joint_Business_Plans_with_Channel_Business_Reviews_with_Channel_Business_Revie__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Joint_Business_Plan__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURPREV1</interval>
+    </timeFrameFilter>
+</Report>

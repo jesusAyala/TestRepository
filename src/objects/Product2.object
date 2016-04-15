@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>APTS_ABB_Global_ID__c</fullName>
+        <description>ABB Global ID for Global Products.</description>
+        <externalId>false</externalId>
+        <label>ABB Global ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GHP__c</fullName>
+        <externalId>false</externalId>
+        <label>GHP</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_BU__c</fullName>
+        <description>BU - Global Business Unit for a Global product, and Local business unit for a local product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>BU - Global Business Unit for a Global product, and Local business unit for a local product</inlineHelpText>
+        <label>BU</label>
+        <picklist>
+            <picklistValues>
+                <fullName>LPBS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LPCP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LPCW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LPED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LPWA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Country_Code__c</fullName>
+        <description>Country Code for Local Products.</description>
+        <externalId>false</externalId>
+        <label>Country Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Country_Market_Type__c</fullName>
+        <description>Country Market Availability Type - Global Products.</description>
+        <externalId>false</externalId>
+        <label>Country Market Availability Type</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_EAN_Code__c</fullName>
+        <description>Local EAN Code - Local Products and EAN Code - Global Products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Local EAN Code - Local Products and EAN Code - Global Products.</inlineHelpText>
+        <label>EAN Code</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_External_ID__c</fullName>
+        <description>External Id Field. This is used while copying records from staging to normal object</description>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+<fields>
+        <fullName>APTS_ProductType__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+ <fields>
+        <fullName>APTS_Product_Line_Tree_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Line Tree</label>
+        <referenceTo>APTS_Product_Line_Tree__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>ProductsLineTree</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Formula_ABB_Global_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Global_Product_ID__r.APTS_ABB_Global_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ABB Global ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GTV_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>GTV Level</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Global_Product_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Self lookup to Product to map Global Product Id with Local Product.</description>
+        <externalId>false</externalId>
+        <label>Global Product ID</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Level_3_Code__c</fullName>
+        <description>Level 3 Hierarchy Code</description>
+        <externalId>false</externalId>
+        <label>Hierarchy Level 3 Code</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Level_4_Code__c</fullName>
+        <description>Level 4 Hierarchy Code</description>
+        <externalId>false</externalId>
+        <label>Hierarchy Level 4 Code</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>Related_Product_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Product Group</label>
+        <referenceTo>Product_Group__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Hierarchy Level</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Code_2__c</fullName>
+        <description>Offering Tree Classification node ID 2 - Global Products.</description>
+        <externalId>false</externalId>
+        <label>Code 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Distribution_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Distribution Channel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BT</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Is_Hierarchy__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check only if Product Hierarchy is created.</description>
+        <externalId>false</externalId>
+        <label>Is Hierarchy</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Product_Hierarchy__c</fullName>
+        <description>Offering Tree Classification node ID 1 - Global Products.</description>
+        <externalId>false</externalId>
+        <label>Product Hierarchy</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Sales_Organization__c</fullName>
+        <defaultValue>$User.Division  &amp; &quot;-&quot; &amp;  $User.Country</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Organization</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Life_Cycle_Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Life Cycle Phase</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Classic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_MDF_Code__c</fullName>
+        <description>Local MDF Code - Local Products and MDF Code- Global Products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Local MDF Code - Local Products and MDF Code- Global Products.</inlineHelpText>
+        <label>MDF Code</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Offering_Tree_Classification_ID_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Offering Tree Classification node ID 1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Offering_Tree_Classification_ID_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Offering Tree Classification node ID 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_PG__c</fullName>
+        <description>Local PG - Local Products and PG - Global Products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Local PG - Local Products and PG - Global Products.</inlineHelpText>
+        <label>PG</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_ID__c</fullName>
+        <description>Local Product ID for Local Products Record Type and Product ID for Global Products Record Type.</description>
+        <externalId>false</externalId>
+        <label>Product ID</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Line_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Line ID</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Line_Tree__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>To link Global and Local Products.</description>
+        <externalId>false</externalId>
+        <label>Product Line Tree</label>
+        <referenceTo>APTS_Product_Line_Tree__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>ProductLineTree</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Type_ID__c</fullName>
+        <description>Product Type ID - Global Products.</description>
+        <externalId>false</externalId>
+        <label>Product Type ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>Family</fullName>
+        <inlineHelpText>GTV Level</inlineHelpText>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Otros dispositivos modulares</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residencial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residencial/terciario</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Produt_Sales_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Sales Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>O</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+	<recordTypes>
+        <fullName>APTS_Global_Products</fullName>
+        <active>true</active>
+        <description>These are products from ABB Global Offering Tree.</description>
+        <label>Global Products</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otros dispositivos modulares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residencial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residencial%2Fterciario</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Local_Hierarchy</fullName>
+        <active>true</active>
+        <description>These are Category Level 4 products.</description>
+        <label>Local Hierarchy</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otros dispositivos modulares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residencial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residencial%2Fterciario</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Local_Products</fullName>
+        <active>true</active>
+        <description>These are LP country specific products.</description>
+        <label>Local Products</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otros dispositivos modulares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residencial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residencial%2Fterciario</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.DESCRIPTION</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.FAMILY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.FAMILY</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Parent_CID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
+    </searchLayouts>
+</CustomObject>

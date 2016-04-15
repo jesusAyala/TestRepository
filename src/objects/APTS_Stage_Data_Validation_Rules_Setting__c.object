@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Product_Line_Tree_BUs__c</fullName>
+        <defaultValue>&quot;LPBS;LPCP;LPCW;LPED;LPLS;LPSU;LPWA;EPBP;EPBS;EPCP;EPCW;EPLS;EPMV;EPSU&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Semicolon delimited list of approved BU Codes.</inlineHelpText>
+        <label>APTS Product Line Tree BUs</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ApprovalMatrix_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>ApprovalMatrix Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ApprovalMatrix_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>ApprovalMatrix Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GlobalProduct_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>GlobalProduct Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GlobalProduct_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>GlobalProduct Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalHierachy_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>LocalHierachy Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalHierachy_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>LocalHierachy Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalOperationalData_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>LocalOperationalData Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalOperationalData_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>LocalOperationalData Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalProduct_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>LocalProduct Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalProduct_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>LocalProduct Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPAApproval_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPAApproval Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPAApproval_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPAApproval Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_LineItems_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA LineItems Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_LineItems_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA LineItems Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MasterPickList_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>MasterPickList Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MasterPickList_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>MasterPickList Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ProductLineTree_Reconciliation__c</fullName>
+        <externalId>false</externalId>
+        <label>ProductLineTree Reconciliation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ProductLineTree_Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>ProductLineTree Validation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Category_Sequence__c</fullName>
+        <description>Determines the sequence of Category</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Values should be Semicolon Seperated</inlineHelpText>
+        <label>Category Sequence</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Create_Audit_Fields__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Custom setting to determine whether to populate the audit fields.</description>
+        <externalId>false</externalId>
+        <label>create Audit Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_SProductLineTree_BUName__c</fullName>
+        <description>Contains values seperated by comma to validate values in BU name field of Staging Product Line Tree Object</description>
+        <externalId>false</externalId>
+        <label>APTS SProduct Line Tree BUName</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Validate_SFDC_User__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Flag to check if Assigned Approver and Actual Approver fields required validation against SFDC User Object</description>
+        <externalId>false</externalId>
+        <label>Validate SFDC User</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+	<label>APTS Stage Data Validation Rules</label>
+    <visibility>Public</visibility>
+</CustomObject>

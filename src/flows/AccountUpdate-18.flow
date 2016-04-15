@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>SendRequestToGIS</name>
+        <label>SendRequestToGIS</label>
+        <locationX>329</locationX>
+        <locationY>461</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>GISUpdate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>RequestType</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>GISRECEIPIENT</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <description>This is an auto launched flow performed by a process</description>
+    <formulas>
+        <name>RequestType</name>
+        <dataType>String</dataType>
+        <expression>IF(NOT({!AccountToUpdate.Active__c}),&quot;Deactivation Request&quot;, &quot;Update Request&quot;+{!MID( $Api.Enterprise_Server_URL_130, 9, 18)})</expression>
+    </formulas>
+    <interviewLabel>AccountUpdate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>AccountUpdate</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>getAccount</name>
+        <label>getAccount</label>
+        <locationX>330</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SendRequestToGIS</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>accUpdateID</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>AccountToUpdate</outputReference>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Active__c</queriedFields>
+        <queriedFields>Name_Local__c</queriedFields>
+        <queriedFields>GUID__c</queriedFields>
+        <queriedFields>Successor_GUID_BAL__c</queriedFields>
+        <queriedFields>Successor_Company__c</queriedFields>
+        <queriedFields>Website</queriedFields>
+        <queriedFields>Account_Short_Name__c</queriedFields>
+        <queriedFields>Family_Tree_Level__c</queriedFields>
+        <queriedFields>Segment_Group__c</queriedFields>
+        <queriedFields>BillingCity</queriedFields>
+        <queriedFields>BillingCountry</queriedFields>
+        <queriedFields>BillingState</queriedFields>
+        <queriedFields>BillingStreet</queriedFields>
+        <queriedFields>BillingPostalCode</queriedFields>
+        <queriedFields>BillingCountryCode</queriedFields>
+        <queriedFields>ParentId</queriedFields>
+        <queriedFields>ShippingCity</queriedFields>
+        <queriedFields>ShippingCountry</queriedFields>
+        <queriedFields>ShippingCountryCode</queriedFields>
+        <queriedFields>ShippingPostalCode</queriedFields>
+        <queriedFields>ShippingState</queriedFields>
+        <queriedFields>ShippingStreet</queriedFields>
+        <queriedFields>Account_Type__c</queriedFields>
+        <queriedFields>Last_Modified_by__c</queriedFields>
+        <queriedFields>Parent_GUID__c</queriedFields>
+        <queriedFields>Successor_Account_Name_GUID__c</queriedFields>
+        <queriedFields>Primary_Account_Manager__c</queriedFields>
+        <queriedFields>ABB_Business_Partner_Segment_Level1__c</queriedFields>
+        <queriedFields>ABB_Business_Partner_Segment_Level2__c</queriedFields>
+        <queriedFields>ABB_Industry_Usage_Level1__c</queriedFields>
+        <queriedFields>ABB_Industry_Usage_Level2__c</queriedFields>
+        <queriedFields>ABB_Industry_Usage_Level3__c</queriedFields>
+        <queriedFields>Channel_Class_Level1__c</queriedFields>
+        <queriedFields>Channel_Class_Level2__c</queriedFields>
+    </recordLookups>
+    <startElementReference>getAccount</startElementReference>
+    <textTemplates>
+        <description>This template is used in the email to be send to the GIS team</description>
+        <name>GISUpdate</name>
+        <text>Please perform the following {!RequestType}:
+
+Requester Name (email): {!AccountToUpdate.Last_Modified_by__c}
+
+GUID:  {!AccountToUpdate.GUID__c}
+SFDC- ID: {!AccountToUpdate.Id}
+Name: {!AccountToUpdate.Name}
+Primary Account Manager: {!AccountToUpdate.Primary_Account_Manager__c}
+Short Name: {!AccountToUpdate.Account_Short_Name__c}
+Account Type: {!AccountToUpdate.Account_Type__c}
+Industry Usage Level1: {!AccountToUpdate.ABB_Industry_Usage_Level1__c}
+Industry Usage Level2: {!AccountToUpdate.ABB_Industry_Usage_Level2__c}
+Industry Usage Level3: {!AccountToUpdate.ABB_Industry_Usage_Level3__c}
+Business Partner Segment Level1: {!AccountToUpdate.ABB_Business_Partner_Segment_Level1__c} 
+Business Partner Segment Level2: {!AccountToUpdate.ABB_Business_Partner_Segment_Level2__c} 
+Channel Class Level1: {!AccountToUpdate.Channel_Class_Level1__c}
+Channel Class Level2: {!AccountToUpdate.Channel_Class_Level2__c}
+Website: {!AccountToUpdate.Website}
+
+Primary Address
+PrimaryStreet: {!AccountToUpdate.BillingStreet}
+Primary ZIP: {!AccountToUpdate.BillingPostalCode}
+Primary City: {!AccountToUpdate.BillingCity}
+Primary Country: {!AccountToUpdate.BillingCountry}
+Primary Country Code: {!AccountToUpdate.BillingCountryCode}
+
+Postal Address
+Postal Street: {!AccountToUpdate.ShippingStreet}
+Postal ZIP: {!AccountToUpdate.ShippingPostalCode}
+Postal City: {!AccountToUpdate.ShippingCity}
+Postal Country: {!AccountToUpdate.ShippingCountry}
+Postal Country Code: {!AccountToUpdate.ShippingCountryCode}
+
+Successor GUID: {!AccountToUpdate.Successor_Account_Name_GUID__c}
+
+Parent: GUID: {!AccountToUpdate.Parent_GUID__c}
+Family Tree Level: {!AccountToUpdate.Family_Tree_Level__c}</text>
+    </textTemplates>
+    <variables>
+        <description>This SSoject variable will hold the account, where changes have been performed</description>
+        <name>AccountToUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>This is the ID of the Account to be updated</description>
+        <name>accUpdateID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>0011100000h342j</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>GISRECEIPIENT</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>masterdata.support@ch.abb.com</stringValue>
+        </value>
+    </variables>
+</Flow>

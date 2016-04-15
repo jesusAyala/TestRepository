@@ -1,0 +1,27 @@
+<!-- 
+/**
+ * VFPage -  Copy all the Product Lines from Channel Market Coverage in to Joint Business Plan Product Line.
+ * Controller - ClsJBPProductLineCopy
+
+ * 
+ * Release R5
+ * @author  Indhu Selvi Ramalingam (Accenture)
+ * @created 2015-01-04
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Joint_Business_Plan__c" extensions="ClsJBPProductLineCopy" action="{!copyChanMarCovProductLine}" id="page">
+<apex:pagemessages escape="false" id="pgmsg"/>
+<apex:form id="form"> 
+<table width="100%">
+<tr>
+<td align="center">
+<apex:outputPanel id="pnl" style="align:centre;" rendered="{!showErrmsg}">
+<apex:commandButton title="Back" value="Back" action="{!goBack}"/>
+</apex:outputPanel>
+</td>
+</tr>
+</table>
+</apex:form>
+</apex:page>

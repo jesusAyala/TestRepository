@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>APTS_LP_Quote Notification_QuotehasbeenRejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>APTS_LP_Quote Notification_QuotehasbeenRejected</name>
+    <style>freeForm</style>
+    <subject>Quote ID# {!Apttus_Proposal__Proposal__c.APTS_SAP_Reference_No__c} - {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Proposal_Name__c} has been rejected</subject>
+    <textOnly>Hi,
+
+Your request for creating Quote N#{!Apttus_Proposal__Proposal__c.Name} - &apos;{!Apttus_Proposal__Proposal__c.Apttus_Proposal__Proposal_Name__c}&apos; has been rejected.
+
+Quote details:
+
+Quote Number: {!Apttus_Proposal__Proposal__c.Name}
+Account Customer: {!Apttus_Proposal__Proposal__c.APTS_LP_AccountCustomer__c}
+Account - End User: {!Apttus_Proposal__Proposal__c.APTS_LP_Account_End_User__c}
+Sales Organization: {!Apttus_Proposal__Proposal__c.APTS_LP_Sales_Organization__c}
+Distribution Channel: {!Apttus_Proposal__Proposal__c.APTS_Distribution_Channel__c}
+Local Channel: {!Apttus_Proposal__Proposal__c.APTS_LP_Local_Channel__c}
+Sales Person: {!Apttus_Proposal__Proposal__c.APTS_LP_Sales_Person__c}
+Sales Office: {!Apttus_Proposal__Proposal__c.APTS_LP_Sales_Office__c}
+Max Order Amount: {!Apttus_Proposal__Proposal__c.00Nm0000000uucc}
+Residual Amount: {!Apttus_Proposal__Proposal__c.APTS_LP_Residual_Amount__c}
+Maximum Substitute Discount: {!Apttus_Proposal__Proposal__c.APTS_LP_MaximumSubstituteDiscount__c}%
+
+Click here to go to Quote details: {!Apttus_Proposal__Proposal__c.Link}
+
+Best Regards,
+Sales Team.
+
+ABB Switzerland Ltd | Brown Boveri Strasse 6 | 5400 Baden
+
+web | www.abb.ch twitter | @abb office | 020 7434 2111</textOnly>
+    <type>html</type>
+</EmailTemplate>

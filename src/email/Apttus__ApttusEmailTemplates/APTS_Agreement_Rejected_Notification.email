@@ -1,0 +1,55 @@
+<messaging:emailTemplate subject="MSPA with ID {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_SAP_Reference_No__c}, Name {!relatedTo.Apttus_Approval__Related_Agreement__r.Name} and Account {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_AccountCustomer__r.Name} {!$Label.HasBeenRejected}" 
+                                  recipientType="User" 
+                                  relatedToType="Apttus_Approval__Approval_Request__c" 
+                                  language="{!recipient.LanguageLocaleKey}"
+                                 replyTo="email_approval_services@5-1lp3asqpz58virpv6fun3z0i4dek91bdgu9ni3qkb7k6t17nfl.g-6taeiea0.cs17.apex.sandbox.salesforce.com">
+    <messaging:htmlEmailBody >
+        <html>
+
+        <body>
+
+        <div style="float:right">
+        <apex:image url="https://abb--sf1rapt--c.cs17.content.force.com/servlet/servlet.ImageServer?id=015g0000000vFcF&oid=00Dg0000006TaEI&lastMod=1446732354000" alt="" height="42" width="120" style="align=right;"/>
+        </div>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        Dear {!recipient.Name},
+        <br/><br/>
+        MSPA with ID {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_SAP_Reference_No__c}, Name {!relatedTo.Apttus_Approval__Related_Agreement__r.Name} and Account {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_AccountCustomer__r.Name} {!$Label.HasBeenRejected}.
+        <br/><br/>
+                
+         <!--  required fields -->
+                <b><apex:OutputLabel value="Sales Rep : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.CreatedBy.Name}"/><br/>
+                <b><apex:OutputLabel value="Account Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_AccountCustomer__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Account End-User : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_Account_End_User__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Primary Partner Account : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Account_End_User__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Sales Office : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_Sales_Office__r.PickList_Description__c}"/><br/>
+                <b><apex:OutputLabel value="Local Channel : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Local_Channel__c}"/><br/>
+                <b><apex:OutputLabel value="Max Order Amount : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Related_Agreement__r.CurrencyIsoCode}"/>
+                <apex:outputText value=" {!relatedTo.Apttus_Approval__Related_Agreement__r.APTS_LP_Max_Order_Amount__c}"/><br/>  
+                
+                <c:APTPS_AgreementApprovalComponent AgreementId="{!relatedTo.Apttus_Approval__Related_Agreement__c}" ReqId="{!relatedTo.id}" AgreementName="{!relatedTo.Apttus_Approval__Related_Agreement__r.Name}"/>           
+                <br/>
+                
+               <br/>
+                <b><apex:OutputLabel value="Approver's Rejection Comments : "/></b>
+                <apex:outputText value="{!relatedTo.APTS_LP_Rejected_Comments_filled__c}" rendered="{!IF(relatedTo.APTS_LP_Rejected_Comments_filled__c == null, false, true)}"/>
+                <apex:outputText value="None" rendered="{!IF(relatedTo.APTS_LP_Rejected_Comments_filled__c == null, true, false)}"/>
+                <br/>
+
+</body>
+
+</html>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

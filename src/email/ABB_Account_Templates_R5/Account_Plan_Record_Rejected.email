@@ -1,0 +1,65 @@
+Dear {!Account_Plan__c.OwnerFullName} ,
+Below Account Plan is rejected. Please login into Salesforce.com for additional information.
+
+</br>
+</br>
+
+<html><table height="250" width="700" border="1">
+
+<tr width="100" height="20">
+            <td>Account :</td>
+            <td> {!Account_Plan__c.Account__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Account Plan Name : </td>
+            <td><a href = "{!Account_Plan__c.Link}"> {!Account_Plan__c.Name} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Key Account Type : </td>
+            <td> {!Account_Plan__c.Key_Account_Type__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Account Plan Year : </td>
+            <td>{!Account_Plan__c.Account_Plan_Year__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Divisions Covered  : </td>
+            <td> {!Account_Plan__c.DIV__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>BU's Covered : </td>
+            <td>{!Account_Plan__c.BU__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>PG's Covered : </td>
+            <td> {!Account_Plan__c.PG__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Product Lines Covered : </td>
+            <td> {!Account_Plan__c.Product_Lines__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Account Plan Status : </td>
+            <td>{!Account_Plan__c.Approval_Status__c} </td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Comments :</td>
+            <td>{!Account_Plan__c.Comments} </td>
+</tr> 
+
+<tr width="100" height="20">
+            <td>Approver Comments :</td>
+            <td>{!ApprovalRequest.Comments} </td>
+</tr>
+
+</table>
+</html>

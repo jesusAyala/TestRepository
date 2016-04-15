@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>This setting allows user to be excluded from validation rules and triggers</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_Merge_Override__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Account Merge Override</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Exclude__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>If this field is set to true, the validation will not be applicable for the user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this field is set to true, the validation will not be applicable for the user</inlineHelpText>
+        <label>Exclude</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Validation Override</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,6 @@
+<apex:page standardController="Joint_Business_Plan_Product_Lines__c" extensions="ClsPrepareForNextYrController" action="{!cloneRecord}">
+    <apex:form >
+        <apex:pageMessages escape="false"></apex:pageMessages>
+        <apex:commandButton value="Back" rendered="{!isAnyError}" action="{!back}"/>
+    </apex:form>
+</apex:page>

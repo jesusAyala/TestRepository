@@ -1,0 +1,185 @@
+<apex:page standardController="Lead" extensions="LeadConvertCustomCon" standardStylesheets="true">
+    
+    
+   <script type="text/javascript">
+    if({!readyToConvert}!= true ) { 
+
+alert('{!JSENCODE($Label.Lead_Conversion_Validation)}'); 
+sforce.one.navigateToSObject('{!leadReference.id}', 'detail');
+    
+}
+    </script>
+    <style type="text/css">
+        input.hiddenInput {
+            width:0;
+            height:0;
+            border:0;
+            padding:0;
+            margin:0;
+        }
+        .ReminderPanelClass .dateFormat {
+            display: none !important;
+        }
+
+    </style>
+    
+    
+<apex:sectionHeader title="Convert Lead" subtitle="{!Lead.name}"/>
+    
+    Leads can be converted to accounts, contacts, opportunities, and follow up tasks.<br/>
+    You should only convert a lead once you have identified it as qualified.<br/>
+    After this lead has been converted, it can no longer be viewed or edited as a lead, but can be viewed in lead reports.<br/><br/>
+    
+    <apex:form id="LeadConversionForm" >
+        
+         <apex:pageBlock mode="edit" id="pageBlock">
+             
+            <apex:pageMessages />
+             
+             <apex:pageBlockButtons >
+       
+                <apex:commandButton action="{!convertLead}" styleClass="sf1button" value="Convert" />
+                <apex:commandButton action="{!cancel}" styleClass="sf1button" value="Cancel"/>
+               
+             </apex:pageBlockButtons>
+             
+             <apex:pageBlockSection id="convertLeadBlock" title="Convert Lead" collapsible="no" columns="1">
+                 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Record Owner" for="recordOwner" />
+                     
+                   
+                    <apex:inputField value="{!contactId.ownerID}" id="recordOwner" required="true" />
+                </apex:pageBlockSectionItem>
+                 
+                <apex:pageBlockSectionItem >
+                 <apex:outputPanel layout="block" />
+                    <apex:outputPanel >
+                    <apex:inputCheckbox value="{!emailChecked}" id="emailChecked" />
+                    <apex:outputLabel value="Send Email to the Owner" for="emailChecked"  />
+                    </apex:outputPanel>
+                    
+                </apex:pageBlockSectionItem>
+                 
+                <apex:pageBlockSectionItem id="accountSelection" >
+                    <apex:outputLabel value="Account Customer" for="accountList" />
+                    
+                    <apex:outputPanel styleClass="requiredInput" id="block">
+                        <div class="requiredBlock"></div>
+                          
+                        <apex:selectList required="true"  value="{!selectedAccount}" size="1" multiselect="false" id="accountList">
+                            <apex:actionSupport event="onchange" action="{!accountChanged}" rerender="ViewLink"/>     
+                            <apex:selectOptions value="{!accounts}"/>
+                        </apex:selectList>
+                       
+                        <apex:inputField value="{!contactId.AccountId}" id="accountId" styleClass="hiddenInput">
+                            <apex:actionSupport event="onchange" action="{!accountLookedUp}" rerender="accountList,ViewLink"/>
+                        </apex:inputField>
+                        <apex:commandLink id="ViewLink"  value="View" onclick="javascript:if ('{!selectedAccount}' != 'NEW' ) {var newWindow = window.open('/{!selectedAccount}/p', 'accountview', 'top=40, left=40,scrollbars=yes, height=450, width=800');newwindow.focus();} else {alert('You can only view existing accounts.');}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+              
+             <apex:pageBlockSectionItem id="OpportunityInfo">
+                  <apex:outputPanel >
+                    <apex:outputLabel value="Opportunity Name" for="oppName"   />
+                    </apex:outputPanel>
+                    <apex:outputPanel id="opportunityPanel" layout="block">
+               
+               
+                <apex:outputPanel rendered="{!NOT(cancelOpp)}" styleClass="requiredInput" id="block">
+                         <div class="requiredBlock"></div>
+                            <apex:inputField required="true" value="{!opp.Name}" id="oppName" />
+                    
+                     </apex:outputPanel>
+                    
+                      <apex:inputText disabled="true" rendered="{!cancelOpp}" value="{!opp.Name}" id="oppNameDisabled"/>
+               
+                    <apex:outputPanel layout="block" />
+                      <apex:outputPanel layout="block" styleClass="requiredInput">
+                            <apex:inputCheckbox value="{!cancelOpp}" id="cancelOpp" >
+                            <apex:actionSupport event="onchange" rerender="opportunityPanel"/>
+                            </apex:inputCheckbox>
+                           <apex:outputLabel value="Do not create a new opportunity upon conversion." for="cancelOpp" ></apex:outputLabel> 
+                        </apex:outputPanel> 
+                    </apex:outputPanel>
+                 </apex:pageBlockSectionItem>
+                 
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Converted Status" for="status" />
+                    
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <div class="requiredBlock"></div>
+                     
+                    <apex:selectList id="statusPicklist" size="1" value="{!LeadReference.Status}" multiselect="false" required="true">
+                        <apex:selectOptions value="{!LeadStatusOption}"/>
+                        </apex:selectList> 
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            
+                 <apex:inputField id="Comments" value="{!taskId.Description}" />
+             </apex:pageBlockSection>
+             <apex:pageBlockSection title="Task Information" collapsible="no" columns="1">
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Subject" for="taskSub"   />
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                     
+                    <apex:inputField id="taskSub" value="{!taskId.Subject}"  required="true"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Status" for="TaskStatusList" />
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <div class="requiredBlock"></div>
+                    
+                    <apex:selectList id="TaskStatusList" size="1" value="{!taskId.Status}" multiselect="false" required="true">
+                        <apex:selectOptions value="{!taskStatusOption}"/>
+                    </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+               
+                   <apex:inputField id="taskDueDate"  value="{!taskId.ActivityDate}" onfocus="DatePicker.pickDate(false, this , false);">
+                    <apex:actionSupport event="onchange" action="{!dueDateChanged}" rerender="ReminderCalendar" />
+                </apex:inputField>
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Priority" for="TaskPriorityList"  />
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <div class="requiredBlock"></div>
+                    
+                    <apex:selectList id="TaskPriorityList" size="1" value="{!taskId.Priority}" multiselect="false" required="true">
+                        <apex:selectOptions value="{!taskPriorityOption}"/>
+                    </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection id="ReminderBlockSection" title="Task Reminder" collapsible="no" columns="1">
+                  <apex:pageBlockSectionItem id="ReminderBlockSectionItem">
+            
+            <apex:outputLabel value="Reminder" for="isReminderSet" />
+            <apex:outputPanel id="reminderPanel" styleClass="ReminderPanelClass"  layout="block">
+                <apex:inputField value="{!taskId.IsReminderSet}" id="isReminderSet">
+                    <apex:actionSupport event="onchange"   rerender="reminderPanel"/>
+                </apex:inputField>
+              <apex:inputField rendered="{!taskId.IsReminderSet}" id="ReminderCalendar" 
+                    value="{!taskId.ReminderDateTime}" >                
+                    <apex:actionSupport event="onchange" 
+                        rerender="ReminderCalendar"/>
+                </apex:inputField>
+                
+               
+                <apex:inputText rendered="{!NOT(taskId.IsReminderSet)}" 
+                disabled="true" size="11" value="{!disabledActivityDate}" />
+                
+                            
+                <apex:selectList disabled="{!NOT(taskId.IsReminderSet)}"  id="ReminderTimeList" size="1" value="{!reminderTime}" multiselect="false">
+                    <apex:selectOptions value="{!ReminderTimeOption}"/>
+                </apex:selectList>
+                
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+  
+</apex:page>

@@ -1,0 +1,112 @@
+<apex:page id="page" standardController="Competitor_CQP__c" extensions="AddNewCQPCompetitor" recordSetVar="compCQPs" standardStylesheets="true">
+<apex:includeScript value=" https://code.jquery.com/jquery-2.2.1.min.js"/>
+
+<apex:form id="form">
+
+<apex:pageMessage id="pageMessage" summary="{!$Label.CQP_Competitor_Addition}" severity="info" rendered="{!competitors.empty}">
+  </apex:pageMessage>
+
+
+ <apex:outputPanel styleClass="pageMsg2">
+      <apex:pageMessage id="pageMessage2" summary="{!$Label.CQP_Empty_Competitor_Addition}" severity="warning" rendered="{!selectedComptId.empty}">
+      </apex:pageMessage>
+</apex:outputPanel>
+ <apex:outputPanel styleClass="pageMsgCls">
+      <apex:pageMessage id="dupAcc" summary="{!$Label.CT_Duplicate_Account_Add}" severity="warning" rendered="{!dupAcc}">
+      </apex:pageMessage>
+  </apex:outputPanel>
+     
+
+  <apex:pageBlock id="pageBlock">
+  <apex:panelGrid columns="1" style="text-align:center; width:70%;">
+      <apex:outputText style="float: left;position:relative;font-size:15px;font-weight:bold;" value="{!$Label.Select_Competitor}"></apex:outputText>
+      <apex:outputPanel >
+          <apex:commandButton id="commandButton" value="{!$Label.Add_Selected_Competitors}" action="{!addSelectedCompetitors}" rendered="{!!competitors.empty}"/>
+          <apex:commandButton id="commandButton2" value="{!$Label.Back}" action="{!back}"/>
+      </apex:outputPanel>    
+  </apex:panelGrid>
+  <br></br>
+  <br></br>
+  <apex:pageBlockTable value="{!competitors}" var="cmptr" id="tblCompetitors"  columnsWidth="50px,150px,300px,300px" rendered="{!!competitors.empty}">
+        <apex:column id="column" >
+            <apex:facet name="header"> 
+            <apex:inputCheckbox id="chk" onclick="checkAll(this)">                        
+            </apex:inputCheckbox>
+            </apex:facet>
+         <apex:inputCheckbox value="{!cmptr.selected}" id="checkedone"></apex:inputCheckbox>         
+        </apex:column> 
+        <apex:column id="column2" headervalue="Name" width="150px">
+        <apex:outputLink id="outputLink" value="/{!cmptr.compt.id}">{!cmptr.compt.Name}</apex:outputlink>
+        </apex:column>         
+        <apex:column id="column3" headervalue="Account" value="{!cmptr.compt.Competitor__r.Name}" width="200px"/>
+        <apex:column id="column4" headervalue="Opportunity" value="{!cmptr.compt.Opportunity__r.Name}" width="200px"/> 
+  </apex:pageBlockTable>
+  <br></br>
+  <br></br>
+  <apex:panelGrid columns="1" style="text-align:center;width:70%">
+      <apex:outputPanel >
+      <apex:commandButton id="commandButton3" value="{!$Label.Add_Selected_Competitors}" action="{!addSelectedCompetitors}" rendered="{!!competitors.empty}"/>
+          <apex:commandButton id="commandButton4" value="{!$Label.Back}" action="{!back}"/>
+      </apex:outputPanel>
+  </apex:panelGrid>    
+  </apex:pageblock>
+  
+  <apex:pageBlock id="pageBlock2">
+  <apex:panelGrid columns="1" style="text-align:center; width:70%;">
+      <apex:outputText style="float: left;position:relative;font-size:15px;font-weight:bold;" value="{!$Label.Select_Other_Competitor}"></apex:outputText> 
+      <apex:commandButton id="commandButton" value="Add Other Competitor" action="{!addCompetitor}"/>
+   </apex:panelGrid>
+      <br></br>
+      <br></br>    
+  <apex:pageBlockSection id="pageBlockSection2" columns="1">    
+  <apex:pageBlockSectionitem id="pageBlockSectionitem" >
+          <apex:outputLabel id="outputLabel" value="{!$Label.Add_Other_Competitor}"/>
+          <apex:outputPanel id="outputPanel" >
+            <apex:inputHidden id="targetId" value="{!selectedComptId}"/>
+            <apex:inputText size="40" id="targetName" onFocus="this.blur()" disabled="false"/> <a href="#" onclick="openLookupPopup('{!$Component.targetName}', '{!$Component.targetId}'); return false"><apex:image id="theImage" value="{!$Resource.LookupIcon}" style="vertical-align: top"/></a>
+          </apex:outputPanel>
+        </apex:pageBlockSectionitem>
+        </apex:pageBlockSection>
+      <br></br>
+      <br></br>
+      <apex:panelGrid columns="1" style="text-align:center; width:70%;">
+          <apex:commandButton id="commandButton1" value="Add Other Competitor" action="{!addCompetitor}"/>
+      </apex:panelGrid> 
+  </apex:pageBlock>
+</apex:form>
+<script>
+function checkAll(cb){
+    var inputElem = document.getElementsByTagName("input");
+    for(var i=0; i<inputElem.length; i++)    
+    {
+        if(inputElem[i].id.indexOf("checkedone")!=-1)        
+        {
+          inputElem[i].checked = cb.checked;      
+        }        
+    }       
+}   
+
+    var newWin=null;
+    function openLookupPopup(name, id)
+    {
+        $('.pageMsgCls').hide();
+        $('.pageMsg2').hide();
+        var url="/apex/LookupPopup?namefield=" + name + "&idfield=" + id;
+        newWin=window.open(url, 'Popup','height=500,width=600,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
+        if (window.focus) 
+        {
+            newWin.focus();
+        }
+            
+        return false;
+    }
+                  
+    function closeLookupPopup()
+    {
+       if (null!=newWin)
+       {
+          newWin.close();
+       }  
+    }
+</script>
+</apex:page>

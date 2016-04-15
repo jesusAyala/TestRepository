@@ -1,0 +1,25 @@
+<!-- 
+@Name: APTS_SubmitProposalApproval
+@Author: Hardik Shah
+@CreateDate: 08 Sep 2015
+@Description: This VF Page passes Agreement Information to APTS_ApprovalSubmitController to fetch Approval Group Value information
+@UsedBy: VF-Page is invoked by 'APTS_Submit_for_Approval' Formula Field on Agreement Object
+@ModifiedBy: NA
+@ModifiedDate: NA
+@ChangeDescription: A brief description of what was modified.
+PS: @ModifiedBy and @ChangeDescription can be repeated multiple time, based on number of changes made to the original process. -->
+
+<apex:page standardController="Apttus_Proposal__Proposal__c" extensions="APTS_SubmitProposalApprovalController" action="{!onLoad}" >
+    <apex:form > 
+       <apex:outputText value="{!Apttus_Proposal__Proposal__c.Name}" rendered="false"/>
+        
+        <apex:outputField value="{!Apttus_Proposal__Proposal__c.APTS_LP_Local_Channel__c}" rendered="false"/>
+        <apex:outputField value="{!Apttus_Proposal__Proposal__c.APTS_LP_GTV_Level__c}" rendered="false"/>
+         <apex:pageBlock mode="edit" rendered="{!bHasErrors}" >
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+  </apex:page>

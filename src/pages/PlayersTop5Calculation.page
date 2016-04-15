@@ -1,0 +1,60 @@
+<apex:page id="pg" standardController="Capture_Team__c" extensions="ClsPlayersTop5Calculation" showHeader="false" sidebar="false"  >
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   </head>
+<apex:form id="frm">
+<!--
+{!TopPriority1} - {!TopValue1}
+{!TopPriority2} - {!TopValue2}
+{!TopPriority3} - {!TopValue3}
+{!TopPriority4} - {!TopValue4}
+{!TopPriority5} - {!TopValue5}    
+ -->              
+<table width="100%" height="100%" >
+<tr>
+<td align="right" width="800px" height ="400px"   valign="top" ><div id="piechart" style="width: 800px; height: 400px;"></div></td>
+<td align="left" valign="bottom"> <apex:commandButton value="Refresh" action="{!Refresh}"  /></td>
+</tr>
+<tr><td colspan ="3" height="10px" >&nbsp;</td></tr>
+<tr>
+<td colspan ="3" height="10px" >
+<input id="txtP1" type="hidden" value ="{!TopPriority1}" />
+<input id="txtP2" type="hidden" value ="{!TopPriority2}" />
+<input id="txtP3" type="hidden" value ="{!TopPriority3}" />
+<input id="txtP4" type="hidden" value ="{!TopPriority4}" />
+<input id="txtP5" type="hidden" value ="{!TopPriority5}" />
+</td>
+</tr>
+</table>
+</apex:form>
+ <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      var TP1 = document.getElementById("txtP1").value;
+      var TP2 = document.getElementById("txtP2").value; 
+      var TP3 = document.getElementById("txtP3").value; 
+      var TP4 = document.getElementById("txtP4").value; 
+      var TP5 = document.getElementById("txtP5").value; 
+       
+       function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          [TP1 ,     {!TopValue1}],
+          [TP2 ,     {!TopValue2}],
+          [TP3 ,     {!TopValue3}],
+          [TP4 ,     {!TopValue4}],
+          [TP5 ,     {!TopValue5}]
+        ]);
+        
+        var options = {
+          title: 'Top 5 values'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</apex:page>

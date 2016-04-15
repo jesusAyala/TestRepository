@@ -1,0 +1,148 @@
+<!--
+@Name: APTS_LP_AgreementLine
+@Author: Hardik Shah
+@CreateDate: 23/08/2015
+@Description: This VF Component fetches Agreement and AgreementLineItem
+@UsedBy: Email Template 'APTS LP MSPA Information'
+@ModifiedBy: NA
+@ModifiedDate: NA
+@ChangeDescription: A brief description of what was modified.
+PS: @ModifiedBy and @ChangeDescription can be repeated multiple time, based on number of changes made to the original process.
+-->
+
+<apex:component access="global" controller="APTS_LP_AgreementLineItemController">
+<style>
+table, th, td {
+    border: 1px solid;
+}
+</style>
+    <apex:attribute name="AgreementIdentifier" description="This field is used to capture Agreement Id" 
+                     type="String" assignTo="{!agreementId}" />
+        
+        
+           
+        <table width= "100%">
+        <apex:repeat var="mspa" value="{!Agreements}">
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Name.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Name}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_MSPA_title__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_MSPA_title__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_AccountCustomer__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_AccountCustomer__r.Name}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Sales_Organization__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Sales_Organization__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_Distribution_Channel__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_Distribution_Channel__r.APTS_Code__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Sales_Office__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Sales_Office__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Max_Order_Amount__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Max_Order_Amount__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Residual_Amount__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Residual_Amount__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Sales_Person__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Sales_Person__r.Name}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Price_Date__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Price_Date__c}" /></td>
+                </tr>
+                 <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Account_End_User__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Account_End_User__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_MSPA_Type__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_MSPA_Type__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.APTS_LP_Price_Date__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.APTS_LP_Price_Date__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus_Approval__Approval_Status__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus_Approval__Approval_Status__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus__Related_Opportunity__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus__Related_Opportunity__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus__Status_Category__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus__Status_Category__c}" /></td>
+                </tr>
+                 <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus__Status__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus__Status__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus__Contract_Start_Date__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus__Contract_Start_Date__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus__Contract_End_Date__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus__Contract_End_Date__c}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.OwnerId.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.OwnerId}" /></td>
+                </tr>
+                <tr>
+                    <td><b><apex:outputText >{!$ObjectType.Apttus__APTS_Agreement__c.Fields.Apttus__Description__c.Label}</apex:outputText></b></td>
+                    <td><apex:outputText value="{!mspa.Apttus__Description__c}" /></td>
+                </tr>
+           
+        </apex:repeat>
+        </table > 
+    <br/><br/> 
+            
+    
+            <apex:outputPanel rendered="{!hasLine}">
+                 <table width = "100%"> 
+             <apex:outputText ><b>AgreementLine Item Details </b></apex:outputText><br/><br/>
+                <tr>
+                    <th width= "15% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Name.Label} </apex:outputText></b></th>
+                    <th width= "10% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus__ProductId__c.Label} </apex:outputText></b></th>
+                    <th width= "10% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus_CMConfig__ChargeType__c.Label}</apex:outputText></b></th>
+                    <th width= "10% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus_CMConfig__Frequency__c.Label}</apex:outputText></b></th>
+                    <th width= "10% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus_CMConfig__PriceUom__c.Label}</apex:outputText></b></th>
+                    <th width= "10% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus_CMConfig__SellingFrequency__c.Label}</apex:outputText></b></th>
+                    <th width= "10% "> <b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus__Quantity__c.Label}</apex:outputText></b></th>
+                    <th width= "15% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus_CMConfig__BaseExtendedPrice__c.Label}</apex:outputText></b></th>
+                    <th width= "10% "><b><apex:outputText >{!$ObjectType.Apttus__AgreementLineItem__c.Fields.Apttus__NetPrice__c.Label}</apex:outputText></b></th>
+                </tr>           
+            
+            <apex:repeat var="LineItem" value="{!AgreementLineItems}">
+               <tr>
+                    <td width= "15% "><apex:outputText value="{!LineItem.Name}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus__ProductId__r.Name}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus_CMConfig__ChargeType__c}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus_CMConfig__Frequency__c}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus_CMConfig__PriceUom__c}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus_CMConfig__SellingFrequency__c}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus__Quantity__c}" /></td>
+                    <td width= "15% "><apex:outputText value="{!LineItem.Apttus_CMConfig__BaseExtendedPrice__c}" /></td>
+                    <td width= "10% "><apex:outputText value="{!LineItem.Apttus__NetPrice__c}" /></td>
+                </tr>
+              </apex:repeat>
+        </table>
+                 </apex:outputPanel>
+               
+         
+</apex:component>

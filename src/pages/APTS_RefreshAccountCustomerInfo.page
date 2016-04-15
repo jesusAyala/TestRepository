@@ -1,0 +1,203 @@
+<!-- ***********************************************************************
+@Name: APTS_RefreshAccountCustomerInfo
+@Author: Niket chandane <nchandane@apttus.com>
+@CreateDate: 2nd Nov, 2015
+@Description: Page to capture "RefreshAccountCustomerInfo Information" on Quote.
+@UsedOn: Opportunity and Account record (while creating Quote/MSPA from them)
+************************************************************************ -->
+
+<apex:page controller="APTS_RefreshAccountCustomerInfoCntrl" action="{!onPageLoad}">
+    <script>
+        function changeValue(input, textid) {
+            document.getElementById(textid).value = input.id;
+            console.log('@@ input.id : ' + input.id);
+        }
+    </script>
+    
+    <apex:form >
+        <apex:pageBlock title="{!$Label.APTS_REFRESH_ACCOUNT_CUSTOMERINFO_INFORMATION}" id="pageblockid" mode="edit" >
+            
+            <!-- Display Error Messages, if any -->
+            <apex:pageMessages id="errorMessages" />
+            
+            <apex:actionStatus id="Loading" >
+                <apex:facet name="start" >
+                  <img src="/img/loading.gif" />                    
+                </apex:facet>
+            </apex:actionStatus>
+                
+                <apex:pageBlockButtons location="bottom">
+                    <apex:CommandButton action="{!updateAgreement}" value="{!$Label.Apttus_Config2__Update}" id="btnMSPAUpdate" rendered="{!AND(bIsUpdatable,NOT(isNonBuyingAccount),isForAgreement)}" rerender="errorMessages" status="Loading"/>
+                    <apex:CommandButton action="{!updateQuote}" value="{!$Label.Apttus_Config2__Update}" id="btnQuotationUpdate" rendered="{!AND(bIsUpdatable,NOT(isNonBuyingAccount),isForQuotation)}" rerender="errorMessages" status="Loading"/>
+                    <apex:CommandButton action="{!updateQuoteAndCreateAgreement}" value="Create MSPA" id="btnCreateMSPA" rendered="{!AND(bIsUpdatable,isNonBuyingAccount)}" rerender="errorMessages" status="Loading"/>
+                    <apex:CommandButton action="{!back}" value="{!$Label.Apttus_Config2__Back}" id="btnback"/>
+                </apex:pageBlockButtons>
+                
+                <apex:PageBlockSection columns="1" >
+                    <apex:InputField value="{!quote.APTS_LP_AccountCustomer__c}" rendered="{!isForQuotation}" id="AccountCustomer">
+                        <apex:CommandButton action="{!FetchLodforSelectedAccount}" value="{!$Label.Apttus_Config2__Refresh}" id="btnRefresh" rerender="errorMessages,lsotable,pageblockid" status="Loading"></apex:CommandButton>
+                    </apex:inputField>
+                    <apex:InputField value="{!agreement.APTS_LP_AccountCustomer__c}" rendered="{!isForAgreement}" id="AccountCustomerMSPA">
+                        <apex:CommandButton action="{!FetchLodforSelectedAccount}" value="{!$Label.Apttus_Config2__Refresh}" id="btnRefresh" rerender="errorMessages,lsotable,pageblockid" status="Loading"></apex:CommandButton>
+                    </apex:inputField>    
+                </apex:PageBlockSection>
+           
+   
+            <!-- INPUT SELECTION SECTION -->
+                <apex:pageBlockSection columns="2" title="{!$Label.APTS_QUOTATION_LOCAL_OPERATIONS_DATA}" rendered="{!isForQuotation}">
+<!--                    <apex:pageBlockSectionItem> -->
+<!--                        <apex:outputLabel value="{!$ObjectType.Apttus_Proposal__Proposal__c.fields.APTS_Account_Type__c.label}" for="AccountType"/> -->
+<!--                        <apex:InputField value="{!quote.APTS_Account_Type__c}" id="AccountType"/> -->
+<!--                    </apex:pageBlockSectionItem><apex:pageBlockSectionItem ></apex:pageBlockSectionItem> -->
+                    <!--Distribution Channel-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus_Proposal__Proposal__c.fields.APTS_Distribution_Channel__c.label}" for="DistributionChannel"/>
+                        <apex:OutputField value="{!quote.APTS_Distribution_Channel__c}" id="DistributionChannel"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem> 
+
+
+                    <!--Incoterms-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus_Proposal__Proposal__c.fields.APTS_Incoterms__c.label}" for="APTSLPIncoterms"/>
+                        <apex:OutputField value="{!quote.APTS_Incoterms__c}" id="APTSLPIncoterms"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                    
+                    <!--Payment Terms-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus_Proposal__Proposal__c.fields.APTS_Payment_Terms__c.label}" for="PaymentTerm"/>
+                        <apex:OutputField value="{!quote.APTS_Payment_Terms__c}" id="PaymentTerm"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                    
+                    <!--Local Channel -->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus_Proposal__Proposal__c.fields.APTS_Local_Channel__c.label}" for="LocalChannel"/>
+                        <apex:OutputField value="{!quote.APTS_Local_Channel__c}" id="LocalChannel"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>    
+                        
+                 </apex:pageBlockSection>
+                 
+                <!-- INPUT SELECTION SECTION FOR Agreement-->
+                <apex:pageBlockSection columns="2" title="{!$Label.APTS_AGREEMENT_LOCAL_OPERATIONS_DATA}" rendered="{!isForAgreement}">
+<!--                    <apex:pageBlockSectionItem> -->
+<!--                        <apex:outputLabel value="{!$ObjectType.Apttus_Proposal__Proposal__c.fields.APTS_Account_Type__c.label}" for="AccountType"/> -->
+<!--                        <apex:InputField value="{!quote.APTS_Account_Type__c}" id="AccountType"/> -->
+<!--                    </apex:pageBlockSectionItem><apex:pageBlockSectionItem ></apex:pageBlockSectionItem> -->
+                    <!--Distribution Channel-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus__APTS_Agreement__c.fields.APTS_Distribution_Channel__c.label}" for="DistributionChannel"/>
+                        <apex:OutputField value="{!agreement.APTS_Distribution_Channel__c}" id="AgrDistributionChannel"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                    
+                    <!--Incoterms-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus__APTS_Agreement__c.fields.APTS_Incoterms__c.label}" for="APTSLPIncoterms"/>
+                        <apex:OutputField value="{!agreement.APTS_Incoterms__c}" id="APTSLPIncoterms"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                    
+                    <!--Payment Terms-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus__APTS_Agreement__c.fields.APTS_Payment_Terms__c.label}" for="PaymentTerm"/>
+                        <apex:OutputField value="{!agreement.APTS_Payment_Terms__c}" id="PaymentTerm"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                    
+                    <!--Local Channel -->
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Apttus__APTS_Agreement__c.fields.APTS_Local_Channel__c.label}" for="LocalChannel"/>
+                        <apex:OutputField value="{!agreement.APTS_Local_Channel__c}" id="LocalChannel"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>    
+                        
+                 </apex:pageBlockSection>
+                 
+                 <apex:inputHidden value="{!selectedLODId}" id="RadioButtonValue" />
+                 
+                 <apex:pageBlockSection columns="1" id="lsotable" title="{!$Label.APTS_SELECT_LOCAL_OPERATIONS_DATA}"> 
+                   <!-- <apex:pageBlockTable var="lso" value="{!lstLODWrapperInfo}" rendered="{!lstLODWrapperInfo.size > 0}" id="lDOtbl">
+                         <apex:column headervalue="Select">
+                            <input type="radio" name="chosen" id="{!lso.Lod.Id}" VALUE="{!lso.bIsSelected}" checked="{!lso.bIsSelected}" onclick="changeValue(this,'{!$Component.RadioButtonValue}');" />
+                        </apex:column>    
+                         
+                        <apex:column headerValue="Distribution Channel" >
+                            <apex:outputField value="{!lso.Lod.APTS_LP_Distribution_Channel__c}"/> 
+                        </apex:column>
+                        
+                        <apex:column headerValue="SAP Division" >
+                            <apex:outputField value="{!lso.Lod.APTS_SAP_Division__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="SAP Customer ID" >
+                            <apex:outputField value="{!lso.Lod.APTS_LP_SAP_Customer_ID__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Payment Terms" >
+                            <apex:outputField value="{!lso.Lod.APTS_Payment_Terms__c}"/> - <apex:outputtext value="{!lso.descPaymentTerm}"/> 
+                        </apex:column>
+                        
+                        <apex:column headerValue="Incoterms" >
+                            <apex:outputField value="{!lso.Lod.APTS_LP_Incoterms__c}"/> - <apex:outputtext value="{!lso.descIncoterm}"/> 
+                        </apex:column>
+                    </apex:pageBlockTable> -->
+                    
+                    <apex:pageBlockTable var="lso" value="{!listUniqWrapperLOD}" rendered="{!listUniqWrapperLOD.size > 0}" id="lDOtbl">
+                         <apex:column headervalue="Select">
+                            <input type="radio" name="chosen" id="{!lso.iRecordId}" VALUE="{!lso.bIsSelected}" class="radiobuttonclass" checked="{!lso.bIsSelected}" onclick="changeValue(this,'{!$Component.RadioButtonValue}');" />
+                        </apex:column>    
+                         
+                        <apex:column headerValue="Distribution Channel" >
+                            <apex:outputField value="{!lso.LSOData.APTS_LP_Distribution_Channel__c}"/> 
+                        </apex:column>
+                        
+                        <apex:column headerValue="Local Channel" >
+                            <apex:outputField value="{!lso.LSOData.APTS_LP_Local_Channel__c}"/> - <apex:outputtext value="{!lso.descLocalChannel}"/> 
+                        </apex:column>
+                        
+                        <apex:column headerValue="SAP Customer ID" >
+                            <apex:outputField value="{!lso.LSOData.APTS_LP_SAP_Customer_ID__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Incoterms" >
+                            <apex:outputField value="{!lso.LSOData.APTS_LP_Incoterms__c}"/> - <apex:outputtext value="{!lso.descIncoterm}"/> 
+                        </apex:column>
+                        
+                        <apex:column headerValue="Payment Terms" >
+                            <apex:outputField value="{!lso.LSOData.APTS_Payment_Terms__c}"/> - <apex:outputtext value="{!lso.descPaymentTerm}"/> 
+                        </apex:column>
+                        
+                        <apex:column style="width:20px;">
+                            <apex:facet name="header" >
+                                SAP<br/>Division
+                            </apex:facet>                            
+                            <apex:outputField value="{!lso.LSOData.APTS_SAP_Division__c}"/> 
+                        </apex:column>
+                        <apex:column style="width:20px;">
+                            <apex:facet name="header" >
+                                Sales<br/>Organization
+                            </apex:facet>                             
+                            <apex:outputField value="{!lso.LSOData.APTS_LP_Sales_Organisation__c}"/> 
+                        </apex:column>
+                        <apex:column headerValue="Sales Office"> 
+                            <apex:outputText value="{!lso.salesOffice}"/>
+                        </apex:column>
+                        <!--
+                        <apex:column headerValue="LBU"> 
+                            <apex:outputText value="{!lso.lbu}"/>
+                        </apex:column>
+                        -->
+                    </apex:pageBlockTable>
+                    <script>
+                         document.getElementsByClassName("radiobuttonclass")[0].checked = true;
+                    </script>
+                 </apex:pageBlockSection>
+                 
+                 
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

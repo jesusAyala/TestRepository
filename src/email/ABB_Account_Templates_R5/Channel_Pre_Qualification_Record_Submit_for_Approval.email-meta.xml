@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - Channel Pre-Qualification Record Submit for Approval</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Channel Pre-Qualification Record Submit for Approval</name>
+    <style>none</style>
+    <subject>Channel Pre-Qualification has been routed for your approval</subject>
+    <type>custom</type>
+</EmailTemplate>

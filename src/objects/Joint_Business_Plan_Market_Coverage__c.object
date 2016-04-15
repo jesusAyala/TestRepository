@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - New Custom Object Joint Business Plan Market Coverage</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Product_Lines__c</fullName>
+        <description>R5 - ABB Product Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product mix - content under Market Scope is used as default value. Please edit as needed.</inlineHelpText>
+        <label>ABB Product Lines</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Annual_Growth_Potential__c</fullName>
+        <description>R5 - Annual Growth Potential</description>
+        <externalId>false</externalId>
+        <inlineHelpText>in % for the partners’ whole business in this segment</inlineHelpText>
+        <label>% Annual Growth Potential</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Partner_Business_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( (TEXT(Joint_Business_Plan__r.Status__c) == &apos;Closed&apos; || TEXT(Joint_Business_Plan__r.Status__c) == &apos;Obsolete&apos;), &apos;Closed&apos;, TEXT(Joint_Business_Plan__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Partner Business Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>Available_Market__c</fullName>
+        <description>R5 - Available Market</description>
+        <externalId>false</externalId>
+        <label>Available Market</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Business__c</fullName>
+        <description>R5 - % Current Business</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What % this segment represents of the partners total business</inlineHelpText>
+        <label>% Current Business</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Existing_Business__c</fullName>
+        <description>R5 - Existing Business</description>
+        <externalId>false</externalId>
+        <label>Existing/Targeted Business</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Targeted Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <!--fields>
+        <fullName>Focussed_Industry1__c</fullName>
+        <description>R5 - Focussed industry - combination of Industry usage level 1, level2 and level3</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick all the industries currently served and targeted in the upcoming 3 years.  Want to add/ remove a focused industry? Do it on &quot;Channel Market Scope&quot; -view and clone the list on Business Plan header -view.</inlineHelpText>
+        <label>Focussed Industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BLD - BLD.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD - BLD.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD - BLD.10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.1 - IND.1.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.1 - IND.1.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.7 - IND.7.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.7 - IND.7.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.7 - IND.7.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.11 - IND.11.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.11 - IND.11.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.17 - IND.17.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.17 - IND.17.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.17 - IND.17.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.18 - IND.18.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.18 - IND.18.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.2 - TRA.2.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.2 - TRA.2.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.2 - TRA.2.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY - XY.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields-->
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <description>R5 - Joint Business Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business plan  this market scope is connected to</inlineHelpText>
+        <label>Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipLabel>Market coverages</relationshipLabel>
+        <relationshipName>Joint_Business_Plan_Market_Coverages</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Market_Position__c</fullName>
+        <description>R5 - Market Position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner’s position on this market segment today. Do not enter if possible compliance issues.</inlineHelpText>
+        <label>Market Position</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Top 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 6 or more</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Market_Share__c</fullName>
+        <description>R5 - Market Share</description>
+        <externalId>false</externalId>
+        <label>Market Share</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Other_Details__c</fullName>
+        <description>R5 - Other Details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>..concerning ABB business potential in this segment</inlineHelpText>
+        <label>Other Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Country__c</fullName>
+        <description>R5 - Copies Primary Address Country from Account .</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Joint_Business_Plan__r.Account__r.Primary_Address_Country__c )</formula>
+        <label>Primary Address Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Today__c</fullName>
+        <description>R5 - Sales Today</description>
+        <externalId>false</externalId>
+        <inlineHelpText>.. to this segment for the products indicated above</inlineHelpText>
+        <label>ABB sales last year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Special_Focus__c</fullName>
+        <description>R5 - Special Focus</description>
+        <externalId>false</externalId>
+        <inlineHelpText>e.g. application, sub-segment</inlineHelpText>
+        <label>Special Focus</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Strength__c</fullName>
+        <description>R5 - Strength</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What are the partners competitive advantages in this segment</inlineHelpText>
+        <label>Strengths</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Targeted_ABB_this_year_sales__c</fullName>
+        <description>R5 - Targeted ABB this year sales</description>
+        <externalId>false</externalId>
+        <inlineHelpText>.. to this segment for the products indicated above</inlineHelpText>
+        <label>Targeted ABB sales this year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Targeted_Sales_this_year__c</fullName>
+        <description>R5 - Targeted Sales This year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Main products and services sold today to this segment</inlineHelpText>
+        <label>Offering today</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Market Coverage</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Joint_Business_Plan__c</columns>
+        <columns>Existing_Business__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>Market-{000000}</displayFormat>
+        <label>Market Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Market Coverages</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Joint_Business_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Existing_Business__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Market_Share__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Current_Business__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Annual_Growth_Potential__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ABB_Product_Lines__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Targeted_Sales_this_year__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Current_Business__c</lookupFilterFields>
+        <lookupFilterFields>Annual_Growth_Potential__c</lookupFilterFields>
+ 
+        <lookupFilterFields>Targeted_Sales_this_year__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Current_Business__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Annual_Growth_Potential__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ABB_Product_Lines__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Targeted_Sales_this_year__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Current_Business__c</searchFilterFields>
+        <searchFilterFields>Annual_Growth_Potential__c</searchFilterFields>
+        <searchFilterFields>Targeted_Sales_this_year__c</searchFilterFields>
+        <searchResultsAdditionalFields>Focussed_Industry1__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Current_Business__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Annual_Growth_Potential__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ABB_Product_Lines__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Targeted_Sales_this_year__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>JBP_Status_Closed_Check_MarketCoverage</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Partner Business Plan Status is Closed/Obsolete, then the user should not edit the Market Coverage</description>
+        <errorConditionFormula>OR(ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Closed&apos;), 
+ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Obsolete&apos;) 
+)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Business Plan is Closed/Obsolete</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Copy_Joint_Business_Plan_Market_Coverage</fullName>
+        <availability>online</availability>
+        <description>R5 Clicking on the button will generate records and pre-fill information from the channel market coverage into the Joint Business Plan Market Coverage</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Copy Channel Business Plan Market Scope</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/JointBusinessPlanMarketCoverage?Id={!Joint_Business_Plan__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <description>R5 - To explore Multi-Edit option in Joint Business Plan Related List.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/JBPMarketCoverageList?Id={!Joint_Business_Plan__c.Id}</url>
+    </webLinks>
+</CustomObject>

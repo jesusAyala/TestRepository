@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>34.0</apiVersion>
+    <description>AgreementApprovalNotification</description>
+    <label>AgreementApprovalNotification</label>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>267</minorNumber>
+        <namespace>Apttus</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>350</minorNumber>
+        <namespace>Apttus_Approval</namespace>
+    </packageVersions>
+</ApexComponent>

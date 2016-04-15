@@ -1,0 +1,6 @@
+<apex:page standardController="Apttus__APTS_Agreement__c">
+    
+    <apex:include pageName="APTS_CustomRelatedListScript" />
+    <apex:relatedList list="Apttus_Approval__R00N70000001lyBVEAY__r" title="" pageSize="1000"/>
+    
+</apex:page>

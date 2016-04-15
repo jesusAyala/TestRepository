@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Created as part of R5-2507. To provide user with a custom page to select and remove opportunities associated with the CT.</description>
+    <label>Remove Opportunity From Capture Team</label>
+</ApexPage>

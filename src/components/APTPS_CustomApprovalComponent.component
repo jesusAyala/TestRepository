@@ -1,0 +1,93 @@
+<!----------------------------------
+@Name: APTPS_CustomApprovalComponent
+@Author: Rushabh Acharya
+@CreateDate: 4th Nov 2015
+@Description: This component is to display fields of Proposal Line Items in Approval mail 
+-------------------------------->
+
+<apex:component access="global" controller="APTPS_CustomApprovalController">
+
+    <apex:attribute name="ProdConfig" description="This is the proposal ID." 
+                     type="string" assignTo="{!ProposalId}" />
+    <apex:attribute name="ReqId" description="This is the current request ID." 
+                     type="string" assignTo="{!RequestID}" />  
+    <apex:attribute name="PropName" description="This is Proposal Name." 
+                     type="string" assignTo="{!proposalName}" />
+    <apex:attribute name="currencyCode" description="This is currency for Proposal." 
+                     type="string" assignTo="{!currCode}" />
+                                      
+  
+  <br/>
+  <b><apex:outputLabel value="Proposal : "></apex:outputLabel></b>
+  <apex:outputLink value="{!propURL}"><apex:outputText value="{!proposalName}"></apex:outputText></apex:outputLink>
+  <br/>
+  <br/>
+  
+  <table border = "1">
+  <tr>
+  <th>Line Number</th>
+  <th>Product Hierarchy Information</th>
+  <th>Quantity</th>
+  <th>Gross Price</th>
+  <th>Standard Discount</th>
+  <th>Standard Net</th>
+  <th>Discount Type</th>
+  <th>Discount %</th>
+  <th>Net Price Override</th>
+  <th>Net Price</th>
+  <th>Net Adjustment Percentage</th>
+  <th>Total Standard Price</th>
+  <th>Total Quote Price</th>
+  <th>Unit Of Price</th>
+  <th>Unit Of Measure</th>
+  </tr>
+  
+  <apex:repeat value="{!lstPropLI}" var="propLI">
+  <tr> 
+  <td align = "center"><apex:outputText value="{!propLI.Apttus_QPConfig__LineNumber__c}"/></td>
+ <td align = "center"><apex:outputText value="{!propLI.APTS_Product_Hierarchy_Information__c}" escape="false"/></td> 
+  
+ <!-- <td align = "center"><apex:outputText value="{!propLI.APTS_new_product_code__c}"/></td>-->
+  <!--<td align = "center"><apex:outputText value="{!propLI.APTS_Product_Hierarchy_Code__c}"/></td> -->
+ <!-- <td><apex:outputText value="{!propLI.Apttus_QPConfig__Quantity2__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!SUBSTITUTE(TEXT(propLI.Apttus_QPConfig__Quantity2__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.Apttus_QPConfig__Quantity2__c))}"/></td>
+ <!-- <td><apex:outputText value="{!propLI.Apttus_QPConfig__BasePrice__c}"/></td> -->
+  <td align = "center">
+ <!-- <apex:outputText value=""/> &nbsp;-->
+  <apex:outputText value="{!currCode}  {!SUBSTITUTE(TEXT(propLI.Apttus_QPConfig__BasePrice__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.Apttus_QPConfig__BasePrice__c))}"/></td>
+ <!-- <td><apex:outputText value="{!propLI.APTS_Standard_Discount__c}"/></td> -->
+
+ 
+ <td align = "center"><apex:outputText value="{!propLI.APTS_Standard_Discount_Format__c}" /> </td>
+ 
+<!--  <td><apex:outputText value="{!propLI.APTS_LP_Standard_Net__c}"/></td>-->
+  <td align = "center">
+  <apex:outputText value="{!currCode}  {!SUBSTITUTE(TEXT(propLI.APTS_LP_Standard_Net__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.APTS_LP_Standard_Net__c))}"/> </td>
+ <td align = "center"><apex:outputText value="{!propLI.APTS_Discount_Type__c}"/></td>
+  
+<!--  <td><apex:outputText value="{!propLI.APTS_Discount_Percentage__c}"/></td>-->
+ <td align = "center"><apex:outputText value="{!SUBSTITUTE(TEXT(propLI.APTS_Discount_Percentage__c),'.',',')} {!percentage}" rendered="{!NOT(ISNULL(propLI.APTS_Discount_Percentage__c))}"/> </td>
+<!--  <td><apex:outputText value="{!propLI.APTS_Net_Price_Override__c}"/></td>-->
+ <td align = "center">
+ <apex:outputText value="{!currCode}  {!SUBSTITUTE(TEXT(propLI.APTS_Net_Price_Override__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.APTS_Net_Price_Override__c))}"/></td>
+<!--  <td><apex:outputText value="{!propLI.Apttus_QPConfig__NetPrice__c}"/></td>-->
+  <td align = "center">
+  <apex:outputText value="{!currCode}  {!SUBSTITUTE(TEXT(propLI.Apttus_QPConfig__NetPrice__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.Apttus_QPConfig__NetPrice__c))}"/></td>
+<!-- <td align = "center"><apex:outputText value="{!propLI.APTS_Net_Adjustment_Percentage__c}"/></td>-->
+  <td align = "center">
+  <apex:outputText value="{!SUBSTITUTE(TEXT(propLI.APTS_Net_Adjustment__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.APTS_Net_Adjustment__c))}"/></td> 
+<!--  <td><apex:outputText value="{!propLI.APTS_LP_Total_Standard_Price__c}"/></td>-->
+  <td align = "center">
+  <apex:outputText value="{!currCode}  {!SUBSTITUTE(TEXT(propLI.APTS_LP_Total_Standard_Price__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.APTS_LP_Total_Standard_Price__c))}"/></td>
+<!--  <td><apex:outputText value="{!propLI.APTS_Total_Quote_Price__c}"/></td>-->
+  <td align = "center">
+
+  <apex:outputText value="{!currCode}  {!SUBSTITUTE(TEXT(propLI.APTS_Total_Quote_Price__c),'.',',')}" rendered="{!NOT(ISNULL(propLI.APTS_Total_Quote_Price__c))}"/></td>
+ <td align = "center"><apex:outputText value="{!propLI.APTS_LP_Unit_Of_Price__c}"/></td>
+ <td align = "center"><apex:outputText value="{!propLI.APTS_LP_Unit_Of_Measure__c}"/></td>
+  </tr>
+  
+ </apex:repeat>
+ </table>
+  
+</apex:component>

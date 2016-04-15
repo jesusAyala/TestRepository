@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - Rfp Requirements</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Engineering_Specification_Provided__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Engineering Specification Provided ?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Oppo__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rfp_Requirements__r.Rfp_Opportunity__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rfp_Addressed__c</fullName>
+        <description>Created as part of  R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>To Whom Should it be addressed ?</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Detail__c</fullName>
+        <description>R5 - Created as part of Req 2461</description>
+        <externalId>false</externalId>
+        <label>Details</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Details__c</fullName>
+        <description>RFP Details - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Details</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Documentation__c</fullName>
+        <description>Documentation - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Documentation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>All available write-ups</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Datasheets only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Documentation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Factory_Discount_Request_Initiated__c</fullName>
+        <description>R5 - Created as part of req 2461</description>
+        <externalId>false</externalId>
+        <label>Factory Discount Request Initiated ?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Pricing__c</fullName>
+        <description>Created as part of Req 2461</description>
+        <externalId>false</externalId>
+        <label>Pricing</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lump Sum</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Itemised</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Requirements__c</fullName>
+        <description>R5 - Master detail relationship to RFP</description>
+        <externalId>false</externalId>
+        <label>RFQ</label>
+        <referenceTo>RFP__c</referenceTo>
+        <relationshipLabel>Requirements</relationshipLabel>
+        <relationshipName>Requirements</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Rfp_Scope_Description__c</fullName>
+        <description>Scope Description - Created as part of  R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Scope Description</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rfp_Sell_Price_Basis__c</fullName>
+        <description>Sell Price Basis - Created as part of R5 Req 2461</description>
+        <externalId>false</externalId>
+        <label>Sell Price Basis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>List Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discount from List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specified GM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Specified NM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rfp_Who_signs_cover_letter__c</fullName>
+        <description>R5 - Created as part of  req 2461</description>
+        <externalId>false</externalId>
+        <label>Who signs cover letter ?</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Requirements</label>
+    <nameField>
+        <displayFormat>REQ-{YY}-{0000}</displayFormat>
+        <label>Requirement Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Requirements</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>New_Requirements</fullName>
+        <availability>online</availability>
+        <description>R5 - Created as part of req 2461</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Requirements</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+result = sforce.connection.query(&quot;Select Id,Name,Team_Role__c,User__c,Access_Level__c from RFP_Team__c where Access_Level__c = &apos;Read/Write&apos; &quot;); 
+records = result.getArray(&quot;records&quot;); 
+var flag = false; 
+
+var redurl = &apos;{!$Label.System_Requirement}e?CF{!$Label.System_Requirement_ID}={!RFP__c.Name}&amp;CF{!$Label.System_Requirement_ID}_lkid={!RFP__c.Id}&amp;retURL=/{!RFP__c.Id}&apos;
+
+for (var i=0; i&lt; records.length; i++) { 
+var record = records[i];
+var teamUser = record.User__c; 
+var teamUserId = teamUser.substring(0,15); 
+ 
+if(teamUserId == &apos;{!$User.Id}&apos;){ 
+flag = true; 
+} 
+}
+
+if(&apos;{!$User.Id}&apos; == &apos;{!RFP__c.OwnerId}&apos; || &apos;{!$Profile.Name}&apos; == &apos;System Administrator&apos; || &apos;{!$User.Id}&apos; == &apos;{!RFP__c.Rfp_Account_Manager__c}&apos; || flag == true){ 
+window.open(redurl,&apos;_top&apos;); 
+}
+else{ 
+alert(&apos;Insufficient Privileges to create Requirement records.&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

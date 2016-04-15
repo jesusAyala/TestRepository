@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NewProductQualificationPage</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R4 - Product Qualification</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>R4 - Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer for which the initiative has been created</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Product Qualifications</relationshipLabel>
+        <relationshipName>Product_Qualifications</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Cost_USD__c</fullName>
+        <description>R4 - This is mainly used to Capture the actual cost of the USD</description>
+        <externalId>false</externalId>
+        <label>Actual Cost USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_End_Date__c</fullName>
+        <description>R4 - Actual End Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date when the product is qualified. The date is set automatically by the system when the Qualification Level is +2</inlineHelpText>
+        <label>Actual End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <description>R4 - Approval date</description>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>R4 Approval Status</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval__c</fullName>
+        <description>R4 - Approval</description>
+        <externalId>false</externalId>
+        <label>Approval</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ApproverName__c</fullName>
+        <externalId>false</externalId>
+        <label>Approver Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Available_Market_CAPEX__c</fullName>
+        <description>R4 - Available Market CAPEX</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the estimated market value for new applications, in USD budget rate.</inlineHelpText>
+        <label>Available Market CAPEX USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Available_Market_OPEX__c</fullName>
+        <description>R4 - Available Market OPEX</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the estimated market value to maintain new applications, in USD budget rate.</inlineHelpText>
+        <label>Available Market OPEX USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Available_Market_Total__c</fullName>
+        <description>R4 Total value of Available Market CAPEX  and  Available Market OPEX</description>
+        <externalId>false</externalId>
+        <formula>Available_Market_CAPEX__c  +  Available_Market_OPEX__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Available Market Total USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit_name__c</fullName>
+        <description>R5-Field to display the Qualification product&apos;s Business Unit Name</description>
+        <externalId>false</externalId>
+        <label>Business Unit name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <description>R4 Close Date</description>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>R4V1-This field refers to comments.</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Competitor_Account_Name__c</fullName>
+        <description>R4 Competitor Account Name</description>
+        <externalId>false</externalId>
+        <label>Competitor Account Name</label>
+        <length>100000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Competitor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R4 - Competitor</description>
+        <externalId>false</externalId>
+        <label>Competitor</label>
+        <referenceTo>Competitor__c</referenceTo>
+        <relationshipLabel>Product Qualifications</relationshipLabel>
+        <relationshipName>Product_Qualifications</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Current_Product_Qualification_Level_2__c</fullName>
+        <description>R4 - Current qualification level</description>
+        <externalId>false</externalId>
+        <label>Current Product Qualification - Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>-3</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Current_Product_Qualification_Level__c</fullName>
+        <description>R4 Current Product Qualification Level</description>
+        <externalId>false</externalId>
+        <label>Current Product Qualification Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Product not qualified</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification in progress – Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification in progress – Execution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification in progress – Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Country__c</fullName>
+        <description>R4 - Text from GIS (Formula Field which copies the Account Country in to Product Qualification.Country Name)</description>
+        <externalId>false</externalId>
+        <formula>Account__r.BillingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_GUID__c</fullName>
+        <description>R4 - ID from GIS (formula field copies GUID from Account)</description>
+        <externalId>false</externalId>
+        <formula>Account__r.GUID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer GUID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Pilot_Installation_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Pilot Installation Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>R5-Field to display the Qualification product&apos;s Division value</description>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_Cost_USD__c</fullName>
+        <description>R4- This Field will be used to capture the Total estimated Budget Value of the Initiative</description>
+        <externalId>false</externalId>
+        <label>Estimated Cost USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Family_Tree_Level__c</fullName>
+        <description>R4 Family Tree Level</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Account__r.Family_Tree_Level__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Family Tree Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Trigger_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R4 Check box field is used in the validation rule Reason_for_Not_Qualified_Check to bypass the trigger</description>
+        <externalId>false</externalId>
+        <label>Hidden Trigger Check</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Initiative_Name__c</fullName>
+        <description>R4 - Initiative name</description>
+        <externalId>false</externalId>
+        <label>Initiative Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initiative_Status__c</fullName>
+        <description>R4 - Initiative status</description>
+        <externalId>false</externalId>
+        <label>Initiative Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Qualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Not Qualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Initiative_Strategic_Reason__c</fullName>
+        <description>R4 - Initiative Strategic Reason</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Objective of this initiative (e.g. “Qualification of RIP bushings for SPT transformers range, up to 170kV”).</inlineHelpText>
+        <label>Initiative Strategic Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Level_Date__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <description>R4 - Level date.</description>
+        <externalId>false</externalId>
+        <label>Level Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product_Commercial_Name__c</fullName>
+        <description>R4 Product Commercial Name</description>
+        <externalId>false</externalId>
+        <label>Product Commercial Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>R4 Product Group</description>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <description>R4 Product Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field shows the product or product family object of the initiative. The name visible is automatically selected by the offcial ABB Offering Tree. This field cannot be modified unless if a new product or product family is selected</inlineHelpText>
+        <label>Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qualification_Expiration_Date__c</fullName>
+        <description>R4V1-This field refers to Qualification Expiration Date.</description>
+        <externalId>false</externalId>
+        <label>Qualification Expiration Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Quarter_1__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;01&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;02&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;03&quot;),&quot;-3&quot;,NULL)))</defaultValue>
+        <description>R4 Quarter 1</description>
+        <externalId>false</externalId>
+        <label>Quarter 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter_2__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;04&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;05&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;06&quot;),&quot;-3&quot;,NULL)))</defaultValue>
+        <description>R4 Quarter 2</description>
+        <externalId>false</externalId>
+        <label>Quarter 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter_3__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;07&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;08&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;09&quot;),&quot;-3&quot;,NULL)))</defaultValue>
+        <description>R4 Quarter 3</description>
+        <externalId>false</externalId>
+        <label>Quarter 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter_4__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;10&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;11&quot;),&quot;-3&quot;,
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;12&quot;),&quot;-3&quot;,NULL)))</defaultValue>
+        <description>R4 Quarter 4</description>
+        <externalId>false</externalId>
+        <label>Quarter 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Closed_Date__c</fullName>
+        <description>R4V1-This field refers to Quotation Closed Date.</description>
+        <externalId>false</externalId>
+        <label>Quotation Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Quotation_ID__c</fullName>
+        <description>R4 - This field refers to Quotation ID</description>
+        <externalId>false</externalId>
+        <label>Quotation ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Status__c</fullName>
+        <description>R4V1-This field refers to Quotation Status.</description>
+        <externalId>false</externalId>
+        <label>Quotation Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quotation_Value__c</fullName>
+        <description>R4V1-This field refers to Quotation Value.</description>
+        <externalId>false</externalId>
+        <label>Quotation Value USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_not_Qualified__c</fullName>
+        <description>R4V1-This field refers to Reason for not Qualified.</description>
+        <externalId>false</externalId>
+        <label>Reason for not Qualified</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ABB Cancelled the Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Cancelled the Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Fulfilling Customer Specification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Fulfilling Local/Industry Standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pilot Failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Remarks__c</fullName>
+        <description>R4 - This field refers to Remarks.</description>
+        <externalId>false</externalId>
+        <label>Remarks</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Source_Location__c</fullName>
+        <description>R4 Source Location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Factory responsible for the qualification initiative</inlineHelpText>
+        <label>Source Location</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Startdate__c</fullName>
+        <description>R4 - Start Date</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>R4 Status</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Target_End_Date__c</fullName>
+        <description>R4 - Target End Date</description>
+        <externalId>false</externalId>
+        <label>Target End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Target_Qualification_Level__c</fullName>
+        <description>R4 - Target qualification level</description>
+        <externalId>false</externalId>
+        <label>Target Qualification Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>-3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not fulfilling customer specification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not fulfilling local/industry standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer cancelled the project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ABB cancelled the project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pilot failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <description>R4 value</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>YQ1__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;01&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot;  &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;02&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;03&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot;  &amp; TEXT(YEAR(TODAY()))),NULL)))</defaultValue>
+        <description>R4 YQ1</description>
+        <externalId>false</externalId>
+        <label>YQ1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YQ2__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;04&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;05&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;06&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),NULL)))</defaultValue>
+        <description>R4 YQ2</description>
+        <externalId>false</externalId>
+        <label>YQ2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YQ3__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;07&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;08&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;09&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),NULL)))</defaultValue>
+        <description>R4 YQ3</description>
+        <externalId>false</externalId>
+        <label>YQ3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YQ4__c</fullName>
+        <defaultValue>IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;10&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;11&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),
+IF(CONTAINS(TEXT(MONTH(TODAY())),&quot;12&quot;),(TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY()))),NULL)))</defaultValue>
+        <description>R4 YQ4</description>
+        <externalId>false</externalId>
+        <label>YQ4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Product Qualification</label>
+    <listViews>
+        <fullName>All_Product_Qualifications</fullName>
+        <columns>NAME</columns>
+        <columns>Initiative_Name__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Initiative_Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>Customer_Country__c</columns>
+        <columns>Product_Name__c</columns>
+        <columns>Source_Location__c</columns>
+        <columns>Available_Market_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Product Qualifications</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_Product_Qualifications</fullName>
+        <columns>NAME</columns>
+        <columns>Initiative_Name__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Initiative_Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>Customer_Country__c</columns>
+        <columns>Product_Name__c</columns>
+        <columns>Source_Location__c</columns>
+        <columns>Available_Market_Total__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Product Qualifications</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>PRD-QUALIF-{0000}</displayFormat>
+        <label>Initiative ID</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Qualifications</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Closed_Not_Qualified_Layout</fullName>
+        <active>true</active>
+        <description>R4 Closed Not Qualified Layout</description>
+        <label>Closed Not Qualified Layout</label>
+        <picklistValues>
+            <picklist>Approval__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product_Qualification_Level_2__c</picklist>
+            <values>
+                <fullName>%2B1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product_Qualification_Level__c</picklist>
+            <values>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Initiative_Status__c</picklist>
+            <values>
+                <fullName>Closed Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quotation_Status__c</picklist>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_not_Qualified__c</picklist>
+            <values>
+                <fullName>ABB Cancelled the Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Cancelled the Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Fulfilling Customer Specification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Fulfilling Local%2FIndustry Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot Failed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Target_Qualification_Level__c</picklist>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ABB cancelled the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer cancelled the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not fulfilling customer specification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not fulfilling local%2Findustry standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot failed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Closed_Qualified</fullName>
+        <active>true</active>
+        <description>R4 Closed_Qualified</description>
+        <label>Closed Qualified</label>
+        <picklistValues>
+            <picklist>Approval__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product_Qualification_Level_2__c</picklist>
+            <values>
+                <fullName>%2B1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product_Qualification_Level__c</picklist>
+            <values>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Initiative_Status__c</picklist>
+            <values>
+                <fullName>Closed Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quotation_Status__c</picklist>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_not_Qualified__c</picklist>
+            <values>
+                <fullName>ABB Cancelled the Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Cancelled the Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Fulfilling Customer Specification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Fulfilling Local%2FIndustry Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot Failed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Target_Qualification_Level__c</picklist>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ABB cancelled the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer cancelled the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not fulfilling customer specification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not fulfilling local%2Findustry standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot failed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Open_Layout</fullName>
+        <active>true</active>
+        <description>R4 Open_Layout</description>
+        <label>Open Layout</label>
+        <picklistValues>
+            <picklist>Approval__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product_Qualification_Level_2__c</picklist>
+            <values>
+                <fullName>%2B1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product_Qualification_Level__c</picklist>
+            <values>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not qualified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Initiative_Status__c</picklist>
+            <values>
+                <fullName>Closed Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quotation_Status__c</picklist>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_not_Qualified__c</picklist>
+            <values>
+                <fullName>ABB Cancelled the Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Cancelled the Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Fulfilling Customer Specification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Fulfilling Local%2FIndustry Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot Failed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Target_Qualification_Level__c</picklist>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ABB cancelled the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer cancelled the project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not fulfilling customer specification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not fulfilling local%2Findustry standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot failed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Initiative_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Initiative_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Customer_Country__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Product_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Source_Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Available_Market_Total__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Initiative_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Initiative_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Group__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Customer_Country__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Source_Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Division__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Business_Unit_name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Current_Product_Qualification_Level_2__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Initiative_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Initiative_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product_Group__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Customer_Country__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Source_Location__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Division__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Business_Unit_name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Current_Product_Qualification_Level_2__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Initiative_Name__c</searchFilterFields>
+        <searchFilterFields>Initiative_Status__c</searchFilterFields>
+        <searchFilterFields>Product_Name__c</searchFilterFields>
+        <searchFilterFields>Product_Group__c</searchFilterFields>
+        <searchFilterFields>Customer_Country__c</searchFilterFields>
+        <searchFilterFields>Source_Location__c</searchFilterFields>
+        <searchFilterFields>Division__c</searchFilterFields>
+        <searchFilterFields>Business_Unit_name__c</searchFilterFields>
+        <searchFilterFields>Current_Product_Qualification_Level_2__c</searchFilterFields>
+        <searchResultsAdditionalFields>Initiative_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Initiative_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Customer_Country__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Source_Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Division__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Unit_name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Current_Product_Qualification_Level_2__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Minus_Values_Check</fullName>
+        <active>true</active>
+        <description>R4 Cannot enter Minus value in Available_Market_CAPEX__c, Available_Market_OPEX__c,Actual_Cost_USD__c, Estimated_Cost_USD__c</description>
+        <errorConditionFormula>AND(NOT($User.AccountMerge_Override__c),OR(OR(Available_Market_CAPEX__c &lt; 0 , Available_Market_OPEX__c &lt; 0), AND(NOT(ISNULL(Estimated_Cost_USD__c)), Estimated_Cost_USD__c &lt; 0),
+AND(NOT(ISNULL(Actual_Cost_USD__c)), Actual_Cost_USD__c &lt; 0)))</errorConditionFormula>
+        <errorMessage>You cannot enter minus values</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_for_Not_Qualified_Check</fullName>
+        <active>false</active>
+        <description>If the Initiative status is &quot;Closed Not Qualified&quot; then, user must choose any one values from the pick list value &quot;Reason for Not Qualified&quot;</description>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+Hidden_Trigger_Check__c  = FALSE, 
+ISPICKVAL( Initiative_Status__c, &quot;Closed Not Qualified&quot;),
+OR(
+(ISPICKVAL(Reason_for_not_Qualified__c , &quot;&quot;)),
+Comments__c  = &quot;&quot; ))</errorConditionFormula>
+        <errorMessage>Please Enter Comments and Reason for not Qualified</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Lock_Check</fullName>
+        <active>false</active>
+        <description>R4 Record Lock Check based on Initiative Status value</description>
+        <errorConditionFormula>AND($Profile.Name   &lt;&gt;  &quot;System Administrator&quot;, ISPICKVAL( PRIORVALUE(Initiative_Status__c), &apos;Closed Qualified&apos;),NOT(ISNEW()))</errorConditionFormula>
+        <errorMessage>You cannot save the changes as Product Qualification Status is Closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Lock_Closed_Check</fullName>
+        <active>false</active>
+        <description>R4 Record Lock Check based on Initiative Status value</description>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,  IF(OR(ISPICKVAL(Initiative_Status__c, &quot;Closed Qualified&quot;),ISPICKVAL(Initiative_Status__c,&quot;Closed Not Qualified&quot;)) ,true, false))</errorConditionFormula>
+        <errorMessage>You cannot save the changes as Product Qualification Status is Closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Target_End_Date_cannot_be_Past_Date</fullName>
+        <active>true</active>
+        <description>R4 Check the Target End Date cannot be entered as a past date</description>
+        <errorConditionFormula>AND(NOT($User.AccountMerge_Override__c),NOT($Setup.Validation_Override__c.Account_Merge_Override__c) ,Target_End_Date__c &lt; TODAY())</errorConditionFormula>
+        <errorDisplayField>Target_End_Date__c</errorDisplayField>
+        <errorMessage>The Target End Date cannot be entered as a past date</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Qualification_Products</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Product Qualification</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/VFProductQualSaveAddProd?Accid={!Account.Id}&amp;AccName={!Account.Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Qualified_Products</fullName>
+        <availability>online</availability>
+        <description>Clicking on the button will show the reports of Qualified Products</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Qualified Products</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/apex.js&quot;)} 
+var result = sforce.connection.query(&quot;select name, id from report where name = \&apos;Qualified Products\&apos;&quot;);
+var records = result.getArray(&quot;records&quot;);
+window.location=&apos;/&apos;+records[0].Id+&apos;?pv1={!Account.Name}&apos;;</url>
+    </webLinks>
+</CustomObject>

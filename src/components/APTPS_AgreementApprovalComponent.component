@@ -1,0 +1,80 @@
+<!----------------------------------
+@Name: APTPS_AgreementApprovalComponent
+@Author: Rushabh Acharya
+@CreateDate: 5th Nov 2015
+@Description: This component is to display fields of Agreement Line Items in Approval mail 
+-------------------------------->
+
+<apex:component access="global" controller="APTPS_AgreementApprovalController">
+
+    <apex:attribute name="AgreementId" description="This is the agreement ID." 
+                     type="string" assignTo="{!agrmntId}" />
+    <apex:attribute name="ReqId" description="This is the current request ID." 
+                     type="string" assignTo="{!requestID}" />  
+    <apex:attribute name="AgreementName" description="This is Agreement Name." 
+                     type="string" assignTo="{!agrmntName}" /> 
+     <apex:attribute name="currencyCode" description="This is currency for Agreement." 
+                     type="string" assignTo="{!currCode}" />
+                     
+    
+    <b><apex:outputLabel value="Agreement : "></apex:outputLabel></b>
+      <apex:outputLink value="{!agrURL}"><apex:outputText value="{!agrmntName}"></apex:outputText></apex:outputLink>
+  <br/>
+  <br/>
+  
+  <table border = "1">
+  <tr>
+  <th>Line Number</th>
+  <th>Product Hierarchy Information</th>
+  <th>Product Name</th>
+  <th>Quantity</th>
+  <th>Gross Price</th>
+  <th>Standard Discount</th>
+  <th>Standard Net</th>
+  <th>Discount Type</th>
+  <th>Discount %</th>
+  <th>Net Price Override</th>
+  <th>Net Price</th>
+  <th>Net Adjustment Percentage</th>
+  <th>Total Standard Price</th>
+  <th>Total Quote Price</th>
+  <th>Unit Of Price</th>
+  <th>Unit Of Measure</th>  </tr>
+  
+  <apex:repeat value="{!lstAgrLI }" var="agrLI">
+  <tr> 
+  <td align = "center"><apex:outputText value="{!agrLI.Apttus_CMConfig__LineNumber__c}"/></td>
+ <td align = "center"><apex:outputText value="{!agrLI.APTS_Product_Hierarchy_Information__c}" escape="false"/></td> 
+<!-- <td align = "center"><apex:outputText value="{!agrLI.APTS_new_product_code__c}"/></td> -->
+  <td align = "center"><apex:outputText value="{!agrLI.APTS_Product_Name__c}"/></td>
+<!--  <td align = "center"><apex:outputText value="{!agrLI.APTS_LP_Product_Hierarchy_Code__c}"/></td> -->
+<!--  <td><apex:outputText value="{!agrLI.APTS_Quantity__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!SUBSTITUTE(TEXT(agrLI.APTS_Quantity__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.APTS_Quantity__c))}"/></td>
+<!--  <td><apex:outputText value="{!agrLI.Apttus_CMConfig__BasePrice__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!currCode} {!SUBSTITUTE(TEXT(agrLI.Apttus_CMConfig__BasePrice__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.Apttus_CMConfig__BasePrice__c))}"/></td>
+  <td align = "center"><apex:outputText value="{!agrLI.APTS_Standard_Discount_Format__c}"/></td>
+<!--  <td align = "center"><apex:outputText value="{!SUBSTITUTE(TEXT(agrLI.APTS_LP_Standard_Discount__c),'.',',')} {!percentage}" rendered="{!NOT(ISNULL(agrLI.APTS_LP_Standard_Discount__c))}"/></td>-->
+<!--  <td><apex:outputText value="{!agrLI.APTS_LP_Standard_Net__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!currCode} {!SUBSTITUTE(TEXT(agrLI.APTS_LP_Standard_Net__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.APTS_LP_Standard_Net__c))}"/></td>
+  <td align = "center"><apex:outputText value="{!agrLI.APTS_Discount_Type__c}"/></td>
+<!--  <td><apex:outputText value="{!agrLI.APTS_Discount_Percentage__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!SUBSTITUTE(TEXT(agrLI.APTS_Discount_Percentage__c),'.',',')} {!percentage}" rendered="{!NOT(ISNULL(agrLI.APTS_Discount_Percentage__c))}"/></td>
+<!--  <td><apex:outputText value="{!agrLI.APTS_Net_Price_Override__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!currCode} {!SUBSTITUTE(TEXT(agrLI.APTS_Net_Price_Override__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.APTS_Net_Price_Override__c))}"/></td>
+<!--  <td><apex:outputText value="{!agrLI.Apttus__NetPrice__c}"/></td>-->
+<td align = "center"><apex:outputText value="{!currCode} {!SUBSTITUTE(TEXT(agrLI.Apttus__NetPrice__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.Apttus__NetPrice__c))}"/></td>  
+<!--  <td><apex:outputText value="{!currCode} {!agrLI.APTS_Net_Adjustment_Percentage__c}"/></td>-->
+ <td align = "center"><apex:outputText value="{!SUBSTITUTE(TEXT(agrLI.APTS_Net_Adjustment_Percentage__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.APTS_Net_Adjustment_Percentage__c))}"/></td>  
+<!--  <td><apex:outputText value="{!agrLI.APTS_LP_Total_Standard_Price__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!currCode} {!SUBSTITUTE(TEXT(agrLI.APTS_LP_Total_Standard_Price__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.APTS_LP_Total_Standard_Price__c))}"/></td>  
+<!--  <td><apex:outputText value="{!agrLI.APTS_Total_Quote_Price__c}"/></td>-->
+  <td align = "center"><apex:outputText value="{!currCode} {!SUBSTITUTE(TEXT(agrLI.APTS_Total_Quote_Price__c),'.',',')}" rendered="{!NOT(ISNULL(agrLI.APTS_Total_Quote_Price__c))}"/></td>  
+  <td align = "center"><apex:outputText value="{!agrLI.APTS_LP_Unit_Of_Price__c}"/></td>
+  <td align = "center"><apex:outputText value="{!agrLI.APTS_LP_Unit_Of_Measure__c}"/></td>
+  </tr>
+  
+ </apex:repeat>
+ </table>
+    
+    
+</apex:component>

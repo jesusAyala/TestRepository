@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - Custom Object to define Channel Market Coverage</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Business_Potential__c</fullName>
+        <description>R5-currency field to capture ABB Business Potential value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Give an estimate on ABB business potential. Will be visible on pre-qualification summary</inlineHelpText>
+        <label>ABB Business Potential</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>R5 - Master Detail Relationship to Account Standard Object</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Channel_Market_Coverages</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>BU_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BU_Covered__c</fullName>
+        <description>R5 - Displays the BU copied from the BU linked to the Product in Channel Market Coverage Product Lines by concatenating it.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of BUs covered in the scope. Autofilled based on &quot;Channel Partner Product Mix&quot;</inlineHelpText>
+        <label>BUs Covered</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Base__c</fullName>
+        <description>R5 - Customer Base</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick customer types actively served. Do not pick if served only reactively.</inlineHelpText>
+        <label>Customer Base</label>
+        <picklist>
+            <picklistValues>
+                <fullName>End users</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OEMs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPCs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System integrators</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Panel builders</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>R5 Division</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick division(s) focused in this market scope (and connected business plan/review)</inlineHelpText>
+        <label>Division</label>
+        <picklist>
+            <picklistValues>
+                <fullName>DM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exisiting_Supplies_for__c</fullName>
+        <description>R5 - Existing suppliers for products ABB has offering</description>
+        <externalId>false</externalId>
+        <label>Existing suppliers products ABB offering</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Existing_ABB_offering__c</fullName>
+        <description>R5-Text field to capture Existing suppliers/ partners with existing ABB offering  value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List the ABB products/services offered by the channel, also including the ABB offering not covered in this market scope</inlineHelpText>
+        <label>Existing ABB offering</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Existing_ABB_offering_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Existing ABB offering is not filled.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Existing_ABB_offering__c ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <!--fields>
+        <fullName>Focussed_Industry1__c</fullName>
+        <description>R5 - New Focussed Industry value -Combination of Industry usage level1, level2 and level3</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick all the industries currently served and targeted in the upcoming 3 years. Pick only industries with sales focus, not the ones that are served reactively.</inlineHelpText>
+        <label>Focussed Industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BLD - BLD.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD - BLD.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BLD - BLD.10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.1 - IND.1.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.1 - IND.1.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.4 - IND.4.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.7 - IND.7.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.7 - IND.7.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.7 - IND.7.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.10 - IND.10.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.11 - IND.11.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.11 - IND.11.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.12 - IND.12.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.17 - IND.17.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.17 - IND.17.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.17 - IND.17.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.18 - IND.18.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IND - IND.18 - IND.18.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.1 - TRA.1.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.2 - TRA.2.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.2 - TRA.2.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.2 - TRA.2.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRA - TRA.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.1 - UT.1.12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - UT.9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XY - XY.1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields-->
+    <fields>
+        <fullName>PG_Covered__c</fullName>
+        <description>R5 - Displays the PG copied from PG linked to the Product in Channel Market Coverage Product Lines by concatenating it.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of PGs covered in the scope. Autofilled based on &quot;Channel Partner Product Mix&quot;</inlineHelpText>
+        <label>PGs Covered</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Partners_with_complementary_products__c</fullName>
+        <description>R5-Text field to capture the Existing suppliers/ partners with complementary products value</description>
+        <externalId>false</externalId>
+        <label>Partners with complementary products</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+   <fields>
+        <fullName>Partners_with_existing_ABB_offering__c</fullName>
+        <description>R5-Text field to capture Existing suppliers/ partners with existing ABB offering  value</description>
+        <externalId>false</externalId>
+        <label>Partners with existing ABB offering</label>
+        <length>225</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Country__c</fullName>
+        <description>R5 - Copies Primary Address Country from Account .</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Account__r.Primary_Address_Country__c )</formula>
+        <label>Primary Address Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Channel_Class__c</fullName>
+        <description>R5-Picklist contains Primary Channel Class values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the primary channel class for this market scope</inlineHelpText>
+        <label>Channel Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Engineering, Procurement and Construction (EPC)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributor (DIS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installer (INST)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Original Equipment Manufacturer (OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Panel Builder (PBL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Provider (SPRO)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Integrator (SYIN)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Distributor (TDIS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Line1__c</fullName>
+        <description>R5 - Long Text Area field to capture Product Line value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of PLs covered in the scope. Autofilled based on &quot;Channel Partner Product Mix&quot;</inlineHelpText>
+        <label>Product Lines</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Relationship_Status__c</fullName>
+        <description>R5-Picklist hold the Relationship Status  values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Partner&quot; - if active business plan;  &quot;Strategic/Key&quot; - if locally identified as such; &quot;ABB AVP&quot; - if valid authorization; &quot;Channel&quot; - otherwise</inlineHelpText>
+        <label>Relationship Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Channel</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Strategic / Key Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ABB authorized value provider</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Channel_Class_2__c</fullName>
+        <description>R5 - Secondary Channel Class</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select additional channel class(es). Affects visibility on ABB.com after authorization</inlineHelpText>
+        <label>Secondary Channel Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EngineeringProcurement&amp;Construction(EPC)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributor (DIS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installer (INST)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Original Equipment Manufacturer (OEM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Panel builder (PBL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Provider (SPRO)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System integrator (SYIN)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical distributor (TDIS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Suppliers_with_complementary_products__c</fullName>
+        <description>R5-Text field to capture the Existing suppliers/ partners with complementary products value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>..where ABB could potentially complement and create synergies - relevant to this market scop</inlineHelpText>
+        <label>Complementary suppliers and offerings</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Suppliers_with_possible_ABB_offering__c</fullName>
+        <description>R5 - Existing suppliers for products ABB has offering</description>
+        <externalId>false</externalId>
+        <inlineHelpText>..where ABB could potentially supply - relevant to this market scope</inlineHelpText>
+        <label>Competing suppliers and their offerings</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Suppliers_complementary_products_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Suppliers with complementary products is not filled</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Suppliers_with_complementary_products__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suppliers_potential_ABB_offering_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Suppliers with potential ABB offering is not filled.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Suppliers_with_possible_ABB_offering__c ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Targeted_AVP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5-Checkbox for Targeted AVP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark if the partner is planned to become an AVP in the upcoming 0-2 years. Affects the templates and functionalities.</inlineHelpText>
+        <label>Targeted AVP</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Targeted_Key_Strategic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5-Checkbox for Targeted Key Strategic</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark if the partner is targeting to become key or strategic partner in the upcoming 0-2 years. Affects the templates and functionalities.</inlineHelpText>
+        <label>Targeted Strategic / Key Partner</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unique_Product_Check__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R5 - Duplicate check in Channel Market Coverage and Account.</description>
+        <externalId>false</externalId>
+        <label>Unique Product Check</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Channel Partner Market Scope</label>
+    <nameField>
+        <label>Market Scope Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Channel Partner Market Scope</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Division__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Primary_Channel_Class__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Division__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>BU_Covered__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PG_Covered__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Primary_Channel_Class__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Relationship_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Targeted_Key_Strategic__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Targeted_AVP__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Line1__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Account__c</lookupFilterFields>
+        <lookupFilterFields>BU_Covered__c</lookupFilterFields>
+        <lookupFilterFields>PG_Covered__c</lookupFilterFields>
+        <lookupFilterFields>Primary_Channel_Class__c</lookupFilterFields>
+        <lookupFilterFields>Relationship_Status__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Division__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>BU_Covered__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PG_Covered__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Primary_Channel_Class__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Relationship_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Targeted_Key_Strategic__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Targeted_AVP__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product_Line1__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>Division__c</searchFilterFields>
+        <searchFilterFields>BU_Covered__c</searchFilterFields>
+        <searchFilterFields>PG_Covered__c</searchFilterFields>
+        <searchFilterFields>Primary_Channel_Class__c</searchFilterFields>
+        <searchFilterFields>Relationship_Status__c</searchFilterFields>
+        <searchFilterFields>Targeted_Key_Strategic__c</searchFilterFields>
+        <searchFilterFields>Targeted_AVP__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Division__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BU_Covered__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PG_Covered__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Channel_Class__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Relationship_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Targeted_Key_Strategic__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Targeted_AVP__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Line1__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Add_Product_Line</fullName>
+        <availability>online</availability>
+        <description>R5 - To add a Product to Channel Market Coverage</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add Product Line</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/AddProductChannelMarketCoverage?ChanMarID={! Channel_Market_Coverage__c.Id }</url>
+    </webLinks>
+    <!--webLinks>
+        <fullName>Change_Product_Line</fullName>
+        <availability>online</availability>
+        <description>R5 - Change the Product through PIS Tree</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Change Product Line</masterLabel>
+        <openType>sidebar</openType>
+        <page>EditChannelMarketPIS</page>
+        <protected>false</protected>
+    </webLinks-->
+    <webLinks>
+        <fullName>New_Channel_Market_Coverage</fullName>
+        <availability>online</availability>
+        <description>R5 - New Channel Market Coverage</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Channel Partner Market Scope</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/SharingPermission?object=Channel_Market_Coverage__c 
+&amp;sfdc_created__c=1 
+&amp;Account__c={! Account.Name } 
+&amp;ID_Account__c={!Account.Id}  
+&amp;retURL={!Account.Id}</url>
+    </webLinks>
+</CustomObject>

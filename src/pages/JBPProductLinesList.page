@@ -1,0 +1,181 @@
+<apex:page standardController="Joint_Business_Plan__c" extensions="ClsJBPProductLinesList" standardStylesheets="true" sidebar="false" id="page" >
+
+    <head>
+        <style type="text/css">
+    
+            .vfHelpText a {position:relative;} .vfHelpText a span {display: none;} 
+              .vfHelpText a:hover span {
+                    display: block;
+                    position:absolute; top:1.25em; padding:2px 5px; left:-15em; 
+                    border:1px solid orange; background-color:#FEFDB9; 
+                    color:black; 
+                    font-weight:normal;
+                    width:200px;
+                    white-space: wrap !important;
+                    z-index: 1;
+               }
+               
+               th {
+                    text-align: left;
+                    font-weight: bold;
+                    white-space: normal !important;
+            }
+            .valueCls {
+                width:70px;
+            }
+            
+           .tableCls, .tableCls th, .tableCls td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    
+    <apex:form id="form" >
+
+       <apex:pageBlock id="pb" title="{!$Label.JBP_List_Title}"> 
+           <apex:pageMessages id="pm" ></apex:pageMessages>
+           
+            <apex:pageBlockButtons id="pbb" location="both">
+                <apex:commandButton action="{!save}" id="saveButton" value="{!$Label.System_Save}"/>
+                 <apex:commandButton action="{!cancel}" id="cancelButton" value="{!$Label.System_Cancel}"/>
+            </apex:pageBlockButtons>
+            <br/>
+            <table style="width:100%" cellspacing="0" cellpadding="5" border="1">
+                <tr>
+                    <th width="10%"> Name </th>
+                    <th width="15%">                     
+                        Product 
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Product__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                    <th>                     
+                        Previous Year                
+                    </th>
+                    
+                    <th>                     
+                        Sales Previous Year
+                        <br/>( {!currencyCode} )
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Previous_Year_Currency__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    <th>                     
+                        Actual Sales <br/> Year to Date
+                        <br/>( {!currencyCode} )
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Current_Ongoing_Year__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                    <th>                     
+                         Run Rate <br/> Current Year
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Actual_Year_to_Date_Changed_on__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                    <th>                     
+                         Date the <br/>actual sales <br/>YTD is given
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Run_Rate_On__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                    
+                    <th>                     
+                        Forecast <br/> Current Year<br/>( {!currencyCode} )
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Forecast_Ongoing_Year__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    <th>                     
+                        Current  <br/>Year
+                    </th>
+                    <th>                     
+                        Budget <br/>Current Year<br/>( {!currencyCode} )
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Current_Year_Currency__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                  
+                    <th>                     
+                        Target 2nd Year<br/>( {!currencyCode} )
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Second_Year_Currency__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                                       
+                    <th>                     
+                        Target 3rd Year<br/>( {!currencyCode} )
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Joint_Business_Plan_Product_Lines__c.Fields.Third_Year_Currency__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                </tr>
+                
+                 <tbody>
+                     <apex:repeat id="rep" value="{!JBPProdLineItems}" var="jbp">
+                        <tr>
+                            <td>  <apex:outputLink value="/{!jbp.id}">{!jbp.Name}</apex:outputLink> </td>
+                            <td>  <apex:outputField value="{!jbp.Product__c}"/> </td>
+                            <td>  <apex:outputField value="{!jbp.Previous_Year__c}"/> </td>
+                            <td>  
+                                <apex:inputField value="{!jbp.Previous_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c != 'Active'}"/>
+                                <apex:outputField value="{!jbp.Previous_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c == 'Active'}"/>
+                            </td>
+                            <td>  <apex:inputField value="{!jbp.Current_Ongoing_Year__c}" styleClass="valueCls"/> </td>
+                            <td>  <apex:outputField value="{!jbp.Run_Rate_On__c}"/> </td>
+                            <td>  <apex:inputField value="{!jbp.Actual_Year_to_Date_Changed_on__c}" styleClass="valueCls"/> </td>
+                            <td>  <apex:inputField value="{!jbp.Forecast_Ongoing_Year__c}" styleClass="valueCls"/> </td>
+                            <td>  <apex:outputField value="{!jbp.Starting_Year__c}" styleClass="valueCls"/> </td>
+                            <td>  
+                                <apex:inputField value="{!jbp.Current_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c != 'Active'}"/> 
+                                <apex:outputField value="{!jbp.Current_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c == 'Active'}"/>
+                            </td>
+                            <td>  
+                                <apex:inputField value="{!jbp.Second_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c != 'Active'}"/> 
+                                <apex:outputField value="{!jbp.Second_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c == 'Active'}"/> 
+                            </td>
+                            <td>  
+                                <apex:inputField value="{!jbp.Third_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c != 'Active'}"/> 
+                                <apex:outputField value="{!jbp.Third_Year_Currency__c}" styleClass="valueCls" rendered="{!jbp.Joint_Business_Plan__r.Status__c == 'Active'}"/> 
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+       </apex:pageblock>
+    </apex:form>
+</apex:page>

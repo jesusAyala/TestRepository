@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>R4 - Create New Capture Team from SF1</description>
+    <height>250</height>
+    <label>New Capture Team</label>
+    <page>NewCaptureTeamSF1</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

@@ -1,0 +1,4 @@
+<apex:page standardController="Budget__c" showHeader="false" sidebar="false" id="page">
+  <center><apex:image url="{!$Resource.MarketAndBudgetImg}" id="image"/></center>
+
+</apex:page>

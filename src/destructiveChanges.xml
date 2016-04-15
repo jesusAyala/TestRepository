@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<types>
+	<members>Case.Case_Access_for_ABB_Global_when_Services_record_type</members>
+	<members>Case.Case_Access_for_ABB_when_Services_record_type</members>
+	<name>SharingCriteriaRules</name>
+</types>
+<types>
+	<members>OpportunityRecordTypeChange_TEST</members>
+	<!--members>clsTriggerOpportunityHandlerLSO_Test</members>
+	<members>ClsTriggerLSODupeHandler</members-->
+	<members>ClsAccntUtil</members>
+	<members>ClsAccntUtil_Test</members>
+
+	<name>ApexClass</name>
+</types>
+<!--types>
+	<members>LSODupeCheckTrigger</members>
+	<name>ApexTrigger</name>
+</types-->       
+    <version>36.0</version>
+</Package>

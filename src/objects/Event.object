@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Create_Visit_Report</fullName>
+        <availability>online</availability>
+        <description>returns to new visit report</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Create Visit Report</masterLabel>
+        <openType>replace</openType>
+        <page>Create_Visit_Report_from_Calendar_Event</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

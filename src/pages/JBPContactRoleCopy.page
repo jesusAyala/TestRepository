@@ -1,0 +1,24 @@
+<!-- 
+/**
+ * VFPage - JBPContactRoleCopy
+ * Controller - ClsJBPContactRoleCopy
+ * 
+ * Copy Contacts from the Account along in to the Joint Business Plan Contact Role.
+ * Release R5
+ * @author  Indhu Selvi Ramalingam (Accenture)
+ * @created 2016-01-29
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Joint_Business_Plan__c" extensions="ClsJBPContactRoleCopy" action="{!copyAccountContacts}" id="page">
+
+<apex:form id="frm" >
+    <apex:outputPanel id="pnl" rendered="{!showErrmsg}">
+        <apex:pagemessages id="pgmsg" escape="false"> </apex:pagemessages> 
+        <table id="tbl" width='100%'>    
+        <tr><td align='center'><apex:commandButton title="Back" value="Back" action="{!GoBack}"/>  </td></tr>
+        </table>
+    </apex:outputPanel>
+</apex:form>
+</apex:page>

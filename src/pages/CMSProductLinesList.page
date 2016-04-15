@@ -1,0 +1,141 @@
+<apex:page standardController="Channel_Market_Coverage__c" extensions="ClsCMSProductLinesList" id="page" >
+
+<style type="text/css">
+
+      .vfHelpText a {position:relative;} .vfHelpText a span {display: none;} 
+      .vfHelpText a:hover span {
+            display: block;
+            position:absolute; top:1.25em; padding:2px 5px; left:-15em; 
+            border:1px solid orange; background-color:#FEFDB9; 
+            color:black; 
+            font-weight:normal;
+            width:200px;
+            white-space: wrap !important;
+            z-index: 1;
+       }
+       
+       th {
+            text-align: left;
+            font-weight: bold;
+            white-space: normal !important;
+    }
+       
+</style>
+<apex:form id="form" >
+ <apex:pageBlock title="{!$Label.ChannelMarkScope_Title}" id="pagebck"> 
+           <apex:pageMessages id="pagemsg"></apex:pageMessages>
+           
+            <apex:pageBlockButtons location="both" id="pageblckbutt">
+                <apex:commandButton action="{!save}" id="saveButton" value="{!$Label.System_Save}"/>
+                 <apex:commandButton action="{!cancel}" id="cancelButton" value="{!$Label.System_Cancel}"/>
+            </apex:pageBlockButtons>
+            <br/>
+             <table style="width:100%" cellspacing="0" cellpadding="5" border="1">
+                             <tr>
+                    <th width="10%"> Product Mix </th>
+                    
+                    <th>                     
+                        Division 
+                        <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Division__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                    
+                    <th>                     
+                        Business Unit
+                        <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Business_Unit__c.inlineHelpText}</span>
+                            </a>
+                        </span>                       
+                         
+                    </th>
+                   
+                    <th>                     
+                        Product Group  
+                        <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Product_Group__c.inlineHelpText}</span>
+                            </a>
+                        </span>
+                    </th>
+                   
+                    <th>                     
+                        Product
+                         <span class="vfHelpText">
+                            <a href="javascript:return false;">
+                                 <img src="/s.gif" alt="" class="helpOrb"/>
+                                  <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Product__c.inlineHelpText}</span>
+                            </a>
+                        </span>                        
+                    </th>
+                    
+                    <th>                     
+                        Target Lead Times
+                        <span class="vfHelpText">
+                        <a href="javascript:return false;">
+                             <img src="/s.gif" alt="" class="helpOrb"/>
+                              <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Target_Lead_Times__c.inlineHelpText}</span>
+                        </a>
+                    </span>
+                    </th>
+                    
+                      <th>                     
+                        Planned Stock                        
+                          <span class="vfHelpText">
+                        <a href="javascript:return false;">
+                             <img src="/s.gif" alt="" class="helpOrb"/>
+                              <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Planned_Stock__c.inlineHelpText}</span>
+                        </a>
+                    </span>
+                    </th>
+                    
+                    <th>                     
+                        Actual Stock                       
+                          <span class="vfHelpText">
+                        <a href="javascript:return false;">
+                             <img src="/s.gif" alt="" class="helpOrb"/>
+                              <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Actual_Stock__c.inlineHelpText}</span>
+                        </a>
+                    </span>
+                    </th>
+                    
+                    
+                    <th>                     
+                       Other Information
+                         <span class="vfHelpText">
+                        <a href="javascript:return false;">
+                             <img src="/s.gif" alt="" class="helpOrb"/>
+                              <span>{!$ObjectType.Channel_Market_Coverage_Product_Lines__c.Fields.Other_Information__c.inlineHelpText}</span>
+                        </a>
+                    </span>
+                    </th>
+                  
+                </tr>
+                 <tbody>
+                     <apex:repeat value="{!CMSProdLineItems}" var="cms" id="repeat">
+                        <tr>
+                           
+                            <td>  <apex:outputLink value="/{!cms.id}">{!cms.Name}</apex:outputLink> </td>
+                            <td>  <apex:inputField value="{!cms.Division__c}" /> </td>
+                            <td>  <apex:inputField value="{!cms.Business_Unit__c}" /> </td>
+                            <td>  <apex:inputField value="{!cms.Product_Group__c}" /> </td>
+                            <td>  <apex:outputField value="{!cms.Product__c}"/> </td>
+                            <td>  <apex:inputField value="{!cms.Target_Lead_Times__c}" /> </td>
+                            <td>  <apex:inputField value="{!cms.Planned_Stock__c}" /> </td>
+                            <td>  <apex:inputField value="{!cms.Actual_Stock__c}" /> </td> 
+                            <td>  <apex:inputField value="{!cms.Other_Information__c}" /> </td> 
+                           
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+            </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

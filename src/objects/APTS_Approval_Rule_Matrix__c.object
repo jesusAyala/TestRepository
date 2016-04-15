@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>APTS_EditApprovalRuleMatrix</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>APTS_EditApprovalRuleMatrix</content>
+        <skipRecordTypeSelect>true</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Approval rule matrix stores routing rules that will be configured by country admin and it drives the Quotation &amp; Agreement approvals.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>APTS_Approval_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Level</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Assigned_to__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned to</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Approval_Rule_Matrix</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_CHF__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(APTS_Country__c ) + TEXT( APTS_Sales_Organisation__c ) + (  APTS_LP_Local_Channel__r.APTS_Code__c ) + (   APTS_Sales_Office__r.PickList_Code__c  ) + APTS_GTV_Level_Code__c</formula>
+        <label>Combined Fields</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_CLF__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(APTS_Country__c ) + TEXT( APTS_Sales_Organisation__c ) + ( APTS_LP_Local_Channel__r.APTS_Code__c ) + ( APTS_Sales_Office__r.PickList_Code__c ) + APTS_GTV_Level_Code__c + TEXT ( APTS_Approval_Level__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Combined Level Fields</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Combined_Header_Fields__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(APTS_Country__c ) + TEXT( APTS_Sales_Organisation__c ) + (  APTS_LP_Local_Channel__r.APTS_Code__c ) + (  APTS_LP_Sales_Office__r.APTS_Code__c  ) + APTS_GTV_Level_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Combined Header Fields</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Country_ISO_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Country ISO code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ES</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Country__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Country name for which approval rule is created</inlineHelpText>
+        <label>Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_External_Id__c</fullName>
+        <description>External Id</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GTV_Level_Code__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Code used for product at level3</inlineHelpText>
+        <label>GTV Level Code</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GTV_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>GTV Level</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+		<fullName>APTS_LP_Local_Channel__c</fullName>
+		<deleteConstraint>SetNull</deleteConstraint>
+		<externalId>false</externalId>
+		<label>Local Channel</label>		
+		<referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+		<relationshipLabel>Approval Rule Matrix</relationshipLabel>
+		<relationshipName>Approval_Rule_Matrix</relationshipName>
+		<required>false</required>
+		<trackHistory>false</trackHistory>
+		<trackTrending>false</trackTrending>
+		<type>Lookup</type>
+	</fields>
+    <fields>
+        <fullName>APTS_LP_Sales_Office__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick sales office code from master picklist table</inlineHelpText>
+        <label>Sales Office</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>APTS_Master_Picklist_Table__c.APTS_Code_Used_For__c</field>
+                <operation>equals</operation>
+                <value>Sales Office</value>
+            </filterItems>
+            <filterItems>
+                <field>APTS_Master_Picklist_Table__c.APTS_Country__c</field>
+                <operation>equals</operation>
+                <valueField>$User.Country</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>Approval Rule Matrix (Sales Office)</relationshipLabel>
+        <relationshipName>Approval_Rule_Matrix1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Legacy_Rule_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Rule ID</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Channel_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Local Channel Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cuadristas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cuadristas CD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distribución General</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integradores y EPC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OEMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OEMS CD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Local Channel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>P1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Max_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Office_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Office Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Barcelona</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Office__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>LSO_Field_Entries__c.Country__c</field>
+                <operation>equals</operation>
+                <valueField>$User.Country</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LSO_Field_Entries__c</referenceTo>
+        <relationshipLabel>Approval Rule Matrix</relationshipLabel>
+        <relationshipName>Approval_Rule_Matrix</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Organisation__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Organisation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ABB</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Threshold_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Threshold Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Assigned_to__r.FirstName + &apos; &apos; +  APTS_Assigned_to__r.LastName</formula>
+        <label>Approver Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Approver_Level__c</fullName>
+        <description>identifies the maximum number of approvals required for an agreement based on a certain combination. Internally used</description>
+        <externalId>false</externalId>
+        <label>Max Approver Level</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Approval Rule Matrix</label>
+    <listViews>
+        <fullName>APTS_Spain_Approval_Rules</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Sales_Organisation__c</columns>
+        <columns>APTS_CHF__c</columns>
+        <columns>APTS_LP_Local_Channel__c</columns>
+        <columns>APTS_LP_Sales_Office__c</columns>
+        <columns>APTS_GTV_Level_Code__c</columns>
+        <columns>APTS_Is_Active__c</columns>
+        <columns>APTS_Threshold_Discount__c</columns>
+        <columns>APTS_Approval_Level__c</columns>
+        <columns>APTS_Assigned_to__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Country__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </filters>
+        <label>Spain Approval Rules</label>
+        <language>en_US</language>
+    </listViews>    
+    <nameField>
+        <displayFormat>ARM-{00000000}</displayFormat>
+        <label>Approval Rule Matrix Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Approval Rule Matrix</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>APTS_Back_To_Console</listViewButtons>
+        <searchFilterFields>APTS_GTV_Level_Code__c</searchFilterFields>
+        <searchFilterFields>APTS_LP_Local_Channel__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>APTS_Check_Threshold_Discount</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF(APTS_Threshold_Discount__c &gt;1,true,false)</errorConditionFormula>
+        <errorMessage>Threshold Discount can not be more than 100 %</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>APTS_Back_To_Console</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Back To Console</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+
+
+var url = window.location.origin;
+parent.location.href = url + &apos;/apex/APTS_LocalCountryAdminConsole&apos;;</url>
+    </webLinks>
+</CustomObject>

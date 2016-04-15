@@ -1,0 +1,3 @@
+<apex:page controller="SetCreateQuoteRecordtypeController" action="{!redirect}">
+
+</apex:page>

@@ -1,0 +1,130 @@
+<messaging:emailTemplate subject="Approval Request for Quote with ID {!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_SAP_Reference_No__c} {!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Quotation_Name_Trimmed__c}" 
+                         recipientType="User" 
+                         relatedToType="Apttus_Approval__Approval_Request__c"
+                         language="{!recipient.LanguageLocaleKey}"
+                         replyTo="{!$Label.APTS_ApprovalEmailService}">
+                         
+    <messaging:htmlEmailBody >
+        <html>
+        <style type="text/css">
+        
+        div {font-color : #FF0000;}
+        .idSize {font-size: 10px;}
+        
+        </style>
+           
+            <body>
+                <div style="float:right">
+                <!--<apex:image url="https://abb--sf1rapt--c.cs17.content.force.com/servlet/servlet.ImageServer?id=015g0000000vFcF&oid=00Dg0000006TaEI&lastMod=1446732354000" alt="" height="42" width="170" style="align=right;"/>-->
+                <apex:variable value="{!LEFT($Api.Partner_Server_URL_260, FIND( '/services', $Api.Partner_Server_URL_260))}" var="hostUrl"/>
+                <apex:variable value="servlet/servlet.ImageServer?id=" var="staticUrl_1"/>
+                <apex:variable value="&oid=" var="staticUrl_2"/>
+                <apex:variable value="{!$Organization.Id}" var="orgId"/>
+                
+                <apex:image value="{!hostUrl}{!staticUrl_1}{!$Setup.APTS_EmailTemplateLogoId__c.APTS_Document_Id__c}{!staticUrl_2}{!orgId}" />
+                </div>
+                <br/>
+                <br/>
+                
+                <br/>
+                <br/>
+                <b><apex:outputText > PLEASE FILL IN REJECTION COMMENTS, WHEN REJECTING THE QUOTATION. THE REJECTION COMMENTS NEED TO BE ENTERED IN A NEW LINE AFTER WRITING THE WORDS ‘Rejected’ OR ‘Reject’ or ‘No’</apex:outputText></b>
+                <br/><br/>
+                Dear {!recipient.Name},
+                <br/><br/>
+                {!$Label.Apttus_QPApprov__ApprovalRequestForQuote} '{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_SAP_Reference_No__c}' and Discount&nbsp; <apex:outputText value="{!SUBSTITUTE(TEXT(relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_MaximumSubstituteDiscount__c),'.',',')}" rendered="{!NOT(ISNULL(relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_MaximumSubstituteDiscount__c))}"/> %  {!$Label.Apttus_Approval__HasBeenSubmittedForApproval}.
+                <br/><br/>
+                
+                <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))}apex/Apttus_QPApprov__QuoteApprovalSummary?id={!relatedTo.Id}&pageMode=approveReject&actionName=quote_approval_summary">Approve/Reject</apex:outputLink><br/>
+                <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))}apex/Apttus_QPApprov__QuoteApprovalSummary?id={!relatedTo.Id}&pageMode=addComment&actionName=quote_approval_summary">Add Comments</apex:outputLink><br/>
+                <br/>
+                
+                <!--  required fields -->
+        <!--        <b>Approval Request ID:</b> <apex:outputText value="{!relatedTo.ID}" rendered="true" /><br/>
+                <b>Approval User ID:</b> <apex:outputText value="{!relatedTo.Apttus_Approval__Assigned_To_Id__c}" rendered="true" /><br/> -->
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Object_Type__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Object_Id__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Approval_Status__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Date__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Assigned_To_Name__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__PrevAssignedToName__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Request_Comments__c}" rendered="false" />
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Approver_Comments__c}" rendered="false" />  
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Step_Name__c}" rendered="false" />    
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.Name}" rendered="false" />
+                
+         <!--       <b><apex:OutputLabel value="Approval Request Id :"/></b> 
+                <apex:outputText value="{!relatedTo.Id}"/><br/> -->
+                <b><apex:OutputLabel value="Sales Rep : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.CreatedBy.Name}"/><br/>
+                <b><apex:OutputLabel value="Account Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_AccountCustomer__r.Name}"/><br/>
+                <b><apex:OutputLabel value="End Account Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Account_End_User__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Partner Account Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_Account_End_User__r.Name}"/><br/>
+              <!--  <b><apex:OutputLabel value="Primary Partner Account : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_Account_End_User__r.Name}"/><br/>  -->
+                <b><apex:OutputLabel value="Sales Office : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Sales_Office__r.PickList_Description__c}"/><br/>
+                <b><apex:OutputLabel value="Local Channel : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Local_Channel__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Max Order Amount : "/></b>
+             <!--   <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.CurrencyIsoCode}"/> &nbsp; -->
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.CurrencyIsoCode} {!SUBSTITUTE(TEXT(relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_Max_Order_Amount__c),'.',',')}" rendered="{!NOT(ISNULL(relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_Max_Order_Amount__c))}"/>
+                
+            <!--    <b><apex:OutputLabel value="To Approve / Reject / Add comments to a quote : "/></b> -->
+
+           <!--     <apex:outputLink value="https://abb--sf1rapt--apttus-qpapprov.cs17.visual.force.com/apex/QuoteApprovalSummary?id={!relatedTo.Id}&pageMode=approveReject&actionName=quote_approval_summary">Approve/Reject/Add Comments</apex:outputLink> -->
+               
+                                                         
+<!--                <apex:outputLink value="{!relatedTo.APTS_Approval_Action__c}">Approve/Reject</apex:outputLink> -->
+              <!--  <a href="{!relatedTo.APTS_Approval_Action__c}">Click here to see the margin by category:</a> -->
+                <br/>
+                                
+                <c:APTPS_CustomApprovalComponent ProdConfig="{!relatedTo.Apttus_QPApprov__ProposalId__c}" ReqId="{!relatedTo.id}" PropName="{!relatedTo.Apttus_QPApprov__ProposalId__r.Apttus_Proposal__Proposal_Name__c}" currencyCode="{!relatedTo.Apttus_QPApprov__ProposalId__r.CurrencyIsoCode}"/>           
+                <br/>
+                
+                <!--
+                <b>Approvals :</b><br/><br/>
+        <table border="1">
+                   <tr style="border-style:1px groove black;font-weight:bold;">
+                        <th >Step Name</th>
+                        <th >Approval Status</th>                                                                        
+                        <th> Date </th>
+                        <th >Assigned To</th>
+                        <th >Depends On</th>
+                        <th >Actual Approver</th>
+                        <th >Approver Comments</th>
+                                              
+                    </tr>
+                    <tr >
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__Step_Name__c}"/></td>   
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__Approval_Status__c}"/></td>                                                                                             
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__Date__c}"/></td>                                                                    
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__Assigned_To_Name__c}"/></td> 
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__DependsOn__c}"/></td> 
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__Actual_Approver__c}"/></td> 
+                    <td ><apex:outputField value="{!relatedTo.Apttus_Approval__Approver_Comments__c}"/></td>
+                                                                                     
+                </tr>
+
+        </table> --><br/>
+                
+                <b><apex:OutputLabel value="Requestor's Comments : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__SubmissionComment1__c}" rendered="{!IF(relatedTo.Apttus_Approval__SubmissionComment1__c == null, false, true)}"/>
+                <apex:outputText value="None" rendered="{!IF(relatedTo.Apttus_Approval__SubmissionComment1__c == null, true, false)}"/>
+                <br/>
+                <br/>
+                
+                <b><apex:outputText value="System Requirements (DO NOT DELETE)" styleClass="idSize"/></b><br/>
+                <b><apex:outputText value="Approval Request ID:" styleClass="idSize"/></b>
+                <apex:outputText value="{!relatedTo.ID}" rendered="true" styleClass="idSize"/><br/>
+                <b><apex:outputText value="Approval User ID:" styleClass="idSize"/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Assigned_To_Id__c}" rendered="true" styleClass="idSize"/><br/>
+                
+                
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

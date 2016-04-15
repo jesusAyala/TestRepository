@@ -1,0 +1,46 @@
+<apex:page id="page" standardController="Capture_Team__c" extensions="AddCaptureTeamMemberClass">
+  <apex:form id="form" title="Add Capture Team Member">
+  <apex:outputPanel id="outputPanel" >
+  <apex:Pagemessages id="Pagemessages" />
+  </apex:outputPanel>
+  <apex:pageBlock id="pageBlock" title="Add Capture Team Member">
+  <table>
+    <tr>
+    <td><apex:outputText value="User" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Team Role" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Access Level" style="color:red;font-weight:bold"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!capTeamMember1.User__c}" required="true"/></td>
+    <td><apex:inputField value="{!capTeamMember1.Team_Role__c}"/></td>
+    <td><apex:outputField value="{!capTeamMember1.Access_Level__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!capTeamMember2.User__c}"/></td>
+    <td><apex:inputField value="{!capTeamMember2.Team_Role__c}"/></td>
+    <td><apex:outputField value="{!capTeamMember2.Access_Level__c}"/></td> 
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!capTeamMember3.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!capTeamMember3.Team_Role__c}"/></td>
+    <td><apex:outputField value="{!capTeamMember3.Access_Level__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!capTeamMember4.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!capTeamMember4.Team_Role__c}"/></td>
+    <td><apex:outputField value="{!capTeamMember4.Access_Level__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!capTeamMember5.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!capTeamMember5.Team_Role__c}"/></td>
+    <td><apex:outputField value="{!capTeamMember5.Access_Level__c}"/></td>
+    </tr>
+  </table>
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!saveRecord}" value="Save"/>
+    <apex:commandButton action="{!saveMoreRecord}" value="Save & More"/>
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form> 
+</apex:page>

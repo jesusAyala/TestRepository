@@ -1,0 +1,25 @@
+<messaging:emailTemplate subject="MSPA form to request additional information " recipientType="User" relatedToType="Apttus__APTS_Agreement__c" >
+<messaging:htmlEmailBody >
+<html>
+<head></head>
+<body>
+Dear Sir/Madam,
+<br></br><br></br>
+
+Please find Addtional MSPA Information below: 
+<br></br><br></br>
+
+<c:APTS_LP_AgreementLine AgreementIdentifier="{!relatedTo.Id}" />
+
+<br></br><br></br>
+
+Thanks
+<br></br><br></br>
+
+ABB Team
+
+
+</body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

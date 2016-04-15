@@ -1,0 +1,24 @@
+<!-- 
+@Name: APTS_AgreementStatus
+@Author: Hardik Shah
+@CreateDate: 08 Sep 2015
+@Description: This VF Page passes Agreement Information to APTS_AgreementDeActivatedController to upate Agreement Status
+@UsedBy: VF-Page is invoked by 'APTS_LP_Deactivate_MSPA__c' Formula Field on Agreement Object
+@ModifiedBy: NA
+@ModifiedDate: NA
+@ChangeDescription: A brief description of what was modified.
+PS: @ModifiedBy and @ChangeDescription can be repeated multiple time, based on number of changes made to the original process. -->
+																															
+
+<apex:page standardController="Apttus__APTS_Agreement__c" extensions="APTS_AgreementStatusController" action="{!onLoad}" >
+    <apex:form > 
+       <apex:outputText value="{!Apttus__APTS_Agreement__c.Name}" rendered="false"/>
+       <apex:outputField value="{!Apttus__APTS_Agreement__c.Apttus__Status__c}" rendered="false"/>
+       <apex:pageBlock mode="edit" rendered="{!hasErrors}" >
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

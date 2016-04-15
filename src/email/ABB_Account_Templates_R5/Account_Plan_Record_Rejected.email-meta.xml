@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - Account Plan Record Rejected</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Account Plan Record Rejected</name>
+    <style>none</style>
+    <subject>Account Plan has been rejected by the Approver</subject>
+    <type>custom</type>
+</EmailTemplate>

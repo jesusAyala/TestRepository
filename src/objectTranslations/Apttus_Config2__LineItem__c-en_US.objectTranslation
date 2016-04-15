@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Qty</label>
+        <name>Apttus_Config2__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Std. Net --></label>
+        <name>APTS_LP_Standard_Net__c</name>
+    </fields>
+    <fields>
+        <label><!-- # --></label>
+        <name>APTS_Line_Number_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Adj. (%) --></label>
+        <name>APTS_Net_Adjustment_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Price --></label>
+        <name>APTS_Unit_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label>Product / Hierarchy Information</label>
+        <name>APTS_new_product_code__c</name>
+    </fields>
+</CustomObjectTranslation>

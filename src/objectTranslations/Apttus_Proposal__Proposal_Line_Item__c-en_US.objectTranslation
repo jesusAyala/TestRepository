@@ -1,0 +1,1749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Adjustment Amount* --></label>
+        <name>APTS_Adjustment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Price* --></label>
+        <name>APTS_Base_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Adj. (%) --></label>
+        <name>APTS_Net_Adjustment_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product/Hierarchy Information --></label>
+        <name>APTS_Product_Hierarchy_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Time --></label>
+        <name>APTS_Delivery_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount % --></label>
+        <name>APTS_Discount_Percentage__c</name>
+    </fields>
+    <fields>
+        <label>Product Name/Hierarchy Name</label>
+        <name>Apttus_Proposal__Product__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Discount Type --></label>
+        <name>APTS_Discount_Type__c</name>
+        <picklistValues>
+            <masterLabel>--None--</masterLabel>
+            <translation><!-- - - None- -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Additional Discount</masterLabel>
+            <translation><!-- Additional Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net Price Discount</masterLabel>
+            <translation><!-- Net Price Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substitute Discount</masterLabel>
+            <translation><!-- Substitute Discount --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Discount (%) --></label>
+        <name>APTS_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hierarchy Level 3 Code text --></label>
+        <name>APTS_Hierarchy_Level_3_Code_text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Standard Price --></label>
+        <name>APTS_LP_Total_Standard_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Of Measure --></label>
+        <name>APTS_LP_Unit_Of_Measure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Of Price --></label>
+        <name>APTS_LP_Unit_Of_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Adjustment* (%) --></label>
+        <name>APTS_Net_Adjustment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Price Override --></label>
+        <name>APTS_Net_Price_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Price* --></label>
+        <name>APTS_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Description --></label>
+        <name>APTS_Product_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity* --></label>
+        <name>APTS_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Quote Price --></label>
+        <name>APTS_Total_Quote_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+        <picklistValues>
+            <masterLabel>AP.301</masterLabel>
+            <translation>AP.301 Automatic Gate, Beam, Barrier or Door</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.302</masterLabel>
+            <translation>AP.302 Cable Car - Ski Lift</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.303</masterLabel>
+            <translation>AP.303 Calander Line</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.304</masterLabel>
+            <translation>AP.304 Centrifuge</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.305</masterLabel>
+            <translation>AP.305 Coating Machine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.306</masterLabel>
+            <translation>AP.306 Compressor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.307</masterLabel>
+            <translation>AP.307 Conveyer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.308</masterLabel>
+            <translation>AP.308 Crusher</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.309</masterLabel>
+            <translation>AP.309 Cutting, Shear, Saw</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.310</masterLabel>
+            <translation>AP.310 Drilling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.311</masterLabel>
+            <translation>AP.311 Drum</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.313</masterLabel>
+            <translation>AP.313 Elevator or Lift</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.314</masterLabel>
+            <translation>AP.314 Extruder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.315</masterLabel>
+            <translation>AP.315 Fan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.316</masterLabel>
+            <translation>AP.316 Flat Rolling Machine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.317</masterLabel>
+            <translation>AP.317 Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.318</masterLabel>
+            <translation>AP.318 Household Machinery or Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.319</masterLabel>
+            <translation>AP.319 Hydro Turbine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.320</masterLabel>
+            <translation>AP.320 Induction Heating</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.321</masterLabel>
+            <translation>AP.321 Kiln</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.322</masterLabel>
+            <translation>AP.322 Machine Tools</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.323</masterLabel>
+            <translation>AP.323 Mixer, Stirrer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.324</masterLabel>
+            <translation>AP.324 Packaging Machine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.325</masterLabel>
+            <translation>AP.325 Paper Machine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.326</masterLabel>
+            <translation>AP.326 Partner/Distributor Stock</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.327</masterLabel>
+            <translation>AP.327 Power Electronics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.328</masterLabel>
+            <translation>AP.328 Processing Line</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.329</masterLabel>
+            <translation>AP.329 Profile Rolling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.330</masterLabel>
+            <translation>AP.330 Propulsion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.331</masterLabel>
+            <translation>AP.331 Pump</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.332</masterLabel>
+            <translation>AP.332 Roller Table</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.333</masterLabel>
+            <translation>AP.333 Rolling Mill</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.334</masterLabel>
+            <translation>AP.334 Separator</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.335</masterLabel>
+            <translation>AP.335 Solar Tracker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.336</masterLabel>
+            <translation>AP.336 Solar, Commercial or Industrial Use</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.337</masterLabel>
+            <translation>AP.337 Solar, Large Power Plant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.338</masterLabel>
+            <translation>AP.338 Solar, Residential Use</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.339</masterLabel>
+            <translation>AP.339 Spinning</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.340</masterLabel>
+            <translation>AP.340 Testbench</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.341</masterLabel>
+            <translation>AP.341 Thruster</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.342</masterLabel>
+            <translation>AP.342 Winch</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.343</masterLabel>
+            <translation>AP.343 Winder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.344</masterLabel>
+            <translation>AP.344 Wind Turbine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.345</masterLabel>
+            <translation>AP.345 Yaw System</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.346</masterLabel>
+            <translation>AP.346 Robotics Applications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.347</masterLabel>
+            <translation>AP.347 Crane</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.348</masterLabel>
+            <translation>AP.348 Electric Vehicle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.349</masterLabel>
+            <translation>AP.349 Printing Machine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.350</masterLabel>
+            <translation>AP.350 Recreational and Sports Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.351</masterLabel>
+            <translation>AP.351 Other Application</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.352</masterLabel>
+            <translation>AP.352 Gas Turbine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.353</masterLabel>
+            <translation>AP.353 Steam Turbine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.354</masterLabel>
+            <translation>AP.354 Diesel or Gas Engines (Reciprocating)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.355</masterLabel>
+            <translation>AP.355 Electric Vehicle Charger</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.356</masterLabel>
+            <translation>AP.356 Fuel Cells</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.357</masterLabel>
+            <translation>AP.357 Tidal or River Turbine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.358</masterLabel>
+            <translation>AP.358 UPS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.359</masterLabel>
+            <translation>AP.359 Power Quality</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.360</masterLabel>
+            <translation>AP.360 High Power Rectifier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.361</masterLabel>
+            <translation>AP.361 Excitation and Synchronizing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.362</masterLabel>
+            <translation>AP.362 DC Wayside Equipment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.363</masterLabel>
+            <translation>AP.363 Traction Propulsion or Auxiliary Converter</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.364</masterLabel>
+            <translation>AP.364 Battery Energy Storage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.365</masterLabel>
+            <translation>AP.365 Pumped Hydro Energy Storage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.366</masterLabel>
+            <translation>AP.366 Shore to Ship</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.367</masterLabel>
+            <translation>AP.367 Rail Intertie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.368</masterLabel>
+            <translation>AP.368 Statcom</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.369</masterLabel>
+            <translation>AP.369 Static Frequency Conversion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.401</masterLabel>
+            <translation>AP.401 Assembling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.402</masterLabel>
+            <translation>AP.402 Mounting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.403</masterLabel>
+            <translation>AP.403 Inserting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.404</masterLabel>
+            <translation>AP.404 Painting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.405</masterLabel>
+            <translation>AP.405 Enamelling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.406</masterLabel>
+            <translation>AP.406 Sealing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.407</masterLabel>
+            <translation>AP.407 Gluing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.408</masterLabel>
+            <translation>AP.408 Spraying</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.409</masterLabel>
+            <translation>AP.409 Other Dispensing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.410</masterLabel>
+            <translation>AP.410 Inspection</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.411</masterLabel>
+            <translation>AP.411 Forging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.412</masterLabel>
+            <translation>AP.412 Stamping</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.413</masterLabel>
+            <translation>AP.413 Pressing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.414</masterLabel>
+            <translation>AP.414 Machine Tool</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.415</masterLabel>
+            <translation>AP.415 Metal Casting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.416</masterLabel>
+            <translation>AP.416 Plastic Moulding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.417</masterLabel>
+            <translation>AP.417 Material Handling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.418</masterLabel>
+            <translation>AP.418 New Application</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.419</masterLabel>
+            <translation>AP.419 Packing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.420</masterLabel>
+            <translation>AP.420 Palletizing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.421</masterLabel>
+            <translation>AP.421 Picking/Placing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.422</masterLabel>
+            <translation>AP.422 Laser Cutting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.423</masterLabel>
+            <translation>AP.423 Mechanical Cutting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.424</masterLabel>
+            <translation>AP.424 Deburring</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.425</masterLabel>
+            <translation>AP.425 Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.426</masterLabel>
+            <translation>AP.426 Finishing/Polishing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.427</masterLabel>
+            <translation>AP.427 Trimming</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.428</masterLabel>
+            <translation>AP.428 Other Removal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.429</masterLabel>
+            <translation>AP.429 Waterjet Cutting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.430</masterLabel>
+            <translation>AP.430 Arc Welding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.431</masterLabel>
+            <translation>AP.431 Laser Welding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.432</masterLabel>
+            <translation>AP.432 Soldering</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.433</masterLabel>
+            <translation>AP.433 Other Welding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.434</masterLabel>
+            <translation>AP.434 Spot Welding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.435</masterLabel>
+            <translation>AP.435 Plasma Cutting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.436</masterLabel>
+            <translation>AP.436 Flame Treatment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.437</masterLabel>
+            <translation>AP.437 Industrial Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.441</masterLabel>
+            <translation>AP.441 Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.500</masterLabel>
+            <translation>AP.500 Semi Sub&apos;s, Drill Ships and Well Intervention</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.501</masterLabel>
+            <translation>AP.501 Jack Up Drilling Rigs</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.502</masterLabel>
+            <translation>AP.502 Tugs</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.503</masterLabel>
+            <translation>AP.503 Offshore Supply Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.504</masterLabel>
+            <translation>AP.504 Liquified Natural Gas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.505</masterLabel>
+            <translation>AP.505 Tankers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.506</masterLabel>
+            <translation>AP.506Cruise</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.507</masterLabel>
+            <translation>AP.507 Ferries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.508</masterLabel>
+            <translation>AP.508 Yachts</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.509</masterLabel>
+            <translation>AP.509 Ice Breakers and Ice Breaking OSV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.510</masterLabel>
+            <translation>AP.510 Container Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.511</masterLabel>
+            <translation>AP.511 Dredgers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.512</masterLabel>
+            <translation>AP.512 Heavy Lift Carrier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.513</masterLabel>
+            <translation>AP.513 Offshore Construction Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.514</masterLabel>
+            <translation>AP.514 Windmill Installation Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.515</masterLabel>
+            <translation>AP.515 Navy and Research Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.516</masterLabel>
+            <translation>AP.516 Bulkers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.517</masterLabel>
+            <translation>AP.517 Rubber Tyred Gantry Crane (RTG)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.518</masterLabel>
+            <translation>AP.518 Ship to Shore Crane (STS)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.519</masterLabel>
+            <translation>AP.519 Grab Ship Unloader (GSU)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.520</masterLabel>
+            <translation>AP.520 Slewing Cranes (SLW)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.521</masterLabel>
+            <translation>AP.521 Rail Mounted Railway Crane (RMRC)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.522</masterLabel>
+            <translation>AP.522 Slab Handling Crane</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.523</masterLabel>
+            <translation>AP.523 Multi Purpose Crane (MPC)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.524</masterLabel>
+            <translation>AP.524 Rail Mounted Gantry Cranes (RMG)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.525</masterLabel>
+            <translation>AP.525 Auto Rail Mounted Gantry Cranes (ARMG)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.526</masterLabel>
+            <translation>AP.526 Automatic Stacking Cranes (ASC)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.527</masterLabel>
+            <translation>AP.527 Ship Yard Crane (SYG)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.528</masterLabel>
+            <translation>AP.528 Electric Overhead Traveling Crane (EOT)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.529</masterLabel>
+            <translation>AP.529 Double Trolley Ship to Shore Crane</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.530</masterLabel>
+            <translation>AP.530 Double Hoist Ship to Shore Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.531</masterLabel>
+            <translation>AP.531 Doubble Hoist / Doubble Trolley Ship to Shore Cranes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.532</masterLabel>
+            <translation>AP.532 Barge Feeder Crane (BFCr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.533</masterLabel>
+            <translation>AP.533 Continuous Ship Unloader (CSLr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.534</masterLabel>
+            <translation>AP.534 Level Luffing Crane (LLCr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.535</masterLabel>
+            <translation>AP.535 Ship Board Gantry Crane (SBGr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.536</masterLabel>
+            <translation>AP.536 Ship Loader (SLr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.537</masterLabel>
+            <translation>AP.537 Floating Slewing Crane (FSLr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.538</masterLabel>
+            <translation>AP.538 Stacker Reclaimer (SRr)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.539</masterLabel>
+            <translation>AP.539 EPG Baseload</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.540</masterLabel>
+            <translation>AP.540 EPG Industrial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.541</masterLabel>
+            <translation>AP.541 EPG Back-up</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.542</masterLabel>
+            <translation>AP.542 EPG Stand-by</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.543</masterLabel>
+            <translation>AP.543 Nuclear</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.544</masterLabel>
+            <translation>AP.544 Bio Gas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.545</masterLabel>
+            <translation>AP.545 Waste Gas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.546</masterLabel>
+            <translation>AP.546 Off Highway Trucks</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.547</masterLabel>
+            <translation>AP.547 Gas Compression</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.548</masterLabel>
+            <translation>AP.548 Auxiliaries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.549</masterLabel>
+            <translation>AP.549 Coastal and River Shipping</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.550</masterLabel>
+            <translation>AP.550 Long Haul Locos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.551</masterLabel>
+            <translation>AP.551 Shunting Locos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.552</masterLabel>
+            <translation>AP.552 Onshore Drilling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.553</masterLabel>
+            <translation>AP.553 Multi Purpose Support/Diving/Remotely Operated Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.554</masterLabel>
+            <translation>AP.554 Accommodation Ship</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.555</masterLabel>
+            <translation>AP.555 Heavy Construction and Installation Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.556</masterLabel>
+            <translation>AP.556 Pipe Layer/Cable Layer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.557</masterLabel>
+            <translation>AP.557 Floating, Storage and Offloading Unit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.558</masterLabel>
+            <translation>AP.558 Floating, Production, Storage and Offloading</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.559</masterLabel>
+            <translation>AP.559 Floating, Storage and Regasification Unit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.560</masterLabel>
+            <translation>AP.560 Platform Supply Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.561</masterLabel>
+            <translation>AP.561 Anchor Handling Tug and Supply Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.562</masterLabel>
+            <translation>AP.562 Emergency Response and Rescue Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.563</masterLabel>
+            <translation>AP.563 Other Support Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.564</masterLabel>
+            <translation>AP.564 Jack-Up</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.565</masterLabel>
+            <translation>AP.565 Semi-Sub</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.566</masterLabel>
+            <translation>AP.566 Drillship</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.567</masterLabel>
+            <translation>AP.567 Well Intervention</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.568</masterLabel>
+            <translation>AP.568 Seismic/Geophysical Survey Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.569</masterLabel>
+            <translation>AP.569 Hydrographic/Oceanographic Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.570</masterLabel>
+            <translation>AP.570 Cruise Liner</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.571</masterLabel>
+            <translation>AP.571 Road Ferry (Double Ended)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.572</masterLabel>
+            <translation>AP.572 RO-PAX</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.573</masterLabel>
+            <translation>AP.573 Fast Ferry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.574</masterLabel>
+            <translation>AP.574 Yacht</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.575</masterLabel>
+            <translation>AP.575 Bulk Carrier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.576</masterLabel>
+            <translation>AP.576 Container Carrier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.577</masterLabel>
+            <translation>AP.577 LNG carrier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.578</masterLabel>
+            <translation>AP.578 LPG carrier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.579</masterLabel>
+            <translation>AP.579 Crude Oil Tanker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.580</masterLabel>
+            <translation>AP.580 Product/Chemical Tanker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.581</masterLabel>
+            <translation>AP.581 Shuttle Tanker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.582</masterLabel>
+            <translation>AP.582 Multipurpose/General Cargo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.583</masterLabel>
+            <translation>AP.583 RORO/Pure Car Carrier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.584</masterLabel>
+            <translation>AP.584 Dredger</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.585</masterLabel>
+            <translation>AP.585 Fishing Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.586</masterLabel>
+            <translation>AP.586 Icebreaker</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.587</masterLabel>
+            <translation>AP.587 Tug</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.588</masterLabel>
+            <translation>AP.588 Heavy Lift</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.589</masterLabel>
+            <translation>AP.589 Other Vessel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP.600</masterLabel>
+            <translation>AP.600 Microgrid</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Description --></label>
+        <name>Apttus_Proposal__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ext Net Price --></label>
+        <name>Apttus_Proposal__Ext_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ext Price --></label>
+        <name>Apttus_Proposal__Ext_Price__c</name>
+    </fields>    
+    <fields>
+        <label><!-- Quote/Proposal --></label>
+        <name>Apttus_Proposal__Proposal__c</name>
+        <relationshipLabel><!-- Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Quantity --></label>
+        <name>Apttus_Proposal__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Discount --></label>
+        <name>Apttus_Proposal__Sales_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Date --></label>
+        <name>Apttus_Proposal__Service_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Net Price --></label>
+        <name>Apttus_Proposal__Unit_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>Apttus_Proposal__Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Apttus_QPApprov__Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approval Required</masterLabel>
+            <translation><!-- Approval Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Submitted</masterLabel>
+            <translation><!-- Not Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Price --></label>
+        <name>Apttus_QPConfig__AdjustedPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Amount --></label>
+        <name>Apttus_QPConfig__AdjustmentAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Type --></label>
+        <name>Apttus_QPConfig__AdjustmentType__c</name>
+        <picklistValues>
+            <masterLabel>% Discount</masterLabel>
+            <translation><!-- % Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>% Markup</masterLabel>
+            <translation><!-- % Markup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Base Price Override</masterLabel>
+            <translation><!-- Base Price Override --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount Amount</masterLabel>
+            <translation><!-- Discount Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Markup Amount</masterLabel>
+            <translation><!-- Markup Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Factor</masterLabel>
+            <translation><!-- Price Factor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Override</masterLabel>
+            <translation><!-- Price Override --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- ID of the asset associated with the product --></help>
+        <label><!-- Asset --></label>
+        <name>Apttus_QPConfig__AssetId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- ID of the associated asset line item from which the line item is created. --></help>
+        <label><!-- Asset Line Item --></label>
+        <name>Apttus_QPConfig__AssetLineItemId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attribute Value --></label>
+        <name>Apttus_QPConfig__AttributeValueId__c</name>
+        <relationshipLabel><!-- Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the order line item associated with the proposal line item will be automatically activated when the quote/proposal is accepted. --></help>
+        <label><!-- Auto Activate Order ? --></label>
+        <name>Apttus_QPConfig__AutoActivateOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether billing schedules would be created for the order line item associated with the proposal line item when the quote/proposal is accepted. --></help>
+        <label><!-- Auto Create Bill ? --></label>
+        <name>Apttus_QPConfig__AutoCreateBill__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether revenue schedules would be created for the order line item associated with the proposal line item when the quote/proposal is accepted. --></help>
+        <label><!-- Auto Create Revenue ? --></label>
+        <name>Apttus_QPConfig__AutoCreateRevenue__c</name>
+    </fields>
+    <fields>
+        <help><!-- The base cost overridden by the user --></help>
+        <label><!-- Base Cost (Override) --></label>
+        <name>Apttus_QPConfig__BaseCostOverride__c</name>
+    </fields>
+    <fields>
+        <help><!-- The base cost is Cost + Automatic Adjustments for individual products and options --></help>
+        <label><!-- Base Cost --></label>
+        <name>Apttus_QPConfig__BaseCost__c</name>
+    </fields>
+    <fields>
+        <help><!-- The base extended cost is Quantity X Term (if applicable) X (Base Cost + Cost Adjustment) for individual products and options --></help>
+        <label><!-- Base Extended Cost --></label>
+        <name>Apttus_QPConfig__BaseExtendedCost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Extended Price --></label>
+        <name>Apttus_QPConfig__BaseExtendedPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Price Method --></label>
+        <name>Apttus_QPConfig__BasePriceMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Price</masterLabel>
+            <translation><!-- Flat Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation><!-- Per Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tiered Rate</masterLabel>
+            <translation><!-- Tiered Rate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The base price overridden by the user --></help>
+        <label><!-- Base Price (Override) --></label>
+        <name>Apttus_QPConfig__BasePriceOverride__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Price --></label>
+        <name>Apttus_QPConfig__BasePrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Base Product --></label>
+        <name>Apttus_QPConfig__BaseProductId__c</name>
+        <relationshipLabel><!-- Proposal Line Items (Base Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- ID of the bill to account associated with the line item --></help>
+        <label><!-- Bill To --></label>
+        <name>Apttus_QPConfig__BillToAccountId__c</name>
+        <relationshipLabel><!-- Quote Line Items (Bill To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The billing frequency associated with the recurring or usage price --></help>
+        <label><!-- Billing Frequency --></label>
+        <name>Apttus_QPConfig__BillingFrequency__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Yearly</masterLabel>
+            <translation><!-- Half Yearly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hourly</masterLabel>
+            <translation><!-- Hourly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One Time</masterLabel>
+            <translation><!-- One Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly</masterLabel>
+            <translation><!-- Yearly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- ID of the associated billing plan --></help>
+        <label><!-- Billing Plan --></label>
+        <name>Apttus_QPConfig__BillingPlanId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- ID of the associated billing preference --></help>
+        <label><!-- Billing Preference --></label>
+        <name>Apttus_QPConfig__BillingPreferenceId__c</name>
+        <relationshipLabel><!-- Quote Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The billing rule associated with the price item --></help>
+        <label><!-- Billing Rule --></label>
+        <name>Apttus_QPConfig__BillingRule__c</name>
+        <picklistValues>
+            <masterLabel>Bill In Advance</masterLabel>
+            <translation><!-- Bill In Advance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill In Arrears</masterLabel>
+            <translation><!-- Bill In Arrears --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Milestone Billing</masterLabel>
+            <translation><!-- Milestone Billing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- ID of the charge group to which this charge type is associated --></help>
+        <label><!-- Charge Group --></label>
+        <name>Apttus_QPConfig__ChargeGroupId__c</name>
+        <relationshipLabel><!-- Quote Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Charge Type --></label>
+        <name>Apttus_QPConfig__ChargeType__c</name>
+        <picklistValues>
+            <masterLabel>Adjustment</masterLabel>
+            <translation><!-- Adjustment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation Fee</masterLabel>
+            <translation><!-- Implementation Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installation Fee</masterLabel>
+            <translation><!-- Installation Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>License Fee</masterLabel>
+            <translation><!-- License Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance Fee</masterLabel>
+            <translation><!-- Maintenance Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subscription Fee</masterLabel>
+            <translation><!-- Subscription Fee --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category Hierarchy --></label>
+        <name>Apttus_QPConfig__ClassificationHierarchy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Apttus_QPConfig__ClassificationId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Apttus_QPConfig__Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- The quantity commitment associated with the product or option --></help>
+        <label><!-- Commitment Quantity --></label>
+        <name>Apttus_QPConfig__CommitmentQuantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Configuration --></label>
+        <name>Apttus_QPConfig__ConfigurationId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- A comma separated list of contract numbers associated with the line item --></help>
+        <label><!-- Contract Numbers --></label>
+        <name>Apttus_QPConfig__ContractNumbers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost --></label>
+        <name>Apttus_QPConfig__Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Derived From --></label>
+        <name>Apttus_QPConfig__DerivedFromId__c</name>
+        <relationshipLabel><!-- Derived Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>Apttus_QPConfig__EndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The extended cost is Quantity X Term X (Base Cost + Cost Adjustment + Option Cost) --></help>
+        <label><!-- Extended Cost --></label>
+        <name>Apttus_QPConfig__ExtendedCost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Extended Description --></label>
+        <name>Apttus_QPConfig__ExtendedDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extended Price --></label>
+        <name>Apttus_QPConfig__ExtendedPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- The extended quantity is Quantity X Parent Quantity) --></help>
+        <label><!-- Extended Quantity --></label>
+        <name>Apttus_QPConfig__ExtendedQuantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- The rolled up adjusted flat price of options for the bundle product --></help>
+        <label><!-- Flat Option Price --></label>
+        <name>Apttus_QPConfig__FlatOptionPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Frequency --></label>
+        <name>Apttus_QPConfig__Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Yearly</masterLabel>
+            <translation><!-- Half Yearly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hourly</masterLabel>
+            <translation><!-- Hourly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly</masterLabel>
+            <translation><!-- Yearly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Group Adjustment (%) --></label>
+        <name>Apttus_QPConfig__GroupAdjustmentPercent__c</name>
+    </fields>
+    <fields>
+        <help><!-- The pricing guidance associated with the line item --></help>
+        <label><!-- Guidance --></label>
+        <name>Apttus_QPConfig__Guidance__c</name>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the product has attributes. --></help>
+        <label><!-- Has Attributes --></label>
+        <name>Apttus_QPConfig__HasAttributes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the product has options. --></help>
+        <label><!-- Has Options --></label>
+        <name>Apttus_QPConfig__HasOptions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the item would be hidden in the invoice display. --></help>
+        <label><!-- Hide Invoice Display --></label>
+        <name>Apttus_QPConfig__HideInvoiceDisplay__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether asset pricing is in effect for the line item --></help>
+        <label><!-- Is Asset Pricing --></label>
+        <name>Apttus_QPConfig__IsAssetPricing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether custom pricing is in effect for the line item --></help>
+        <label><!-- Is Custom Pricing --></label>
+        <name>Apttus_QPConfig__IsCustomPricing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Option Rollup Line --></label>
+        <name>Apttus_QPConfig__IsOptionRollupLine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Primary Line --></label>
+        <name>Apttus_QPConfig__IsPrimaryLine__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the line is the primary line for the price ramp. Only applicable when price ramp is in effect for the product or option --></help>
+        <label><!-- Is Primary Ramp Line --></label>
+        <name>Apttus_QPConfig__IsPrimaryRampLine__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the usage price tier is modifiable for the product or option --></help>
+        <label><!-- Is Usage Tier Modifiable --></label>
+        <name>Apttus_QPConfig__IsUsageTierModifiable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Sequence --></label>
+        <name>Apttus_QPConfig__ItemSequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Number --></label>
+        <name>Apttus_QPConfig__LineNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Status --></label>
+        <name>Apttus_QPConfig__LineStatus__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing</masterLabel>
+            <translation><!-- Existing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalized</masterLabel>
+            <translation><!-- Finalized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewed</masterLabel>
+            <translation><!-- Renewed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Line Type --></label>
+        <name>Apttus_QPConfig__LineType__c</name>
+        <picklistValues>
+            <masterLabel>Misc</masterLabel>
+            <translation><!-- Misc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Option</masterLabel>
+            <translation><!-- Option --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product/Service</masterLabel>
+            <translation><!-- Product/Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- List Price --></label>
+        <name>Apttus_QPConfig__ListPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Apttus_QPConfig__LocationId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Net Adjustment (%) --></label>
+        <name>Apttus_QPConfig__NetAdjustmentPercent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Price --></label>
+        <name>Apttus_QPConfig__NetPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- The rolled up extended cost of options for the product --></help>
+        <label><!-- Option Cost --></label>
+        <name>Apttus_QPConfig__OptionCost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Option --></label>
+        <name>Apttus_QPConfig__OptionId__c</name>
+        <relationshipLabel><!-- Proposal Option Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Option Price --></label>
+        <name>Apttus_QPConfig__OptionPrice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Represents the parent bundle number associated with the child bundle --></help>
+        <label><!-- Parent Bundle Number --></label>
+        <name>Apttus_QPConfig__ParentBundleNumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID of the payment term associated with the quote/proposal --></help>
+        <label><!-- Payment Term --></label>
+        <name>Apttus_QPConfig__PaymentTermId__c</name>
+        <relationshipLabel><!-- Quote Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price Adjustment Amount --></label>
+        <name>Apttus_QPConfig__PriceAdjustmentAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Adjustment Type --></label>
+        <name>Apttus_QPConfig__PriceAdjustmentType__c</name>
+        <picklistValues>
+            <masterLabel>% Discount</masterLabel>
+            <translation><!-- % Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>% Markup</masterLabel>
+            <translation><!-- % Markup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount Amount</masterLabel>
+            <translation><!-- Discount Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Markup Amount</masterLabel>
+            <translation><!-- Markup Amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Override</masterLabel>
+            <translation><!-- Price Override --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Price Adjustment --></label>
+        <name>Apttus_QPConfig__PriceAdjustment__c</name>
+    </fields>
+    <fields>
+        <help><!-- The price group associated with the product or option --></help>
+        <label><!-- Price Group --></label>
+        <name>Apttus_QPConfig__PriceGroup__c</name>
+        <picklistValues>
+            <masterLabel>Price Ramp</masterLabel>
+            <translation><!-- Price Ramp --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the option price is included in the bundle. Only applicable to Option line types. --></help>
+        <label><!-- Price Included In Bundle --></label>
+        <name>Apttus_QPConfig__PriceIncludedInBundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price List --></label>
+        <name>Apttus_QPConfig__PriceListId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price List Item --></label>
+        <name>Apttus_QPConfig__PriceListItemId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price Method --></label>
+        <name>Apttus_QPConfig__PriceMethod__c</name>
+        <picklistValues>
+            <masterLabel>Flat Price</masterLabel>
+            <translation><!-- Flat Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Per Unit</masterLabel>
+            <translation><!-- Per Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Percentage</masterLabel>
+            <translation><!-- Percentage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Related Price</masterLabel>
+            <translation><!-- Related Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tiered Rate</masterLabel>
+            <translation><!-- Tiered Rate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Price Type --></label>
+        <name>Apttus_QPConfig__PriceType__c</name>
+        <picklistValues>
+            <masterLabel>One Time</masterLabel>
+            <translation><!-- One Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recurring</masterLabel>
+            <translation><!-- Recurring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usage</masterLabel>
+            <translation><!-- Usage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pricing Uom --></label>
+        <name>Apttus_QPConfig__PriceUom__c</name>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Day</masterLabel>
+            <translation><!-- Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Each</masterLabel>
+            <translation><!-- Each --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gallon</masterLabel>
+            <translation><!-- Gallon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hour</masterLabel>
+            <translation><!-- Hour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation><!-- Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation><!-- Quarter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation><!-- Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The pricing date, The product list price is determined based on this date. --></help>
+        <label><!-- Pricing Date --></label>
+        <name>Apttus_QPConfig__PricingDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Represents the unique number for each primary line item --></help>
+        <label><!-- Primary Line Number --></label>
+        <name>Apttus_QPConfig__PrimaryLineNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Option --></label>
+        <name>Apttus_QPConfig__ProductOptionId__c</name>
+        <relationshipLabel><!-- Proposal Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity (2) --></label>
+        <name>Apttus_QPConfig__Quantity2__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date the order item is ready for activation. The order item is activated on this date. --></help>
+        <label><!-- Ready For Activation Date --></label>
+        <name>Apttus_QPConfig__ReadyForActivationDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date when the order item is ready for billing. The billing schedules are created on this date. --></help>
+        <label><!-- Ready For Billing Date --></label>
+        <name>Apttus_QPConfig__ReadyForBillingDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date the order item is ready for fulfillment. The order item is fulfilled on this date. --></help>
+        <label><!-- Ready For Fulfillment Date --></label>
+        <name>Apttus_QPConfig__ReadyForFulfillmentDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date when the order is order item for revenue recognition. The revenue schedules are created on this date. --></help>
+        <label><!-- Ready For Revenue Recognition Date --></label>
+        <name>Apttus_QPConfig__ReadyForRevRecDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selling Frequency --></label>
+        <name>Apttus_QPConfig__SellingFrequency__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Yearly</masterLabel>
+            <translation><!-- Half Yearly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hourly</masterLabel>
+            <translation><!-- Hourly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One Time</masterLabel>
+            <translation><!-- One Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly</masterLabel>
+            <translation><!-- Yearly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Selling Term --></label>
+        <name>Apttus_QPConfig__SellingTerm__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID of the ship to account associated with the line item --></help>
+        <label><!-- Ship To --></label>
+        <name>Apttus_QPConfig__ShipToAccountId__c</name>
+        <relationshipLabel><!-- Quote Line Items (Ship To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Apttus_QPConfig__StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary Group --></label>
+        <name>Apttus_QPConfig__SummaryGroupId__c</name>
+        <relationshipLabel><!-- Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- ID of the tax code associated with the line item. Only applicable for taxable items. --></help>
+        <label><!-- Tax Code --></label>
+        <name>Apttus_QPConfig__TaxCodeId__c</name>
+        <relationshipLabel><!-- Quote Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the price is tax inclusive. Only applicable for taxable items. --></help>
+        <label><!-- Tax Inclusive ? --></label>
+        <name>Apttus_QPConfig__TaxInclusive__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the line item is taxable --></help>
+        <label><!-- Taxable ? --></label>
+        <name>Apttus_QPConfig__Taxable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Term --></label>
+        <name>Apttus_QPConfig__Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Uom --></label>
+        <name>Apttus_QPConfig__Uom__c</name>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Day</masterLabel>
+            <translation><!-- Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Each</masterLabel>
+            <translation><!-- Each --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gallon</masterLabel>
+            <translation><!-- Gallon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hour</masterLabel>
+            <translation><!-- Hour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation><!-- Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarter</masterLabel>
+            <translation><!-- Quarter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation><!-- Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Item Name --></label>
+        <name>Customer_Item_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Delivery Time to Customer --></label>
+        <name>Item_Delivery_Time_to_Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Technical Details --></label>
+        <name>Item_Technical_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Total Sales Price --></label>
+        <name>Item_Total_Sales_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Number --></label>
+        <name>Line_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position Number --></label>
+        <name>Position_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>Product_Name_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>Product_Name__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- CQP --></label>
+        <name>CQP</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- AddLineItems --></label>
+        <name>Apttus_QPConfig__AddLineItems</name>
+    </webLinks>
+</CustomObjectTranslation>

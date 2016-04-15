@@ -1,0 +1,20 @@
+<apex:page standardController="Account">
+<apex:includeScript value="/soap/ajax/28.0/apex.js"/>
+<apex:includeScript value="/soap/ajax/28.0/connection.js"/>
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  sforce.connection.sessionId = "{!$Api.Session_ID}";
+  window.onload = function(){  
+   var userid = '{!$User.Id}';
+   var query = "select id,name,Division_DIV__c  from User where id=\'"+ userid  +"\'";
+   var result = sforce.connection.query(query);
+   var records = result.getArray("records");   
+   if(records[0].Division_DIV__c != "{!$Label.UserDivisionDM}")
+   {
+       sforce.one.navigateToURL('/a2J/o');
+   }else{
+       sforce.one.navigateToURL('/apex/CreateQuoteSF1');
+   }
+   }
+</script>
+</apex:page>

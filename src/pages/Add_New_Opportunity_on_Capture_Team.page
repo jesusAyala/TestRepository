@@ -1,0 +1,46 @@
+<apex:page standardController="Opportunity" extensions="addNewOpportunityOnCaptureTeam" recordSetVar="Oppts">
+<apex:form >
+  <apex:pageblock >
+  <apex:pageMessage summary="{!error}" severity="error" rendered="{!error!=null}" escape="false"></apex:pageMessage>
+  <apex:pageMessage summary="{!$Label.CT_Oppty_Addition}" severity="info" rendered="{!opportunities.empty}">
+  </apex:pageMessage>
+  <apex:pageBlockSection rendered="{!!opportunities.empty}">
+  <apex:pageBlockTable value="{!opportunities}" var="oppy" id="tblCompetitors" >
+        <apex:column >
+            <apex:facet name="header"> 
+            <apex:inputCheckbox id="chk" onclick="checkAll(this)">                        
+            </apex:inputCheckbox>
+            </apex:facet>
+         <apex:inputCheckbox value="{!oppy.selected}" id="checkedone"></apex:inputCheckbox>         
+        <!-- <apex:inputHidden id="Accids" value="{!oppy.oppty.Id}"  />  -->
+        </apex:column>
+        <!--<apex:column headervalue="Action">
+            <apex:outputLink value="/apex/AccountCVP/?id=!{wa.acc.id}">View</apex:outputlink>
+        </apex:column>-->     
+      
+        <apex:column headervalue="Opportunity Name">
+        <apex:outputLink value="/{!oppy.oppty.id}">{!oppy.oppty.Name}</apex:outputlink>
+        </apex:column>
+        <apex:column headervalue="ABB Sales Stage" value="{!oppy.oppty.StageName}"/>
+        <apex:column headervalue="Expected Award Date" value="{!oppy.oppty.CloseDate}"/> 
+  </apex:pageBlockTable>
+  </apex:pageBlockSection>
+  <apex:pageBlockSection columns="3">
+  <apex:commandButton value="{!$Label.Add_Selected_Opportunities}" action="{!addSelectedOpportunities}" rendered="{!!opportunities.empty}"/>
+  <apex:commandButton value="{!$Label.Back}" action="{!back}" />
+  </apex:pageBlockSection>
+  </apex:pageblock>
+</apex:form>
+<script>
+function checkAll(cb){
+    var inputElem = document.getElementsByTagName("input");
+    for(var i=0; i<inputElem.length; i++)    
+    {
+        if(inputElem[i].id.indexOf("checkedone")!=-1)        
+        {
+          inputElem[i].checked = cb.checked;      
+        }        
+    }       
+}    
+</script>
+</apex:page>

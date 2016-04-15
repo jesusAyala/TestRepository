@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>PISJBPProductLine</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - Joint Business Plan Product Lines</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Actual_Stock__c</fullName>
+        <description>R5 - Actual Stock</description>
+        <externalId>false</externalId>
+        <label>Actual Stock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Year_to_Date_Changed_on__c</fullName>
+        <description>R5 - Actual Year to Date Changed on field to capture the date when the user changes the field Current Ongoing Year.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Give the date the Actual Sales Year to Date is reported. Used in Run rate calculation.</inlineHelpText>
+        <label>Date the actual sales YTD is given</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit_Name__c</fullName>
+        <description>R5 - Business Unit Name</description>
+        <externalId>false</externalId>
+        <label>Business Unit Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>R5 - Business Unit</description>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Partner_Business_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( (TEXT(Joint_Business_Plan__r.Status__c) == &apos;Closed&apos; || TEXT(Joint_Business_Plan__r.Status__c) == &apos;Obsolete&apos;), &apos;Closed&apos;, TEXT(Joint_Business_Plan__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Partner Business Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Ongoing_Year__c</fullName>
+        <description>R5 Current_Ongoing_Year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the actual sales @ every business review. Indicate also date of the report to get run rate calculation correct</inlineHelpText>
+        <label>Actual Sales Year to Date</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_Currency__c</fullName>
+        <description>R5 Current_Year_Currency field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Budget for this product line, this year</inlineHelpText>
+        <label>Budget Current Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Division_Name__c</fullName>
+        <description>R5 - Division Name</description>
+        <externalId>false</externalId>
+        <label>Division Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>R5 - Division</description>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Forecast_Ongoing_Year__c</fullName>
+        <description>R5 Forecast_Ongoing_Year field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the whole year&apos;s forecast @ every business review</inlineHelpText>
+        <label>Forecast Current Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <description>R5 - Master-Detail Relationship to Joint Business Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business plan this sales plan is connected to</inlineHelpText>
+        <label>Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipLabel>Sales Targets and Results</relationshipLabel>
+        <relationshipName>Joint_Business_Plan_Product_Lines</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Other_Information__c</fullName>
+        <description>R5 - Other Information</description>
+        <externalId>false</externalId>
+        <label>Other Information</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Stock__c</fullName>
+        <description>R5 - Planned Stock</description>
+        <externalId>false</externalId>
+        <label>Planned Stock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Year_Currency__c</fullName>
+        <description>R5 Previous_Year_Currency field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales of this product, previous year</inlineHelpText>
+        <label>Sales previous year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Year__c</fullName>
+        <description>R5 Previous Year = value of Starting year - 1</description>
+        <externalId>false</externalId>
+        <formula>TEXT(VALUE(TEXT( Starting_Year__c ))-1)</formula>
+        <label>Previous Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Country__c</fullName>
+        <description>R5 - Copies Primary Address Country from Account .</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Joint_Business_Plan__r.Account__r.Primary_Address_Country__c )</formula>
+        <label>Primary Address Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>R5 - Product Group</description>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Mix__c</fullName>
+        <description>R5 - Product Mix</description>
+        <externalId>false</externalId>
+        <label>Product Mix</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product as chosen in the market scope. Want to add/remove products? Update Market scope product list and copy content on Business Plan template.</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Sales Targets and Results</relationshipLabel>
+        <relationshipName>Joint_Business_Plan_Product_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Run_Rate_On__c</fullName>
+        <description>R5 - Run Rate Calculation Formula</description>
+        <externalId>false</externalId>
+        <formula>IF (ISNULL(Actual_Year_to_Date_Changed_on__c) , 0, (365  / (  Actual_Year_to_Date_Changed_on__c - DATEVALUE( TEXT(YEAR( Actual_Year_to_Date_Changed_on__c  )) &amp; &quot;-01-01&quot; )))  * Current_Ongoing_Year__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Calculated; linear trend based on Year to Date sales and date</inlineHelpText>
+        <label>Run Rate Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Second_Year_Currency__c</fullName>
+        <description>R5 Second_Year_Currency field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Budget/ target for this product line, 2nd year</inlineHelpText>
+        <label>Target 2nd Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Second_Year__c</fullName>
+        <description>R5 Second Year = value of Starting year + 1</description>
+        <externalId>false</externalId>
+        <formula>TEXT(VALUE(TEXT( Starting_Year__c ))+1)</formula>
+        <label>2nd Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Starting_Year_Product__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R5 - Unique check</description>
+        <externalId>false</externalId>
+        <label>Starting Year &amp; Product</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Starting_Year__c</fullName>
+        <description>R5 Starting_Year</description>
+        <externalId>false</externalId>
+        <label>Current Year</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Target_Lead_Times__c</fullName>
+        <description>R5 - Target Lead Times</description>
+        <externalId>false</externalId>
+        <label>Target Lead Times</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Targeted_Stock__c</fullName>
+        <description>R5 - Targeted Stock</description>
+        <externalId>false</externalId>
+        <label>Targeted Stock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Third_Year_Currency__c</fullName>
+        <description>R5 Third_Year_Currency field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Budget/ target for this product line, 3rd year</inlineHelpText>
+        <label>Target 3rd Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Third_Year__c</fullName>
+        <description>R5 Third Year = value of Starting year +2</description>
+        <externalId>false</externalId>
+        <formula>TEXT(VALUE(TEXT( Starting_Year__c ))+2)</formula>
+        <label>3rd Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sales Targets and Results</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Joint_Business_Plan__c</columns>
+        <columns>Product__c</columns>
+        <columns>Current_Ongoing_Year__c</columns>
+        <columns>Forecast_Ongoing_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>MIX-{0000000}</displayFormat>
+        <label>Product Mix</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sales Targets and Results</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Freeze_Budget</fullName>
+        <active>true</active>
+        <description>R5 - Freeze Budget Record Type</description>
+        <label>Freeze Budget</label>
+        <picklistValues>
+            <picklist>Starting_Year__c</picklist>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Joint_Business_Plan_Product_Lines</fullName>
+        <active>true</active>
+        <description>R5 - Joint Business Plan Product Lines</description>
+        <label>Joint Business Plan Product Lines</label>
+        <picklistValues>
+            <picklist>Starting_Year__c</picklist>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Product__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Joint_Business_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Current_Ongoing_Year__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Forecast_Ongoing_Year__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Business_Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Starting_Year__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Previous_Year__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Run_Rate_On__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Forecast_Ongoing_Year__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Current_Year_Currency__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Second_Year__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Third_Year__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Business_Unit__c</lookupFilterFields>
+        <lookupFilterFields>Product__c</lookupFilterFields>
+        <lookupFilterFields>Starting_Year__c</lookupFilterFields>
+        <lookupFilterFields>Previous_Year__c</lookupFilterFields>
+        <lookupFilterFields>Run_Rate_On__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Business_Unit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Starting_Year__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Previous_Year__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Run_Rate_On__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Forecast_Ongoing_Year__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Current_Year_Currency__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Second_Year__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Third_Year__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Business_Unit__c</searchFilterFields>
+        <searchFilterFields>Product__c</searchFilterFields>
+        <searchFilterFields>Starting_Year__c</searchFilterFields>
+        <searchFilterFields>Previous_Year__c</searchFilterFields>
+        <searchFilterFields>Run_Rate_On__c</searchFilterFields>
+        <searchFilterFields>Forecast_Ongoing_Year__c</searchFilterFields>
+        <searchFilterFields>Current_Year_Currency__c</searchFilterFields>
+        <searchFilterFields>Second_Year__c</searchFilterFields>
+        <searchFilterFields>Third_Year__c</searchFilterFields>
+        <searchResultsAdditionalFields>Business_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Starting_Year__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Previous_Year_Currency__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Run_Rate_On__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Forecast_Ongoing_Year__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Current_Year_Currency__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Second_Year_Currency__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Third_Year_Currency__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>JBP_Status_Closed_Check_SalesTargets</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Partner Business Plan Status is Closed/Obsolete, then the user should not edit the Sales Targets and Results</description>
+        <errorConditionFormula>OR(ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Closed&apos;), 
+ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Obsolete&apos;) 
+)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Business Plan is Closed/Obsolete</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_the_fields_to_Edit_When_Active</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(Joint_Business_Plan__r.Status__c, &apos;Active&apos;) &amp;&amp; ( ISCHANGED(Current_Year_Currency__c) ||
+ISCHANGED(Starting_Year__c) || ISCHANGED(Second_Year_Currency__c) || ISCHANGED(Third_Year_Currency__c) || ISCHANGED(Previous_Year_Currency__c) )</errorConditionFormula>
+        <errorMessage>You are not allowed to change the values of Current Year,Budget Current Year, Target Second Year, Target Third Year and Sales Previous Year when the channel Business Plan Status is Active</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Missing_Products_from_Channel_Market_Coverate</fullName>
+        <availability>online</availability>
+        <description>R5 - Add Missing Products from the Channel Market Coverage</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add Missing Products from Channel Market Coverate</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>www.salesforce.com</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Change_Product</fullName>
+        <availability>online</availability>
+        <description>R5 - Change the product line</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Change Product</masterLabel>
+        <openType>noSidebar</openType>
+        <page>EditJointBusinessPlanPIS</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Copy_Product_Lines</fullName>
+        <availability>online</availability>
+        <description>R5 -  Copy all the product lines involved in the Channel Market Coverage in to the Joint Business Plan Product Lines.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Copy Product Mix from Channel Market Scope</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/JBPProductLineCopy?Id={!Joint_Business_Plan__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <description>R5 - To explore Multi-Edit option in Joint Business Plan Related List.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/JBPProductLinesList?Id={!Joint_Business_Plan__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Prepare_Next_Year_Budget</fullName>
+        <availability>online</availability>
+        <description>R5 - Prepare Next year Budget</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Prepare Next Year Budget</masterLabel>
+        <openType>sidebar</openType>
+        <page>PrepareForNextYrPage</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

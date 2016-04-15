@@ -1,0 +1,189 @@
+<!--   
+* VF Page - AddProductCustSeg    
+* Controller - ClsAddProductCustSeg
+* Display the PIS Tree to select a product. This page is a part of Customer Segmentation page layout.
+* Release R5
+*  
+* @author  Indhu Selvi Ramalingam (Accenture)
+* @created 2016-01-11
+* @version 1.0
+*
+* - Created
+-->
+
+
+<apex:page id="pg" standardController="Customer_Segmentation__c" extensions="ClsAddProductCustSeg">
+<script type="text/javascript" src="/canvas/sdk/js/33.0/controller.js" />
+<script type="text/javascript">
+  
+  //Object to pass to VF controller
+  function PISNode() {
+     this.cid = null;
+     this.englishDescription = null;
+     this.languageSpecificDescription = null;
+  }
+
+  //Holds all products to be added
+  var productsToAdd;
+    
+  var ProdQualID = "{!ParentId }";
+  var returnURL = "/{!ParentId }";
+    
+  
+  // Set timeout at page level
+  Visualforce.remoting.timeout = 30000;
+
+  //Set to true for enhanced JavaScript debugging output 
+  var dbgMode = false;
+
+  //To prevent duplicate adding when the "Add" button is clicked more than once
+  var buttonPressed = false;
+
+
+  //Handle the response from handleProducts (VF Remoting)
+  function returnHandler(result, event) {
+      if (event.status) {
+          if (result.success == true) { 
+            window.location.href = returnURL;
+          } else {
+            
+            var message = 'Error: ';
+            if (result.failedProducts.length > 0) {
+              message += result.failed +' of ' + result.total + ' products not found.\n\n';
+              message += 'The following products could not be added: ';
+              for (var i = 0; i < result.failedProducts.length; i++) {
+                var product = result.failedProducts[i];
+                message += '\n[' + product.cid + '] ' + product.englishDescription;
+                
+                if (product.languageSpecificDescription != '') {
+                  message += ' (' + product.languageSpecificDescription + ')';
+                }
+              }
+            } else {
+              //message += 'Insufficient access rights for this Customer Segmentation!\n';
+              
+              /*message += result.failed +' of ' + result.total + ' products could not be added.\n\n';*/
+            }
+            alert(result.errorMsg);
+            window.location.href = returnURL;
+        }
+
+      } else if (event.type == 'exception') {
+        alert(event.message);
+        var message = 'Exception: ' + result.failed +' of ' + result.total + ' products failed.\n\n';
+        message += 'The following products will not be added:';
+        
+        for (var i = 0; i < result.failedProducts.length; i++) {
+          var product = result.failedProducts[i];
+          message += '\n[' + product.cid + '] ' + product.englishDescription;
+          
+          if (product.languageSpecificDescription != '') {
+            message += ' (' + product.languageSpecificDescription + ')';
+          }
+        }
+        alert(message);
+        window.location.href = returnURL;
+
+      } else {
+          alert('Event type "other": ' + event.message);
+      }
+  }
+
+  // function that uses APEX controller extentsion to save products to Budget
+  function handleProducts() {
+    Visualforce.remoting.Manager.invokeAction(
+      '{!$RemoteAction.ClsAddProductCustSeg.addProducts}', 
+        ProdQualID,
+        productsToAdd,
+        returnHandler, 
+      {escape: true}
+    );
+  }
+ 
+ //Receives the Canvas APP event with the products to add
+ Sfdc.canvas(function() {  
+        Sfdc.canvas.controller.subscribe(
+            {name : 'pis.sendProducts', 
+                onData : function (data) {
+                  var parsedInput = JSON.parse(data.value);
+                  
+               if (buttonPressed == true) {
+                  alert('Please click only once!');
+                } else {
+                  buttonPressed = true;
+
+                  if (parsedInput.Type == 'Apply') {
+                    //alert('pis.sendProducts: Apply event.');
+                    productsToAdd = new Array();
+
+                    //alert(parsedInput.Nodes.length);                    
+                    if(parsedInput.Nodes.length >1)
+                    {
+                     alert('Please do not select more than one Product!');
+                     buttonPressed = false;                        
+                     return false;
+                    }
+                    
+                    for (var i = 0; i < parsedInput.Nodes.length; i++) {
+                      var jsnProduct = parsedInput.Nodes[i];
+                      tmpProduct = new PISNode();
+                      
+                      if (dbgMode == true) {
+                        alert('Data: ' + data);
+                        alert('CID: ' + jsnProduct.Cid);
+                        alert('Parsed input: '+ parsedInput);
+                      }
+                      
+                      tmpProduct.cid = jsnProduct.Cid;
+                      tmpProduct.englishDescription = jsnProduct.EnglishDescription;
+                      tmpProduct.languageSpecificDescription = jsnProduct.LanguageSpecificDescription;
+                      
+                      if (dbgMode == true ) {
+                        var dbg = 'CID ' + tmpProduct.cid  + '\n';
+                        dbg += 'Description: ' + tmpProduct.englishDescription  + '\n';
+                        dbg += 'local Description: ' +  tmpProduct.languageSpecificDescription + '\n';
+                        alert('Debug: ' + dbg);
+                      }
+                      productsToAdd.push(tmpProduct);
+                    }
+                    handleProducts();
+
+                  } else if (parsedInput.Type == 'Cancel') { 
+                    if (dbgMode == true) {
+                      if (confirm('pis.sendProducts: Cancel event.')) {
+                        window.location.href = returnURL;
+                      }
+                    } else {
+                      window.location.href = returnURL;
+                    }
+                  } else {
+                    alert('pis.sendProducts: unknown event: ' + parsedInput.Type);
+                  }
+              }
+              }
+            }
+        );
+    });   
+ </script>
+ 
+
+<apex:form id="frm" >
+    <apex:outputPanel id="pnl" rendered="{!showErrmsg}">
+        <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+        <table id="tbl" width='100%'>    
+        <tr><td align='center'><apex:commandButton title="Back" value="Back" action="{!GoBack}"/>  </td></tr>
+        </table>
+    </apex:outputPanel>
+</apex:form>              
+
+
+
+ <apex:canvasApp rendered="{!ShowCanvas}" applicationName="{!$Label.PIS_TreeView_Canvas}"
+                      parameters="{filterCountry:'',
+                      GARID:'{!$Setup.PIS__c.extSystemId__c}',
+                      mode:'create',
+                      configKey:'{!$Setup.PIS__c.configKey__c}'
+              }" 
+              width="900" height="600"/>             
+              
+</apex:page>

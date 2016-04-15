@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R4 - This refers to Opportunity Screening Approved</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Opportunity Screening Approved</name>
+    <style>none</style>
+    <subject>{!Opportunity_Screening__c.Id} record has been approved</subject>
+    <type>text</type>
+</EmailTemplate>

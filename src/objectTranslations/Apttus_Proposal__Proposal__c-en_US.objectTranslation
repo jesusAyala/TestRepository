@@ -1,0 +1,2116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quotation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quotations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>APTS_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Rejection Comment --></label>
+        <name>APTS_Approval_Rejection_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Required --></label>
+        <name>APTS_Approval_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>APTS_Country__c</name>
+        <picklistValues>
+            <masterLabel>Spain</masterLabel>
+            <translation><!-- Spain --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Create MSPA Header --></label>
+        <name>APTS_Create_MSPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create MSPA with Changes --></label>
+        <name>APTS_Create_MSPA_with_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create MSPA without Changes --></label>
+        <name>APTS_Create_MSPA_without_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Channel(Product) --></label>
+        <name>APTS_Distribution_Channel_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- End User Project --></label>
+        <name>APTS_End_User_Project__c</name>
+        <relationshipLabel>Quotations</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estimated Delivery Time --></label>
+        <name>APTS_Estimated_Delivery_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exceptions --></label>
+        <name>APTS_Exceptions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate --></label>
+        <name>APTS_Generate__c</name>
+    </fields>
+    <fields>
+        <label><!-- APTS_Hierarchy Discounts --></label>
+        <name>APTS_Hierarchy_Discounts__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AN</masterLabel>
+            <translation><!-- AN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANS</masterLabel>
+            <translation><!-- ANS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AS</masterLabel>
+            <translation><!-- AS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NS</masterLabel>
+            <translation><!-- NS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hierarchy Level 3 Code Count --></label>
+        <name>APTS_Hierarchy_Level_3_Code_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- APTS_Hierarchy_level --></label>
+        <name>APTS_Hierarchy_level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Generated --></label>
+        <name>APTS_Is_Generated__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto Populated from Opportunity --></help>
+        <label><!-- Account Customer --></label>
+        <name>APTS_LP_AccountCustomer__c</name>
+        <relationshipLabel><!-- Quotations (Account Direct Customer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Auto populated from Opportunity --></help>
+        <label><!-- Primary Partner Customer --></label>
+        <name>APTS_LP_Account_End_User__c</name>
+        <relationshipLabel>Quotations (Account - End User)</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Distribution Channel --></label>
+        <name>APTS_LP_Distribution_Channel__c</name>
+        <picklistValues>
+            <masterLabel>BT</masterLabel>
+            <translation><!-- BT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NI</masterLabel>
+            <translation><!-- NI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GTV Level --></label>
+        <name>APTS_LP_GTV_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group --></label>
+        <name>APTS_LP_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto populated from Account --></help>
+        <label><!-- Incoterms --></label>
+        <name>APTS_LP_Incoterms__c</name>
+        <picklistValues>
+            <masterLabel>CFR - Costes y flete</masterLabel>
+            <translation><!-- CFR - Costes y flete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CIF - Costes, seguro y flete</masterLabel>
+            <translation><!-- CIF - Costes, seguro y flete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CIP - Porte pagado y seguro</masterLabel>
+            <translation><!-- CIP - Porte pagado y seguro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPT - Porte pagado</masterLabel>
+            <translation><!-- CPT - Porte pagado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAF - Entrega en frontera</masterLabel>
+            <translation><!-- DAF - Entrega en frontera --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAP - Delivered At Place</masterLabel>
+            <translation><!-- DAP - Delivered At Place --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAT - Delivered At Terminal</masterLabel>
+            <translation><!-- DAT - Delivered At Terminal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DDP - Entrega con aduana</masterLabel>
+            <translation><!-- DDP - Entrega con aduana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DDU - Entrega sin aduana</masterLabel>
+            <translation><!-- DDU - Entrega sin aduana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEQ - Entrg.en muelle (der.ad.pag.)</masterLabel>
+            <translation><!-- DEQ - Entrg.en muelle (der.ad.pag.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DES - Entrega en el buque</masterLabel>
+            <translation><!-- DES - Entrega en el buque --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EXW - Puesto en fábrica</masterLabel>
+            <translation><!-- EXW - Puesto en fábrica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FAS - Franco al costado del buque</masterLabel>
+            <translation><!-- FAS - Franco al costado del buque --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FCA - Franco transportista</masterLabel>
+            <translation><!-- FCA - Franco transportista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FH - Franco domicilio</masterLabel>
+            <translation><!-- FH - Franco domicilio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOB - Franco a bordo</masterLabel>
+            <translation><!-- FOB - Franco a bordo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PD - Portes debidos</masterLabel>
+            <translation><!-- PD - Portes debidos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PP - Portes pagados</masterLabel>
+            <translation><!-- PP - Portes pagados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UN - Sin franquear</masterLabel>
+            <translation><!-- UN - Sin franquear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZFE - Free delivery including packin</masterLabel>
+            <translation><!-- ZFE - Free delivery including packin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZVR - Ver detalle</masterLabel>
+            <translation><!-- ZVR - Ver detalle --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Auto populated from Account --></help>
+        <label><!-- Local Channel --></label>
+        <name>APTS_LP_Local_Channel__c</name>
+        <picklistValues>
+            <masterLabel>Cuadristas</masterLabel>
+            <translation><!-- Cuadristas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuadristas CD</masterLabel>
+            <translation><!-- Cuadristas CD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution General</masterLabel>
+            <translation><!-- Distribution General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integradores y EPC</masterLabel>
+            <translation><!-- Integradores y EPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEMS</masterLabel>
+            <translation><!-- OEMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEMS CD</masterLabel>
+            <translation><!-- OEMS CD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Apply Reason --></label>
+        <name>APTS_LP_MSPA_title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Order Amount --></label>
+        <name>APTS_LP_Max_Order_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum Substitute Discount --></label>
+        <name>APTS_LP_MaximumSubstituteDiscount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>APTS_LP_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residual Amount --></label>
+        <name>APTS_LP_Residual_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Organization --></label>
+        <name>APTS_LP_Sales_Organization__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto populated from User Profile --></help>
+        <label><!-- Sales Person --></label>
+        <name>APTS_LP_Sales_Person__c</name>
+        <relationshipLabel>Quotations</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MSPA End Date --></label>
+        <name>APTS_MSPA_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create MSPA without Changes --></label>
+        <name>APTS_MSPA_without_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net price By Envolvente --></label>
+        <name>APTS_Net_price_By_Envolvente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net price By GTV --></label>
+        <name>APTS_Net_price_By_GTV__c</name>
+    </fields>
+    <fields>
+        <help><!-- This button will be visible once Quote is approved or generated. --></help>
+        <label><!-- Present --></label>
+        <name>APTS_Present__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Date --></label>
+        <name>APTS_Price_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact Salutation --></label>
+        <name>APTS_Primary_Contact_Salutation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>APTS_Primary_Contact__c</name>
+        <relationshipLabel><!-- Quotations (Primary Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Configuration --></label>
+        <name>APTS_Product_Configuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- APTS_Product_Discounts --></label>
+        <name>APTS_Product_Discounts__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AN</masterLabel>
+            <translation><!-- AN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANS</masterLabel>
+            <translation><!-- ANS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AS</masterLabel>
+            <translation><!-- AS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NS</masterLabel>
+            <translation><!-- NS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- QuotationType --></label>
+        <name>APTS_QuotationType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Cart Export --></label>
+        <name>APTS_Quotation_Cart_Export__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Category --></label>
+        <name>APTS_Quotation_Category__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quotation Closed Status --></label>
+        <name>APTS_Quotation_Closed_Status__c</name>
+        <picklistValues>
+            <masterLabel>Another ABB</masterLabel>
+            <translation><!-- Another ABB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost</masterLabel>
+            <translation><!-- Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neglected</masterLabel>
+            <translation><!-- Neglected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won</masterLabel>
+            <translation><!-- Won --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quotation Id --></label>
+        <name>APTS_Quotation_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Line Item Rollup Summary --></label>
+        <name>APTS_Quotation_Line_Item_Rollup_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Probability --></label>
+        <name>APTS_Quotation_Probability__c</name>
+        <picklistValues>
+            <masterLabel>0%  -  Lost the order</masterLabel>
+            <translation><!-- 0%  -  Lost the order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100%  -  Written purchase order or contract received</masterLabel>
+            <translation><!-- 100%  -  Written purchase order or contract received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20%  -  Competitor is the leading potential supplier</masterLabel>
+            <translation><!-- 20%  -  Competitor is the leading potential supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50%  -  ABB and competitor is considered equal by customer</masterLabel>
+            <translation><!-- 50%  -  ABB and competitor is considered equal by customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70%  -  ABB is the leading potential supplier</masterLabel>
+            <translation><!-- 70%  -  ABB is the leading potential supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90%  -  Verbal purchase order or LOI received</masterLabel>
+            <translation><!-- 90%  -  Verbal purchase order or LOI received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quotation Reference System --></label>
+        <name>APTS_Quotation_Reference_System__c</name>
+        <picklistValues>
+            <masterLabel>CQP</masterLabel>
+            <translation><!-- CQP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDC</masterLabel>
+            <translation><!-- PDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProSales</masterLabel>
+            <translation><!-- ProSales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quotation Type --></label>
+        <name>APTS_Quotation_Type__c</name>
+        <picklistValues>
+            <masterLabel>Binding</masterLabel>
+            <translation><!-- Binding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Binding</masterLabel>
+            <translation><!-- Non-Binding --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Type Name --></label>
+        <name>APTS_Record_Type_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regenerate --></label>
+        <name>APTS_Regenerate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAP Customer ID --></label>
+        <name>APTS_SAP_Customer_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAP Reference No --></label>
+        <name>APTS_SAP_Reference_No__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto populated from User Profile --></help>
+        <label><!-- Sales Office --></label>
+        <name>APTS_Sales_Office__c</name>
+    </fields>
+    <fields>
+        <label><!-- Select Offering --></label>
+        <name>APTS_Select_Offering__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto Populated from Account --></help>
+        <label><!-- Payment Terms --></label>
+        <name>APTS_Terms_of_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>APTS_Total_Amount_of_the_quotation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Apttus_Proposal__Account__c</name>
+        <relationshipLabel>Quotations (Account)</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Apttus_Proposal__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Stage --></label>
+        <name>Apttus_Proposal__Approval_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Another ABB</masterLabel>
+            <translation><!-- Another ABB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approval Required</masterLabel>
+            <translation><!-- Approval Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved but Action Required</masterLabel>
+            <translation><!-- Approved but Action Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved but failed to load on SAP</masterLabel>
+            <translation><!-- Approved but failed to load on SAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deactivated</masterLabel>
+            <translation><!-- Deactivated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generated</masterLabel>
+            <translation><!-- Generated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost</masterLabel>
+            <translation><!-- Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neglected</masterLabel>
+            <translation><!-- Neglected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Approved</masterLabel>
+            <translation><!-- Not Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presented</masterLabel>
+            <translation><!-- Presented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saturated</masterLabel>
+            <translation><!-- Saturated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saturated Expired</masterLabel>
+            <translation><!-- Saturated Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won</masterLabel>
+            <translation><!-- Won --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Create Agreement --></label>
+        <name>Apttus_Proposal__CreateAgreement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Apttus_Proposal__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount % --></label>
+        <name>Apttus_Proposal__Discount_Percent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Expected End Date --></label>
+        <name>Apttus_Proposal__ExpectedEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Expected Start Date --></label>
+        <name>Apttus_Proposal__ExpectedStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate --></label>
+        <name>Apttus_Proposal__Generate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grand Total --></label>
+        <name>Apttus_Proposal__Grand_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internal Deadline --></label>
+        <name>Apttus_Proposal__Internal_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Make Primary --></label>
+        <name>Apttus_Proposal__MakePrimary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Amount --></label>
+        <name>Apttus_Proposal__Net_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Opportunity --></label>
+        <name>Apttus_Proposal__Opportunity__c</name>
+        <relationshipLabel>Quotations</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Term --></label>
+        <name>Apttus_Proposal__Payment_Term__c</name>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Years</masterLabel>
+            <translation><!-- 3 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30 Days</masterLabel>
+            <translation><!-- Net 30 Days --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Present --></label>
+        <name>Apttus_Proposal__Present__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presented Date --></label>
+        <name>Apttus_Proposal__Presented_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preview --></label>
+        <name>Apttus_Proposal__Preview__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Apttus_Proposal__Primary_Contact__c</name>
+        <relationshipLabel>Quotations</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>Apttus_Proposal__Primary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Proposal Approval Date --></label>
+        <name>Apttus_Proposal__Proposal_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Proposal Expiration Date --></label>
+        <name>Apttus_Proposal__Proposal_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Proposal Name --></label>
+        <name>Apttus_Proposal__Proposal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Intake Date --></label>
+        <name>Apttus_Proposal__RFP_Intake_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Response Due Date --></label>
+        <name>Apttus_Proposal__RFP_Response_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFP Stage --></label>
+        <name>Apttus_Proposal__RFP_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Expected</masterLabel>
+            <translation><!-- Expected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final Draft</masterLabel>
+            <translation><!-- Final Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Revision</masterLabel>
+            <translation><!-- First Revision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Approval</masterLabel>
+            <translation><!-- Internal Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing</masterLabel>
+            <translation><!-- Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Input</masterLabel>
+            <translation><!-- Technical Input --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RFP Value --></label>
+        <name>Apttus_Proposal__RFP_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready To Generate --></label>
+        <name>Apttus_Proposal__ReadyToGenerate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready To Present --></label>
+        <name>Apttus_Proposal__ReadyToPresent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Approval --></label>
+        <name>Apttus_Proposal__Request_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk Factors --></label>
+        <name>Apttus_Proposal__Risk_Factors__c</name>
+        <picklistValues>
+            <masterLabel>Price Pressure</masterLabel>
+            <translation><!-- Price Pressure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Delivery</masterLabel>
+            <translation><!-- Technical Delivery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turnaround Time</masterLabel>
+            <translation><!-- Turnaround Time --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Tax Amount --></label>
+        <name>Apttus_Proposal__Sales_Tax_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Tax % --></label>
+        <name>Apttus_Proposal__Sales_Tax_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping &amp; Handling --></label>
+        <name>Apttus_Proposal__Shipping_Handling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Terms --></label>
+        <name>Apttus_Proposal__Special_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Importance --></label>
+        <name>Apttus_Proposal__Strategic_Importance__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Must Win</masterLabel>
+            <translation><!-- Must Win --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Strategic</masterLabel>
+            <translation><!-- Not Strategic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submit For Approval --></label>
+        <name>Apttus_Proposal__SubmitForApproval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Valid Until Date --></label>
+        <name>Apttus_Proposal__Valid_Until_Date__c</name>
+    </fields>
+    <fields>
+        <label>Approval Status</label>
+        <name>Apttus_QPApprov__Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approval Required</masterLabel>
+            <translation><!-- Approval Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Submitted</masterLabel>
+            <translation><!-- Not Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Configure products (with assets) for the quote/proposal --></help>
+        <label><!-- Configure Products --></label>
+        <name>Apttus_QPAsset__ConfigureWithAssets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Agreement With Line Items --></label>
+        <name>Apttus_QPComply__CreateAgreementWithLineItems__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID of the master agreement associated with the quote/proposal --></help>
+        <label><!-- Master Agreement --></label>
+        <name>Apttus_QPComply__MasterAgreementId__c</name>
+        <relationshipLabel><!-- Quote/Proposals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accept --></label>
+        <name>Apttus_QPConfig__Accept__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the order associated with the quote/proposal will be automatically activated when the quote/proposal is accepted. --></help>
+        <label><!-- Auto Activate Order ? --></label>
+        <name>Apttus_QPConfig__AutoActivateOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether billing schedules would be created for the order associated with the quote/proposal when the quote/proposal is accepted. --></help>
+        <label><!-- Auto Create Bill ? --></label>
+        <name>Apttus_QPConfig__AutoCreateBill__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether revenue schedules would be created for the order associated with the quote/proposal when the quote/proposal is accepted. --></help>
+        <label><!-- Auto Create Revenue ? --></label>
+        <name>Apttus_QPConfig__AutoCreateRevenue__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Bill To --></label>
+        <name>Apttus_QPConfig__BillToAccountId__c</name>
+        <relationshipLabel><!-- Quotes (Bill To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- ID of the associated billing preference --></help>
+        <label><!-- Billing Preference --></label>
+        <name>Apttus_QPConfig__BillingPreferenceId__c</name>
+        <relationshipLabel><!-- Quotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Configuration Finalized Date --></label>
+        <name>Apttus_QPConfig__ConfigurationFinalizedDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date when the configuration was synchronized for the quote/proposal --></help>
+        <label><!-- Configuration Sync Date --></label>
+        <name>Apttus_QPConfig__ConfigurationSyncDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Configure Products --></label>
+        <name>Apttus_QPConfig__Configure__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID of the associated account location --></help>
+        <label><!-- Location --></label>
+        <name>Apttus_QPConfig__LocationId__c</name>
+        <relationshipLabel><!-- Quotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The purchase order date --></help>
+        <label><!-- PO Date --></label>
+        <name>Apttus_QPConfig__PODate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The purchase order number --></help>
+        <label><!-- PO Number --></label>
+        <name>Apttus_QPConfig__PONumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID of the payment term associated with the quote/proposal --></help>
+        <label><!-- Payment Term --></label>
+        <name>Apttus_QPConfig__PaymentTermId__c</name>
+        <relationshipLabel><!-- Quotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price List --></label>
+        <name>Apttus_QPConfig__PriceListId__c</name>
+        <relationshipLabel><!-- Quotes/Proposals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pricing Date --></label>
+        <name>Apttus_QPConfig__PricingDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date the order is ready for activation. The order is activated on this date. --></help>
+        <label><!-- Ready For Activation Date --></label>
+        <name>Apttus_QPConfig__ReadyForActivationDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date when the order is ready for billing. The billing schedules are created on this date. --></help>
+        <label><!-- Ready For Billing Date --></label>
+        <name>Apttus_QPConfig__ReadyForBillingDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date the order is ready for fulfillment. The order is fulfilled on this date. --></help>
+        <label><!-- Ready For Fulfillment Date --></label>
+        <name>Apttus_QPConfig__ReadyForFulfillmentDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date when the order is ready for revenue recognition. The revenue schedules are created on this date. --></help>
+        <label><!-- Ready For Revenue Recognition Date --></label>
+        <name>Apttus_QPConfig__ReadyForRevRecDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Its Used for CQP Integration --></help>
+        <label><!-- Ship To --></label>
+        <name>Apttus_QPConfig__ShipToAccountId__c</name>
+        <relationshipLabel><!-- Quotes (Ship To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Synchronize with Opportunity --></label>
+        <name>Apttus_QPConfig__SyncWithOpportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bussines Line --></label>
+        <name>Bussines_Line__c</name>
+        <picklistValues>
+            <masterLabel>BL.101</masterLabel>
+            <translation>BL.101 - Extended Automation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.103</masterLabel>
+            <translation>BL.103 - Essential Automation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.107</masterLabel>
+            <translation>BL.107 - Decathlon</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.108</masterLabel>
+            <translation>BL.108 - Safety System</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.109</masterLabel>
+            <translation>BL.109 - Heritage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.110</masterLabel>
+            <translation>BL.110 - EPC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.111</masterLabel>
+            <translation>BL.111 - Turnkey</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.112</masterLabel>
+            <translation>BL.112 - Equipment Supply</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.113</masterLabel>
+            <translation>BL.113 - Supply of Site Services</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.114</masterLabel>
+            <translation>BL.114 - System Delivery / Engineered Package</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.201</masterLabel>
+            <translation>BL.201 - Automation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.202</masterLabel>
+            <translation>BL.202 - Electrification</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.203</masterLabel>
+            <translation>BL.203 - Automation and Electrification</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.204</masterLabel>
+            <translation>BL.204 - Others</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.301</masterLabel>
+            <translation>BL.301 - Packaging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.302</masterLabel>
+            <translation>BL.302 - Welding and Cutting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.303</masterLabel>
+            <translation>BL.303 - PAS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.304</masterLabel>
+            <translation>BL.304 - Base Applications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.305</masterLabel>
+            <translation>BL.305 - New Applications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.306</masterLabel>
+            <translation>BL.306 - Lot Orders</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.307</masterLabel>
+            <translation>BL.307 - Internal Robot Order</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.308</masterLabel>
+            <translation>BL.308 - Paint</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.309</masterLabel>
+            <translation>BL.309 - Body-in-White</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.310</masterLabel>
+            <translation>BL.310 - Powertrain</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.311</masterLabel>
+            <translation>BL.311 - Spare Parts (FE)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.312</masterLabel>
+            <translation>BL.312 - Fieldserv and Training</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.313</masterLabel>
+            <translation>BL.313 - System Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.314</masterLabel>
+            <translation>BL.314 - Parts and Logistics (BE)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.315</masterLabel>
+            <translation>BL.315 - Body-in-White</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.316</masterLabel>
+            <translation>BL.316 - Paint</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.317</masterLabel>
+            <translation>BL.317 - Powertrain</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.318</masterLabel>
+            <translation>BL.318 - Small Part Assembly</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.319</masterLabel>
+            <translation>BL.319 - Service Robotics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.320</masterLabel>
+            <translation>BL.320 - Customer Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.401</masterLabel>
+            <translation>BL.401 - Packaging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.402</masterLabel>
+            <translation>BL.402 - Others</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.501</masterLabel>
+            <translation>BL.501 - Packaging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL.502</masterLabel>
+            <translation>BL.502 - Others</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CQP External ID --></label>
+        <name>CQP_External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - BTDIS Building Trade Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - DIST Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - DIY Retail &amp; Do it yourself (DIY)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ELW</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - ELW Electrical Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - IBDIS Internet Based Distributors, Ecommerce Distributors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>PBL Panel Builder and Installer - INST Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCC</masterLabel>
+            <translation>PBL Panel Builder and Installer - MCC Panel Builder (Motor Control Centre)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PABL</masterLabel>
+            <translation>PBL Panel Builder and Installer - PABL Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL Panel Builder and Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer - POEM Project OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSHO</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - RSHO Repairshop</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer - SOEM Serial OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - SPRO Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITCH</masterLabel>
+            <translation>PBL Panel Builder and Installer - SWITCH Panel Builder (Switchboard)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN System Integrator</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - TDIS Technical Distributor</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact Email --></label>
+        <name>Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Full Name --></label>
+        <name>Contact_Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Before Date --></label>
+        <name>Delivery_Before_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery City --></label>
+        <name>Delivery_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Company Name --></label>
+        <name>Delivery_Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Country --></label>
+        <name>Delivery_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Postal Code --></label>
+        <name>Delivery_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Street Address --></label>
+        <name>Delivery_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Terms --></label>
+        <name>Delivery_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery term to city --></label>
+        <name>Delivery_term_to_city__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Margin Level --></label>
+        <name>Estimated_Margin_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Global Project Name --></label>
+        <name>Global_Project_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry Usage --></label>
+        <name>Industry_Usage__c</name>
+        <picklistValues>
+            <masterLabel>BLD</masterLabel>
+            <translation>BLD - Building (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.10</masterLabel>
+            <translation>BLD.10 - Industrial Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.10.1</masterLabel>
+            <translation>BLD.10.1 - HVAC (Industrial Buildings)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.8</masterLabel>
+            <translation>BLD.8 - Residential Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9</masterLabel>
+            <translation>BLD.9 - Commercial &amp; institutional Buildings</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLD.9.1</masterLabel>
+            <translation>BLD.9.1 - HVAC (Commercial Buildings)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND</masterLabel>
+            <translation>IND - Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1</masterLabel>
+            <translation>IND.1 - Automotive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.1</masterLabel>
+            <translation>IND.1.1 - Automotive (Vehicles - OEM)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.1.2</masterLabel>
+            <translation>IND.1.2 - Automotives (Parts - Tier1)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10</masterLabel>
+            <translation>IND.10 - Mining and Minerals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.2</masterLabel>
+            <translation>IND.10.2 - Underground Mining including Hoisting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.3</masterLabel>
+            <translation>IND.10.3 - Open Pit Mining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.4</masterLabel>
+            <translation>IND.10.4 - Grinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.10.5</masterLabel>
+            <translation>IND.10.5 - Mineral Processing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11</masterLabel>
+            <translation>IND.11 - Cement and Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.1</masterLabel>
+            <translation>IND.11.1 - Cement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.11.2</masterLabel>
+            <translation>IND.11.2 - Glass</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12</masterLabel>
+            <translation>IND.12 - Oil and Gas Industry</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.1</masterLabel>
+            <translation>IND.12.1 - Oil and Gas - Offshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.2</masterLabel>
+            <translation>IND.12.2 - Oil and Gas - Onshore Upstream</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.3</masterLabel>
+            <translation>IND.12.3 - Refining</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.4</masterLabel>
+            <translation>IND.12.4 - Oil and Gas - Midstream and Transportation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.12.7</masterLabel>
+            <translation>IND.12.7 - Oil and Gas - Offshore Upstream / Floating Production Units</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.13</masterLabel>
+            <translation>IND.13 - Pharmaceutical and Cosmetics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.14</masterLabel>
+            <translation>IND.14 - Grinding (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15</masterLabel>
+            <translation>IND.15 - Rubber and Plastics Products (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.15.10</masterLabel>
+            <translation>IND.15.10 - Plastics and Rubber (General Industry) (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16</masterLabel>
+            <translation>IND.16 - Other Industries (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.1</masterLabel>
+            <translation>IND.16.1 - Sawmill Industry (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.2</masterLabel>
+            <translation>IND.16.2 - Recreation (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.16.3</masterLabel>
+            <translation>IND.16.3 - Other Industries (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17</masterLabel>
+            <translation>IND.17 - Agriculture and Forestry (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.1</masterLabel>
+            <translation>IND.17.1 - Agriculture (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.10</masterLabel>
+            <translation>IND.17.10 - Agriculture, Hunting and Forestry; Fishing (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.11</masterLabel>
+            <translation>IND.17.11 - Wood, Products of Wood and Cork (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.2</masterLabel>
+            <translation>IND.17.2 - Forestry (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.17.3</masterLabel>
+            <translation>IND.17.3 - Irrigation (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18</masterLabel>
+            <translation>IND.18 - Data Centers (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.1</masterLabel>
+            <translation>IND.18.1 - AC Data Centers (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.18.2</masterLabel>
+            <translation>IND.18.2 - DC Data Centers (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2</masterLabel>
+            <translation>IND.2 - Chemical (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2.12</masterLabel>
+            <translation>IND.2.12 - Chemical Intermediates (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.2.13</masterLabel>
+            <translation>IND.2.13 - Consumer and Fine Chemicals (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.3</masterLabel>
+            <translation>IND.3 - Petrochemicals (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.4</masterLabel>
+            <translation>IND.4 - Food and Beverage (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5</masterLabel>
+            <translation>IND.5 - Printing (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.5.10</masterLabel>
+            <translation>IND.5.10 - Paper and Paper Products (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.6</masterLabel>
+            <translation>IND.6 - Textile (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7</masterLabel>
+            <translation>IND.7 - Metals (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.1</masterLabel>
+            <translation>IND.7.1 - Aluminium (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.2</masterLabel>
+            <translation>IND.7.2 - Steel (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.7.3</masterLabel>
+            <translation>IND.7.3 - Other Metals (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8</masterLabel>
+            <translation>IND.8 - Electronics and Semiconductors (3C) (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.8.1</masterLabel>
+            <translation>IND.8.1 - Consumer Industry (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9</masterLabel>
+            <translation>IND.9 - Manufacturing of Machinery and Electrical Equipment (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.1</masterLabel>
+            <translation>IND.9.1 - Foundry (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.10</masterLabel>
+            <translation>IND.9.10 - Manufacturing of HVAC Equipment (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.11</masterLabel>
+            <translation>IND.9.11 - Manufacturing of Refrigeration Equipment (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.12</masterLabel>
+            <translation>IND.9.12 - Manufacturing of Gen Set / Turbines (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.13</masterLabel>
+            <translation>IND.9.13 - Manufacturing of Generators (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.14</masterLabel>
+            <translation>IND.9.14 - Manufacturing of ATS (Automatic Transfer Switch) (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.15</masterLabel>
+            <translation>IND.9.15 - Manufacturing of Drives (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.2</masterLabel>
+            <translation>IND.9.2 - Machine Tools (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.3</masterLabel>
+            <translation>IND.9.3 - Material Handling (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.4</masterLabel>
+            <translation>IND.9.4 - Manufacturing of Pumps (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.5</masterLabel>
+            <translation>IND.9.5 - Manufacturing of Compressors (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.6</masterLabel>
+            <translation>IND.9.6 - Manufacturing of UPS (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.7</masterLabel>
+            <translation>IND.9.7 - Manufacturing of Solar Equipment (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.8</masterLabel>
+            <translation>IND.9.8 - Manufacturing of Wind Turbines (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IND.9.9</masterLabel>
+            <translation>IND.9.9 - Manufacturing of Electrical Vehicle Charger (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quotation created</masterLabel>
+            <translation><!-- Quotation created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA</masterLabel>
+            <translation>Transport and Transportation Infrastructure (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1</masterLabel>
+            <translation>TRA.1 - Marine (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.3</masterLabel>
+            <translation>TRA.1.3 - Harbor Infrastructure Incl. Shore to Ship Activities (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.4</masterLabel>
+            <translation>TRA.1.4 - Cruise and Ferry (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.6</masterLabel>
+            <translation>TRA.1.6 - Other Marine (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.7</masterLabel>
+            <translation>TRA.1.7 - Oil and Gas Vessels (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.8</masterLabel>
+            <translation>TRA.1.8 - Merchant Vessels (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.1.9</masterLabel>
+            <translation>TRA.1.9 - Naval (military) Vessels (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2</masterLabel>
+            <translation>TRA.2 - Railway (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.1</masterLabel>
+            <translation>TRA.2.1 - Railway Rolling Stock (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.2</masterLabel>
+            <translation>TRA.2.2 - Railway AC Infrastructure (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.2.3</masterLabel>
+            <translation>TRA.2.3 - Railway DC Infrastructure (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3</masterLabel>
+            <translation>TRA.3 - Air Transportation (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.3.1</masterLabel>
+            <translation>TRA.3.1 - Airport Infrastructure (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4</masterLabel>
+            <translation>TRA.4 - Cranes (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.4.1</masterLabel>
+            <translation>TRA.4.1 - Cranes (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5</masterLabel>
+            <translation>TRA.5 - Land Transport Infrastructure (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.5.1</masterLabel>
+            <translation>TRA.5.1 - Bridge,Tunnel and Highway (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRA.6</masterLabel>
+            <translation>TRA.6 - E-Vehicle Charging (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation>UT - Utilities (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1</masterLabel>
+            <translation>UT.1 - Electric Utility - Power Generation (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.1</masterLabel>
+            <translation>UT.1.1 - Power Generation - Gas/Oil (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.10</masterLabel>
+            <translation>UT.1.10 - Power Generation - Oil/Diesel (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.11</masterLabel>
+            <translation>UT.1.11 - Power Generation - Waste to Energy (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.12</masterLabel>
+            <translation>UT.1.12 - Power Generation - Wind (on shore) (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.3</masterLabel>
+            <translation>UT.1.3 - Power Generation - Nuclear (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.4</masterLabel>
+            <translation>UT.1.4 - Power Generation - Hydro (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.5</masterLabel>
+            <translation>UT.1.5 - Power Generation - Wind (off shore) (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.6</masterLabel>
+            <translation>UT.1.6 - Power Generation - Solar (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.7</masterLabel>
+            <translation>UT.1.7 - Power Generation - Biomass (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.8</masterLabel>
+            <translation>UT.1.8 - Power Generation - Coal (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.1.9</masterLabel>
+            <translation>UT.1.9 - Power Generation - Other Sources (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.2</masterLabel>
+            <translation>UT.2 - Electric Distribution (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.3</masterLabel>
+            <translation>UT.3 - Electric Transmission (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4</masterLabel>
+            <translation>UT.4 - Water and Wastewater (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.1</masterLabel>
+            <translation>UT.4.1 - Water Desalination (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.2</masterLabel>
+            <translation>UT.4.2 - Water Transportation (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.3</masterLabel>
+            <translation>UT.4.3 - Water Distribution (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.4</masterLabel>
+            <translation>UT.4.4 - Water Treatment (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.5</masterLabel>
+            <translation>UT.4.5 - Wastewater Treatment (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.4.6</masterLabel>
+            <translation>UT.4.6 - Water and Wastewater - Other (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.5</masterLabel>
+            <translation>UT.5 - Gas Utilities (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT.7</masterLabel>
+            <translation>UT.7 - Other Utilities (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY</masterLabel>
+            <translation>XY - Usage Unknown (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1</masterLabel>
+            <translation>XY.1 - End Usage Unknown (All)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XY.1.1</masterLabel>
+            <translation>XY.1.1 - Stock order (All)</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LSU ID --></label>
+        <name>LSU_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multioffers --></label>
+        <name>Multioffers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Number --></label>
+        <name>Opportunity_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Term --></label>
+        <name>Payment_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position Number --></label>
+        <name>Position_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Probability --></label>
+        <name>Project_Probability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Category --></label>
+        <name>Quotation_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Probability --></label>
+        <name>Quotation_Probability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quotation Reference System --></label>
+        <name>Quotation_reference_system__c</name>
+        <picklistValues>
+            <masterLabel>BOL</masterLabel>
+            <translation><!-- BOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMS</masterLabel>
+            <translation><!-- PMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProSales</masterLabel>
+            <translation><!-- ProSales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SalesForce</masterLabel>
+            <translation><!-- SalesForce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>cBOL</masterLabel>
+            <translation><!-- cBOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>e-mail</masterLabel>
+            <translation><!-- e-mail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quotation status --></label>
+        <name>Quotation_status__c</name>
+        <picklistValues>
+            <masterLabel>After order created</masterLabel>
+            <translation><!-- After order created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document generated</masterLabel>
+            <translation><!-- Document generated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In approval workflow</masterLabel>
+            <translation><!-- In approval workflow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loss</masterLabel>
+            <translation><!-- Loss --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Ordered</masterLabel>
+            <translation><!-- Not Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ordered</masterLabel>
+            <translation><!-- Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partially ordered</masterLabel>
+            <translation><!-- Partially ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre handled</masterLabel>
+            <translation><!-- Pre handled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PriceBook refreshing</masterLabel>
+            <translation><!-- PriceBook refreshing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quotation created</masterLabel>
+            <translation><!-- Quotation created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote approved and issued</masterLabel>
+            <translation><!-- Quote approved and issued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFQ</masterLabel>
+            <translation><!-- RFQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisioned</masterLabel>
+            <translation><!-- Revisioned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to bol</masterLabel>
+            <translation><!-- Sent to bol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won</masterLabel>
+            <translation><!-- Won --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quotation type --></label>
+        <name>Quotation_type__c</name>
+        <picklistValues>
+            <masterLabel>Blanket quotation</masterLabel>
+            <translation><!-- Blanket quotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package or bundle</masterLabel>
+            <translation><!-- Package or bundle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product quotation</masterLabel>
+            <translation><!-- Product quotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project quotation</masterLabel>
+            <translation><!-- Project quotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Template</masterLabel>
+            <translation><!-- Template --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quote Language --></label>
+        <name>Quote_Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote/Proposal Migration ID --></label>
+        <name>Quote_Proposal_Migration_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Total Sales Price --></label>
+        <name>Quote_Total_Sales_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote number and revision letter --></label>
+        <name>Quote_number_and_revision_letter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested Delivery Date --></label>
+        <name>Requested_Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Win/Loss Reason --></label>
+        <name>Win_Loss_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Alternate Quotation</masterLabel>
+            <translation><!-- Alternate Quotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Conditions</masterLabel>
+            <translation><!-- Commercial Conditions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Lost Order</masterLabel>
+            <translation><!-- Customer Lost Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delivery Time</masterLabel>
+            <translation><!-- Delivery Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investment Cancelled</masterLabel>
+            <translation><!-- Investment Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Late Reply</masterLabel>
+            <translation><!-- Late Reply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quality</masterLabel>
+            <translation><!-- Quality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quotation Deleted</masterLabel>
+            <translation><!-- Quotation Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relations</masterLabel>
+            <translation><!-- Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taken over by another ABB unit</masterLabel>
+            <translation><!-- Taken over by another ABB unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Conditions</masterLabel>
+            <translation><!-- Technical Conditions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won by other ABB entity</masterLabel>
+            <translation><!-- Won by other ABB entity --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Winners --></label>
+        <name>Winners__c</name>
+    </fields>
+    <nameFieldLabel>Quote Number and Revision Letter</nameFieldLabel>
+    <recordTypes>
+        <label><!-- LP Spain - Proposal --></label>
+        <name>APTS_LP_Spain_Proposal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CQP --></label>
+        <name>CQP</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- LP Spain - Proposal RO --></label>
+        <name>LP_Spain_Proposal_RO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Proposal --></label>
+        <name>Proposal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RFP --></label>
+        <name>RFP</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select value in Quotation Closed Status. --></errorMessage>
+        <name>APTS_QuotationCloseStatus_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid To and Quotation Expiration Date should be Future Date --></errorMessage>
+        <name>APTS_QuotationValidation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- APTS_Cart_Upload --></label>
+        <name>APTS_Cart_Upload</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- APTS_New_Quotation_From_Account --></label>
+        <name>APTS_New_Quotation_From_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- APTS_New_Quotation_From_Opportunity --></label>
+        <name>APTS_New_Quotation_From_Opportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- APTS_Submit_for_Approval --></label>
+        <name>APTS_Submit_for_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Approvals --></label>
+        <name>Apttus_CQApprov__Approvals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MyApprovals --></label>
+        <name>Apttus_CQApprov__MyApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- AddProposalProducts --></label>
+        <name>Apttus_Proposal__AddProposalProducts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneProposalwithDetails --></label>
+        <name>Apttus_Proposal__CloneProposalwithDetails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateAgreement --></label>
+        <name>Apttus_Proposal__CreateAgreement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- EditProposaProducts --></label>
+        <name>Apttus_Proposal__EditProposaProducts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generate --></label>
+        <name>Apttus_Proposal__Generate</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GenerateProposal --></label>
+        <name>Apttus_Proposal__GenerateProposal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewQuoteProposalFromOpportunity --></label>
+        <name>Apttus_Proposal__NewQuoteProposalFromOpportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PresentProposal --></label>
+        <name>Apttus_Proposal__PresentProposal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ReportViewCurrentTotals --></label>
+        <name>Apttus_Proposal__ReportViewCurrentTotals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SubmitForApproval --></label>
+        <name>Apttus_Proposal__SubmitForApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SyncWithOpportunity --></label>
+        <name>Apttus_Proposal__SyncWithOpportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateAgreementWithLineItems --></label>
+        <name>Apttus_QPComply__CreateAgreementWithLineItems</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RepriceQuote --></label>
+        <name>Apttus_QPConfig__RepriceQuote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Edit_Quote --></label>
+        <name>Edit_Quote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_fromAccount --></label>
+        <name>New_fromAccount</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_fromOpportunity --></label>
+        <name>New_fromOpportunity</name>
+    </webLinks>
+</CustomObjectTranslation>

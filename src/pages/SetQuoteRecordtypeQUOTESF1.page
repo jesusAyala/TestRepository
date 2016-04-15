@@ -1,0 +1,33 @@
+<apex:page standardController="Apttus_Proposal__Proposal__c">
+<apex:includeScript value="/soap/ajax/28.0/apex.js"/>
+<apex:includeScript value="/soap/ajax/28.0/connection.js"/>
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  sforce.connection.sessionId = "{!$Api.Session_ID}";
+  window.onload = function(){  
+       //User creation
+       var userid = '{!$User.Id}';
+       var query = "select id,name,Division_DIV__c  from User where id=\'"+ userid  +"\'";
+       var result = sforce.connection.query(query);
+       var records = result.getArray("records");  
+       
+       //Quote ID
+       var quoteID= '{!$CurrentPage.parameters.Id}';
+      
+       //Get Current Time
+        var datetime = '{!NOW()}';
+       
+       //CQP Server
+       var serverCQP='{!$Label.SYS_CQPurl_Edit}';
+       var errorPage='{!$Label.SYS_NoQuoteCreationAllowed}';
+       //var serverCQP='/apex/CreateQuoteSF1';
+   
+      if(records[0].Division_DIV__c != "{!$Label.UserDivisionDM}"){
+        sforce.one.navigateToURL(''+errorPage);
+      }else{
+        //sforce.one.navigateToURL('/apex/CreateQuoteSF1?accountId='+ accId + '&opportunityNumber=' + oppNumber + '&SFDCUserId=' + userid + '&RequestID=' + userid + datetime);
+          sforce.one.navigateToURL(serverCQP +'?quotationNumber='+ quoteID + '&SFDCUserId=' + userid + '&RequestID=' + userid + datetime);
+      }
+      }
+</script>
+</apex:page>

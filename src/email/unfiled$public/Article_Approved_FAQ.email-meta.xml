@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header</letterhead>
+    <name>Article Approved FAQ</name>
+    <style>freeForm</style>
+    <subject>Article Approved</subject>
+    <textOnly>Dear {!FAQ__kav.LastModifiedBy},
+Your below article is confirmed
+
+Article Title : {!FAQ__kav.Title}
+Link to Article : {!FAQ__kav.Link}
+
+Thanks</textOnly>
+    <type>html</type>
+</EmailTemplate>

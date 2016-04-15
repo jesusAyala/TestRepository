@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 Joint Business Plan</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+	<enableSearch>true</enableSearch>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ABB_Overview_Flag__c</fullName>
+        <description>R5- Flag update for Must have</description>
+        <externalId>false</externalId>
+        <formula>IF( ABB_Overview_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ABB_Overview_Info__c</fullName>
+        <description>R5 - Field will have the &quot;Must Have&quot; value</description>
+        <externalId>false</externalId>
+        <label>ABB Overview Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ABB_Overview__c</fullName>
+        <description>R5 - Overview of ABB</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Short description of the part of the ABB organization involved in this Business Plan</inlineHelpText>
+        <label>ABB Overview</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 Account</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Joint_Business_Plans</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actions_Record_Required__c</fullName>
+        <description>R5 - Field will have Flag</description>
+        <externalId>false</externalId>
+        <formula>IF(Actions_RollUp__c = 0, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <inlineHelpText>Mandatory section of &quot;Business Plan&quot;. Add in &quot;Actions&quot; section below</inlineHelpText>
+        <label>Actions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actions_RollUp__c</fullName>
+        <description>R5 - field to rollup the JBP Action records. Used in JBP status change validation rule</description>
+        <externalId>false</externalId>
+        <label>Actions RollUp</label>
+        <summaryForeignKey>Joint_Business_Plan_Actions__c.Joint_Business_Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Sales_Year_to_Date_Formula__c</fullName>
+        <description>R5 - Actual Sales Year to Date</description>
+        <externalId>false</externalId>
+        <formula>Actual_Sales_Year_to_Date__c</formula>
+        <label>Actual Sales Year to Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Sales_Year_to_Date__c</fullName>
+        <description>R5 - Actual Sales Year to Date</description>
+        <externalId>false</externalId>
+        <label>Actual Sales Year to Date</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>After_Sales_and_Warranties_Info__c</fullName>
+        <description>R5- Field to show the &quot;Must Have&quot;</description>
+        <externalId>false</externalId>
+        <label>After Sales and Warranties Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>After_sales_and_warranties1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What kind of after sales and warranty arrangement, terms and processes have been agreed by the partner and ABB. If they are attached to agreement, indicate that</inlineHelpText>
+        <label>After sales and warranties</label>
+        <length>2555</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>After_sales_and_warranties__c</fullName>
+        <description>R5-After sales and warranties</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What kind of after sales and warranty arrangement, terms and processes have been agreed by the partner and ABB. If they are attached to agreement, indicate that</inlineHelpText>
+        <label>After sales and warranties</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <description>R5 - Approval Date</description>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>R5 - Approval Status</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approver_Name__c</fullName>
+        <description>R5 - Approver Name</description>
+        <externalId>false</externalId>
+        <label>Approver Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_To_Flag__c</fullName>
+        <description>R5 - Flag field to display when Assigned To is not filled</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Assigned_To__c ) , IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Assigned To</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB person responsible for executing, supporting and following up this plan and keeping it up-to-date.</inlineHelpText>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Joint_Business_Plans</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BU_s_Covered__c</fullName>
+        <description>R5 - BU&apos;s Covered</description>
+        <externalId>false</externalId>
+        <formula>Channel_Market_Coverage__r.BU_Covered__c</formula>
+        <label>BU&apos;s Covered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Budget_Current_Year__c</fullName>
+        <description>R5 - Budget Current Year</description>
+        <externalId>false</externalId>
+        <label>Budget Current Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Current_Year_formula__c</fullName>
+        <description>R5 - Budget Current Year formula</description>
+        <externalId>false</externalId>
+        <formula>Budget_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Budget Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Market_Coverage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Lookup to Channel Market Coverage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Channel &quot;Market scope&quot; this business plan is related to</inlineHelpText>
+        <label>Market Scope</label>
+        <referenceTo>Channel_Market_Coverage__c</referenceTo>
+        <relationshipLabel>Channel Partner Business Plans</relationshipLabel>
+        <relationshipName>Joint_Business_Plans</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Check_Company_Description__c</fullName>
+        <description>R5 - Text field to check Company Description is filled or not and it is also used for the Flag formula field.</description>
+        <externalId>false</externalId>
+        <label>Check Company Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_Operation_Overview1_Flag__c</fullName>
+        <description>R5- Flag update for Must have</description>
+        <externalId>false</externalId>
+        <formula>IF(  Co_operation_Overview_1_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_Operation_Overview2_Flag__c</fullName>
+        <description>R5- Flag update for Must have</description>
+        <externalId>false</externalId>
+        <formula>IF(  Co_operation_Overview_2_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_operation_Overview_123__c</fullName>
+        <description>It Is Used for X-Author Document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe how the partner fits into ABB´s business strategy. Include territory, industry branch and product mix considerations.</inlineHelpText>
+        <label>Partner&apos;s fit to ABB’s business strategy</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Co_operation_Overview_1_Info__c</fullName>
+        <description>R5 - Field will have the &quot;Must Have&quot; value</description>
+        <externalId>false</externalId>
+        <label>ABB’s fit to business strategy Acc Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_operation_Overview_1__c</fullName>
+        <description>R5-Co-operation Overview 1</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe how ABB fits into the partner&apos;s business and territory strategy. Include both short term fit and also the fit based to the defined long term company mission, vision and strategy</inlineHelpText>
+        <label>ABB’s fit to partner&apos;s business strategy</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Co_operation_Overview_2_Info__c</fullName>
+        <description>R5 - Field will have the &quot;Must Have&quot; value</description>
+        <externalId>false</externalId>
+        <label>Account fit to the ABB’s business Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Co_operation_Overview_2__c</fullName>
+        <description>R5-Co-operation Overview 2</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe how the partner fits into ABB´s business strategy. Include territory, industry branch and product mix considerations.</inlineHelpText>
+        <label>Partner&apos;s fit to ABB’s business strategy</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_Description_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Company Description is not filled.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Check_Company_Description__c ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the content in section &quot;Channel Partner Common Data&quot; under ACCOUNT</inlineHelpText>
+        <label>Company Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_strategy__c</fullName>
+        <description>R5- Company strategy</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe how the Partner&apos;s Vision will be achieved.</inlineHelpText>
+        <label>Company strategy</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_Roles_Record_Required__c</fullName>
+        <description>R5 - Field will have Flag</description>
+        <externalId>false</externalId>
+        <formula>IF( JBP_Contact_Role_Rollup__c = 0, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <inlineHelpText>Mandatory section of &quot;Business Plan&quot;. Add in &quot;Channel Partner Contact Roles&quot; section below</inlineHelpText>
+        <label>Channel Partner Contact Roles</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(Start_Date__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_for_Next_Review_Flag__c</fullName>
+        <description>R5 - Flag field to display when Date for Next Review is not filled.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Date_for_Next_Review__c ), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_for_Next_Review__c</fullName>
+        <description>R5 - Date for Next Review</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Define the date by which the next business review should be executed. Create yourself a task to remember.</inlineHelpText>
+        <label>Date for Next Review</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Completion__c</fullName>
+        <description>R5 - Date of Completion when the Status is changed to Completed.</description>
+        <externalId>false</externalId>
+        <label>Date of Completion</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_the_actual_sales_YTD_is_given__c</fullName>
+        <externalId>false</externalId>
+        <label>Date the  actual sales  YTD is given</label>
+        <summarizedField>Joint_Business_Plan_Product_Lines__c.Actual_Year_to_Date_Changed_on__c</summarizedField>
+        <summaryForeignKey>Joint_Business_Plan_Product_Lines__c.Joint_Business_Plan__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>End Date Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the plan ends to be effective, typically Dec31st of the year</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Existing_ABB_offering_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Existing ABB offering is not filled.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Existing_ABB_offering__c ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Existing_ABB_offering__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the content in section &quot;Existing suppliers/Partners&quot; under MARKET SCOPE</inlineHelpText>
+        <label>Existing ABB offering</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Ongoing_Year_Formula__c</fullName>
+        <description>R5 - Forecast Ongoing Year Formula</description>
+        <externalId>false</externalId>
+        <formula>Forecast_ongoing_year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Forecast Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_ongoing_year__c</fullName>
+        <description>R5 - Forecast current year</description>
+        <externalId>false</externalId>
+        <label>Forecast current year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Information_Sharing_Flag__c</fullName>
+        <description>R5 - Field for Flag</description>
+        <externalId>false</externalId>
+        <formula>IF( Information_Sharing_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Information_Sharing_Info__c</fullName>
+        <description>R5 - Field to display &quot;Must Have&quot; value</description>
+        <externalId>false</externalId>
+        <label>Information Sharing Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Information_Sharing__c</fullName>
+        <description>R5-Information Sharing</description>
+        <externalId>false</externalId>
+        <label>Information Sharing</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>JBP_Contact_Role_Rollup__c</fullName>
+        <description>R5 - field to rollup the JBP Contact Role records. Used in JBP status change validation rule</description>
+        <externalId>false</externalId>
+        <label>JBP Contact Role Rollup</label>
+        <summaryForeignKey>Joint_Business_Plan_Contact_Role__c.Joint_Business_Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>JBP_MarketCoverage_Rollup__c</fullName>
+        <description>R5 - field to rollup the JBP MarketCoverage records. Used in JBP status change validation rule</description>
+        <externalId>false</externalId>
+        <label>JBP MarketCoverage Rollup</label>
+        <summaryForeignKey>Joint_Business_Plan_Market_Coverage__c.Joint_Business_Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>JBP_ProdLine_Rollup__c</fullName>
+        <description>R5 - field created to validate the Joint business plan must have at lease 1 record when changing the JBP status to, in approval or closed</description>
+        <externalId>false</externalId>
+        <label>JBP ProdLine Rollup</label>
+        <summaryForeignKey>Joint_Business_Plan_Product_Lines__c.Joint_Business_Plan__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Late__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Date_for_Next_Review__c &lt; Today(), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Late</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Logistics_Flag__c</fullName>
+        <description>R5 - Flag update for Must have</description>
+        <externalId>false</externalId>
+        <formula>IF(  Logistics_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Logistics_Info__c</fullName>
+        <description>R5 - Field will have the &quot;Must Have&quot; value</description>
+        <externalId>false</externalId>
+        <label>Logistics Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Logistics__c</fullName>
+        <description>R5-Logistics</description>
+        <externalId>false</externalId>
+        <label>Logistics</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Market_Coverages_Record_Required__c</fullName>
+        <description>R5 - Field will have Flag</description>
+        <externalId>false</externalId>
+        <formula>IF(JBP_MarketCoverage_Rollup__c = 0, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <inlineHelpText>Mandatory section of &quot;Business Plan&quot;. Define in &quot;Market Coverages&quot; section below</inlineHelpText>
+        <label>Market Coverages</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mission_statement__c</fullName>
+        <description>R5- Mission Statement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe shortly the partner&apos;s purpose to be in the business.</inlineHelpText>
+        <label>Mission statement</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Mutually_Agreed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Mutually Agreed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tick this box in case this plan is agreed by both partner and ABB. Will turn back to NO when active plan is changed to &quot;draft&quot; (e.g. for changing validity period)</inlineHelpText>
+        <label>Mutually Agreed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Old_Record_Type_Value__c</fullName>
+        <description>R5 Field to capture the Old Record Type Value</description>
+        <externalId>false</externalId>
+        <label>Old Record Type Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunities__c</fullName>
+        <description>R5 - Opportunities</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the opportunities when the partner and ABB are co-operating as described in this plan</inlineHelpText>
+        <label>Opportunities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PG_s_Covered__c</fullName>
+        <description>R5 - PG&apos;s Covered</description>
+        <externalId>false</externalId>
+        <formula>Channel_Market_Coverage__r.PG_Covered__c</formula>
+        <label>PG&apos;s Covered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Year__c</fullName>
+        <description>It was created for X-Author Template, it will store the current Year-1.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(Start_Date__c)-1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Country__c</fullName>
+        <description>R5 - Copies Primary Address Country from Account.</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Account__r.Primary_Address_Country__c )</formula>
+        <label>Primary Address Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Channel_Class__c</fullName>
+        <description>R5 - Primary Channel Class</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Channel_Market_Coverage__r.Primary_Channel_Class__c )</formula>
+        <inlineHelpText>Presents the channel class defined in &quot;Market scope&quot; where possible update must be done.</inlineHelpText>
+        <label>Channel Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Lines_Record_Required__c</fullName>
+        <description>R5 - Field will have Flag</description>
+        <externalId>false</externalId>
+        <formula>IF(JBP_ProdLine_Rollup__c = 0, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Mandatory section of &quot;Business Plan&quot;. Define in &quot;Sales Targets &amp; Results&quot; section below</inlineHelpText>
+        <label>Sales Targets &amp; Results</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Relationship_Status__c</fullName>
+        <description>R5 - Relationship Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Channel_Market_Coverage__r.Relationship_Status__c)</formula>
+        <inlineHelpText>Presents the relationship status defined in &quot;Market scope&quot;, where any update must be done</inlineHelpText>
+        <label>Relationship Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rund_Rate_Ongoing_year_Formula__c</fullName>
+        <description>R5 - Rund Rate Ongoing year Formula</description>
+        <externalId>false</externalId>
+        <formula>Rund_Rate_Ongoing_year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Run Rate Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rund_Rate_Ongoing_year__c</fullName>
+        <description>R5 - Run Rate Current year</description>
+        <externalId>false</externalId>
+        <label>Run Rate Current year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_and_Warranties_Flag__c</fullName>
+        <description>R5- Field to show the Flag</description>
+        <externalId>false</externalId>
+        <formula>IF( After_Sales_and_Warranties_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_previous_year__c</fullName>
+        <description>R5 - Sales previous year</description>
+        <externalId>false</externalId>
+        <label>Sales previous year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_previous_year_formula__c</fullName>
+        <description>R5 - Sales previous year formula</description>
+        <externalId>false</externalId>
+        <formula>Sales_previous_year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Scope_of_the_plan__c</fullName>
+        <description>R5</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Geographical scope of the plan, (covers whole country or just this branch office) E.g. &quot;This plan covers all branch offices in Sweden&quot;. Possible text here is printed on cover page of paper print.</inlineHelpText>
+        <label>Scope of the plan</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Secondary_Channel_Class__c</fullName>
+        <externalId>false</externalId>
+        <label>Secondary Channel Class</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Start Date Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the plan starts to be effective, typically Jan1st of the year</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>R5 - Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Turn active when content agreed with partner and all mandatory fields are filled. Alternatively send for approval. Change back to draft for updating content that is locked for editing for active plan.</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Strengths__c</fullName>
+        <description>R5 - Strengths</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the strengths when the partner and ABB are co-operating as described in this plan</inlineHelpText>
+        <label>Strengths</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Suppliers_complementary_products_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Suppliers with complementary products is not filled</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Suppliers_with_complementary_products__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suppliers_potential_ABB_offering_Flag__c</fullName>
+        <description>R5 - Flag is displayed when Suppliers with potential ABB offering is not filled.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(  Suppliers_with_potential_ABB_offering__c  ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suppliers_with_complementary_products__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the content in section &quot;Existing suppliers/Partners&quot; under MARKET SCOPE</inlineHelpText>
+        <label>Suppliers with complementary products</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Suppliers_with_potential_ABB_offering__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the content in section &quot;Existing suppliers/Partners&quot; under MARKET SCOPE</inlineHelpText>
+        <label>Suppliers with potential ABB offering</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Target_2nd_Year_Formula__c</fullName>
+        <description>R5 - Target 2nd Year Formula</description>
+        <externalId>false</externalId>
+        <formula>Target_2nd_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Target 2nd Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Target_2nd_Year__c</fullName>
+        <description>R5 - Target 2nd Year</description>
+        <externalId>false</externalId>
+        <label>Target 2nd Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Target_3rd_Year_Formula__c</fullName>
+        <description>R5 - Target 3rd Year Formula</description>
+        <externalId>false</externalId>
+        <formula>Target_3rd_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Target 3rd Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Target_3rd_Year__c</fullName>
+        <description>R5 - Target 3rd Year</description>
+        <externalId>false</externalId>
+        <label>Target 3rd Year</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Targeted_AVP__c</fullName>
+        <description>R5 - Targeted AVP</description>
+        <externalId>false</externalId>
+        <formula>Channel_Market_Coverage__r.Targeted_AVP__c</formula>
+        <inlineHelpText>Checked if indicated as such in &quot;Market Scope&quot;. Update only from &quot;Market Scope&quot; view.</inlineHelpText>
+        <label>Targeted AVP</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Targeted_Key_Stratergic__c</fullName>
+        <description>R5 - Targeted Key Stratergic</description>
+        <externalId>false</externalId>
+        <formula>Channel_Market_Coverage__r.Targeted_Key_Strategic__c</formula>
+        <inlineHelpText>Checked if indicated as such in &quot;Market Scope&quot;. Update only from &quot;Market Scope&quot; view.</inlineHelpText>
+        <label>Targeted Key Strategic</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Threats__c</fullName>
+        <description>R5 - Threats</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the threats when the partner and ABB are co-operating as described in this plan</inlineHelpText>
+        <label>Threats</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Training_and_Authorization_Plan_Info__c</fullName>
+        <description>R5-Filed to populate &quot;Must Have&quot; value</description>
+        <externalId>false</externalId>
+        <label>Training and Authorization Plan Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Training_and_Authorization_Plan__c</fullName>
+        <description>R5-Training and Authorization Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the current authorization status and plan  of the company. Add Actions on action -list for easy follow-up purposes.</inlineHelpText>
+        <label>Training and Authorization Plan</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Training_and_authorization_Plan_Flag__c</fullName>
+        <description>R5- Flag update for Must have</description>
+        <externalId>false</externalId>
+        <formula>IF( Training_and_Authorization_Plan_Info__c = &quot;Must Have&quot;, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vision__c</fullName>
+        <description>R5-Vision</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe where the partner as a company want to be and what to achieve in 3 and 5 year terms.</inlineHelpText>
+        <label>Vision</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Weaknesses__c</fullName>
+        <description>R5 - Weaknesses</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the weaknesses when the partner and ABB are co-operating as described in this plan</inlineHelpText>
+        <label>Weaknesses</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>XA_Contracts_del__c</fullName>
+        <description>R5 Formula field to set up XA Contracts</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/apex/Apttus__DocumentGenerate?id=&quot;&amp;Id &amp; &quot;&amp;action=Generate_Document&amp;templateType=Channel Partner Business Plans&quot;, IMAGE(&quot;/resource/Apttus__Button_Generate&quot;, &quot;Generate&quot;),&quot;_self&quot;)</formula>
+        <inlineHelpText>Click GENERATE button to create a standard format file from the content. You can choose between several file formats and languages.</inlineHelpText>
+        <label>Print Document</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Channel Partner Business Plan</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Business Plan Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Channel Partner Business Plans</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Closed_Joint_Business_Plan</fullName>
+        <active>true</active>
+        <description>R5 - Closed Joint Business Plan</description>
+        <label>Closed Channel Business Plan</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Distributor_as_AVP</fullName>
+        <active>true</active>
+        <description>Template for distributors (with no technical focus) who is or targets to become an ABB authorized value provider</description>
+        <label>3. Distributor as AVP, existing/targeted</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Distributor_as_Partner</fullName>
+        <active>true</active>
+        <description>Template for distributors, short form. Can be used when the partner is not technical and is not targeting to become Key/Strategic partner or ABB authorized provider during the business planning period</description>
+        <label>1. Distributor as Partner</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Distributor_as_Strategic_Key_Partner</fullName>
+        <active>true</active>
+        <description>Template for distributors (with no technical focus) who is or targets to become a key- or strategic distributor</description>
+        <label>2. Distributor as Strategic/Key Partner, existing/targeted</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>JointBusinessPlan</fullName>
+        <active>true</active>
+        <description>R5 Joint Business Plan</description>
+        <label>Joint Business Plan</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Technical_Channel_as_Key_Strategic_Partner_or_AVP</fullName>
+        <active>true</active>
+        <description>Template for technical channels (e.g. technical distributors, system integrators, ..) who are or plan to become key- or strategic partners or ABB authorized value providers</description>
+        <label>5. Technical Channel as Key/Strategic Partner or AVP, existing/targeted</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Technical_Channel_as_Partner</fullName>
+        <active>true</active>
+        <description>Template for technical channels, short form. Can be used when the partner is not targeting to become Key/Strategic partner or ABB authorized provider during the business planning period</description>
+        <label>4. Technical Channel as Partner</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Channel_Market_Coverage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Primary_Channel_Class__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ABB_Overview__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>BU_s_Covered__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PG_s_Covered__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Primary_Channel_Class__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>End_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date_for_Next_Review__c</lookupDialogsAdditionalFields>
+        <!--lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Account__c</lookupFilterFields>
+        <lookupFilterFields>Primary_Channel_Class__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>Start_Date__c</lookupFilterFields>
+        <lookupFilterFields>End_Date__c</lookupFilterFields-->
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>BU_s_Covered__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PG_s_Covered__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Primary_Channel_Class__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Start_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>End_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date_for_Next_Review__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>BU_s_Covered__c</searchFilterFields>
+        <searchFilterFields>PG_s_Covered__c</searchFilterFields>
+        <searchFilterFields>Primary_Channel_Class__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Start_Date__c</searchFilterFields>
+        <searchFilterFields>End_Date__c</searchFilterFields>
+        <searchFilterFields>Date_for_Next_Review__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BU_s_Covered__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PG_s_Covered__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary_Channel_Class__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_for_Next_Review__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>End_Date_greater_than_Start_Date</fullName>
+        <active>true</active>
+        <description>R5 - Joint Business Plan End Date must be always greater than Start Date.</description>
+        <errorConditionFormula>End_Date__c  &lt;  Start_Date__c</errorConditionFormula>
+        <errorDisplayField>End_Date__c</errorDisplayField>
+        <errorMessage>End Date must be greater than Start Date!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>JBP_status_change_to_In_Approval</fullName>
+        <active>true</active>
+        <description>R5 - Validate the required fields are filled out to change status to &quot;In Approval&quot;  or &quot;Closed&quot;</description>
+        <errorConditionFormula>OR( 
+AND(OR(RecordType.DeveloperName = &quot;Distributor_as_AVP&quot;,RecordType.DeveloperName =&quot;Technical_Channel_as_Key_Strategic_Partner_or_AVP&quot;),OR(ISPICKVAL(Status__c, &quot;In Approval&quot;),ISPICKVAL(Status__c, &quot;Closed&quot;), ISPICKVAL(Status__c, &quot;Active&quot;)), 
+OR(  ISBLANK(Existing_ABB_offering__c), ISBLANK(Suppliers_with_potential_ABB_offering__c ), ISBLANK(Suppliers_with_complementary_products__c), ISBLANK(Co_operation_Overview_1__c), ISBLANK(Co_operation_Overview_2__c),  LEN(Training_and_Authorization_Plan__c) &lt; 1, Channel_Market_Coverage__c = NULL, Actions_RollUp__c = 0,JBP_ProdLine_Rollup__c = 0, JBP_MarketCoverage_Rollup__c = 0, JBP_Contact_Role_Rollup__c = 0, ISBLANK( Date_for_Next_Review__c ),ISBLANK( Assigned_To__c ) ) ), 
+
+AND(RecordType.DeveloperName = &quot;Distributor_as_Strategic_Key_Partner&quot;, OR(ISPICKVAL(Status__c, &quot;In Approval&quot;),ISPICKVAL(Status__c, &quot;Closed&quot;), ISPICKVAL(Status__c, &quot;Active&quot;)), 
+OR(ISBLANK(Existing_ABB_offering__c), ISBLANK(Suppliers_with_potential_ABB_offering__c ), ISBLANK( Suppliers_with_complementary_products__c), ISBLANK(Co_operation_Overview_1__c), ISBLANK(Co_operation_Overview_2__c), Channel_Market_Coverage__c = NULL, Actions_RollUp__c = 0,JBP_ProdLine_Rollup__c = 0, JBP_MarketCoverage_Rollup__c = 0, JBP_Contact_Role_Rollup__c = 0, ISBLANK(Date_for_Next_Review__c),ISBLANK( Assigned_To__c ))), 
+
+AND(RecordType.DeveloperName =&quot;Distributor_as_Partner&quot;, OR(ISPICKVAL(Status__c, &quot;In Approval&quot;),ISPICKVAL(Status__c, &quot;Closed&quot;), ISPICKVAL(Status__c, &quot;Active&quot;)),  OR( ISBLANK(Existing_ABB_offering__c), ISBLANK(Suppliers_with_potential_ABB_offering__c ), ISBLANK( Suppliers_with_complementary_products__c), ISBLANK(Co_operation_Overview_1__c), ISBLANK(Co_operation_Overview_2__c), Channel_Market_Coverage__c = NULL, Actions_RollUp__c = 0,JBP_ProdLine_Rollup__c = 0,JBP_Contact_Role_Rollup__c = 0 , ISBLANK( Date_for_Next_Review__c ),ISBLANK( Assigned_To__c )) ), 
+
+AND(RecordType.DeveloperName =&quot;Technical_Channel_as_Partner&quot;, OR(ISPICKVAL(Status__c, &quot;In Approval&quot;),ISPICKVAL(Status__c, &quot;Closed&quot;), ISPICKVAL(Status__c, &quot;Active&quot;)),
+OR(ISBLANK(Existing_ABB_offering__c), ISBLANK(Suppliers_with_potential_ABB_offering__c ), ISBLANK( Suppliers_with_complementary_products__c), ISBLANK(Co_operation_Overview_1__c), ISBLANK(Co_operation_Overview_2__c), Channel_Market_Coverage__c = NULL, Actions_RollUp__c = 0, JBP_Contact_Role_Rollup__c = 0 , JBP_MarketCoverage_Rollup__c = 0, ISBLANK( Date_for_Next_Review__c ),ISBLANK( Assigned_To__c ))) 
+)</errorConditionFormula>
+        <errorMessage>Status cannot be changed as not all Red Flag marked mandatory fields are answered. You might need to change Status back to &quot;Draft&quot; to save and see if Red Flagged fields were missed in earlier stages or related lists.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Joint_Business_Plan</fullName>
+        <availability>online</availability>
+        <description>R5-Will redirect to the new JBP page with the record type selected</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Channel Partner Business Plan</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/JBPRecordTypePage?id={!Channel_Market_Coverage__c.Id}&amp;object=Joint_Business_Plan__c&amp;&amp;sfdc_created__c=1&amp;ID_Channel_Market_Coverage__c={!Channel_Market_Coverage__c.Id}&amp;Account__c={!Channel_Market_Coverage__c.Account__c}&amp;ID_Account__c={!Channel_Market_Coverage__c.AccountId__c}&amp;Channel_Market_Coverage__c={!Channel_Market_Coverage__c.Name}&amp;&amp;retURL={!Channel_Market_Coverage__c.Id}</url>
+    </webLinks>
+</CustomObject>

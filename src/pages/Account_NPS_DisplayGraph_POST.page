@@ -1,0 +1,29 @@
+<apex:page standardController="Account" id="page">
+<apex:includeScript value="/soap/ajax/28.0/apex.js" id="incscript"/>
+<apex:includeScript value="/soap/ajax/28.0/connection.js" id="incscript1"/>
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  sforce.connection.sessionId = "{!$Api.Session_ID}";
+  window.onload = function(){  
+   var accountid = '{!Id}';
+   var query = "select id, GUID__c from Account where id=\'"+ accountid  +"\'";
+   var result = sforce.connection.query(query);
+   var records = result.getArray("records");   
+   if(records[0].GUID__c)
+   {
+       var form = document.createElement("form");
+       form.setAttribute("method", "post");
+       form.setAttribute("action", "https://node2.cust-rel.e.abb.com/sfdc-SfDev/client/#/customer");
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "customerGuid");
+            hiddenField.setAttribute("value", records[0].GUID__c);
+            form.appendChild(hiddenField);
+       document.body.appendChild(form);
+       form.submit();
+   }else{
+       alert('No NPS Data available');
+   }
+   }
+</script>
+</apex:page>

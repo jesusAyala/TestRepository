@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Case_Access_for_ABB_Global_when_Services_record_type</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Case Access for ABB Global when Services record type</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Services,Closed Case,Complaint</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Access_for_ABB_when_Services_record_type</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Case Access for ABB when Services record type</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Services,Closed Case,Complaint</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <!--sharingOwnerRules>
+        <fullName>ABB_External_to_ABB_Case_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB External to ABB Case Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB_External</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ABB_External_to_ABB_Global_Case_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ABB External to ABB Global Case Access</label>
+        <sharedTo>
+            <roleAndSubordinates>ABB_Global</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ABB_External</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules-->
+</SharingRules>

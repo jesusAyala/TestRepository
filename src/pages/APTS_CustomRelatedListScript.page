@@ -1,0 +1,47 @@
+<apex:page >
+<style>
+    
+    .bPageBlock {
+            height: 180px !important;
+    }
+</style>
+<script>
+     
+        window.onload = function(){
+            
+            setTargetforAnchorTag();
+            removeElementsByClass('actionColumn');
+            removeElementsByClass('btn');
+            removeElementsByClass('actionLink');
+          
+        }
+        
+        function setTargetforAnchorTag(){
+            
+            var anchors = document.getElementsByTagName('a');
+            for (var i=0; i<anchors.length; i++){
+                    anchors[i].setAttribute('target', '_blank');
+                }
+            
+            
+        }
+        
+        function removeElementsByClass(className){
+        
+            if(!document.getElementsByClassName) {
+                document.getElementsByClassName = function(className) {
+                    return this.querySelectorAll("." + className);
+                };
+                Element.prototype.getElementsByClassName = document.getElementsByClassName;
+            }
+
+            var elements = document.getElementsByClassName(className);
+            while(elements.length > 0){
+                elements[0].parentNode.removeChild(elements[0]);
+            }
+        }
+        
+    </script>
+
+    
+</apex:page>

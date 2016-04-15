@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting is used to recover failure MSPA in SAP. We are starting async operation(in specified interval &amp; specified number of re-tries)</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Call_Interval__c</fullName>
+        <description>MSPA recovery module will push the MSPA in SAP in the time interval specified in this field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MSPA recovery module will push the MSPA in SAP in the time interval specified in this field.</inlineHelpText>
+        <label>Call Interval (Minutes)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_of_Re_Tries__c</fullName>
+        <description>Number of times MSPA Recovery module will try to push the agreement in SAP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of times MSPA Recovery module will try to push the MSPA in SAP</inlineHelpText>
+        <label># of Re-Tries</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Config SAP Integration</label>
+    <visibility>Public</visibility>
+</CustomObject>

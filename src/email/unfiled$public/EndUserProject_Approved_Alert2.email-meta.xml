@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - This refers to Enduser project approved</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>EndUserProject Approved Alert2</name>
+    <style>none</style>
+    <subject>EndUserProject {!End_User_Project__c.Name} Approval Notification</subject>
+    <textOnly>Dear {!End_User_Project__c.CreatedBy},
+&lt;/br&gt;&lt;/br&gt;
+Please be informed that End user project approval for {!End_User_Project__c.Name} is completed.
+&lt;/br&gt;&lt;/br&gt;
+Link to End user project: &lt;a href =&apos;{!End_User_Project__c.Link}&apos;&gt;{!End_User_Project__c.Name}&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+Best Regards,
+&lt;/br&gt;
+Your Salesforce Team
+&lt;/br&gt;&lt;/br&gt; 
+*** This is an automatically generated email, please do not reply ***</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+<apex:page standardController="End_User_Project__c">
+  <head>
+      <script>
+          
+          function navigateToRecord(){
+              var eupId = '{!$CurrentPage.parameters.Id}';
+              sforce.one.navigateToSObject(eupId);
+          }
+          
+          
+      </script>
+  </head>
+  <apex:form >
+  <h1>Insufficient Privilege. You do not have the level of access necessary to perform the operation you requested. Please contact the owner of the record or your administrator if access is necessary.</h1>
+  
+  <button type="button" onclick="navigateToRecord()">Back</button>
+ <!-- <apex:commandButton value="Back" action="{!backToDetailPage}" id="back"/> -->
+  </apex:form>
+</apex:page>

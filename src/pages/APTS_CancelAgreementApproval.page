@@ -1,0 +1,22 @@
+<!-- 
+@Name: APTS_CancelAgreementApproval
+@Author: Chetan Patel
+@CreateDate: 18 Nov 2015
+@Description: This VF Page passes Quotation Information to APTS_CancelProposalApprovalController
+@UsedBy: VF-Page is invoked by 'APTS_Recall_Approvals__c' Formula Field on quotation Object
+@ModifiedBy: NA
+@ModifiedDate: NA
+@ChangeDescription: A brief description of what was modified.
+PS: @ModifiedBy and @ChangeDescription can be repeated multiple time, based on number of changes made to the original process. -->
+
+<apex:page standardController="Apttus__APTS_Agreement__c" extensions="APTS_CancelAgreementApprovalController" action="{!onLoad}" >
+    <apex:form > 
+       
+         <apex:pageBlock rendered="{!bHasErrors}" >
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+  </apex:page>

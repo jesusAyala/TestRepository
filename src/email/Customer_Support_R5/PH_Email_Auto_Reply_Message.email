@@ -1,0 +1,40 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" align="center" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; text-align: center;"><font face="arial"><b><u>&nbsp; {!Case.CaseNumber}&nbsp;</u></b></font><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><u>Power Help Email Processor – Autoreply Message<o:p></o:p></u></b></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span class="twelveblack"><span style="font-size:10.0pt;
+font-family:&quot;Tahoma&quot;,sans-serif">Dear ABB Customer, </span></span><span class="twelveblack"><span style="font-size:10.0pt"><o:p></o:p></span></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif">Thank you for
+contacting ABB Customer Service! </span><span style="font-size:10.0pt"><o:p></o:p></span></p><p style="text-align: justify;"><span style="color: rgb(0, 0, 0); font-family: Tahoma, sans-serif; font-size: 10pt;">Your
+email has been received by our automated email system and has been assigned
+Support Line case number&nbsp;</span><font face="Tahoma, sans-serif"><span style="font-size: 13.3333px;">{!Case.CaseNumber}</span></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; text-align: justify;"><span style="font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif">Be
+assured that we have received your communication and there is no need to reply
+to this message. Your e-mail will be reviewed and responded to by our Support
+Line staff.<o:p></o:p></span></p><p style="text-align: justify;"><span style="color: rgb(0, 0, 0); font-family: Tahoma, sans-serif; font-size: 10pt;">Please
+be advised, if you have a time sensitive or urgent issue, we recommend that you
+contact us via telephone and refer to case #</span><font face="Tahoma, sans-serif"><span style="font-size: 13.3333px;">{!Case.CaseNumber}</span><font face="arial"><span style="font-size: 10pt;">, as phone requests
+are treated as highest priority.<o:p></o:p></span></font></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt;"><span style="font-size:10.0pt;
+font-family:&quot;Tahoma&quot;,sans-serif">Best Regards, <o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt;"><span style="font-size:10.0pt;
+font-family:&quot;Tahoma&quot;,sans-serif">ABB Automation Support Line <o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt;"><span style="font-size:10.0pt;
+font-family:&quot;Tahoma&quot;,sans-serif">1-800 HELP 365 or 1-440-585-7804 for
+International Customers <o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt;"><br></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<o:p></o:p></p>]]></td>
+</tr>
+</table>

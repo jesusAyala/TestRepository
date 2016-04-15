@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Joint_Business_Plan_Actions__c.Registered__c</field>
+    </columns>
+    <columns>
+        <field>Joint_Business_Plan_Actions__c.Deadline__c</field>
+    </columns>
+    <columns>
+        <field>Joint_Business_Plan_Actions__c.Partner_Responsible__c</field>
+    </columns>
+    <columns>
+        <field>Joint_Business_Plan_Actions__c.Priority__c</field>
+    </columns>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Total Number of Actions on the Channels</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <operator>contains</operator>
+            <value>Ebenezer</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Joint_Business_Plan_Actions__c.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CHILD_RECORDTYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Total Number of Actions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Joint_Business_Plan__c$Joint_Business_Plan_Actions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Joint_Business_Plan__c.Date_for_Next_Review__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

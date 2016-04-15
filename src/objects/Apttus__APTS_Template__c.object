@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>APTS_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <picklist>
+            <picklistValues>
+                <fullName>LP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <!--fields>
+        <fullName>Apttus__Agreement_Types__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Note: If you add a new agreement record type, the type must also be manually added to this set of picklist values to keep record types in sync between agreements and templates.</description>
+        <externalId>false</externalId>
+        <label>Agreement Types</label>
+        <picklist>
+            <picklistValues>
+                <fullName>LP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Distributor as Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Distributor as Strategic/Key Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Distributor as AVP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Technical Channel as Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. Technical Channel as Key/Strategic Partner or AVP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields-->
+    <fields>
+        <fullName>Apttus__BusinessObject__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of the business object associated with the template</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of the business object associated with the template</inlineHelpText>
+        <label>Business Object</label>
+        <picklist>
+            <controllingField>Apttus__Type__c</controllingField>
+            <picklistValues>
+                <fullName>Apttus__APTS_Agreement__c</fullName>
+                <controllingFieldValues>Agreement</controllingFieldValues>
+                <controllingFieldValues>Clause</controllingFieldValues>
+                <controllingFieldValues>Section</controllingFieldValues>
+                <controllingFieldValues>Supporting Document</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apttus_Proposal__Proposal__c</fullName>
+                <controllingFieldValues>Clause</controllingFieldValues>
+                <controllingFieldValues>Proposal</controllingFieldValues>
+                <controllingFieldValues>Section</controllingFieldValues>
+                <controllingFieldValues>Supporting Document</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apttus_Config2__ProductConfiguration__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apttus_Config2__LineItem__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joint_Business_Plan__c</fullName>
+                <controllingFieldValues>Channel Partner Business Plans</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Apttus__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the contract template type which can be either a template or clause type.</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Agreement</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Section</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Supporting Document</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Channel Partner Business Plans</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Channel Partner Business Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>Apttus__Agreements</fullName>
+        <columns>NAME</columns>
+        <columns>Apttus__IsActive__c</columns>
+        <columns>Apttus__Category__c</columns>
+        <columns>Apttus__Subcategory__c</columns>
+        <columns>Apttus__Agreement_Types__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Apttus__Locale__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Apttus__Type__c</field>
+            <operation>equals</operation>
+            <value>Agreement</value>
+        </filters>
+        <filters>
+            <field>Apttus__IsActive__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Spain MSPA Templates</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Apttus__Proposals</fullName>
+        <columns>NAME</columns>
+        <columns>Apttus__IsActive__c</columns>
+        <columns>Apttus__Category__c</columns>
+        <columns>Apttus__Subcategory__c</columns>
+        <columns>Apttus__Agreement_Types__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Apttus__Locale__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Apttus__Type__c</field>
+            <operation>equals</operation>
+            <value>Proposal</value>
+        </filters>
+        <filters>
+            <field>Apttus__IsActive__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Spain Quotation Templates</label>
+        <language>en_US</language>
+    </listViews>
+    <webLinks>
+        <fullName>APTS_Back_To_Console</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Back To Console</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+
+
+var url = window.location.origin;
+parent.location.href = url + &apos;/apex/APTS_LocalCountryAdminConsole&apos;;</url>
+    </webLinks>
+</CustomObject>

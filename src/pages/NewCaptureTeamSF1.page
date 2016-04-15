@@ -1,0 +1,23 @@
+<apex:page standardController="End_User_Project__c">
+<apex:includeScript value="/soap/ajax/28.0/connection.js"/>
+<apex:includeScript value="/soap/ajax/28.0/apex.js"/>
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+  sforce.connection.sessionId = "{!$Api.Session_ID}";
+  window.onload = function(){  
+   var userid = '{!$User.Id}';
+   var accmanager = '{!End_User_Project__c.Account_Manager__c}';
+   var ownerid = '{!End_User_Project__c.CreatedByid}';
+   var query = "select id from User where email =\'"+ accmanager +"\'";
+   var result = sforce.connection.query(query);
+   var records = result.getArray("records");   
+   
+   if((records > 0 && records[0].id == userid) || ownerid == userid || '{!$User.ProfileId}' == '{!$Label.AdminProfileID}')
+   {
+       sforce.one.navigateToURL('/a0j/e');
+   }else{
+       sforce.one.navigateToURL('/apex/CaptureTeamErrorPage?Id={!End_User_Project__c.Id}');
+   }
+   }
+</script>
+</apex:page>

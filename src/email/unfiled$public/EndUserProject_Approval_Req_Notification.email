@@ -1,0 +1,17 @@
+Dear Approver, 
+</br>
+</br>
+An End User Project is pending for your approval. 
+</br>
+</br>
+Please click on the link below to view the details of this End user project, where the complete approval history can be found. 
+</br>
+</br>
+Link to End user project: <a href ='{!End_User_Project__c.Link}'>{!End_User_Project__c.Name}</a> 
+</br>
+</br>
+Best Regards, 
+Your Salesforce Team 
+</br>
+</br>
+*** This is an automatically generated email, please do not reply ***

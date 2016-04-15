@@ -1,0 +1,3 @@
+<apex:page standardController="Competitor__c" sidebar="false" showHeader="false" id="page">
+<apex:pagemessage summary="{!$Label.OpptyComptrPriceNote}" severity="info" strength="1" id="pagemsg"/>
+</apex:page>

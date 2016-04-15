@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Delete Quote {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Delete Quote</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Quote</name>
+        <label>Delete Quote</label>
+        <locationX>485</locationX>
+        <locationY>109</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordID</elementReference>
+            </value>
+        </filters>
+        <object>Apttus_Proposal__Proposal__c</object>
+    </recordDeletes>
+    <startElementReference>Delete_Quote</startElementReference>
+    <variables>
+        <description>Record ID of the record to be deleted.</description>
+        <name>recordID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

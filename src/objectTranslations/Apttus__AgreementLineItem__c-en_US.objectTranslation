@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Disc. %</label>
+        <name>APTS_Discount_Percentage__c</name>
+    </fields>
+    <fields>
+        <label>Disc. %</label>
+        <name>APTS_Discount__c</name>
+    </fields>
+    <fields>
+        <label>Std. Disc. %</label>
+        <name>APTS_LP_Standard_Discount__c</name>
+    </fields>
+    <fields>
+        <label>Std. Net</label>
+        <name>APTS_LP_Standard_Net__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Price --></label>
+        <name>APTS_Gross_Price__c</name>
+    </fields>
+    <fields>
+        <label>Total Std. Price</label>
+        <name>APTS_LP_Total_Standard_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Adj. (%) (Do not Use) --></label>
+        <name>APTS_Net_Adjustment_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Adj. (%) --></label>
+        <name>APTS_Net_Adjustment_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Price Override --></label>
+        <name>APTS_Net_Price_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product/Hierarchy Information --></label>
+        <name>APTS_Product_Hierarchy_Information__c</name>
+    </fields>
+    <fields>
+        <label>Net Adj. %</label>
+        <name>APTS_Net_Adjustment__c</name>
+    </fields>
+    <fields>
+        <label>Net Price</label>
+        <name>APTS_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label>Qty</label>
+        <name>APTS_Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Summary of the Product and Hierarchy information , for a given line item. --></help>
+        <label>Product / Hierarchy Information</label>
+        <name>APTS_new_product_code__c</name>
+    </fields>
+</CustomObjectTranslation>

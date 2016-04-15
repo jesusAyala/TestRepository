@@ -1,0 +1,16 @@
+<!-- 
+/**
+ * VFPage -  ChannelBusinessReviewEditPage
+ * Controller - ClsChannelBusinessReviewEditPage.
+ * VF Page used to redirect the edit page of Channel Business Review
+ * 
+ * Release R5
+ * @author  Ayiravalli Arasu (Accenture)
+ * @created 2016-1-28
+ * @version 1.0
+ * Created
+ */
+-->
+<apex:page standardController="Channel_Business_Review__c" extensions="ClsChannelBusinessReviewEditPage" action="{!editPageChange}">
+
+</apex:page>

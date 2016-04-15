@@ -1,0 +1,21 @@
+<!--*************************************************************
+@Name:APTS_SAPConnectorforMSPACreation
+@Author: Ganga Vemula
+@CreateDate: 17th sep 2015.
+@Description: This page is to call the controller to create MSPA in SAP
+@UsedBy: 
+******************************************************************-->
+
+<apex:page standardcontroller="Apttus__APTS_Agreement__c" 
+           extensions="APTS_MSPACreatorInSAPController" 
+           action="{!CreateMSPAviaButton}">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputText value="{!Apttus__APTS_Agreement__c.APTS_Country__c}" rendered="false" />
+            <apex:pagemessages />
+            <apex:pageblockbuttons location="bottom">
+                <Apex:commandbutton value="Back" action="{!backToMSPA}"/>
+            </apex:pageblockbuttons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

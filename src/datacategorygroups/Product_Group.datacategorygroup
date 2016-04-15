@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>4114 - LV High Power Drives</label>
+            <name>X4114_LV_High_Power_Drives</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4117 - MV Drives</label>
+            <name>X4117_MV_Drives</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4120 - Low Power Drives and Automation</label>
+            <name>X4120_Low_Power_Drives_and_Automation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4159 - Drives and Controls Service</label>
+            <name>X4159_Drives_and_Controls_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4162 - Sundry DMDR</label>
+            <name>X4162_Sundry_DMDR</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4131 - Motors &amp; Generators Service</label>
+            <name>X4131_Motors_Generators_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4133 - IEC LV Motors</label>
+            <name>X4133_IEC_LV_Motors</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4130 - Large Motors &amp; Generators</label>
+            <name>X4130_Large_Motors_Generators</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4156 - NEMA Motors</label>
+            <name>X4156_NEMA_Motors</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4157 - Mechanical Power Transmission</label>
+            <name>X4157_Mechanical_Power_Transmission</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4163 - Sundry DMMG</label>
+            <name>X4163_Sundry_DMMG</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4107 - Solar</label>
+            <name>X4107_Solar</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4109 - Power Converters</label>
+            <name>X4109_Power_Converters</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4118 - Transportation</label>
+            <name>X4118_Transportation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4149 - Power Conversion Service</label>
+            <name>X4149_Power_Conversion_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4164 - Sundry DMPC</label>
+            <name>X4164_Sundry_DMPC</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4313 - Robot Supply Unit (SU)</label>
+            <name>X4313_Robot_Supply_Unit_SU</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4314 - Robots &amp; Applications (R&amp;A)</label>
+            <name>X4314_Robots_Applications_R_A</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4331 - Robot Systems</label>
+            <name>X4331_Robot_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4333 - Robotics Customer Service (CS)</label>
+            <name>X4333_Robotics_Customer_Service_CS</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4366 - Sundry DMRO</label>
+            <name>X4366_Sundry_DMRO</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4161 - Sundry DM</label>
+            <name>X4161_Sundry_DM</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3100 - Power Enclosures</label>
+            <name>X3100_Power_Enclosures</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3103 - Circuit Breakers</label>
+            <name>X3103_Circuit_Breakers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3097 - Switches and Fusegear</label>
+            <name>X3097_Switches_and_Fusegear</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3107 - Breakers &amp; Switches Service</label>
+            <name>X3107_Breakers_Switches_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3122 - Control &amp; Protection</label>
+            <name>X3122_Control_Protection</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3123 - Electronics Products (EPR)</label>
+            <name>X3123_Electronics_Products_EPR</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3124 - Connection</label>
+            <name>X3124_Connection</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3136 - Control Products Service</label>
+            <name>X3136_Control_Products_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3145 - Wire Management and Connectivity</label>
+            <name>X3145_Wire_Management_and_Connectivity</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3119 - Distribution Enclosures</label>
+            <name>X3119_Distribution_Enclosures</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3132 - RCD &amp; MDRC</label>
+            <name>X3132_RCD_MDRC</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3133 - MCB &amp; SPD</label>
+            <name>X3133_MCB_SPD</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3134 - Building Automation</label>
+            <name>X3134_Building_Automation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3101 - LV Systems</label>
+            <name>X3101_LV_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3102 - LV Systems Service</label>
+            <name>X3102_LV_Systems_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3131 - Sundry EP</label>
+            <name>X3131_Sundry_EP</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3137 - EP Front End Cross-Divisional Sal</label>
+            <name>X3137_EP_Front_End_Cross_Divisional_Sal</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3121 - Wiring Accessories</label>
+            <name>X3121_Wiring_Accessories</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4489 - CT Partners and Projects</label>
+            <name>X4489_CT_Partners_and_Projects</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4414 - CT Service</label>
+            <name>X4414_CT_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4493 - CT Products</label>
+            <name>X4493_CT_Products</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7709 - Ports</label>
+            <name>X7709_Ports</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7704 - Oil &amp; Gas</label>
+            <name>X7704_Oil_Gas</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7713 - Marine Service</label>
+            <name>X7713_Marine_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7715 - Ports Service</label>
+            <name>X7715_Ports_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7717 - Propulsion Products</label>
+            <name>X7717_Propulsion_Products</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3127 - Field Instrumentation &amp; Devices</label>
+            <name>X3127_Field_Instrumentation_Devices</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3128 - Flow Measurement</label>
+            <name>X3128_Flow_Measurement</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3129 - Measurement Products Service</label>
+            <name>X3129_Measurement_Products_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3199 - Measurement Products Sales</label>
+            <name>X3199_Measurement_Products_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4442 - Force Measurement</label>
+            <name>X4442_Force_Measurement</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4498 - Analytical Measurement</label>
+            <name>X4498_Analytical_Measurement</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4528 - Chemical, Refining Systems</label>
+            <name>X4528_Chemical_Refining_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4426 - EPC</label>
+            <name>X4426_EPC</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4449 - Oil, Gas &amp; Chemicals Service</label>
+            <name>X4449_Oil_Gas_Chemicals_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4531 - PAOG Systems sales</label>
+            <name>X4531_PAOG_Systems_sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4600 - Sundry PAOG</label>
+            <name>X4600_Sundry_PAOG</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4100 - PAPI Systems sales</label>
+            <name>X4100_PAPI_Systems_sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4101 - Mineral Processing, Aluminium and</label>
+            <name>X4101_Mineral_Processing_Aluminium_and</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4102 - Grinding and Open Pit Mining</label>
+            <name>X4102_Grinding_and_Open_Pit_Mining</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4103 - Under Ground Mining</label>
+            <name>X4103_Under_Ground_Mining</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4104 - Metals</label>
+            <name>X4104_Metals</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4106 - Pulp &amp; Paper</label>
+            <name>X4106_Pulp_Paper</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4108 - Process Industry Service</label>
+            <name>X4108_Process_Industry_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>5500 - Sundry PA</label>
+            <name>X5500_Sundry_PA</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4494 - ABB Full Service</label>
+            <name>X4494_ABB_Full_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7712 - Turbocharging Service</label>
+            <name>X7712_Turbocharging_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7714 - Low and Medium Speed Products</label>
+            <name>X7714_Low_and_Medium_Speed_Products</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7716 - Turbocharging Marine Auxiliary</label>
+            <name>X7716_Turbocharging_Marine_Auxiliary</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2106 - Gas Insulated Switchgear</label>
+            <name>X2106_Gas_Insulated_Switchgear</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2108 - HV Breakers &amp; Modules</label>
+            <name>X2108_HV_Breakers_Modules</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2111 - Common Apparatus &amp; Devices</label>
+            <name>X2111_Common_Apparatus_Devices</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2115 - Generator Circuit Breakers</label>
+            <name>X2115_Generator_Circuit_Breakers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2127 - Other High Voltage Components</label>
+            <name>X2127_Other_High_Voltage_Components</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2128 - Capacitors and Filters</label>
+            <name>X2128_Capacitors_and_Filters</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2129 - Instrument Transformers</label>
+            <name>X2129_Instrument_Transformers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2132 - HV Testing Labs</label>
+            <name>X2132_HV_Testing_Labs</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2617 - Domestic Sales</label>
+            <name>X2617_Domestic_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2657 - High Voltage Service</label>
+            <name>X2657_High_Voltage_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2699 - Sundry PGHV</label>
+            <name>X2699_Sundry_PGHV</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3401 - Distribution Automation</label>
+            <name>X3401_Distribution_Automation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3406 - MV Instrument Transformers &amp; Sens</label>
+            <name>X3406_MV_Instrument_Transformers_Sens</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3407 - MV Outdoor Apparatus</label>
+            <name>X3407_MV_Outdoor_Apparatus</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3408 - MV Indoor Apparatus</label>
+            <name>X3408_MV_Indoor_Apparatus</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3410 - MV Primary Switchgear</label>
+            <name>X3410_MV_Primary_Switchgear</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3430 - MV Secondary Distribution</label>
+            <name>X3430_MV_Secondary_Distribution</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3435 - Modular Systems</label>
+            <name>X3435_Modular_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3442 - MV Service</label>
+            <name>X3442_MV_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3446 - Domestic Sales</label>
+            <name>X3446_Domestic_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3499 - Sundry EPMV</label>
+            <name>X3499_Sundry_EPMV</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2200 - Sundry PP</label>
+            <name>X2200_Sundry_PP</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2401 - Distribution Transformers</label>
+            <name>X2401_Distribution_Transformers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2404 - Small Power Transformers</label>
+            <name>X2404_Small_Power_Transformers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2408 - Large and Medium Power Transforme</label>
+            <name>X2408_Large_and_Medium_Power_Transforme</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2409 - Dry Transformers</label>
+            <name>X2409_Dry_Transformers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2413 - Transformer Service</label>
+            <name>X2413_Transformer_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2425 - Insulation and Components</label>
+            <name>X2425_Insulation_and_Components</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2451 - Domestic Sales</label>
+            <name>X2451_Domestic_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2480 - Sundry PGTR</label>
+            <name>X2480_Sundry_PGTR</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2818 - Communication Networks</label>
+            <name>X2818_Communication_Networks</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2875 - Substation Automation Systems</label>
+            <name>X2875_Substation_Automation_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2877 - Substation Automation Products</label>
+            <name>X2877_Substation_Automation_Products</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2879 - Substation Automation Services</label>
+            <name>X2879_Substation_Automation_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2214 - Offshore Wind Connections</label>
+            <name>X2214_Offshore_Wind_Connections</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2215 - HVDC</label>
+            <name>X2215_HVDC</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2221 - OWC Service</label>
+            <name>X2221_OWC_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2222 - HVDC Service</label>
+            <name>X2222_HVDC_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2224 - Power Cables Service</label>
+            <name>X2224_Power_Cables_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2899 - Power Cables</label>
+            <name>X2899_Power_Cables</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2861 - Consulting Power Systems</label>
+            <name>X2861_Consulting_Power_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>6680 - Semiconductors</label>
+            <name>X6680_Semiconductors</name>
+        </dataCategory>
+        <dataCategory>
+            <label>1722 - Thermal &amp; Water Systems</label>
+            <name>X1722_Thermal_Water_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>1723 - Power and Water Automation</label>
+            <name>X1723_Power_and_Water_Automation</name>
+        </dataCategory>
+        <dataCategory>
+            <label>1724 - Renewable Systems</label>
+            <name>X1724_Renewable_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>1728 - Automation Products</label>
+            <name>X1728_Automation_Products</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2889 - FES Grid Integration</label>
+            <name>X2889_FES_Grid_Integration</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2869 - Power Generation Services</label>
+            <name>X2869_Power_Generation_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2217 - FACTS</label>
+            <name>X2217_FACTS</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2223 - FACTS Service</label>
+            <name>X2223_FACTS_Service</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2871 - Substation Services</label>
+            <name>X2871_Substation_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2881 - T&amp;D Substations for Utilities</label>
+            <name>X2881_T_D_Substations_for_Utilities</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2882 - T&amp;D infrastructure and grid integ</label>
+            <name>X2882_T_D_infrastructure_and_grid_integ</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2883 - EPC solutions</label>
+            <name>X2883_EPC_solutions</name>
+        </dataCategory>
+        <dataCategory>
+            <label>6699 - Sundry PS</label>
+            <name>X6699_Sundry_PS</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2851 - Enterprise Software Services</label>
+            <name>X2851_Enterprise_Software_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2872 - Network Control</label>
+            <name>X2872_Network_Control</name>
+        </dataCategory>
+        <dataCategory>
+            <label>6110 - Treasury Centers</label>
+            <name>X6110_Treasury_Centers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9907 - Accounting Services</label>
+            <name>X9907_Accounting_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9908 - HR Center</label>
+            <name>X9908_HR_Center</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9919 - Information Systems Services</label>
+            <name>X9919_Information_Systems_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9938 - Supply Chain Management</label>
+            <name>X9938_Supply_Chain_Management</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9939 - Transport, Trade &amp; Logistics</label>
+            <name>X9939_Transport_Trade_Logistics</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9941 - Group Holding and Country Corpora</label>
+            <name>X9941_Group_Holding_and_Country_Corpora</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9944 - Corporate One-Time Items</label>
+            <name>X9944_Corporate_One_Time_Items</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9945 - Headquarter Support Service Fee</label>
+            <name>X9945_Headquarter_Support_Service_Fee</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9948 - Trademark Fee</label>
+            <name>X9948_Trademark_Fee</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9950 - R&amp;D Corporate</label>
+            <name>X9950_R_D_Corporate</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9951 - R&amp;D Acceleration Fund</label>
+            <name>X9951_R_D_Acceleration_Fund</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9953 - R&amp;D Support Activities</label>
+            <name>X9953_R_D_Support_Activities</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9962 - ABB Information Management</label>
+            <name>X9962_ABB_Information_Management</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9957 - ABB Internal</label>
+            <name>X9957_ABB_Internal</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9958 - Third Parties</label>
+            <name>X9958_Third_Parties</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9959 - Special Items</label>
+            <name>X9959_Special_Items</name>
+        </dataCategory>
+        <dataCategory>
+            <label>1339 - Non-Core Various</label>
+            <name>X1339_Non_Core_Various</name>
+        </dataCategory>
+        <dataCategory>
+            <label>1342 - Various</label>
+            <name>X1342_Various</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3075 - EPBS Front End Sales</label>
+            <name>X3075_EPBS_Front_End_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3076 - EPBS Regional Distribution Center</label>
+            <name>X3076_EPBS_Regional_Distribution_Center</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3080 - EPCP Front End Sales</label>
+            <name>X3080_EPCP_Front_End_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3081 - EPCP Regional Distribution Center</label>
+            <name>X3081_EPCP_Regional_Distribution_Center</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3085 - EPBP Front End Sales</label>
+            <name>X3085_EPBP_Front_End_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3086 - EPBP Regional Distribution Center</label>
+            <name>X3086_EPBP_Regional_Distribution_Center</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3095 - EPCW Front End Sales</label>
+            <name>X3095_EPCW_Front_End_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3096 - EPCW Regional Distribution Center</label>
+            <name>X3096_EPCW_Regional_Distribution_Center</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3150 - Cable Protection, Explosion Proof</label>
+            <name>X3150_Cable_Protection_Explosion_Proof</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3155 - Cable Accessories and Apparatus</label>
+            <name>X3155_Cable_Accessories_and_Apparatus</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4526 - Offshore Systems</label>
+            <name>X4526_Offshore_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>4527 - Onshore Systems</label>
+            <name>X4527_Onshore_Systems</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7705 - Passenger and Cargo</label>
+            <name>X7705_Passenger_and_Cargo</name>
+        </dataCategory>
+        <dataCategory>
+            <label>7719 - Turbocharging High Speed Products</label>
+            <name>X7719_Turbocharging_High_Speed_Products</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2900 - Sundry PGSU</label>
+            <name>X2900_Sundry_PGSU</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2884 - Microgrids and Distributed Genera</label>
+            <name>X2884_Microgrids_and_Distributed_Genera</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2885 - Energy Portfolio Management</label>
+            <name>X2885_Energy_Portfolio_Management</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2886 - Sundry PGGA</label>
+            <name>X2886_Sundry_PGGA</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2897 - Sundry PGGS</label>
+            <name>X2897_Sundry_PGGS</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2891 - Sundry PGGI</label>
+            <name>X2891_Sundry_PGGI</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9934 - Direct Procurement Excellence Cen</label>
+            <name>X9934_Direct_Procurement_Excellence_Cen</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9935 - Indirect Procurement Excellence C</label>
+            <name>X9935_Indirect_Procurement_Excellence_C</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9936 - Transport, Trade &amp; Logistics Mana</label>
+            <name>X9936_Transport_Trade_Logistics_Mana</name>
+        </dataCategory>
+        <dataCategory>
+            <label>9937 - SCM Shared Services Centers</label>
+            <name>X9937_SCM_Shared_Services_Centers</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product Group</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

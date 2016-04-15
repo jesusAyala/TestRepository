@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>R3 created a custom settings for field dependencies.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>R3 - Field Dependencies country value</description>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Main_Business__c</fullName>
+        <description>R3 - Local Main Business created a custom settings for country field dependencies.</description>
+        <externalId>false</externalId>
+        <label>Local Main Business</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_District__c</fullName>
+        <description>R3 - Sales District created a custom settings for country field dependencies.</description>
+        <externalId>false</externalId>
+        <label>Sales District</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Office__c</fullName>
+        <description>R3 - Sales Office created a custom settings for country field dependencies.</description>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Field Dependencies</label>
+    <visibility>Public</visibility>
+</CustomObject>

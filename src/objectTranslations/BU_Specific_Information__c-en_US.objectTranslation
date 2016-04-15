@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BU Specific Information</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BU Specific Information</value>
+    </caseValues>
+    <fields>
+        <label>PAPG Add 1</label>
+        <name>PSPG_Add_1__c</name>
+        <picklistValues>
+            <masterLabel>Automation Sentinel</masterLabel>
+            <translation><!-- Automation Sentinel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carbon In Ash</masterLabel>
+            <translation><!-- Carbon In Ash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Condition Monitoring</masterLabel>
+            <translation><!-- Condition Monitoring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flame Scanners</masterLabel>
+            <translation><!-- Flame Scanners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Additional</masterLabel>
+            <translation><!-- No Additional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optimization</masterLabel>
+            <translation><!-- Optimization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PFMaster</masterLabel>
+            <translation><!-- PFMaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGIM</masterLabel>
+            <translation><!-- PGIM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PowerStore</masterLabel>
+            <translation><!-- PowerStore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety</masterLabel>
+            <translation><!-- Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simulation/Emulator</masterLabel>
+            <translation><!-- Simulation/Emulator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>PAPG Add 2</label>
+        <name>PSPG_Add_2__c</name>
+        <picklistValues>
+            <masterLabel>Automation Sentinel</masterLabel>
+            <translation><!-- Automation Sentinel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carbon In Ash</masterLabel>
+            <translation><!-- Carbon In Ash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Condition Monitoring</masterLabel>
+            <translation><!-- Condition Monitoring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flame Scanners</masterLabel>
+            <translation><!-- Flame Scanners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Additional</masterLabel>
+            <translation><!-- No Additional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optimization</masterLabel>
+            <translation><!-- Optimization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PFMaster</masterLabel>
+            <translation><!-- PFMaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGIM</masterLabel>
+            <translation><!-- PGIM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PowerStore</masterLabel>
+            <translation><!-- PowerStore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety</masterLabel>
+            <translation><!-- Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simulation/Emulator</masterLabel>
+            <translation><!-- Simulation/Emulator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>BU Specific Information PAPG</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PSPG Specific --></label>
+            <section>PSPG Specific</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label>PAPG Specific</label>
+        <name>PSPG_Specific</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

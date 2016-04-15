@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Created as part of R5-2348 to allow user to add CQP Competitors on Quote other than those already added.</description>
+    <label>Add New CQP Competitor</label>
+</ApexPage>

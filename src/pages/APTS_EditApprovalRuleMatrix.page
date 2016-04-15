@@ -1,0 +1,300 @@
+<!-- 
+@Name: APTS_EditApprovalRuleMatrix
+@Author: Chetan Patel
+@CreateDate: 15th Oct 2015
+@Description: This VF Page allows users to edit/add/delete approval rule matrix records who have necessary access
+@UsedBy: VF-Page is invoked when user clicks on standard approval rule matrix edit button/link
+@ModifiedBy: NA
+@ModifiedDate: NA
+@ChangeDescription: A brief description of what was modified.
+PS: @ModifiedBy and @ChangeDescription can be repeated multiple time, based on number of changes made to the original process. 
+-->
+
+<apex:page standardController="APTS_Approval_Rule_Matrix__c" extensions="APTS_EditApprovalRuleMatrixExtension">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        .fa {
+            display: block;
+            font-size: 20px;
+        }
+    </style>
+    <apex:form >
+        <apex:sectionHeader title="{!$Label.APTS_MANAGE_APPROVAL_RULE_MATRIX}" subtitle="{!oApprovalRuleMatrix.Name}"/>
+        <apex:pageMessages id="messages"/>
+        
+        <apex:pageBlock rendered="{!isEdit}" id="editblockid">
+            
+            <apex:pageBlockSection columns="2" title="{!$Label.APTS_EDIT_APPROVAL_RULE_HEADER}">
+                
+                <apex:outputField value="{!oApprovalRuleMatrix.APTS_Country__c}" />
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_Sales_Organisation__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_LP_Local_Channel__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_LP_Sales_Office__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_GTV_Level_Code__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_Is_Active__c}" required="false"/>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" title="{!$Label.APTS_EDIT_APPROVAL_RULE_DETAILS}" id="pb">
+                <apex:variable var="iRowNumber" value="{!0}"/>
+                <apex:variable var="innerRowNumber" value="{!0}"/>
+               <apex:pageBlockTable title="{!$Label.APTS_APPROVAL_RULES}" var="rule" value="{!mapApprovalRuleMatrixByRows}" > 
+
+                    <apex:column headerValue="No." >
+                        <apex:outputText value="{0}" > 
+                            <apex:param value="{!iRowNumber+1}" /> 
+                        </apex:outputText>
+                    </apex:column> 
+                    <apex:column headerValue="Threshold Discount" >
+                        <apex:inputField value="{!mapApprovalRuleMatrixByRows[rule][0].APTS_Threshold_Discount__c}" required="true"/>
+                    </apex:column>
+                    <apex:column headerValue="Max Discount" >
+                        <apex:outputField value="{!mapApprovalRuleMatrixByRows[rule][0].APTS_Max_Discount__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Approver Details" >
+                        
+                        <apex:pageBlockTable title="{!$Label.APTS_APPROVAL_RULES}" var="innerRule" value="{!mapApprovalRuleMatrixByRows[rule]}" > 
+                            
+                            <apex:column headerValue="No." >
+                            <apex:outputText value="{0}" > 
+                                <apex:param value="{!innerRowNumber+1}" /> 
+                            </apex:outputText>
+                            </apex:column> 
+                            <apex:column headerValue="Approvers" >
+                                <apex:inputField value="{!innerRule.APTS_Assigned_to__c}" required="true"/>
+                            </apex:column>
+                            <apex:column headerValue="Is Created" >
+                                <i class="fa fa-check" style="display:{!IF(innerRule.Id != null,'inline','none')}"></i>
+                                <i class="fa fa-times" style="display:{!IF(innerRule.Id == null,'inline','none')}"></i>
+                            </apex:column>
+                            <apex:column headerValue="Approval Level" >
+                                <apex:outputField value="{!innerRule.APTS_Approval_Level__c}" />
+                            </apex:column> 
+                            <apex:column headerValue="Action" >
+                                <div class="fa fa-plus-circle add-row{!iRowNumber} add-row-inner" onclick="addRowInnerJS('{!iRowNumber}','{!innerRowNumber}');" ></div>
+                                <div class="fa fa-minus-circle delete-row-inner{!iRowNumber}"  onclick="deleteRowInnerJs('{!iRowNumber}','{!innerRowNumber}');"></div> 
+                                <apex:variable var="innerRowNumber" value="{!innerRowNumber+1}"/>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                        <script>
+                            var iRowNumber ='{!iRowNumber}';
+                            var allRows = $('.delete-row-inner'+ iRowNumber);
+                            if(allRows.length==1)
+                                $(allRows[0]).hide();
+                            
+                        </script>
+                        <apex:variable var="innerRowNumber" value="{!0}"/>
+                        
+                    </apex:column> 
+                    
+                    <apex:column headerValue="Action" >
+                        <div class="fa fa-plus-circle add-row" onclick="addRowJs('{!iRowNumber}');" ></div>
+                        <div class="fa fa-minus-circle delete-row" onclick="deleteRowJs('{!iRowNumber}');"></div> 
+                        <apex:variable var="iRowNumber" value="{!iRowNumber+1}"/>
+                        
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+                
+                <div align="center" class="waitingImage" style="display:none;font-weight:bold">Processing...<img  src="/img/loading.gif"  /></div>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="{!$Label.APTS_APPROVAL_RULE_MATRIX_HISTORY}" columns="1" id="history">
+                <apex:pageBlockTable value="{!lstHistory}" var="h">
+                    
+                    <apex:column headerValue="Name" >
+                        <apex:outputLink target="_blank" value="/{!h.Parent.Id}">{!h.Parent.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="Date" >
+                        <apex:outputField value="{!h.CreatedDate}" />
+                    </apex:column>
+                    <apex:column headerValue="User" >
+                        <apex:outputLink target="_blank" value="/{!h.CreatedById}">{!h.CreatedBy.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="Action" >
+                        <apex:outputText > Changed <b>{!mapFieldAPIFieldLabel[h.Field]}</b> from {!h.oldValue} to <b>{!h.newValue}</b></apex:outputText>
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+                
+                <apex:commandButton value="{!$Label.Apttus_Config2__Save}" action="{!Add}" oncomplete="refreshHistory();">
+                    <apex:actionSupport event="onclick" rerender="pb1,pb,messages" status="actStatusIdUpdate" />
+                </apex:commandButton>
+                <apex:commandButton value="{!$Label.APTS_Save_And_Exit}" action="{!Save}" oncomplete="refreshHistory();" >
+                    <apex:actionSupport event="onclick" rerender="pb1,pb,messages" status="actStatusIdUpdate" />
+                </apex:commandButton>
+                
+                <apex:commandButton value="{!$Label.Apttus_Config2__Cancel}" action="{!cancel}" />
+                
+                <apex:actionStatus id="actStatusIdUpdate" >
+                <apex:facet name="start" >
+                  <img src="/img/loading.gif" />                    
+                </apex:facet>
+                </apex:actionStatus>
+                
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+        
+        <apex:pageBlock rendered="{!isCreate}" id="pb1">
+            <apex:pageBlockSection columns="2" title="{!$Label.APTS_CREATE_APPROVAL_RULE_MATRIX}">
+                
+                <apex:outputField value="{!oApprovalRuleMatrix.APTS_Country__c}" />
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_Sales_Organisation__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_LP_Local_Channel__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_LP_Sales_Office__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_GTV_Level_Code__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_Threshold_Discount__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_Assigned_to__c}" required="true"/>
+                <apex:inputField value="{!oApprovalRuleMatrix.APTS_Is_Active__c}" required="false"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="{!$Label.Apttus_Config2__Save}" action="{!Add}" oncomplete="refreshHistory();">
+                    
+                    <apex:actionSupport event="onclick" rerender="pb1,pb,messages" status="actStatusId" />
+                </apex:commandButton>
+                <apex:commandButton value="{!$Label.APTS_Save_And_Exit}" action="{!Save}" oncomplete="refreshHistory();">
+                    <apex:actionSupport event="onclick" rerender="pb1,pb,messages" status="actStatusId" />
+                </apex:commandButton>
+                <apex:commandButton value="{!$Label.Apttus_Config2__Cancel}" action="{!cancel}" />
+                
+                <apex:actionStatus id="actStatusId" >
+                <apex:facet name="start" >
+                  <img src="/img/loading.gif" />                    
+                </apex:facet>
+                </apex:actionStatus>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+        <script>
+        
+            $( document ).ready(function() {
+                hideRowsExceptLast();
+            });
+            
+            function refreshHistory(){
+                showLoadingImage();
+                refreshHistoryAction();
+            }
+            function deleteRowJs(iRowNumber){
+                showLoadingImage();
+                deleteRowAction(iRowNumber);
+            }
+            
+            
+            function addRowJs(iRowNumber){
+                showLoadingImage();
+                addRowAction(iRowNumber);
+            }
+            function addRowInnerJS(iRowNumber,innerRowNumber){
+                showLoadingImage();
+                addRowInnerAction(iRowNumber,innerRowNumber);
+            }
+            function deleteRowInnerJs(iRowNumber,innerRowNumber){
+                showLoadingImage();
+                deleteRowInnerAction(iRowNumber,innerRowNumber);
+            }
+            
+            
+            function showLoadingImage(){
+                
+                $('.waitingImage').show(); 
+            }
+            function hideLoadingImage(){
+                
+                $('.waitingImage').hide();   
+            }
+            function hideRowsExceptLast(){
+                
+                var allRows = $('.add-row');
+                var max = '{!maxRowsAllowed}';
+                
+                if(allRows.length>=max)
+                   max =  allRows.length;
+                else 
+                   max =  allRows.length-1;
+                
+                for(i=0;i<max;i++)
+                    $(allRows[i]).remove();
+                    
+                var allInnerRows = $('.add-row-inner');
+                console.log('@@ allInnerRows : ' + allInnerRows.length);
+                max = '{!maxRowsAllowed}';
+                if(allInnerRows.length>=max){
+                    
+                   for(i=0;i<allInnerRows.length;i++)
+                    $(allInnerRows[i]).remove();
+                    
+                    var allOuterRows = $('.add-row');
+                    for(i=0;i<allOuterRows.length;i++)
+                        $(allOuterRows[i]).remove();
+                   
+                }
+                
+                var deleteRows = $('.delete-row');
+                if(deleteRows.length==1)
+                    $(deleteRows[0]).hide();
+                   
+            }
+            
+        </script>
+        
+        <apex:actionFunction action="{!getHistoryOnComplete}" 
+                        name="refreshHistoryAction"
+                        rerender="pb,history,pb1,messages"
+                        oncomplete="hideRowsExceptLast();hideLoadingImage();">
+        </apex:actionFunction>
+        
+        <apex:actionFunction action="{!deleteRow}" 
+                        name="deleteRowAction"
+                        rerender="pb,pb1,messages"
+                        oncomplete="hideRowsExceptLast();hideLoadingImage();">
+            <apex:param name="iRowNumber"
+                        value="" />
+            
+           
+        </apex:actionFunction>
+        
+        <apex:actionFunction action="{!addRow}" 
+                        name="addRowAction"
+                        rerender="pb,pb1,messages"
+                        oncomplete="hideRowsExceptLast();hideLoadingImage();">
+            <apex:param name="iRowNumber"
+                        value="" />
+        </apex:actionFunction>
+        
+        <apex:actionFunction action="{!addRowInner}" 
+                        name="addRowInnerAction"
+                        rerender="pb,pb1,messages"
+                        oncomplete="hideRowsExceptLast();hideLoadingImage();">
+            
+            <apex:param name="iRowNumber"
+                        value="" />
+            <apex:param name="innerRowNumber"
+                        value="" />
+        </apex:actionFunction>
+        
+        <apex:actionFunction action="{!deleteRowInner}" 
+                        name="deleteRowInnerAction"
+                        rerender="pb,pb1,messages"
+                        oncomplete="hideRowsExceptLast();hideLoadingImage();">
+            
+            <apex:param name="iRowNumber"
+                        value="" />
+            <apex:param name="innerRowNumber"
+                        value="" />
+        </apex:actionFunction>
+        
+        
+        
+        
+
+    </apex:form>    
+</apex:page>

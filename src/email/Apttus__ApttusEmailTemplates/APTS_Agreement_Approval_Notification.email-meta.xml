@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>APTS_Agreement Approval Notification (Assignment)</name>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>267</minorNumber>
+        <namespace>Apttus</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>361</minorNumber>
+        <namespace>Apttus_Approval</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>7</majorNumber>
+        <minorNumber>71</minorNumber>
+        <namespace>Apttus_CMConfig</namespace>
+    </packageVersions>
+    <style>none</style>
+    <subject>Approval Request for Agreement(MSPA) with ID , Name  and Account  has been submitted for your approval</subject>
+    <type>visualforce</type>
+</EmailTemplate>

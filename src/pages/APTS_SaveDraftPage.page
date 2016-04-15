@@ -1,0 +1,10 @@
+<!--*************************************************************
+@Name: APTS_SaveDraftPage
+@Author: Shahid Ali
+@CreateDate: 27th Nov 2015.
+@Description: This is the custom page to be used for draft save button on cart page on LocalProducts Flow
+@UsedBy: 
+******************************************************************-->
+<apex:page controller="APTS_SaveDraftCartController" sidebar="false" showheader="false" action="{!saveDraftMethod}">
+    <apex:pageMessages />
+</apex:page>

@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>APTS_BundleOptionIsHierarchy__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( TEXT( Apttus_Config2__LineType__c) == &quot;Product/Service&quot;, Apttus_Config2__ProductId__r.APTS_LP_Is_Hierarchy__c ,
+if( TEXT( Apttus_Config2__LineType__c) == &quot;Option&quot;,  Apttus_Config2__OptionId__r.APTS_LP_Is_Hierarchy__c , FALSE))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Hierarchy</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_BusinessObjectStatus__c</fullName>
+        <description>This formula will return the status of Business Object - i.e Agreement status or Proposal Approval Stage - It is being used in Line Item delete trigger where we are restricting user to delete line item if Business object is in certain status.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Apttus_Config2__ConfigurationId__r.Apttus_Config2__BusinessObjectType__c, &quot;Agreement&quot;),  TEXT(Apttus_Config2__ConfigurationId__r.Apttus_CMConfig__AgreementId__r.Apttus__Status__c), IF(ISPICKVAL(Apttus_Config2__ConfigurationId__r.Apttus_Config2__BusinessObjectType__c, &quot;Proposal&quot;),  TEXT(Apttus_Config2__ConfigurationId__r.Apttus_QPConfig__Proposald__r.Apttus_Proposal__Approval_Stage__c), NULL))</formula>
+        <label>Business Object Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Critical_Discount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Critical Discount</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Config2__Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The product or service quantity</description>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_Percentage__c</fullName>
+        <description>Field to specify the percentage of discount to be applied to the line item when selected discount type is either &quot;Substitute Discount&quot; or &quot;Additional Discount&quot;.</description>
+        <externalId>false</externalId>
+        <label>Discount %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_Type__c</fullName>
+        <description>Field for user to select appropriate type of discount in line item.</description>
+        <externalId>false</externalId>
+        <label>Discount Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Net Price Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Additional Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Substitute Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+	    <picklistValues>
+		<fullName>--None--</fullName>
+		<default>false</default>
+	    </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_GTV_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>Apttus_Config2__ProductId__r.APTS_GTV_Level__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GTV Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Global_Product_Code__c</fullName>
+        <description>Field to hold the Product ID (Code) fetched from global product associated with selected local product in the record.</description>
+        <externalId>false</externalId>
+        <formula>IF(Apttus_Config2__ProductId__r.APTS_LP_Is_Hierarchy__c, &apos;&apos;,  Apttus_Config2__ProductId__r.APTS_Global_Product_ID__r.APTS_Product_ID__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Global Product Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Level_3_Code__c</fullName>
+        <description>Field to capture Level 3 Hierarchy code entered by user.</description>
+        <externalId>false</externalId>
+        <label>Hierarchy Level 3 Code</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Line_Priced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Line Priced?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Hierarchy_Name__c</fullName>
+        <description>Formula field to display the name of the hierarchy product.</description>
+        <externalId>false</externalId>
+        <formula>IF( Apttus_Config2__ProductId__r.APTS_LP_Is_Hierarchy__c,  Apttus_Config2__ProductId__r.Name , &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hierarchy Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Product_Code__c</fullName>
+        <description>Field to hold the value of Product ID fetched from selected local product in the record.</description>
+        <externalId>false</externalId>
+        <formula>IF(Apttus_Config2__ProductId__r.APTS_LP_Is_Hierarchy__c, &apos;&apos;,  Apttus_Config2__ProductId__r.APTS_Product_ID__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Local Product Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Product_Description__c</fullName>
+        <description>Formula field to fetch the name/description of the selected local product.</description>
+        <externalId>false</externalId>
+        <formula>IF(Apttus_Config2__ProductId__r.APTS_LP_Is_Hierarchy__c, &apos;&apos;,  Apttus_Config2__ProductId__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Product_Hierarchy__c</fullName>
+        <description>Formula field to hold the value of the Product Hierarchy code fetched from selected product in the line item.</description>
+        <externalId>false</externalId>
+        <formula>Apttus_Config2__ProductId__r.APTS_Hierarchy_Level_3_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Hierarchy Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Standard_Discount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Placeholder field to hold the value of Standard Discount fetched from SAP.</description>
+        <externalId>false</externalId>
+        <label>Standard Discount</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Standard_Net__c</fullName>
+        <externalId>false</externalId>
+        <label>Std. Net</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Total_Standard_Price__c</fullName>
+        <description>Formula for this field :  Gross (Base) Price * Quantity</description>
+        <externalId>false</externalId>
+        <formula>APTS_LP_Standard_Net__c *  Apttus_Config2__Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Standard Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Unit_Of_Measure__c</fullName>
+        <description>Placeholder field to hold the value of Delivery Unit fetched from SAP.</description>
+        <externalId>false</externalId>
+        <label>Unit Of Measure</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Unit_Of_Price__c</fullName>
+        <defaultValue>TEXT(0)</defaultValue>
+        <description>Placeholder field to hold the value of Price Unit fetched from SAP.</description>
+        <externalId>false</externalId>
+        <label>Unit Of Price</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Line_Item_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Apttus_Config2__ProductId__r.APTS_LP_Is_Hierarchy__c,APTS_Discount_Percentage__c,(Apttus_Config2__NetAdjustmentPercent__c * -1))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Line Item Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Line_Number_Custom__c</fullName>
+        <externalId>false</externalId>
+        <label>#</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Adjustment_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*if( Apttus_Config2__NetAdjustmentPercent__c &lt; 0 , ABS(Apttus_Config2__NetAdjustmentPercent__c ), if(Apttus_Config2__NetAdjustmentPercent__c &gt; 0,Apttus_Config2__NetAdjustmentPercent__c + 1,0))*/
+
+
+ IF( ISPICKVAL( APTS_Discount_Type__c , &apos;Substitute Discount&apos;) , 
+ APTS_Discount_Percentage__c 
+,IF(ISPICKVAL( APTS_Discount_Type__c , &apos;Additional Discount&apos;),
+APTS_Discount_Percentage__c +  APTS_LP_Standard_Discount__c , 
+ IF(ISPICKVAL( APTS_Discount_Type__c , &apos;Net Price Discount&apos;),
+  Apttus_Config2__NetAdjustmentPercent__c * -1, NULL)
+))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Adj. (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Price_Override__c</fullName>
+        <description>Field to hold the new price value (to override existing price value) for the line item when selected discount type is &quot;Net Price Discount&quot;.</description>
+        <externalId>false</externalId>
+        <label>Net Price Override</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Original_Created_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Created By</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Original_Created_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Created On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Owner</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_SPA_Line_Item_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>SPA Line Item Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Total_Quote_Price__c</fullName>
+        <description>Formula field to contain the total quote price which is multiplication of net price and quantity.</description>
+        <externalId>false</externalId>
+        <formula>Apttus_Config2__NetPrice__c * Apttus_Config2__Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Quote Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>   
+    <fields>
+        <fullName>APTS_Unit_Net_Price__c</fullName>
+        <description>Formula field to hold the Net Price for Unit quantity.
+Used for template as well.</description>
+        <externalId>false</externalId>
+        <formula>Apttus_Config2__NetPrice__c  /  Apttus_Config2__Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_new_product_code__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( APTS_BundleOptionIsHierarchy__c = True, APTS_LP_Hierarchy_Name__c &amp; BR() &amp; &apos;Hierarchy Code:&apos; &amp; CASE( Apttus_Config2__ProductId__r.APTS_Hierarchy_Level__c ,2, Apttus_Config2__ProductId__r.APTS_LP_Product_Hierarchy__c,3,Apttus_Config2__ProductId__r.APTS_Hierarchy_Level_3_Code__c,4, Apttus_Config2__ProductId__r.APTS_Hierarchy_Level_4_Code__c,NULL) , APTS_LP_Product_Description__c &amp; BR() &amp; &apos;Hierarchy Code:&apos;&amp; Apttus_Config2__ProductId__r.APTS_Hierarchy_Level_3_Code__c &amp; BR() &amp; &apos;Local Code:&apos; &amp; APTS_LP_Product_Code__c)</formula>
+        <label>Product/Hierarchy Information</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Config2__AdjustmentType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The manual price adjustment type</description>
+        <externalId>false</externalId>
+        <label>Adjustment Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>% Discount Off List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discount Amount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>% Uplift</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>% Markup</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Markup Amount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Override</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Base Price Override</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Factor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Additional Discounts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>% Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>--None--</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GTV_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>GTV Level</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <recordTypes>
+        <fullName>APTS_Additional_and_Net_Discounts_availble</fullName>
+        <active>true</active>
+        <description>Only Additional and Net discounts availble</description>
+        <label>Additional and Net Discounts availble</label>
+       <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Additional Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net Price Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>Additional Discounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Base Price Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Override</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Additional_and_Substitute_Discounts_availble</fullName>
+        <active>true</active>
+        <description>Only Additional and Substitute Discounts are availble</description>
+        <label>Additional and Substitute Discounts availble</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Additional Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>%25 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Additional Discounts</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_All_Discounts_Available</fullName>
+        <active>true</active>
+        <description>All discounts available (as offered by CPQ)</description>
+        <label>All Discounts Available</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Additional Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net Price Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute Discount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>%25 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%25 Discount Off List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%25 Markup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%25 Uplift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Base Price Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discount Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Markup Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Factor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Override</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_No_Adjustment_Available</fullName>
+        <active>true</active>
+        <label>No Adjustment Available</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Net Price Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>--None--</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Only_Additional_Discount</fullName>
+        <active>true</active>
+        <description>Only Additional Discount type is available</description>
+        <label>Only Additional Discount</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Additional Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>Additional Discounts</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Only_Additional_Net_and_Substitute_Discounts_availble</fullName>
+        <active>true</active>
+        <label>Only Additional,Net and Substitute Discounts availble</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Additional Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net Price Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute Discount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>%25 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Additional Discounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Override</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Only_Net_Discount_Available</fullName>
+        <active>true</active>
+        <label>Only Net Discount Available</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Net Price Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>Price Override</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Only_Net_and_Substitute_Discounts</fullName>
+        <active>true</active>
+        <description>Only net and substitute discounts availble</description>
+        <label>Only Net and Substitute Discounts</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Net Price Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute Discount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>%25 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Override</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_Only_Substitute_Discount</fullName>
+        <active>true</active>
+        <description>Only Substitute Discount type is available</description>
+        <label>Only Substitute Discount</label>
+        <picklistValues>
+            <picklist>APTS_Discount_Type__c</picklist>
+            <values>
+                <fullName>Substitute Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Apttus_Config2__AdjustmentType__c</picklist>
+            <values>
+                <fullName>%25 Discount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

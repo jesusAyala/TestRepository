@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#DDDDDD</backgroundEndColor>
+    <backgroundFadeDirection>TopToBottom</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>MyTeamUser</dashboardType>
+    <description>Designed to allow direct line managers to control and influence their current quarter opportunity pipeline
+
+Suggested name change from &quot;Opportunity Performance&quot; to &quot;Opportunity closing accuracy&quot;</description>
+    <leftSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) - Shows 10 Largest  Click to view opportunity details. Tip - use chatter to post this chart to individuals in your team to prompt to update Expected Award Dates - or - post from the Opportunity by drilling down into the report</footer>
+            <header>Overdue Opportunities</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>10</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_Overdue_CQ_summary</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Expected Award Date in the Past</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>Opportunity.Opportunity__hd$Amount__hst.CONVERT</column>
+            </chartSummary>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>true</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>The Table shows those Opportunities whose Expect Award Date has be changed to move the Opportunity into the Current Quarter - Click the Opportunity Name to view details of the change history</footer>
+            <groupingColumn>Opportunity$CloseDate</groupingColumn>
+            <groupingColumn>SnapshotDate</groupingColumn>
+            <header>Consequences for Expected Award Date in CFQ - Top 15</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_HT_All_in_current_quarter</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Pushed into the Current Fiscal Quarter</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>Opportunity.Opportunity__hd$Amount__hst</column>
+            </chartSummary>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>true</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>The Table shows those Opportunities whose Expect Award Date has be changed to move the Opportunity out of the Current Quarter - Click the Opportunity Name to view details of the change history</footer>
+            <groupingColumn>Opportunity$CloseDate</groupingColumn>
+            <groupingColumn>SnapshotDate</groupingColumn>
+            <header>Top 15</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_HT_Moved_out_current_quarter</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Pushed out of Current FIscal Quarter</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y2</axisBinding>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+            </chartSummary>
+            <componentType>ColumnLineStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) Shows Opportunites where the Sales Pursuit Progress has been flagged as on hold - allows you to keep track of the Opportunities to confirm progress/ adjust Expected Award Date accordingly</footer>
+            <groupingColumn>CLOSE_DATE</groupingColumn>
+            <groupingColumn>Opportunity.Sales_Pursuit_Progress__c</groupingColumn>
+            <header>Stuck Opportunities</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_On_hold_current_quarter</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Opportunities On Hold</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y2</axisBinding>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+            </chartSummary>
+            <componentType>ColumnLineStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) - Shows all open opportunities where no related activity - e.g. visit reports, or events, have been recorded in the last 30 days</footer>
+            <groupingColumn>CLOSE_DATE</groupingColumn>
+            <groupingColumn>Opportunity.Customer_Buying_Path__c</groupingColumn>
+            <header>Two Months of No Activity</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Stuck_No_Activity_last_60_Days</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Nobody touched these Opportunities?</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y2</axisBinding>
+                <column>TOTAL_PRICE</column>
+            </chartSummary>
+            <componentType>ColumnLineStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) The Chart show the total number of Opportunities Won in the year to date by Product Group</footer>
+            <groupingColumn>User.Division_DIV__c</groupingColumn>
+            <groupingColumn>Opportunity.Business_Unit__c</groupingColumn>
+            <header>Won Opt by Division and Product Group</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Won_by_BU_wt_PG_LinesItems</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Year to Date</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Number of Opportunites owned by your team active in the currenct Quarter</footer>
+            <header>My Teams Opportunity Count Current Fiscal Quarter</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Count_by_User_CQ_summary</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y2</axisBinding>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+            </chartSummary>
+            <componentType>ColumnLineStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) - Shows Opportunites where the Confidence Level has been flagged to &quot;expect a delay&quot; - allows you to keep track of the Opportunities to confirm if the delay is confirmed and ensure the &quot;Expected Award Date&quot; is tracked</footer>
+            <groupingColumn>CLOSE_DATE</groupingColumn>
+            <groupingColumn>User.Division_DIV__c</groupingColumn>
+            <header>Exceptions: Expect Award Date</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Open_wt_delays_current_quarter</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Opts with expected delays</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>STAGE_NAME</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>OPPORTUNITY_NAME</column>
+                <showTotal>false</showTotal>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>true</drillToDetailEnabled>
+            <footer>Show all Non-Target &amp; Committed Opportunities, click the Opportunity Name to view details - note: as a quarter closes this table should start to empty out</footer>
+            <header>Back-up Opportunities - Top 15</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_Backup_current_quarter</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Non Target/Committed Opportunities</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>CLOSE_DATE</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>OPPORTUNITY_NAME</column>
+                <showTotal>false</showTotal>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>(Values in USD) Shows opportunities with Expected Award Dates in the current quarter - which have been cancelled</footer>
+            <header>Cancelled Opportunities this quarter - Top 15</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_Cancelled_current_quarter</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>Opportunity.Application__c</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>CLOSE_DATE</column>
+                <showTotal>false</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>The Chart show the total values the Opportunity Pipeline in current quarter by Appilcation as identifed in each Opportunity</footer>
+            <header>Pipeline by Application - Top 15</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_By_Application_curent_quarter</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>The Chart Shows the End User Project for the Open Opportunities in the current quarter - by drilling down into the report will be  find the detail of Opportunity, Projects and Opportunity Scope of the Project across ABB</footer>
+            <groupingColumn>Opportunity.End_User_Project_Name__c</groupingColumn>
+            <groupingColumn>STAGE_NAME</groupingColumn>
+            <header>End User Projects with Closing Opts Current FIscal Quarter - Top 15</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_End_User_Projects_cq</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Top 15</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>FORMULA1</column>
+            </chartSummary>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+            </chartSummary>
+            <componentType>ColumnLineStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) Shows all current open Opportunities in your pipeline - click the chart to dril down into the details - note: Prospecting and Pursuit should moved to realistic Expected Award Dates (and/or) have their Sales Stage updated by each Month End</footer>
+            <groupingColumn>User.Division_DIV__c</groupingColumn>
+            <groupingColumn>STAGE_NAME</groupingColumn>
+            <header>Opportunity Pipeline Current Fiscal Quarter</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_All_current_quarter</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Active Pipeline</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_All_current_quarter</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Active Pipeline by Month</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+            </chartSummary>
+            <componentType>Pie</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>true</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>(Values in USD) Click Opportunity Names to view the detailed Opportunties. You may also &quot;Follow&quot; to Opportunity to review an notification once the Opportunity is Closed and Won</footer>
+            <groupingColumn>STAGE_NAME</groupingColumn>
+            <header>Breakdown for Current Fiscal Quarter</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Committed_currrent_quarter</report>
+            <showPercentage>true</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Where Target &amp; Commit is set to true</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>STAGE_NAME</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>OPPORTUNITY_NAME</column>
+                <showTotal>false</showTotal>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>true</drillToDetailEnabled>
+            <footer>(Values in USD) Click Opportunity Names to view the detailed Opportunties and track progress to closing this quarter.  You may also &quot;Follow&quot; to Opportunity to review an notification once the Opportunity is Closed and Won</footer>
+            <header>Targeted Opportunities not Committed - Top 15</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>15</maxValuesDisplayed>
+            <report>X00_Sales_Operations/MTOppt_Targeted_current_quarter</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Targeted but not Committed</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) The chart shows, by Quarter all Closed Won Opportunities in the Years to Date - to provide with an overview of progress for this quarter</footer>
+            <header>Closed Won Opportunities</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Won_Year_to_Date</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Year to Date</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y2</axisBinding>
+                <column>Opportunity.Opportunity_Value__c.CONVERT</column>
+            </chartSummary>
+            <componentType>ColumnLineStacked</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>(Values in USD) The charts shows all Closed Lost and Cancelled Opportunities, Year to Date.</footer>
+            <groupingColumn>CLOSE_DATE</groupingColumn>
+            <groupingColumn>User.Division_DIV__c</groupingColumn>
+            <header>Closed Lost &amp; Cancelled Opportunities</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X00_Sales_Operations/MTOppt_Lost_year_to_date</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Year to Date</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>slawomir.czuz@pl.abb.com</runningUser>
+    <textColor>#333333</textColor>
+    <title>SO: Sales Mngt: Opportunity Performance Summary</title>
+    <titleColor>#CC0000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

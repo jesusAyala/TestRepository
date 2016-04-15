@@ -1,0 +1,413 @@
+<!--*************************************************************
+@Name: APTS_CreateLineItems
+@Author: Axaykumar Varu
+@CreateDate: 21st Oct 2015
+@Description: This pagewill dispaly all the errors to user if any errors occurs while uploading file.
+@UsedBy: Processes L4 – SAL04-02-01 Perform bulk upload for line items with in the Cart for Quotation and MSPA
+******************************************************************-->
+<apex:page id="thePage" controller="APTS_BulkUploadProductsController" showHeader="false">
+    
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'js/jquery-1.8.3.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'js/jquery-ui-1.9.2.custom.min.js')}"/>
+
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'css/smoothness/jquery-ui-1.9.2.custom.css')}"/>
+
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryCarousel)}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryTouchSwipeLibrary, 'TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryTouchSwipeLibrary, 'TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JSTreeLibrary, 'jstree-v.pre1.0/jquery.jstree.js')}"/>
+   
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__AptBreadCrumb, 'js/jquery.easing.1.3.js')}"/>   
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__AptBreadCrumb, 'js/aptBreadCrumb.js')}"/>
+
+
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__ActionFunctionQueue)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__CPQColumnView)}"/>
+    
+    
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__CPQPageResources,'CPQCommon.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__CPQPageResources,'BreadCrumb.css')}"/>    
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__CPQPageResources,'CPQCatalog.css')}" />
+     <apex:includeScript value="{!$Resource.Apttus_Config2__CPQJSLibrary}"/>
+     
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/yahoo-dom-event/yahoo-dom-event.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/container/container-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/dragdrop/dragdrop-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/animation/animation-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/treeview/treeview-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/menu/menu-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/yahoo/yahoo-min.js')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/assets/skins/sam/skin.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/treeview/assets/skins/sam/treeview.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/examples/treeview/assets/css/menu/tree.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/menu/assets/skins/sam/menu.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/container/assets/skins/sam/container.css')}" />
+    
+<style type="text/css" id="vakata-stylesheet">
+    /* popup_box DIV-Styles*/
+    #popup_box { 
+        display:none; /* Hide the DIV */
+        position:fixed;  
+        _position:absolute; /* hack for internet explorer 6 */  
+        height:300px;  
+        width:600px;  
+        background:#FFFFFF;  
+        left: 300px;
+        top: 150px;
+        z-index:100; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+        margin-left: 15px;  
+        
+        /* additional features, can be omitted */
+        border:2px solid #ff0000;      
+        padding:15px;  
+        font-size:15px;  
+        -moz-box-shadow: 0 0 5px #ff0000;
+        -webkit-box-shadow: 0 0 5px #ff0000;
+        box-shadow: 0 0 5px #ff0000;
+            
+        }
+        
+        #container {
+            background: #d2d2d2; /*Sample*/
+            width:100%;
+            height:100%;
+        }
+        
+        a{  
+        cursor: pointer;  
+        text-decoration:none;  
+        } 
+        
+        /* This is for the positioning of the Close Link */
+        #popupBoxClose {
+            font-size:20px;  
+            line-height:15px;  
+            right:5px;  
+            top:5px;  
+            position:absolute;  
+            color:#6fa5e2;  
+            font-weight:500;      
+        }
+</style>
+    
+    <style type="text/css" id="vakata-stylesheet">
+    #vakata-dragged {
+        display: block;
+        margin: 0 0 0 0;
+        padding: 4px 4px 4px 24px;
+        position: absolute;
+        top: -2000px;
+        line-height: 16px;
+        z-index: 10000;
+    }
+    #vakata-contextmenu {
+        display: block;
+        visibility: hidden;
+        left: 0;
+        top: -200px;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        min-width: 180px;
+        background: #ebebeb;
+        border: 1px solid silver;
+        z-index: 10000;
+    *width:180px;
+    }
+    #vakata-contextmenu ul {
+        min-width: 180px;
+    *width:180px;
+    }
+    #vakata-contextmenu ul, #vakata-contextmenu li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: block;
+    }
+    #vakata-contextmenu li {
+        line-height: 20px;
+        min-height: 20px;
+        position: relative;
+        padding: 0px;
+    }
+    #vakata-contextmenu li a {
+        padding: 1px 6px;
+        line-height: 17px;
+        display: block;
+        text-decoration: none;
+        margin: 1px 1px 0 1px;
+    }
+    #vakata-contextmenu li ins {
+        float: left;
+        width: 16px;
+        height: 16px;
+        text-decoration: none;
+        margin-right: 2px;
+    }
+    #vakata-contextmenu li a:hover, #vakata-contextmenu li.vakata-hover > a {
+        background: gray;
+        color: white;
+    }
+    #vakata-contextmenu li ul {
+        display: none;
+        position: absolute;
+        top: -2px;
+        left: 100%;
+        background: #ebebeb;
+        border: 1px solid gray;
+    }
+    #vakata-contextmenu .right {
+        right: 100%;
+        left: auto;
+    }
+    #vakata-contextmenu .bottom {
+        bottom: -1px;
+        top: auto;
+    }
+    #vakata-contextmenu li.vakata-separator {
+        min-height: 0;
+        height: 1px;
+        line-height: 1px;
+        font-size: 1px;
+        overflow: hidden;
+        margin: 0 2px;
+        background: silver; /* border-top:1px solid #fefefe; */
+        padding: 0;
+    }
+    </style>
+
+    <script type="text/javascript">
+    YAHOO.namespace("force.com");
+     
+    YAHOO.force.com.init = function() {
+            document.body.className = document.body.className + " yui-skin-sam";
+            YAHOO.force.com.myDialog = new YAHOO.widget.Panel(
+                "confirmationPanel",  // The id of our dialog container
+                { 
+                        width           :   "300px", // You can play with this until it's right
+                        visible         :   false,   // Should be invisible when rendered
+                        draggable       :   false,    // Make the dialog draggable
+                        close           :   false,   // Don't include a close title button
+                        modal           :   true,    // Make it modal
+                        fixedCenter     :   true,    // Keep centered if window is scrolled
+                        zindex          :   40,      // Make sure it's on top of everything
+                        
+                        // This line adds the appear/disapper fade effect
+                        effect          :   {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.35} 
+                }
+             );
+            
+            // Render the dialog to the document.body level of the DOM
+            YAHOO.force.com.myDialog.render(document.body);
+        }
+        
+    // Add the init method to the window.load event
+    YAHOO.util.Event.addListener(window, "load", YAHOO.force.com.init);
+    
+    
+    /**
+    * Builds the wait panel.
+    */
+    YAHOO.force.com.buildWaitPanel = function() {
+        document.body.className = document.body.className + " yui-skin-sam";
+        YAHOO.force.com.waitPanel = new YAHOO.widget.Panel(
+            "waitPanel",  // The id of our dialog container
+            { 
+                    width           :   "300px", // You can play with this until it's right
+                    visible         :   true,   // Should be invisible when rendered
+                    draggable       :   false,   // Make the dialog draggable
+                    close           :   false,   // Don't include a close title button
+                    modal           :   true,    // Make it modal
+                    fixedCenter     :   true,    // Keep centered if window is scrolled
+                    zindex          :   40,      // Make sure it's on top of everything
+                    constraintoviewport: true,
+                    
+                    // This line adds the appear/disapper fade effect
+                    effect          :   {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.25}
+                                
+            }
+        );
+        
+        YAHOO.force.com.waitPanel.setHeader('Please Wait..');
+        YAHOO.force.com.waitPanel.setBody('<center><img class="waitingImage" src="/resource/1423513114000/apttus_config2__Image_LoadingPage" /></center>');
+        YAHOO.force.com.waitPanel.render(document.body);
+        }
+        
+        window.onload = function(){
+            
+            YAHOO.force.com.buildWaitPanel();
+            YAHOO.force.com.waitPanel.setFooter('Creating Line Items, Please Wait..');
+            loadCartLineItems();
+            
+        }
+        
+        function stopLoad(){
+            
+            var lstSize = "{!lstCSVDataErrors.size > 0}";
+            console.log('AXAY: '+lstSize);
+            if(lstSize == "true"){
+                //if errors, show errors
+                reRenderPanel();
+            }
+            
+            else{
+                YAHOO.force.com.waitPanel.setFooter('Redirecting to pricing, Please Wait..');
+                redirectToPricing();
+            }
+            
+        }
+        
+    </script>
+    
+    <apex:form id="theForm">
+        <apex:actionFunction name="redirectToPricing" action="{!redirectToPricing}" id="thePricing"/>
+        <apex:actionFunction name="loadCartLineItems" action="{!loadCartLines}" id="loadLines" oncomplete="stopLoad();" /><!--oncomplete="stopLoad();"/>-->
+        <apex:actionFunction name="reRenderPanel" rerender="theForm" action="{!reRenderPanel}" oncomplete="YAHOO.force.com.waitPanel.hide();"/>
+        
+        <apex:outputPanel rendered="{!showBlock}">
+            
+            <div class="apt-page-header cartTable clearfix">
+                      <div class="apt-quote-panel apt-pull-left"><span class="apt-cart-head-label">
+                      <apex:outputlabel value="{!$Label.Apttus_Config2__Quote}:" rendered="{!ProdConfigSobj.Apttus_QPConfig__Proposald__c !=null}"/>
+                      <apex:outputlabel value="{!$Label.Apttus_Config2__Agreement}:" rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}"/>
+                      </span> &nbsp;<span ><a href="/{!quoteid}">{!Quotename}</a></span><span class="apt-location-text apt-cart-head-label">{!Proposalname}</span>
+                      <apex:outputlabel styleclass="apt-location-text apt-cart-head-label"  value="Number:" rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}"/>&nbsp;<span  rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}">{!agreementNumber}</span></div>
+                       
+                       <div class="apt-aprroval-panel apt-pull-left"><span class="apt-cart-head-label">Approval Status:</span><span class="approvalText"><span>{!ApprovalStatus}</span></span><span >&nbsp;</span> </div>
+                        <div id="aptGeneralSpinner"></div>
+                         <div id="aptAbandonBtn" style="float:right;padding-top:2px;">
+                           <div id="" style="text-align: right; padding-right: 4px;">
+                             <!--<input type="submit" value="Abandon" onclick="j$.APTTUS.showAbandonConfirmationDialog(); return false;" style="background-color:#657383;background-image:none;color:white;" class="btn">
+                             </input>-->
+                             <apex:commandButton value="Abandon"
+                                            action="{!DoAbandon}"
+                                            style="background-color:#657383;background-image:none;color:white;" 
+                                            immediate="true">
+                                 <!--reRender="dummy"--> 
+                           </apex:commandButton>
+                           </div>
+                         </div>
+                       <div class="apt-headerPlacement apt-pull-right"> </div>
+                     <div class="apt-powered-logo"><img src="/resource/1440518445000/apttus_config2__CPQDelight/apt-logo.png" alt="Powered By Apttus" title="Powered By Apttus"></img></div>
+                    
+                </div>
+            <br/>
+            
+            <div>
+                <div style="text-align: center;" >
+                
+                    <apex:outputPanel id="categoryprdt">
+                    
+                    <apex:commandButton id="idGoBackTop" 
+                                        value="Upload More Products"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatus"
+                                        reRender="dummy" 
+                                        action="{!goBack}"/>
+                                                        
+                    <apex:commandButton id="idBackToCatalogTop" 
+                                        value="Back to Catalog"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatus"
+                                        reRender="dummy" 
+                                        action="{!backToCatalog}" /> 
+                     
+                     <apex:commandButton id="idGo2PricingTop" 
+                                        value="Go to Pricing"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatus"
+                                        reRender="dummy" 
+                                        action="{!redirectToPricing}" />
+                         &nbsp;&nbsp;               
+                    <apex:actionstatus id="constraintRuleCancelStatus">
+                      <apex:facet name="start"> <img class="constraintRuleCancelStatus" src="/img/loading.gif" /> </apex:facet>
+                      <apex:facet name="stop"> </apex:facet>
+                    </apex:actionstatus>
+                    
+                  </apex:outputPanel>
+                </div>
+              </div>
+              <br/>
+             <div></div>
+             
+             <apex:pagemessages id="pagemessages"/>
+                  
+                  
+             <apex:pageBlock id="theBlock" rendered="{!lstCSVDataErrors.size > 0}">
+            
+            <apex:pageMessage severity="Warning" strength="3" summary="Some products failed to load due to following errors. Please click on button 'Back to Catalog' or 'Upload More' to re-upload the correct csv." />
+                
+                <apex:pageBlockTable value="{!lstCSVDataErrors}" var="errors" >
+                    
+                    <apex:column headerValue="Row Number" >
+                        <apex:outputText value="{!errors.data.seq}" style="color:red; font-weight:bold;"></apex:outputText>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Product Hierarchy Code" value="{!errors.data.prodHierarchyCode}" />
+                        
+                    <apex:column headerValue="Product Code" value="{!errors.data.prodCode}" />
+                        
+                    <apex:column headerValue="Quantity" value="{!errors.data.quantity}" />
+                    
+                    <apex:column headerValue="Discount Type" value="{!errors.data.discountType}" />
+                    
+                    <apex:column headerValue="Discount %" value="{!errors.data.discountPercent}" />
+                    
+                    <apex:column headerValue="Net Price" value="{!errors.data.netPrice}" />
+                    
+                    <apex:column headerValue="Error" value="{!errors.error}" style="color:red;"/>
+                    
+                </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+        
+        <div>
+                <div style="text-align: center;" >
+                
+                    <apex:outputPanel id="bottomCartPrdt">
+                    
+                    <apex:commandButton id="idGoBackBottom" 
+                                        value="Upload More Products"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatusBottom"
+                                        reRender="dummy" 
+                                        action="{!goBack}"/>
+                                                        
+                    <apex:commandButton id="idBackToCatalogBottom" 
+                                        value="Back to Catalog"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatusBottom"
+                                        reRender="dummy" 
+                                        action="{!backToCatalog}" /> 
+                     
+                     <apex:commandButton id="idGo2PricingBottom" 
+                                        value="Go to Pricing"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatusBottom"
+                                        reRender="dummy" 
+                                        action="{!redirectToPricing}" />
+                       &nbsp;&nbsp;
+                    <apex:actionstatus id="constraintRuleCancelStatusBottom">
+                      <apex:facet name="start"> <img class="constraintRuleCancelStatus" src="/img/loading.gif" /> </apex:facet>
+                      <apex:facet name="stop"> </apex:facet>
+                    </apex:actionstatus>
+                    
+                  </apex:outputPanel>
+                </div>
+              </div>
+              <br/>
+              
+        </apex:outputPanel>
+            
+             
+        
+        
+    </apex:form>
+</apex:page>

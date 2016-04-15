@@ -1,0 +1,49 @@
+<messaging:emailTemplate subject="Quotation with ID {!relatedTo.Apttus_QPApprov__ProposalId__r.Name}, Name {!relatedTo.Apttus_QPApprov__ProposalId__r.Apttus_Proposal__Proposal_Name__c} and Account {!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_AccountCustomer__r.Name} {!$Label.CommentsAdded}" 
+                         recipientType="User" 
+                         relatedToType="Apttus_Approval__Approval_Request__c"
+                         language="{!recipient.LanguageLocaleKey}"
+                         replyTo="email_approval_services@5-1lp3asqpz58virpv6fun3z0i4dek91bdgu9ni3qkb7k6t17nfl.g-6taeiea0.cs17.apex.sandbox.salesforce.com">
+                         
+    <messaging:htmlEmailBody >
+        <html>
+                   
+            <body>
+                <div style="float:right">
+                <apex:image url="https://abb--sf1rapt--c.cs17.content.force.com/servlet/servlet.ImageServer?id=015g0000000vFcF&oid=00Dg0000006TaEI&lastMod=1446732354000" alt="" height="42" width="120" style="align=right;"/>
+                </div>
+                <br/>
+                <br/>
+
+                <br/>
+                <br/>
+                Dear {!recipient.Name},
+                <br/><br/>
+                {!$Label.Apttus_QPApprov__ApprovalRequestForQuote} '{!relatedTo.Apttus_QPApprov__ProposalId__r.Apttus_Proposal__Proposal_Name__c}' and Discount {!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_MaximumSubstituteDiscount__c}%  {!$Label.CommentsAdded}.
+                <br/><br/>
+  
+                 <!--  required fields -->
+                <b><apex:OutputLabel value="Sales Rep : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.CreatedBy.Name}"/><br/>
+                <b><apex:OutputLabel value="Account Customer : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_AccountCustomer__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Account End-User : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Account_End_User__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Primary Partner Account : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_Account_End_User__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Sales Office : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Sales_Office__r.PickList_Description__c}"/><br/>
+                <b><apex:OutputLabel value="Local Channel : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_Local_Channel__r.Name}"/><br/>
+                <b><apex:OutputLabel value="Max Order Amount : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.CurrencyIsoCode}"/>
+                <apex:outputText value="{!relatedTo.Apttus_QPApprov__ProposalId__r.APTS_LP_Max_Order_Amount__c}"/><br/>  
+                
+                <c:APTPS_CustomApprovalComponent ProdConfig="{!relatedTo.Apttus_QPApprov__ProposalId__c}" ReqId="{!relatedTo.id}" PropName="{!relatedTo.Apttus_QPApprov__ProposalId__r.Apttus_Proposal__Proposal_Name__c}"/>           
+                <br/>
+                <b><apex:OutputLabel value="Added Comments : "/></b>
+                <apex:outputText value="{!relatedTo.Apttus_Approval__Request_Comments__c}"/>
+                <br/>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

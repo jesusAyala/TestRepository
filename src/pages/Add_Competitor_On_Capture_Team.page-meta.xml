@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Created as part of R5-2348. To allow user to add all competitors associated to the opportunities of the End User Project except those which are already added on the Capture Team.</description>
+    <label>Add Competitor On Capture Team</label>
+</ApexPage>

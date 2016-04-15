@@ -1,0 +1,1940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R4 Product Qualification Level</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Customer_Pilot_Installation_Start_Date__c</fullName>
+        <description>R4 Customer Pilot Installation Start Date</description>
+        <externalId>false</externalId>
+        <label>Customer Pilot Installation Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setExecution1__c</fullName>
+        <description>R4 - Step 1 Qualification in progress –Execution 1</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setExecution2__c</fullName>
+        <description>R4 - Step 2 Qualification in progress – Execution</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setExecution3__c</fullName>
+        <description>R4 - Step 3 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setExecution4__c</fullName>
+        <description>R4 - Step 4 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setExecution5__c</fullName>
+        <description>R4 Date_when_Step_is_setExecution5</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setPlanning1__c</fullName>
+        <description>R4 Date_when_Step_is_setPlanning1</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setPlanning2__c</fullName>
+        <description>R4 Date_when_Step_is_setPlanning2</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setPlanning3__c</fullName>
+        <description>R4 Date_when_Step_is_setPlanning3</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setPlanning4__c</fullName>
+        <description>R4 Date_when_Step_is_setPlanning4</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setQualified1__c</fullName>
+        <description>R4 - Date_when_Step_is_setQualified1</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setQualified2__c</fullName>
+        <description>R4 - Date_when_Step_is_setQualified2</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setStep1NQual__c</fullName>
+        <description>R4 Date_when_Step_is_setStep1NQual</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setStep2NQual__c</fullName>
+        <description>R4 Date_when_Step_is_setStep2NQual__c</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setSubmitted1__c</fullName>
+        <description>R4 - Date when Step is set Submitted 1</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_when_Step_is_setSubmitted2__c</fullName>
+        <description>R4 - Qualification in progress – Submitted2</description>
+        <externalId>false</externalId>
+        <label>Date when Step is set</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>R4 End Date</description>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Initiative_Status__c</fullName>
+        <description>R4 Initiative Status</description>
+        <externalId>false</externalId>
+        <formula>Text( Product_Qualification__r.Initiative_Status__c )</formula>
+        <label>Initiative Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_Date__c</fullName>
+        <description>R4 Hidden Level Date</description>
+        <externalId>false</externalId>
+        <formula>Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Level Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Option1_NQual__c</fullName>
+        <description>R4 Option1_NQual</description>
+        <externalId>false</externalId>
+        <label>Option 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option2_NQual__c</fullName>
+        <description>R4 Option2_NQual</description>
+        <externalId>false</externalId>
+        <label>Option 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_1Execution__c</fullName>
+        <description>R4 - Step 1 Qualification in progress – Execution</description>
+        <externalId>false</externalId>
+        <label>Option 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_1Planning__c</fullName>
+        <description>R3 - Step 1 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Option 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_1Qualified1__c</fullName>
+        <description>R4 - Option_1Qualified</description>
+        <externalId>false</externalId>
+        <label>Option 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_1Submitted__c</fullName>
+        <description>R4 - Qualification in progress – Submitted</description>
+        <externalId>false</externalId>
+        <label>Option 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_2Execution__c</fullName>
+        <description>R4 - Step 2 Qualification in progress – Execution</description>
+        <externalId>false</externalId>
+        <label>Option 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_2Planning__c</fullName>
+        <description>R3 - Step 2 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Option 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_2Qualified2__c</fullName>
+        <description>R4 - Option_2Qualified</description>
+        <externalId>false</externalId>
+        <label>Option 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_2Submitted__c</fullName>
+        <description>R4 - Qualification in progress – Submitted</description>
+        <externalId>false</externalId>
+        <label>Option 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_3Execution__c</fullName>
+        <description>R4 - Step 3 Qualification in progress – Execution</description>
+        <externalId>false</externalId>
+        <label>Option 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_3Planning__c</fullName>
+        <description>R4 - Step 3 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Option 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_4Execution__c</fullName>
+        <description>R4 - Step 4 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Option 4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_4Planning__c</fullName>
+        <description>R4 - Step 1 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Option 4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Option_5Execution__c</fullName>
+        <description>R4 Option_5Execution__c</description>
+        <externalId>false</externalId>
+        <label>Option 5</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Qualification_Level_2__c</fullName>
+        <description>R4 Product Qualification - Level</description>
+        <externalId>false</externalId>
+        <label>Product Qualification - Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>-3</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Qualification_Level__c</fullName>
+        <description>R4 Product Qualification Level</description>
+        <externalId>false</externalId>
+        <label>Product Qualification Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Product not qualified</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification in progress – Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification in progress – Execution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualification in progress – Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Qualification__c</fullName>
+        <description>R4 Product Qualification</description>
+        <externalId>false</externalId>
+        <label>Product Qualification</label>
+        <referenceTo>Product_Qualification__c</referenceTo>
+        <relationshipLabel>Product Qualification Level</relationshipLabel>
+        <relationshipName>Product_Qualification_Levels</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Quarter_1__c</fullName>
+        <description>R4 Quarter 1 field hold the product qualification level value</description>
+        <externalId>false</externalId>
+        <label>Quarter 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter_2__c</fullName>
+        <description>R4 Quarter 2 field hold the product qualification level value</description>
+        <externalId>false</externalId>
+        <label>Quarter 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter_3__c</fullName>
+        <description>R4 Quarter 3 field hold the product qualification level value</description>
+        <externalId>false</externalId>
+        <label>Quarter 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter_4__c</fullName>
+        <description>R4 Quarter 4 field hold the product qualification level value</description>
+        <externalId>false</externalId>
+        <label>Quarter 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Step1_NQual__c</fullName>
+        <defaultValue>$Label.PQL_Step1_NQual</defaultValue>
+        <description>R4 Step 1</description>
+        <externalId>false</externalId>
+        <label>Step 1</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step2_NQual__c</fullName>
+        <defaultValue>$Label.PQL_Step2_NQual</defaultValue>
+        <description>R4 Step2_NQual</description>
+        <externalId>false</externalId>
+        <label>Step 2</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_1Execution__c</fullName>
+        <defaultValue>$Label.PQL_Step_1Execution</defaultValue>
+        <description>R4 Step_1Execution</description>
+        <externalId>false</externalId>
+        <label>Step 1</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_1Planning__c</fullName>
+        <defaultValue>$Label.PQL_Step_1Planning</defaultValue>
+        <description>R4 Step_1Planning</description>
+        <externalId>false</externalId>
+        <label>Step 1</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_1Qualified1__c</fullName>
+        <defaultValue>$Label.PQL_Step_1Qualified1</defaultValue>
+        <description>R 4- Step 1 Product qualified</description>
+        <externalId>false</externalId>
+        <label>Step 1</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_1Submitted__c</fullName>
+        <defaultValue>$Label.PQL_Step_1Submitted</defaultValue>
+        <description>R4 Step 1 Qualification in progress – Submitted</description>
+        <externalId>false</externalId>
+        <label>Step 1</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_2Execution__c</fullName>
+        <defaultValue>$Label.PQL_Step_2Execution</defaultValue>
+        <description>R4 - Step 2 Qualification in progress – Execution</description>
+        <externalId>false</externalId>
+        <label>Step 2</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_2Planning__c</fullName>
+        <defaultValue>$Label.PQL_Step_2Planning</defaultValue>
+        <externalId>false</externalId>
+        <label>Step 2</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_2Qualified2__c</fullName>
+        <defaultValue>$Label.PQL_Step_2Qualified2</defaultValue>
+        <description>R4 - Step 2 Product qualified</description>
+        <externalId>false</externalId>
+        <label>Step 2</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_2__c</fullName>
+        <defaultValue>$Label.PQL_Step_2</defaultValue>
+        <description>R4 - Qualification in progress – Submitted Step_2 Submitted</description>
+        <externalId>false</externalId>
+        <label>Step 2</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_3Execution__c</fullName>
+        <defaultValue>$Label.PQL_Step_3Execution</defaultValue>
+        <description>R4 - Step 2 Qualification in progress – Execution</description>
+        <externalId>false</externalId>
+        <label>Step 3</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_3Planning__c</fullName>
+        <defaultValue>$Label.PQL_Step_3Planning</defaultValue>
+        <description>R4 Step_3Planning</description>
+        <externalId>false</externalId>
+        <label>Step 3</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_4Execution__c</fullName>
+        <defaultValue>$Label.PQL_Step_4Execution</defaultValue>
+        <description>R4- Step 4 Qualification in progress – Planning</description>
+        <externalId>false</externalId>
+        <label>Step 4</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_4Planning__c</fullName>
+        <defaultValue>$Label.PQL_Step_4Planning</defaultValue>
+        <description>R4 Step_4Planning</description>
+        <externalId>false</externalId>
+        <label>Step 4</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_5Execution__c</fullName>
+        <defaultValue>$Label.PQL_Step_5Execution</defaultValue>
+        <description>R4 Step_5Execution</description>
+        <externalId>false</externalId>
+        <label>Step 5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Last_Modified_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>R4 Test Last Modified Date</description>
+        <externalId>false</externalId>
+        <label>Test Last Modified Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>YQ1__c</fullName>
+        <description>Displays last modified Year and month into the quarter1  field</description>
+        <externalId>false</externalId>
+        <label>YQ1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YQ2__c</fullName>
+        <description>Displays last modified Year and month into the quarter2  field</description>
+        <externalId>false</externalId>
+        <label>YQ2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YQ3__c</fullName>
+        <description>Displays last modified Year and month into the quarter3  field</description>
+        <externalId>false</externalId>
+        <label>YQ3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YQ4__c</fullName>
+        <description>Displays last modified Year and month into the quarter4 field</description>
+        <externalId>false</externalId>
+        <label>YQ4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Product Qualification Level</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>QUES-{0000}</displayFormat>
+        <label>Questionaire Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Qualification Levels</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Product_Qualification_Level</fullName>
+        <active>true</active>
+        <description>R4 Product_Qualification_Level Record Type</description>
+        <label>Product Qualification Level</label>
+        <picklistValues>
+            <picklist>Option1_NQual__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option2_NQual__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Planning__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Qualified1__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Submitted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Execution__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Qualified2__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Submitted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_3Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_3Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_4Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_4Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_5Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Qualification_Level_2__c</picklist>
+            <values>
+                <fullName>%2B1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Qualification_Level__c</picklist>
+            <values>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not qualified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Product_Qualification_Level_Closed</fullName>
+        <active>true</active>
+        <description>R4 Product_Qualification_Level_Closed Record Type</description>
+        <label>Product Qualification Level Closed</label>
+        <picklistValues>
+            <picklist>Option1_NQual__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option2_NQual__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Planning__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Qualified1__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Submitted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Execution__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Qualified2__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Submitted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_3Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_3Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_4Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_4Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_5Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Qualification_Level_2__c</picklist>
+            <values>
+                <fullName>%2B1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Qualification_Level__c</picklist>
+            <values>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not qualified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Product_Qualification_Level_Closed_NQ</fullName>
+        <active>true</active>
+        <description>R4 Product Qualification Level Closed NQ Layout</description>
+        <label>Product Qualification Level Closed NQ</label>
+        <picklistValues>
+            <picklist>Option1_NQual__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option2_NQual__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Planning__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Qualified1__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_1Submitted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Execution__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Qualified2__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_2Submitted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_3Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_3Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_4Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_4Planning__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Option_5Execution__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Qualification_Level_2__c</picklist>
+            <values>
+                <fullName>%2B1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2B3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>-3</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Qualification_Level__c</picklist>
+            <values>
+                <fullName>Preferred Qualified Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product not qualified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Product qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualification in progress %E2%80%93 Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Date_Values_cannot_be_Past_Date</fullName>
+        <active>true</active>
+        <description>R4 Check the Date value cannot be entered as a past date</description>
+        <errorConditionFormula>OR(AND(NOT(ISNULL(Customer_Pilot_Installation_Start_Date__c)), Customer_Pilot_Installation_Start_Date__c &lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(End_Date__c)), End_Date__c &lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setStep1NQual__c)), Date_when_Step_is_setStep1NQual__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setStep2NQual__c)), Date_when_Step_is_setStep2NQual__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setExecution1__c)), Date_when_Step_is_setExecution1__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setExecution2__c)), Date_when_Step_is_setExecution2__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setExecution3__c)), Date_when_Step_is_setExecution3__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setExecution4__c)), Date_when_Step_is_setExecution4__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setExecution5__c)), Date_when_Step_is_setExecution5__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setPlanning1__c)), Date_when_Step_is_setPlanning1__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setPlanning2__c)), Date_when_Step_is_setPlanning2__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setPlanning3__c)), Date_when_Step_is_setPlanning3__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setPlanning4__c)), Date_when_Step_is_setPlanning4__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setQualified1__c)), Date_when_Step_is_setQualified1__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setQualified2__c)), Date_when_Step_is_setQualified2__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setSubmitted1__c)), Date_when_Step_is_setSubmitted1__c&lt; Product_Qualification__r.Startdate__c),
+AND(NOT(ISNULL(Date_when_Step_is_setSubmitted2__c)), Date_when_Step_is_setSubmitted2__c&lt; Product_Qualification__r.Startdate__c))</errorConditionFormula>
+        <errorMessage>Date values cannot be before the Product Qualification Start Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Options_None_Value_Check</fullName>
+        <active>false</active>
+        <description>R4 Validation Rule not to allow the user to choose “none” option to the previous questions, if they are already answered to some of the product qualification levels</description>
+        <errorConditionFormula>AND(ISCHANGED(Option1_NQual__c), ISPICKVAL(Option1_NQual__c , &quot;&quot;))||
+AND(ISCHANGED(Option2_NQual__c), ISPICKVAL(Option2_NQual__c, &quot;&quot;))||
+AND(ISCHANGED(Option_1Planning__c), ISPICKVAL(Option_1Planning__c, &quot;&quot;))||
+AND(ISCHANGED(Option_2Planning__c), ISPICKVAL(Option_2Planning__c , &quot;&quot;))||
+AND(ISCHANGED(Option_3Planning__c), ISPICKVAL(Option_3Planning__c , &quot;&quot;))||
+AND(ISCHANGED(Option_4Planning__c), ISPICKVAL(Option_4Planning__c, &quot;&quot;))||
+AND(ISCHANGED(Option_1Execution__c), ISPICKVAL(Option_1Execution__c, &quot;&quot;))||
+AND(ISCHANGED(Option_2Execution__c), ISPICKVAL(Option_2Execution__c , &quot;&quot;))||
+AND(ISCHANGED(Option_3Execution__c), ISPICKVAL(Option_3Execution__c , &quot;&quot;))||
+AND(ISCHANGED(Option_4Execution__c), ISPICKVAL(Option_4Execution__c, &quot;&quot;))||
+AND(ISCHANGED(Option_5Execution__c), ISPICKVAL(Option_5Execution__c, &quot;&quot;))||
+AND(ISCHANGED(Option_1Submitted__c), ISPICKVAL(Option_1Submitted__c, &quot;&quot;))||
+AND(ISCHANGED(Option_2Submitted__c), ISPICKVAL(Option_2Submitted__c , &quot;&quot;))||
+AND(ISCHANGED(Option_1Qualified1__c), ISPICKVAL(Option_1Qualified1__c, &quot;&quot;))||
+AND(ISCHANGED(Option_2Qualified2__c), ISPICKVAL(Option_2Qualified2__c, &quot;&quot;))</errorConditionFormula>
+        <errorMessage>Please answer the questionnaire. Cannot change the value to None.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Product_qualified_Yes_Value_Check</fullName>
+        <active>true</active>
+        <description>R4 Check the value of Date when Step is setSubmitted1  &amp; Date when Step is setSubmitted2 if the value for Option_1Submitted   &amp; Option_2Submitted is Yes</description>
+        <errorConditionFormula>AND( 
+AND( 
+ISPICKVAL( Option_1Submitted__c, &quot;Yes&quot;), 
+ISPICKVAL( Option_2Submitted__c, &quot;Yes&quot;)), 
+OR( 
+ISBLANK(Date_when_Step_is_setSubmitted1__c), 
+ISBLANK(Date_when_Step_is_setSubmitted2__c)))</errorConditionFormula>
+        <errorMessage>Please answer the Product qualified dates In order to save. Please make sure all the Date fields are filled.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>QualfInProgress_Execution_Check</fullName>
+        <active>true</active>
+        <description>R4 Validation for Qualification in progress – Execution check</description>
+        <errorConditionFormula>AND( 
+OR( 
+NOT(ISPICKVAL( Option_1Execution__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_2Execution__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_3Execution__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_4Execution__c, &quot;&quot;)),
+NOT(ISPICKVAL( Option_5Execution__c, &quot;&quot;))), 
+OR( 
+ISBLANK(Date_when_Step_is_setStep1NQual__c), 
+ISBLANK(Date_when_Step_is_setStep2NQual__c),
+ISBLANK(Date_when_Step_is_setPlanning1__c),
+ISBLANK(Date_when_Step_is_setPlanning2__c),
+ISBLANK(Date_when_Step_is_setPlanning3__c),
+ISBLANK(Date_when_Step_is_setPlanning4__c), 
+ISBLANK(TEXT(Option1_NQual__c)), 
+ISBLANK(TEXT(Option2_NQual__c)),
+ISBLANK(TEXT(Option_1Planning__c)),
+ISBLANK(TEXT(Option_2Planning__c)),
+ISBLANK(TEXT(Option_3Planning__c)),
+ISBLANK(TEXT(Option_4Planning__c))))</errorConditionFormula>
+        <errorMessage>Please answer the Previous section questionnaire In order to save. Please make sure all  the Date fields are filled in Previous sections.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>QualfInProgress_Planning_Check</fullName>
+        <active>true</active>
+        <description>R4 Validation for Qualification in progress – Planning check</description>
+        <errorConditionFormula>AND( 
+OR( 
+NOT(ISPICKVAL( Option_1Planning__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_2Planning__c, &quot;&quot;)),
+NOT(ISPICKVAL( Option_3Planning__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_4Planning__c, &quot;&quot;))), 
+OR( 
+ISBLANK(Date_when_Step_is_setStep1NQual__c), 
+ISBLANK(Date_when_Step_is_setStep2NQual__c), 
+ISBLANK(TEXT(Option1_NQual__c)), 
+ISBLANK(TEXT(Option2_NQual__c))))</errorConditionFormula>
+        <errorMessage>Please answer the Previous section questionnaire In order to save. Please make sure all  the Date fields are filled in Previous sections.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>QualfInProgress_Qualified_Check</fullName>
+        <active>true</active>
+        <description>R4 Validation for Qualification in progress – Qualified check</description>
+        <errorConditionFormula>AND( 
+OR( 
+NOT(ISPICKVAL(Option_1Qualified1__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_2Qualified2__c, &quot;&quot;))), 
+OR( 
+ISBLANK(Date_when_Step_is_setStep1NQual__c), 
+ISBLANK(Date_when_Step_is_setStep2NQual__c), 
+ISBLANK(Date_when_Step_is_setPlanning1__c), 
+ISBLANK(Date_when_Step_is_setPlanning2__c), 
+ISBLANK(Date_when_Step_is_setPlanning3__c), 
+ISBLANK(Date_when_Step_is_setPlanning4__c), 
+ISBLANK(Date_when_Step_is_setExecution1__c), 
+ISBLANK(Date_when_Step_is_setExecution2__c), 
+ISBLANK(Date_when_Step_is_setExecution3__c), 
+ISBLANK(Date_when_Step_is_setExecution4__c), 
+ISBLANK(Date_when_Step_is_setExecution5__c), 
+ISBLANK(Date_when_Step_is_setSubmitted1__c), 
+ISBLANK(Date_when_Step_is_setSubmitted2__c), 
+ISBLANK(TEXT(Option1_NQual__c)), 
+ISBLANK(TEXT(Option2_NQual__c)), 
+ISBLANK(TEXT(Option_1Planning__c)), 
+ISBLANK(TEXT(Option_2Planning__c)), 
+ISBLANK(TEXT(Option_3Planning__c)), 
+ISBLANK(TEXT(Option_4Planning__c)),
+ISBLANK(TEXT(Option_1Execution__c)), 
+ISBLANK(TEXT(Option_2Execution__c)), 
+ISBLANK(TEXT(Option_3Execution__c)), 
+ISBLANK(TEXT(Option_4Execution__c)), 
+ISBLANK(TEXT(Option_5Execution__c)), 
+ISBLANK(TEXT(Option_1Submitted__c)),
+ISBLANK(TEXT(Option_2Submitted__c))
+))</errorConditionFormula>
+        <errorMessage>Please answer the Previous section questionnaire In order to save. Please make sure all  the Date fields are filled in Previous sections.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>QualfInProgress_Submitted_Check</fullName>
+        <active>true</active>
+        <description>R4 Validation for Qualification in progress – Submitted check</description>
+        <errorConditionFormula>AND( 
+OR( 
+NOT(ISPICKVAL( Option_1Submitted__c, &quot;&quot;)), 
+NOT(ISPICKVAL( Option_2Submitted__c, &quot;&quot;))), 
+OR( 
+ISBLANK(Date_when_Step_is_setStep1NQual__c), 
+ISBLANK(Date_when_Step_is_setStep2NQual__c), 
+ISBLANK(Date_when_Step_is_setPlanning1__c), 
+ISBLANK(Date_when_Step_is_setPlanning2__c), 
+ISBLANK(Date_when_Step_is_setPlanning3__c), 
+ISBLANK(Date_when_Step_is_setPlanning4__c), 
+ISBLANK(Date_when_Step_is_setExecution1__c),
+ISBLANK(Date_when_Step_is_setExecution2__c),
+ISBLANK(Date_when_Step_is_setExecution3__c),
+ISBLANK(Date_when_Step_is_setExecution4__c),
+ISBLANK(Date_when_Step_is_setExecution5__c),
+ISBLANK(TEXT(Option1_NQual__c)), 
+ISBLANK(TEXT(Option2_NQual__c)), 
+ISBLANK(TEXT(Option_1Planning__c)), 
+ISBLANK(TEXT(Option_2Planning__c)), 
+ISBLANK(TEXT(Option_3Planning__c)), 
+ISBLANK(TEXT(Option_1Execution__c)),
+ISBLANK(TEXT(Option_2Execution__c)),
+ISBLANK(TEXT(Option_3Execution__c)),
+ISBLANK(TEXT(Option_4Execution__c)),
+ISBLANK(TEXT(Option_5Execution__c)),
+ISBLANK(TEXT(Option_4Planning__c))))</errorConditionFormula>
+        <errorMessage>Please answer the Previous section questionnaire In order to save. Please make sure all  the Date fields are filled in Previous sections.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Lock_Check</fullName>
+        <active>true</active>
+        <description>R4 Record Lock Check based on Initiative Status value</description>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+OR(ISPICKVAL(Product_Qualification__r.Initiative_Status__c, &quot;Closed Qualified&quot;),
+ISPICKVAL(Product_Qualification__r.Initiative_Status__c,&quot;Closed Not Qualified&quot;)), 
+IF( ISNEW()  ,true, false))</errorConditionFormula>
+        <errorMessage>You cannot save the changes as Product Qualification Status is Closed.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Product_Qualification_Level</fullName>
+        <availability>online</availability>
+        <description>R4 New Product Qualification level</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Product Qualification Level</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/ProductQualificationLevelRecordCount?Id={!Product_Qualification__c.Id}</url>
+    </webLinks>
+</CustomObject>

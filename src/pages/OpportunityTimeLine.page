@@ -1,0 +1,448 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" standardController="Opportunity" extensions="OpportunityTimeLineCTR" id="page">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+</head>
+<!-- <apex:includeScript value="{!URLFOR($Resource.jQuery, '/jquery-1.9.1.js')}"  />
+    <apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/jquery-ui-1.9.1.custom.min.js')}"  />
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap, '/css/bootstrap-namespaced.css')}"/>
+-->
+    <style> 
+
+        * {margin: 0; padding: 0;}
+
+        html, body {min-height: 100%;}
+
+        body {
+            text-align: center;
+            padding-top: 15px; 
+            /*background: #689976;*/
+            /*background: linear-gradient(#689976, #ACDACC);*/
+            font-family: "ProximaNovaSoft-Regular", Calibri, "Gill Sans", "Gill Sans MT", Candara, Segoe, "Segoe UI", Arial, sans-serif;
+            font-size: 95%;
+        }
+ 
+    
+        .breadcrumbf {
+            display:inline-block;
+            box-shadow: 0 0 15px 1px rgba(0,0,0,0.6);
+            border-radius: 5px;
+             
+            overflow:hidden;
+            counter-reset:flag;
+        }
+ 
+        .breadcrumbf a {
+            display:block;
+            border-radius: -20px;
+            float:left;
+             
+            text-decoration:none;
+            padding: 0 10px 0 30px;
+             
+            line-height:36px;
+             
+            /* TA2717 not working for IE  */
+            background: linear-gradient(#FFDC73,#F0CF6C);  
+            background: #FFDC73\9; /* IE 8 and below */
+            
+            color:black;
+             
+            position:relative; 
+            font-size:smaller;
+            width:120px;
+        }
+        
+        .breadcrumbf a.vactive {
+         display:block;
+         float:left;
+         width:110px;
+        }
+        
+         .breadcrumbf a.sactive {
+         display:block;
+         float:left;
+         width:120px;
+        }
+        
+        .breadcrumbf a.pactive {
+         display:block;
+         float:left;
+         width:160px;
+        }
+        
+        .breadcrumbf a.tactive {
+         display:block;
+         float:left;
+         width:30px;
+        }
+ 
+        .breadcrumbf a.bactive, .breadcrumbf a:hover {
+             background: linear-gradient(#FAC937, #E8BC35); 
+            /* TA2717 not working for IE  */
+            background: #FAC937\9; /* IE 8 and below */
+        }
+        
+        .breadcrumbf a.nactive{
+             background: linear-gradient(#FAC937, #E8BC35); 
+            /* TA2717 not working for IE  */
+            background: #FAC937\9; /* IE 8 and below */
+             display:block;
+             float:left;
+             width:30px;
+        }
+                 
+        .breadcrumbf a.bactive:after, .breadcrumbf a:hover:after {
+         background: linear-gradient(135deg,#FAC937, #E8BC35);
+            /* TA2717 not working for IE  */
+            background: #FAC937\9; /* IE 8 and below */
+        }
+ 
+        .breadcrumbf a:after {
+            content:'';
+            width: 36px;
+            height:36px;
+                             
+            background:linear-gradient(135deg,#FFDC73,#F0CF6C);
+            /* TA2717 not working for IE  */
+            background: #FFDC73\9; /* IE 8 and below */
+             
+            position:absolute;
+            top:0px;
+             
+            z-index:1;
+            right:-18px;
+             
+            -webkit-transform: scale(0.707) rotate(45deg);
+            -moz-transform: scale(0.707) rotate(45deg);
+            -o-transform: scale(0.707) rotate(45deg);
+            transform: scale(0.707) rotate(45deg);
+             
+            border-radius: 0 0 0 30px;
+             
+            box-shadow: 2px -2px 1px 1px rgba(0,0,0,0.5),
+                3px -2px 1px 1px rgba(255,255,255,0.6);                
+        }
+ 
+        .breadcrumbf a:last-child:after {
+            content:none;
+        }
+ 
+        .breadcrumbf a:last-child {
+            padding-right:20px;
+            border-radius: 0 5px 5px 0;
+        }
+ 
+        .breadcrumbf a:before {
+            /*content:counter(flag);*/
+            /*counter-increment:flag;*/
+             
+            width: 20px;
+            height:20px;
+             
+            background:#0E2F4A;
+            font-weight:bold;
+             
+            position:absolute;
+            top:0px;
+            left:30px;
+             
+            line-height:20px;
+            margin:8px 0;
+             
+            border-radius: 100%;
+        }
+
+        .breadcrumbf a.flagged:before {
+            content:counter(flag);
+            /*counter-increment:flag;*/
+             
+/*            width: 20px;
+            height:20px;
+             
+            background:#0E2F4A;
+            font-weight:bold;
+             
+            position:absolute;
+            top:0px;
+            left:30px;
+             
+            line-height:20px;
+            margin:8px 0;
+             
+            border-radius: 100%;*/
+        }
+
+        .breadcrumbf span.flagged:before{
+            content: "\e107";
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            font-family: 'Glyphicons Halflings';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .breadcbp {
+            display:inline-block;
+            box-shadow: 0 0 15px 1px rgba(0,0,0,0.6);
+            border-radius: 5px;
+             
+            overflow:hidden;
+            counter-reset:flag;
+        }
+ 
+        .breadcbp a {
+            display:block;
+            float:left;
+             
+            text-decoration:none;
+            padding: 0 10px 0 30px;
+             
+            line-height:36px;
+             
+            /* TA2717 not working for IE  */
+            background: linear-gradient(#ADD8E6,#87CEEB);  
+            background: #ADD8E6\9; /* IE 8 and below */
+            
+            color:black;
+             
+            position:relative;
+            font-size:smaller;
+            width:115px; 
+        }
+ 
+        .breadcbp a.cactive, .breadcbp a:hover {
+             background: linear-gradient(#87CEFA, #00BFFF); 
+            /* TA2717 not working for IE  */
+            background: #87CEFA\9; /* IE 8 and below */
+        }
+                 
+        .breadcbp a.cactive:after, .breadcbp a:hover:after {
+         background: linear-gradient(135deg,#87CEFA, #00BFFF);
+            /* TA2717 not working for IE  */
+            background: #87CEFA\9; /* IE 8 and below */
+        }
+ 
+        .breadcbp a:after {
+            content:'';
+            width: 36px;
+            height:36px;
+                             
+            background:linear-gradient(135deg,#ADD8E6,#87CEEB);
+            /* TA2717 not working for IE  */
+            background: #ADD8E6\9; /* IE 8 and below */
+             
+            position:absolute;
+            top:0px;
+             
+            z-index:1;
+            right:-18px;
+             
+            -webkit-transform: scale(0.707) rotate(45deg);
+            -moz-transform: scale(0.707) rotate(45deg);
+            -o-transform: scale(0.707) rotate(45deg);
+            transform: scale(0.707) rotate(45deg);
+             
+            border-radius: 0 0 0 30px;
+             
+            box-shadow: 2px -2px 1px 1px rgba(0,0,0,0.5),
+                3px -2px 1px 1px rgba(255,255,255,0.6);                
+        }
+ 
+        .breadcbp a:last-child:after {
+            content:none;
+        }
+ 
+        .breadcbp a:last-child {
+            padding-right:20px;
+            border-radius: 0 5px 5px 0;
+        }
+ 
+        .breadcbp a:before {
+            /*content:counter(flag);*/
+            /*counter-increment:flag;*/
+             
+            width: 20px;
+            height:20px;
+             
+            background:#0E2F4A;
+            font-weight:bold;
+             
+            position:absolute;
+            top:0px;
+            left:30px;
+             
+            line-height:20px;
+            margin:8px 0;
+             
+            border-radius: 100%;
+        }
+
+        .breadcbp a.flagged:before {
+            content:counter(flag);
+            /*counter-increment:flag;*/
+             
+/*            width: 20px;
+            height:20px;
+             
+            background:#0E2F4A;
+            font-weight:bold;
+             
+            position:absolute;
+            top:0px;
+            left:30px;
+             
+            line-height:20px;
+            margin:8px 0;
+             
+            border-radius: 100%;*/
+        }
+
+        .breadcbp span.flagged:before{
+            content: "\e107";
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            font-family: 'Glyphicons Halflings';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+/*######### Flow CSS Tweaks ###########*/
+        .interviewDisplayTextRow{   
+            position: fixed;
+            top: 20px;
+            left:100px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+    </style>
+    <apex:form id="form">
+    <!-- #### OpportunityTimeLine ##### -->
+       <u style="float:center;"><b><apex:outputText value="Customer Buying Path" id="style"/></b></u>
+      <br/><br/>
+        <apex:outputPanel styleClass="breadcbp" id="timeLineBuying" >
+            <apex:repeat value="{!sortedCustomerBuyingPaths}" var="scbp" id="rep">
+                <apex:outputLink id="opl" styleClass="cactive" title="{!$Label[OppCustomerBuyingPaths[scbp].formalStage]}" rendered="{!IF(currentCustomerBuyingPath == OppCustomerBuyingPaths[scbp].Name,'true','false')}" value="#" onmouseover="this.style.cursor = 'default';">{!OppCustomerBuyingPaths[scbp].Name}&nbsp; 
+                    <apex:outputPanel id="outputpanel" rendered="{!IF(approvalRunning,'true','false')}"  styleClass="flagged"  title="{!$Label['ApprovalRunning']}" ></apex:outputPanel>
+                </apex:outputLink>
+                <apex:outputLink id="opl1" rendered="{!IF(currentCustomerBuyingPath == OppCustomerBuyingPaths[scbp].Name,'false','true')}" title="{!$Label[OppCustomerBuyingPaths[scbp].formalStage]}"  value="#" onmouseover="this.style.cursor = 'default';">{!OppCustomerBuyingPaths[scbp].Name}</apex:outputLink>
+            </apex:repeat>
+        </apex:outputPanel>  
+        <br/>    
+        <apex:outputPanel styleClass="breadcrumbf"  id="timeLine" rendered="{!NOT(ShowApproval)}">
+                <apex:repeat value="{!SortedStages}" var="stg" id="rep1"> 
+                     <apex:outputLink ondblclick="SendUrl(this.id);" id="outpnlcurstg"  value="#" styleClass="{!IF(OppStages[stg].Name == 'Closed Lost' || OppStages[stg].Name == 'Closed Won' || OppStages[stg].Name == 'Closed Lost Without ABB Bid' || oppStages[stg].Name == 'Closed Lost (Cancelled)','nactive','bactive')}" title="{!$Label[OppStages[stg].formalStage]}" rendered="{!IF(CurrentStage == OppStages[stg].Name,'true','false')}" onmouseover="this.style.cursor = 'default';"> 
+                         <apex:param name="&opp11" value="{!OppStages[stg].Name}" id="param"/>  
+                         <apex:outputText id="outputtext11" value="{! IF(OppStages[stg].Name == 'Closed Lost' || OppStages[stg].Name == 'Closed Won' || OppStages[stg].Name == 'Closed Lost Without ABB Bid' || oppStages[stg].Name == 'Closed Lost (Cancelled)', 'Closed', OppStages[stg].Name )}">
+                         </apex:outputText>&nbsp;
+                         <!-- once approvalRunning is working :         <apex:outputLink styleClass="bactive" title="{!$Label[OppStages[stg]]}" rendered="{!IF(CurrentStage == stg,'true','false')}" target="_parent"  value="{!IF(approvalRunning,$Page.OpportunityApprovalView2 + '?id=' + Opportunity.id ,'#')}" >{!stg}&nbsp; -->
+                         <apex:outputPanel id="outputpanel1" rendered="{!IF(approvalRunning,'true','false')}" styleClass="flagged" title="{!$Label['ApprovalRunning']}" >
+                         </apex:outputPanel>
+                         <apex:outputText id="opplnkhdn" style="display:none;"  value="{!OppStages[stg].Name}" />
+                     </apex:outputLink>  
+                     
+                     <apex:outputLink ondblclick="SendUrl(this.id);" id="outpnlallstg" value="#" styleClass="{!IF(OppStages[stg].Name == 'Opportunity Pursuit','pactive',IF(OppStages[stg].Name == 'Prospecting','sactive',IF(OppStages[stg].Name == 'Closed Lost' || OppStages[stg].Name == 'Closed Won' || OppStages[stg].Name == 'Closed Lost Without ABB Bid' || oppStages[stg].Name == 'Closed Lost (Cancelled)', 'tactive', 'vactive' )))}" rendered="{!IF(CurrentStage == OppStages[stg].Name,'false','true')}" title="{!$Label[OppStages[stg].formalStage]}" onmouseover="this.style.cursor = 'default';"> 
+                         <apex:param id="param1" name="&opp11" value="{!OppStages[stg].Name}"/> 
+                         
+                         <apex:outputText id="outputtext1" value="{! IF(OppStages[stg].Name == 'Closed Lost' || OppStages[stg].Name == 'Closed Won' || OppStages[stg].Name == 'Closed Lost Without ABB Bid' || oppStages[stg].Name == 'Closed Lost (Cancelled)', 'Closed', OppStages[stg].Name )}">
+                         </apex:outputText>
+                         <apex:outputText id="opplnk2hdn"  style="display:none;" value="{!OppStages[stg].Name}" />                      
+                    </apex:outputLink>
+                   
+                    
+                </apex:repeat>
+        </apex:outputPanel>
+        <br/><br/>
+        <u style="float:center;"><b><apex:outputText id="outputtext2" value="ABB Sales Stages"/></b></u>
+        
+        </apex:form>       
+        <script src="/soap/ajax/28.0/connection.js" type="text/javascript"></script>
+        <script src="/soap/ajax/28.0/apex.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+        var __sfdcSessionId = '{!GETSESSIONID()}';
+        </script>
+        <script type="text/javascript">
+        function SendUrl(rowid)
+        {
+         if(!((typeof sforce != 'undefined') && sforce && (!!sforce.one))) {
+         sforce.connection.sessionId = '{!$Api.Session_ID}';
+         var newrowid = '';              
+         newrowid = rowid.replace('outpnlcurstg','opplnkhdn');        
+         newrowid = newrowid.replace('outpnlallstg','opplnk2hdn');
+         var stage= document.getElementById(newrowid).innerText;
+         // recordtype update logic
+         var oppid = '{!oppId}';
+         // identify the record
+         var r= sforce.connection.query('select id,StageName,Sales_Pursuit_Progress__c,Main_Reason_For_Close__c,Additional_Reason_For_Close__c,CloseDate from opportunity where id=\''+oppid+'\'');
+         var records = r.getArray("records");
+         var answer=true;
+         var newRecords = [];
+         var o = new sforce.SObject("opportunity");
+         o.id = records[0].Id;
+         var oldStage=records[0].StageName;
+         var oldProgress=records[0].Sales_Pursuit_Progress__c;
+         var oldCloseDate=records[0].CloseDate;
+         stage= stage.replace(/\s+$/g,''); 
+         var val = new Boolean(true);
+         if( oldStage != stage ){
+                 if( ( oldStage =="Closed Won" || oldStage =="Closed Lost" || oldStage =="Closed Lost (Cancelled)" || oldStage =="Closed Lost Without ABB Bid") && ( stage=="Prospecting" || stage=="Opportunity Pursuit" || stage=="Negotiation" || stage=="Bidding"))
+                 {
+                     answer=confirm("You are about to open a Closed / Cancelled Opportunity, please click on OK to proceed");      
+                 }
+                 if( answer==true){
+                     if( stage =="Prospecting" || stage =="Bidding" || stage=="Opportunity Pursuit" || stage=="Negotiation"){
+                         if(( oldStage =="Closed Won" || oldStage =="Closed Lost" || oldStage =="Closed Lost (Cancelled)" || oldStage =="Closed Lost Without ABB Bid"))
+                         {
+                             o.Main_Reason_For_Close__c = null;
+                             o.Additional_Reason_For_Close__c = null;
+                         }
+                         o.StageName=stage;
+                         if(stage =="Prospecting"){
+                             o.Sales_Pursuit_Progress__c="Opportunity Is Captured";
+                         }
+                         else{
+                             o.Sales_Pursuit_Progress__c =stage;
+                         }
+                         // save the change
+                         newRecords.push(o);
+                         var result=sforce.connection.update(newRecords);
+                         //alert(result);
+                         if(result[0].getBoolean("success"))
+                         {
+                             parent.window.location = "/" + oppid + "/" + "e?saveURL=%2F" + oppid + "&cancelURL=" + "/apex/Cancel_Oppty_Record_Type_change" + "?stageName=" + oldStage + "%26CloseDate=" + oldCloseDate + "%26Sales_Pursuit_Progress__c=" + oldProgress + "%26id=" +oppid ;
+                         }
+                         else
+                         {
+                              var errors = result[0].errors;
+                              if(errors.length>1){
+                                  var errorMessages = "";
+
+                                  for ( var i = 0; i < errors.length; i++ ) {
+                                      errorMessages += errors[i].message + '\n';
+                                  }
+                                  alert( errorMessages );
+                              }
+                              else{
+                                  alert( errors.message );
+                              }
+                         }
+                     }
+                     else{
+                         if(!( oldStage =="Closed Won" || oldStage =="Closed Lost" || oldStage =="Closed Lost (Cancelled)" || oldStage =="Closed Lost Without ABB Bid")){
+                             parent.window.location = "/apex/OpenPopup" + "?opptyId=" + oppid ;
+                         }
+                     }
+                }
+          }
+         }
+       }
+     </script> 
+</apex:page>

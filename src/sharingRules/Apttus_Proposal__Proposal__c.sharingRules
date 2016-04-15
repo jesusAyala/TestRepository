@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>APTS_LP_Quotations_Share_with_spain_country_admin</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>APTS LP Quotations Share with spain country admin</label>
+        <sharedTo>
+            <group>Spain_Country_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>APTS_Country__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

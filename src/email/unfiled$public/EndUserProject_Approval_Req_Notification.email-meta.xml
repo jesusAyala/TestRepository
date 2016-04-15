@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - Template for Notification alert when user submit EndUserProject for approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>EndUserProject Approval Req Notification</name>
+    <style>none</style>
+    <subject>EndUserProject {!End_User_Project__c.Name} Pending for Approval</subject>
+    <textOnly>Dear Approver, 
+
+An End User Project is pending for your approval. 
+
+Please click on the link below to view the details of this End user project, where the complete approval history can be found. 
+
+Link to End user project: &lt;a href =&apos;{!End_User_Project__c.Link}&apos;&gt;{!End_User_Project__c.Name}&lt;/a&gt; 
+
+Best Regards, 
+Your Salesforce Team 
+
+*** This is an automatically generated email, please do not reply ***</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - Channel Business Review Record Rejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Channel Business Review Record Rejected</name>
+    <style>none</style>
+    <subject>Channel Business Review has been rejected by the Approver.</subject>
+    <type>custom</type>
+</EmailTemplate>

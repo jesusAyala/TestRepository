@@ -1,0 +1,4 @@
+<apex:page standardController="Apttus_Proposal__Proposal__c" >  
+You can not access CQP in Salesforce1. 
+Please click &nbsp;     <a id="theLink" name="theLink" href="https://quotations.abb.com/CQP_SANDBOX2/">here</a>   &nbsp;  to access CQP.
+</apex:page>

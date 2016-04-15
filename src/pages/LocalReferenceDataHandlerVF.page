@@ -1,0 +1,153 @@
+<!-- 
+* Visual Force Page - created for the Manual Entry Local Reference Data. 
+* Apex controller - ClsLSOFieldEntries
+* Pre-Populate the LSO country based on User Country 
+* also Pre-Populate the Dependency Picklist values for LSO & LBU from ERP mapping Table.
+*      
+* Release R3 
+*  
+* @author  Mohanraj Kasinathan (Accenture)
+* @created 2015-07-31
+* @version 1.0
+*
+* Created
+-->
+<apex:page extensions="ClsLocalReferenceDataHandler" StandardController="ERP_Reference_Data__c" id="LRD" standardStylesheets="True" >
+    <apex:includeScript id="jsscript1" value="/soap/ajax/29.0/connection.js"/>
+    <apex:includeScript id="jsscript2" value="/soap/ajax/29.0/apex.js"/>
+    <apex:form id="frm" > 
+        <apex:pagemessages id="pgMSG"   > </apex:pagemessages>        
+        <apex:pageBlock title="{!$Label.System_Local_Reference_Data_Manual_Entry}" id="block">
+            <apex:pageBlockButtons >        
+                <apex:commandButton value="{!$Label.System_Save}" onclick="return SaveClickMetd();" action="{!SaveERP}"  id="theButton" />
+                <apex:commandButton action="{!Cancel}" value="{!$Label.System_Cancel}" id="theButton2"/> 
+                <input type="hidden" id="ErpId" value ="{!eId}"  />  
+            </apex:pageBlockButtons>        
+            <apex:pageblockSection title="{!$Label.System_General_Reference_Data}" columns="2" id="pbs" >           
+                <apex:inputField id="lkpAccount" value="{!localreferenceData.Account__c}" />
+                <apex:inputField id="picNonBuyingAccount" value="{!localreferenceData.Non_Buying_Account_Type__c }" />
+            </apex:pageblockSection>                    
+          <apex:pageblockSection title="{!$Label.System_Local_Sales_Information}"  columns="1" id="blockLSF" >              
+                <apex:inputField id="picCountry" value="{!localreferenceData.Country__c}" onchange="countryFun(this.value);"  > 
+                </apex:inputField>                  
+                <apex:SelectList size="1" Id="LSOidPicklist" Label="{!$Label.System_LSO}" value="{!strLSOValues}" onchange="LSOFun(this.value);">      
+                    <apex:SelectOptions value="{!listLSO}" id="option" >
+                    </apex:SelectOptions>
+                </apex:SelectList>                 
+                <apex:SelectList size="1" Id="LBUidPicklist" Label="LBU"  value="{!strLBUValues}" onchange="LBUFun(this.value);"  >
+                    <apex:SelectOptions value="{!listLBU}" ></apex:SelectOptions>
+                </apex:SelectList>                
+            </apex:pageblockSection>            
+           
+            <apex:pageblockSection title="{!$Label.System_Country_Specific_Reference_Data}" id="BlockCSRD" columns="2">                   
+                <apex:SelectList size="1" Id="SalDistrict" Label="Sales District" value="{!strSalDistrict}" onchange="DisFun(this.value);">      
+                    <apex:SelectOptions value="{!listSalDistrict}" >
+                    </apex:SelectOptions>
+                </apex:SelectList> 
+                 <apex:SelectList size="1" Id="SalesOffice" Label="Sales Office" value="{!strSalesOffice}" onchange="SalFun(this.value);">      
+                    <apex:SelectOptions value="{!listSalesOffice}" >
+                    </apex:SelectOptions>
+                </apex:SelectList> 
+                 <apex:SelectList size="1" Id="LocalMainBus" Label="Local Main Business" value="{!strLocalMainBus}" >      
+                    <apex:SelectOptions value="{!listLocalMainBus}" >
+                    </apex:SelectOptions>
+                </apex:SelectList> 
+                 <apex:SelectList size="1" Id="LocalChannel" Label="Local Channel" value="{!strLocalChannel}" >      
+                    <apex:SelectOptions value="{!listLocalChannel}" >
+                    </apex:SelectOptions>
+                </apex:SelectList> 
+                 <apex:SelectList size="1" Id="LocalSegment" Label="Local Segment" value="{!strLocalSegment}" >      
+                    <apex:SelectOptions value="{!listLocalSegment}" >
+                    </apex:SelectOptions>
+                </apex:SelectList> 
+                 <apex:SelectList size="1" Id="CustAllocation" Label="Customer Allocation" value="{!strCustAllocation}" >      
+                    <apex:SelectOptions value="{!listCustAllocation}" >
+                    </apex:SelectOptions>
+                </apex:SelectList>                
+                <apex:inputField id="TechSupport" value="{!localreferenceData.Technical_Support__c}" />                                  
+                <apex:inputField id="TechPromoter" value="{!localreferenceData.Technical_Promoter__c}" />
+                <apex:inputField id="SalesPlan" value="{!localreferenceData.Sales_Plan__c}" />  
+                <apex:inputField id="PromotionPlan" value="{!localreferenceData.Promotion_Plan__c}" />                 
+                <apex:SelectList size="1" Id="TypeSalesResource" Label="Type of Sales Resources" value="{!strTypeSalesResource}" >      
+                    <apex:SelectOptions value="{!listTypeSalesResource}" >
+                    </apex:SelectOptions>
+                </apex:SelectList>                               
+                <apex:inputField id="CrifNumber" value="{!localreferenceData.Crif_Number__c}" />                        
+                <apex:inputField id="Business1" value="{!localreferenceData.Business_1__c}" />   
+                <apex:inputField id="SalesPerson1" value="{!localreferenceData.Sales_Person_1_Manual_Entry__c}" />   
+                <apex:inputField id="Business2" value="{!localreferenceData.Business_2__c}" />  
+                <apex:inputField id="SalesPerson2" value="{!localreferenceData.Sales_Person_2_Manual_Entry__c}" />   
+                <apex:inputField id="Business3" value="{!localreferenceData.Business_3__c}" />                   
+                <apex:inputField id="SalesPerson3" value="{!localreferenceData.Sales_Person_3_Manual_Entry__c}" /> 
+            </apex:pageblockSection>    
+            
+            
+        <apex:actionFunction id="acnCountryLevel"  name="assignCountryLevel" reRender="LSOidPicklist,LBUidPicklist,BlockCSRD" >
+           <apex:param name="countryValue" assignTo="{!countryValue}" value=""/>
+        </apex:actionFunction>
+        
+        <apex:actionFunction id="acnLSOLevel" name="assignLSOLevel" reRender="LBUidPicklist">
+            <apex:param name="LSOValue" assignTo="{!LSOValue}" value=""/>
+        </apex:actionFunction>   
+        
+        <apex:actionFunction id="acnLBULevel" name="assignLBULevel" reRender="BlockCSRD" >
+            <apex:param name="LBUValue" assignTo="{!LBUValue}" value=""/>
+        </apex:actionFunction>   
+                               
+        <apex:actionFunction id="acnDisLevel" name="assignDisLevel" reRender="SalesOffice" >
+           <apex:param name="DisValue" assignTo="{!DisValue}" value=""/>
+        </apex:actionFunction>  
+        
+        <apex:actionFunction id="acnSalLevel" name="assignSalLevel" reRender="LocalMainBus" >
+           <apex:param name="SalValue" assignTo="{!SalValue}" value=""/>
+        </apex:actionFunction>           
+                  
+        </apex:pageBlock>
+       
+    </apex:form> 
+    
+    <script type="text/javascript">
+        
+        function countryFun(countryVal) {
+            if(countryVal == '') {countryVal = '--None--'; }
+            assignCountryLevel(countryVal);
+        }
+        
+        function LSOFun(Lsovalue) {            
+            assignLSOLevel(Lsovalue);
+        }
+        
+        function LBUFun(Lbuvalue) {            
+            assignLBULevel(Lbuvalue);
+        }
+        
+        function DisFun(Disvalue) {            
+            assignDisLevel(Disvalue);
+        }
+        
+        function SalFun(Salvalue) {                    
+            assignSalLevel(Salvalue);
+        }  
+        
+        function SaveClickMetd()
+        {  
+            var Erpidval = document.getElementById("ErpId").value;
+            var NonBuyingAccount = document.getElementById("LRD:frm:block:pbs:picNonBuyingAccount").value;
+            var lkpAccount = document.getElementById("LRD:frm:block:pbs:lkpAccount_lkid").value;
+            var Country = document.getElementById("LRD:frm:block:blockLSF:picCountry").value;
+            var LSOx = document.getElementById("LRD:frm:block:blockLSF:LSOidPicklist").selectedIndex;            
+            var LSO = document.getElementById("LRD:frm:block:blockLSF:LSOidPicklist")[LSOx].value;
+
+            if(lkpAccount == '000000000000000' ||lkpAccount == ''){alert('Please Select Account!');return false;}            
+            if(NonBuyingAccount == ''){alert('Please Select Non-Buying Account!');return false;}
+            
+            if(Country == ''){alert('Please Select Country!');return false;}
+            if(LSO == '--None--'){alert('Please Select LSO!');return false;}       
+            
+            return true;     
+                        
+        }    
+        
+    </script>   
+    
+</apex:page>

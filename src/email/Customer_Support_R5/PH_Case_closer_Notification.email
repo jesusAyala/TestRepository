@@ -1,0 +1,55 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Dear
+{!Case.OwnerFullName},<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Your SupportLine Case
+&nbsp;{!Case.CaseNumber}&nbsp;, has been closed by &nbsp; {!Case.OwnerFullName}
+on&nbsp;{!Case.ClosedDate}.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">We are confident that
+the provided solution has resolved / will solve the reported condition.
+However, if you feel that the matter needs further discussion or the provided
+solution will not resolve the reported issue, please feel free to reply to this
+email and we will re-open the case.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Product:&nbsp;
+{!Case.Product}<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Open
+Date/Time:&nbsp;&nbsp;{!Case.CreatedDate}<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Problem
+Summary:{!Case.Subject}<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Problem Description:
+&nbsp;{!Case.Case_Resolution__c}.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Use the following link
+to view the details of your case:&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><a href="http://supportline.us.abb.com/public/index.cfm?fuseaction=viewCall&amp;call_id%7b!Case.Id%7d."><span style="color:blue">http://supportline.us.abb.com/public/index.cfm?fuseaction=viewCall&amp;call_id{!Case.Id}.</span></a><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Do not hesitate to
+contact us if you have any question or need further information regarding this
+case.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">In your correspondence
+with us use the following address:<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">E-Mail:</span> <span style="font-size: 12pt; font-family: Arial, sans-serif;">{!Case.Email_To_Case_Recipient__c}<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Best Regards,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">{!Case.OwnerFullName}</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;"><o:p></o:p></span></p><p class="MsoNormal" style="font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">ABB Control Technologies
+SupportLine<o:p></o:p></span></p>]]></td>
+</tr>
+</table>

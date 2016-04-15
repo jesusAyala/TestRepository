@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Job Title</value>
+        </caseValues>
+        <name>title_lead</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>Business_Unit__c</name>
+        <picklistValues>
+            <masterLabel>DMDR</masterLabel>
+            <translation>DMDR - Drives and Controls</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMMG</masterLabel>
+            <translation>DMMG - Motors &amp; Generators</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMPC</masterLabel>
+            <translation>DMPC - Power Conversion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMRO</masterLabel>
+            <translation>DMRO - Robotics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPBP</masterLabel>
+            <translation>EPBP - Building Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPBS</masterLabel>
+            <translation>EPBS - Breakers &amp; Switches</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPCP</masterLabel>
+            <translation>EPCP - Control Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPCW</masterLabel>
+            <translation>EPCW - Installation Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPLS</masterLabel>
+            <translation>EPLS - Electrification Solutions</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPMV</masterLabel>
+            <translation>EPMV - Medium Voltage Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PACT</masterLabel>
+            <translation>PACT - Control Technologies</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAMA</masterLabel>
+            <translation>PAMA - Marine &amp; Ports</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAMP</masterLabel>
+            <translation>PAMP - Measurement &amp; Analytics</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAOG</masterLabel>
+            <translation>PAOG - Oil, Gas &amp; Chemicals</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAPG</masterLabel>
+            <translation>PAPG - Power Generation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAPI</masterLabel>
+            <translation>PAPI - Process Industries</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PATU</masterLabel>
+            <translation>PATU - Turbocharging</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGGA</masterLabel>
+            <translation>PGGA - Grid Automation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGGI</masterLabel>
+            <translation>PGGI - Grid Integration</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGGS</masterLabel>
+            <translation>PGGS - Grid Systems</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGHV</masterLabel>
+            <translation>PGHV - High Voltage Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGTR</masterLabel>
+            <translation>PGTR - Transformers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZCCO</masterLabel>
+            <translation>ZCCO - Corporate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZCRE</masterLabel>
+            <translation>ZCRE - Real Estate</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZCVA</masterLabel>
+            <translation>ZCVA - Various</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Class --></label>
+        <name>Channel_Class__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALCEN</masterLabel>
+            <translation>ABBINT Internal ABB Sales - ALCEN ABB Logistic Centre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APBLD</masterLabel>
+            <translation>ABBINT Internal ABB Sales - APBLD ABB Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - BTDIS Building Trade Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIS Distributor - DIST Electrical Wholesalers / Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - DIY Retail &amp; Do it yourself (DIY)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ELW</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - ELW Electrical Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBDIS</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - IBDIS Internet Based Distributors, Ecommerce Distributors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCC</masterLabel>
+            <translation>PBL Panel Builder and Installer - MCC Panel Builder (Motor Control Centre)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PABL</masterLabel>
+            <translation>PBL Panel Builder and Installer - PABL Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer - POEM Project OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSHO</masterLabel>
+            <translation>DIS Electrical Distributor / Wholesaler - RSHO Repairshop</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOEM</masterLabel>
+            <translation>OEM Original Equipment Manufacturer - SOEM Serial OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>DIS Distributor - SPRO Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITCH</masterLabel>
+            <translation>PBL Panel Builder and Installer - SWITCH Panel Builder (Switchboard)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN System Integrator</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINLB</masterLabel>
+            <translation>SYIN System Integrator - SYINLB Line Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINMB</masterLabel>
+            <translation>SYIN System Integrator - SYINMB Machine Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>DIS Distributor - TDIS Technical Distributor</translation>
+        </picklistValues>
+    </fields>	
+    <fields>
+        <help><!-- Channel classification of the Leads. --></help>
+        <label><!-- Channel Class Level1 --></label>
+        <name>Channel_Class_Level1__c</name>
+        <picklistValues>
+            <masterLabel>ABBINT</masterLabel>
+            <translation>ABBINT - Internal ABB Sales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEU</masterLabel>
+            <translation>DEU - Direct Sales to End Customer / End User</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIS</masterLabel>
+            <translation>DIS - Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPC</masterLabel>
+            <translation>EPC - Engineering, Procurement and Construction</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation>OEM - Original Equipment Manufacturer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBL</masterLabel>
+            <translation>PBL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYIN</masterLabel>
+            <translation>SYIN - System Integrator</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Channel classification of the leads --></help>
+        <label><!-- Channel Class Level2 --></label>
+        <name>Channel_Class_Level2__c</name>
+        <picklistValues>
+            <masterLabel>ALCEN</masterLabel>
+            <translation>ALCEN - ABB Logistic Centre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APBLD</masterLabel>
+            <translation>APBLD - ABB Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTDIS</masterLabel>
+            <translation>BTDIS - Building Trade Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIST</masterLabel>
+            <translation>DIST - Electrical Wholesalers / Distributor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY</masterLabel>
+            <translation>DIY - Retail &amp; Do it yourself (DIY)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ELW</masterLabel>
+            <translation>ELW - Electrical Wholesaler</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBDIS</masterLabel>
+            <translation>IBDIS - Internet Based Distributors, Ecommerce Distributors</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INST</masterLabel>
+            <translation>INST - Installer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCC</masterLabel>
+            <translation>MCC - Panel Builder (Motor Control Centre)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PABL</masterLabel>
+            <translation>PABL - Panel Builder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POEM</masterLabel>
+            <translation>POEM - Project OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSHO</masterLabel>
+            <translation>RSHO - Repairshop</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOEM</masterLabel>
+            <translation>SOEM - Serial OEM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRO</masterLabel>
+            <translation>SPRO - Service Provider</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITCH</masterLabel>
+            <translation>SWITCH - Panel Builder (Switchboard)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINLB</masterLabel>
+            <translation>SYINLB - Line Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYINMB</masterLabel>
+            <translation>SYINMB - Machine Builder (DMRO only)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TDIS</masterLabel>
+            <translation>TDIS - Technical Distributor</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>DM</masterLabel>
+            <translation>DM - Discrete Automation and Motion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EP</masterLabel>
+            <translation>EP - Electrification Products</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation>PA - Process Automation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PG</masterLabel>
+            <translation>PG - Power Grids</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZC</masterLabel>
+            <translation>ZC - Corporate &amp; Other</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Group --></label>
+        <name>Product_Group__c</name>
+        <picklistValues>
+            <masterLabel>1339 - Non-Core Various</masterLabel>
+            <translation><!-- 1339 - Non-Core Various --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1342 - Various</masterLabel>
+            <translation><!-- 1342 - Various --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1722 - Thermal &amp; Water Systems</masterLabel>
+            <translation><!-- 1722 - Thermal &amp; Water Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1723 - Power and Water Automation</masterLabel>
+            <translation><!-- 1723 - Power and Water Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1724 - Renewable Systems</masterLabel>
+            <translation><!-- 1724 - Renewable Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1728 - Automation Products</masterLabel>
+            <translation><!-- 1728 - Automation Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2106 - Gas Insulated Switchgear</masterLabel>
+            <translation><!-- 2106 - Gas Insulated Switchgear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2108 - HV Breakers &amp; Modules</masterLabel>
+            <translation><!-- 2108 - HV Breakers &amp; Modules --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2111 - Common Apparatus &amp; Devices</masterLabel>
+            <translation><!-- 2111 - Common Apparatus &amp; Devices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2115 - Generator Circuit Breakers</masterLabel>
+            <translation><!-- 2115 - Generator Circuit Breakers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2127 - Other High Voltage Components</masterLabel>
+            <translation><!-- 2127 - Other High Voltage Components --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2128 - Capacitors and Filters</masterLabel>
+            <translation><!-- 2128 - Capacitors and Filters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2129 - Instrument Transformers</masterLabel>
+            <translation><!-- 2129 - Instrument Transformers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2132 - HV Testing Labs</masterLabel>
+            <translation><!-- 2132 - HV Testing Labs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2209 - HVDC Mega order pull-through</masterLabel>
+            <translation><!-- 2209 - HVDC Mega order pull-through --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2211 - HVDC Systems</masterLabel>
+            <translation><!-- 2211 - HVDC Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2214 - Offshore Wind Connections</masterLabel>
+            <translation><!-- 2214 - Offshore Wind Connections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2215 - HVDC</masterLabel>
+            <translation><!-- 2215 - HVDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2217 - FACTS</masterLabel>
+            <translation><!-- 2217 - FACTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2221 - OWC Service</masterLabel>
+            <translation><!-- 2221 - OWC Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2222 - HVDC Service</masterLabel>
+            <translation><!-- 2222 - HVDC Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2223 - FACTS Service</masterLabel>
+            <translation><!-- 2223 - FACTS Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2224 - Power Cables Service</masterLabel>
+            <translation><!-- 2224 - Power Cables Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2401 - Distribution Transformers</masterLabel>
+            <translation><!-- 2401 - Distribution Transformers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2404 - Small Power Transformers</masterLabel>
+            <translation><!-- 2404 - Small Power Transformers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2408 - Large and Medium Power Transformers</masterLabel>
+            <translation><!-- 2408 - Large and Medium Power Transformers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2409 - Dry Transformers</masterLabel>
+            <translation><!-- 2409 - Dry Transformers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2413 - Transformer Service</masterLabel>
+            <translation><!-- 2413 - Transformer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2425 - Insulation and Components</masterLabel>
+            <translation><!-- 2425 - Insulation and Components --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2451 - Domestic Sales</masterLabel>
+            <translation><!-- 2451 - Domestic Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2480 - Sundry PPTR</masterLabel>
+            <translation><!-- 2480 - Sundry PPTR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2617 - Domestic Sales</masterLabel>
+            <translation><!-- 2617 - Domestic Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2657 - High Voltage Service</masterLabel>
+            <translation><!-- 2657 - High Voltage Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2699 - Sundry PPHV</masterLabel>
+            <translation><!-- 2699 - Sundry PPHV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2818 - Communication Networks</masterLabel>
+            <translation><!-- 2818 - Communication Networks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2851 - Enterprise Software Services</masterLabel>
+            <translation><!-- 2851 - Enterprise Software Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2861 - Consulting Power Systems</masterLabel>
+            <translation><!-- 2861 - Consulting Power Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2869 - Power Generation Services</masterLabel>
+            <translation><!-- 2869 - Power Generation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2871 - Substation Services</masterLabel>
+            <translation><!-- 2871 - Substation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2872 - Network Control</masterLabel>
+            <translation><!-- 2872 - Network Control --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2875 - Substation Automation Systems</masterLabel>
+            <translation><!-- 2875 - Substation Automation Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2877 - Substation Automation Products</masterLabel>
+            <translation><!-- 2877 - Substation Automation Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2879 - Substation Automation Services</masterLabel>
+            <translation><!-- 2879 - Substation Automation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2881 - T&amp;D Substations for Utilities</masterLabel>
+            <translation><!-- 2881 - T&amp;D Substations for Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2882 - T&amp;D infrastructure and grid integration solutions</masterLabel>
+            <translation><!-- 2882 - T&amp;D infrastructure and grid integration solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2883 - EPC solutions</masterLabel>
+            <translation><!-- 2883 - EPC solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2884 - Microgrids and Distributed Generation</masterLabel>
+            <translation><!-- 2884 - Microgrids and Distributed Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2885 - Energy Portfolio Management</masterLabel>
+            <translation><!-- 2885 - Energy Portfolio Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2886 - Sundry PGGA</masterLabel>
+            <translation><!-- 2886 - Sundry PGGA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2889 - FES PS-Substations</masterLabel>
+            <translation><!-- 2889 - FES PS-Substations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2891 - Sundry PGGI</masterLabel>
+            <translation><!-- 2891 - Sundry PGGI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2897 - Sundry PGGS</masterLabel>
+            <translation><!-- 2897 - Sundry PGGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2899 - Power Cables</masterLabel>
+            <translation><!-- 2899 - Power Cables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2900 - Sundry PGSU</masterLabel>
+            <translation><!-- 2900 - Sundry PGSU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3075 - EPBS Front End Sales</masterLabel>
+            <translation><!-- 3075 - EPBS Front End Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3076 - EPBS Regional Distribution Center</masterLabel>
+            <translation><!-- 3076 - EPBS Regional Distribution Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3080 - EPCP Front End Sales</masterLabel>
+            <translation><!-- 3080 - EPCP Front End Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3081 - EPCP Regional Distribution Center</masterLabel>
+            <translation><!-- 3081 - EPCP Regional Distribution Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3085 - EPBP Front End Sales</masterLabel>
+            <translation><!-- 3085 - EPBP Front End Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3086 - EPBP Regional Distribution Center</masterLabel>
+            <translation><!-- 3086 - EPBP Regional Distribution Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3095 - EPCW Front End Sales</masterLabel>
+            <translation><!-- 3095 - EPCW Front End Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3096 - EPCW Regional Distribution Center</masterLabel>
+            <translation><!-- 3096 - EPCW Regional Distribution Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3097 - Switches and Fusegear</masterLabel>
+            <translation><!-- 3097 - Switches and Fusegear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3100 - Power Enclosures</masterLabel>
+            <translation><!-- 3100 - Power Enclosures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3101 - LV Systems</masterLabel>
+            <translation><!-- 3101 - LV Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3102 - LV Systems Service</masterLabel>
+            <translation><!-- 3102 - LV Systems Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3103 - Circuit Breakers</masterLabel>
+            <translation><!-- 3103 - Circuit Breakers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3107 - Breakers &amp; Switches Service</masterLabel>
+            <translation><!-- 3107 - Breakers &amp; Switches Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3119 - Distribution Enclosures</masterLabel>
+            <translation><!-- 3119 - Distribution Enclosures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3121 - Wiring Accessories</masterLabel>
+            <translation><!-- 3121 - Wiring Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3122 - Control &amp; Protection</masterLabel>
+            <translation><!-- 3122 - Control &amp; Protection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3123 - Electronics Products (EPR)</masterLabel>
+            <translation><!-- 3123 - Electronics Products (EPR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3124 - Connection</masterLabel>
+            <translation><!-- 3124 - Connection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3127 - Field Instrumentation &amp; Devices</masterLabel>
+            <translation><!-- 3127 - Field Instrumentation &amp; Devices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3128 - Flow Measurement</masterLabel>
+            <translation><!-- 3128 - Flow Measurement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3129 - Measurement Products Service</masterLabel>
+            <translation><!-- 3129 - Measurement Products Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3131 - Sundry LP</masterLabel>
+            <translation><!-- 3131 - Sundry LP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3132 - RCD &amp; MDRC</masterLabel>
+            <translation><!-- 3132 - RCD &amp; MDRC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3133 - MCB &amp; SPD</masterLabel>
+            <translation><!-- 3133 - MCB &amp; SPD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3134 - Building Automation</masterLabel>
+            <translation><!-- 3134 - Building Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3145 - Wire Management and Connectivity (WMC)</masterLabel>
+            <translation><!-- 3145 - Wire Management and Connectivity (WMC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3150 - Cable Protection, Explosion Proof and Lighting (CEL)</masterLabel>
+            <translation><!-- 3150 - Cable Protection, Explosion Proof and Lighting (CEL) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3155 - Cable Accessories and Apparatus (CAA)</masterLabel>
+            <translation><!-- 3155 - Cable Accessories and Apparatus (CAA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3199 - Measurement Products Sales</masterLabel>
+            <translation><!-- 3199 - Measurement Products Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3401 - Distribution Automation</masterLabel>
+            <translation><!-- 3401 - Distribution Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3406 - MV Instrument Transformers &amp; Sensors</masterLabel>
+            <translation><!-- 3406 - MV Instrument Transformers &amp; Sensors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3407 - MV Outdoor Apparatus</masterLabel>
+            <translation><!-- 3407 - MV Outdoor Apparatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3408 - MV Indoor Apparatus</masterLabel>
+            <translation><!-- 3408 - MV Indoor Apparatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3410 - MV Primary Switchgear</masterLabel>
+            <translation><!-- 3410 - MV Primary Switchgear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3430 - MV Secondary Distribution</masterLabel>
+            <translation><!-- 3430 - MV Secondary Distribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3435 - Modular Systems</masterLabel>
+            <translation><!-- 3435 - Modular Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3442 - MV Service</masterLabel>
+            <translation><!-- 3442 - MV Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3446 - Domestic Sales</masterLabel>
+            <translation><!-- 3446 - Domestic Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3499 - Sundry PPMV</masterLabel>
+            <translation><!-- 3499 - Sundry PPMV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4100 - PAPI Systems sales</masterLabel>
+            <translation><!-- 4100 - PAPI Systems sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4101 - Mineral Processing, Aluminium and Cement</masterLabel>
+            <translation><!-- 4101 - Mineral Processing, Aluminium and Cement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4102 - Grinding and Open Pit Mining</masterLabel>
+            <translation><!-- 4102 - Grinding and Open Pit Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4103 - Under Ground Mining</masterLabel>
+            <translation><!-- 4103 - Under Ground Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4104 - Metals</masterLabel>
+            <translation><!-- 4104 - Metals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4106 - Pulp &amp; Paper</masterLabel>
+            <translation><!-- 4106 - Pulp &amp; Paper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4107 - Solar</masterLabel>
+            <translation><!-- 4107 - Solar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4108 - Process Industry Service</masterLabel>
+            <translation><!-- 4108 - Process Industry Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4114 - LV High Power Drives</masterLabel>
+            <translation><!-- 4114 - LV High Power Drives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4117 - MV Drives</masterLabel>
+            <translation><!-- 4117 - MV Drives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4118 - Transportation</masterLabel>
+            <translation><!-- 4118 - Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4120 - Low Power Drives and Automation</masterLabel>
+            <translation><!-- 4120 - Low Power Drives and Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4130 - Large Motors &amp; Generators</masterLabel>
+            <translation><!-- 4130 - Large Motors &amp; Generators --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4131 - Motors &amp; Generators Service</masterLabel>
+            <translation><!-- 4131 - Motors &amp; Generators Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4133 - IEC LV Motors</masterLabel>
+            <translation><!-- 4133 - IEC LV Motors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4149 - Power Conversion Service</masterLabel>
+            <translation><!-- 4149 - Power Conversion Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4156 - NEMA Motors</masterLabel>
+            <translation><!-- 4156 - NEMA Motors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4157 - Mechanical Power Transmission</masterLabel>
+            <translation><!-- 4157 - Mechanical Power Transmission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4159 - Drives and Controls Service</masterLabel>
+            <translation><!-- 4159 - Drives and Controls Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4161 - Sundry DM</masterLabel>
+            <translation><!-- 4161 - Sundry DM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4162 - Sundry DMDR</masterLabel>
+            <translation><!-- 4162 - Sundry DMDR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4163 - Sundry DMMG</masterLabel>
+            <translation><!-- 4163 - Sundry DMMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4164 - Sundry DMPC</masterLabel>
+            <translation><!-- 4164 - Sundry DMPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4313 - Robot Supply Unit (SU)</masterLabel>
+            <translation><!-- 4313 - Robot Supply Unit (SU) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4314 - Robots &amp; Applications (R&amp;A)</masterLabel>
+            <translation><!-- 4314 - Robots &amp; Applications (R&amp;A) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4331 - Robot Systems</masterLabel>
+            <translation><!-- 4331 - Robot Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4333 - Robotics Customer Service (CS)</masterLabel>
+            <translation><!-- 4333 - Robotics Customer Service (CS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4366 - Sundry DMRO</masterLabel>
+            <translation><!-- 4366 - Sundry DMRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4414 - CT Service</masterLabel>
+            <translation><!-- 4414 - CT Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4426 - EPC</masterLabel>
+            <translation><!-- 4426 - EPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4442 - Force Measurement</masterLabel>
+            <translation><!-- 4442 - Force Measurement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4449 - Oil, Gas &amp; Chemicals Service</masterLabel>
+            <translation><!-- 4449 - Oil, Gas &amp; Chemicals Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4489 - CT Partners and Projects</masterLabel>
+            <translation><!-- 4489 - CT Partners and Projects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4493 - CT Products</masterLabel>
+            <translation><!-- 4493 - CT Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4498 - Analytical Measurement</masterLabel>
+            <translation><!-- 4498 - Analytical Measurement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4526 - Offshore Systems</masterLabel>
+            <translation><!-- 4526 - Offshore Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4527 - Onshore Systems</masterLabel>
+            <translation><!-- 4527 - Onshore Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4528 - Chemical, Refining Systems</masterLabel>
+            <translation><!-- 4528 - Chemical, Refining Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5500 - Sundry PA</masterLabel>
+            <translation><!-- 5500 - Sundry PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6110 - Treasury Centers</masterLabel>
+            <translation><!-- 6110 - Treasury Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6680 - Semiconductors</masterLabel>
+            <translation><!-- 6680 - Semiconductors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7704 - Oil &amp; Gas</masterLabel>
+            <translation><!-- 7704 - Oil &amp; Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7705 - Passenger and Cargo</masterLabel>
+            <translation><!-- 7705 - Passenger and Cargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7709 - Ports</masterLabel>
+            <translation><!-- 7709 - Ports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7712 - Turbocharging Service</masterLabel>
+            <translation><!-- 7712 - Turbocharging Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7713 - Marine Service</masterLabel>
+            <translation><!-- 7713 - Marine Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7714 - Low and Medium Speed Products</masterLabel>
+            <translation><!-- 7714 - Low and Medium Speed Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7715 - Ports Service</masterLabel>
+            <translation><!-- 7715 - Ports Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7716 - Turbocharging Marine Auxiliary</masterLabel>
+            <translation><!-- 7716 - Turbocharging Marine Auxiliary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7717 - Propulsion Products</masterLabel>
+            <translation><!-- 7717 - Propulsion Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7719 - Turbocharging High Speed Products</masterLabel>
+            <translation><!-- 7719 - Turbocharging High Speed Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9907 - Accounting Services</masterLabel>
+            <translation><!-- 9907 - Accounting Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9908 - HR Center</masterLabel>
+            <translation><!-- 9908 - HR Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9919 - Information Systems Services</masterLabel>
+            <translation><!-- 9919 - Information Systems Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9934 - Direct Procurement Excellence Centers</masterLabel>
+            <translation><!-- 9934 - Direct Procurement Excellence Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9935 - Indirect Procurement Excellence Centers</masterLabel>
+            <translation><!-- 9935 - Indirect Procurement Excellence Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9936 - Transport, Trade &amp; Logistics Management</masterLabel>
+            <translation><!-- 9936 - Transport, Trade &amp; Logistics Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9937 - SCM Shared Services Centers</masterLabel>
+            <translation><!-- 9937 - SCM Shared Services Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9938 - Supply Chain Management</masterLabel>
+            <translation><!-- 9938 - Supply Chain Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9939 - Transport, Trade &amp; Logistics</masterLabel>
+            <translation><!-- 9939 - Transport, Trade &amp; Logistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9941 - Group Holding and Country Corporate</masterLabel>
+            <translation><!-- 9941 - Group Holding and Country Corporate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9944 - Corporate One-Time Items</masterLabel>
+            <translation><!-- 9944 - Corporate One-Time Items --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9945 - Headquarter Support Service Fee</masterLabel>
+            <translation><!-- 9945 - Headquarter Support Service Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9948 - Trademark Fee</masterLabel>
+            <translation><!-- 9948 - Trademark Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9950 - R&amp;D Corporate</masterLabel>
+            <translation><!-- 9950 - R&amp;D Corporate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9953 - R&amp;D Support Activities</masterLabel>
+            <translation><!-- 9953 - R&amp;D Support Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9957 - ABB Internal</masterLabel>
+            <translation><!-- 9957 - ABB Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9958 - Third Parties</masterLabel>
+            <translation><!-- 9958 - Third Parties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9959 - Special Items</masterLabel>
+            <translation><!-- 9959 - Special Items --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9962 - ABB Information Management</masterLabel>
+            <translation><!-- 9962 - ABB Information Management --></translation>
+        </picklistValues>
+    </fields>	
+    <layouts>
+        <layout>Contact Center Feed-based</layout>
+        <sections>
+            <label><!-- Lead Capture Information --></label>
+            <section>Lead Capture Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Classification --></label>
+            <section>Lead Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Scoring --></label>
+            <section>Lead Scoring</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales &amp; Marketing</layout>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Scoring --></label>
+            <section>Lead Scoring</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales &amp; Marketing (Read Only)</layout>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Scoring --></label>
+            <section>Lead Scoring</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Contact Center --></label>
+        <name>Contact_Center</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact Center (Read Only) --></label>
+        <name>Contact_Center_Read_Only</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales &amp; Marketing --></label>
+        <name>Sales_Marketing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales &amp; Marketing (Read Only) --></label>
+        <name>Sales_and_Marketing_Read_Only</name>
+    </recordTypes>
+</CustomObjectTranslation>

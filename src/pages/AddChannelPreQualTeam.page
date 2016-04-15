@@ -1,0 +1,61 @@
+<!-- 
+VF Page - AddChannelPreQualTeam
+Controller - ClsAddChannelPreQualTeam
+Create the Channel Pre-Qualification team members from Standard Account Team
+
+-->
+
+
+<apex:page standardController="Channel_Qualifications__c" extensions="ClsAddChannelPreQualTeam" id="pageId1" standardStylesheets="false">
+    <br />
+    <apex:form title="{!$Label.Business_Channel_PreQual_Team_Title}" id="pageId2">
+     <apex:outputPanel id="pnl" rendered="true">
+    <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+    
+    <center> 
+<apex:commandButton id="cb" title="{!$Label.Back}" value="{!$Label.Back}" action="{!GoBack}"  rendered="{!showBack}"/></center>
+    </apex:outputPanel>
+   
+  <apex:pageBlock title="{!$Label.Business_New_Channel_Pre_Qualification_Team}" id="pageId4" rendered="{!showCanvas}" >
+  
+  <table>
+    <tr>
+    <td><apex:outputText value="User" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Team Role" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Access Level" style="color:red;font-weight:bold"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!channelPreQualTeam1.User__c}" required="true" id="value1"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam1.Team_Role__c}" required="true" id="value2"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam1.Access__c}" required="true" id="value3"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!channelPreQualTeam2.User__c}"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam2.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam2.Access__c}"/></td> 
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!channelPreQualTeam3.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!channelPreQualTeam3.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam3.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!channelPreQualTeam4.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!channelPreQualTeam4.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam4.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!channelPreQualTeam5.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!channelPreQualTeam5.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!channelPreQualTeam5.Access__c}"/></td>
+    </tr>
+  </table>
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!saveRecord}" value="Save"/>
+    <apex:commandButton action="{!saveMoreRecord}" value="Save & More" />
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form> 
+
+</apex:page>

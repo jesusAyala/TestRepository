@@ -1,0 +1,77 @@
+<apex:page standardController="Case" extensions="ExtSimilarCases" title="SimilarCases" showHeader="false" sidebar="false" id="page">
+    <apex:includeScript value="/support/console/32.0/integration.js" id="script1"/>
+    <apex:includeScript value="{!URLFOR($Resource.JQuery)}" id="script2"/>
+    <style type="text/css">
+        #loading{top:0px;left:0px;text-align: center; width: 100%; height: 100%; display: block; background-color: #FFF; opacity: 0.85; position: fixed; z-index: 8000; filter: alpha(opacity = 85); background-repeat: no-repeat; background-position: center center; background-image:url(../img/loading.gif); display:none;}
+    </style>
+    
+    <script>
+        
+        function opennewsubtab(id, name) {
+            //sforce.console.getEnclosingPrimaryTabObjectId(showObjectId);
+            //sforce.console.getFocusedPrimaryTabObjectId(showObjectId);
+            sforce.console.getPrimaryTabIds(function(resulta){
+                sforce.console.generateConsoleUrl(['/'+id], function(result) {
+                    sforce.console.openConsoleUrl(null, result.consoleUrl, true, [''], [name] ,openSuccess);
+                    for(var i in resulta.ids) {
+                        sforce.console.openConsoleUrl(resulta.ids[i], result.consoleUrl, true, [''], [name] ,openSuccess);
+                    }
+                }); 
+            });
+            
+        }
+
+        var showObjectId = function showObjectId(result) {
+            alert ('Object ID: ' + result.id);         
+        };
+        
+        
+        var openSuccess = function openSuccess(result) {
+            if (result.success == true) {
+                //sforce.console.getFocusedPrimaryTabId(showTabId());
+                //alert('Primary tab opened success');
+            } else {
+                alert('Primary tab cannot be opened');
+            }
+        }
+        
+        var showTabId = function showTabId(result) {
+            if(result.success) {
+                alert('Object Id' + result.id);
+            }
+        }
+        
+        var showloading = function showloading(){
+            $("#loading").show();
+        }
+        
+        var hideloading = function hideloading(){
+            $("#loading").hide();
+        }
+    </script>
+    <apex:form id="form">
+        <apex:pageMessages id="pagemessages"  /> 
+        <div id="loading"></div>
+        <apex:outputLabel rendered="{!noCaseRecord}" value="{!$Label.Similar_Case_unavailable}" id="olabel"/>
+        <apex:pageBlock id="similarTable" rendered="{!!noCaseRecord}">
+            <apex:pageBlockSection title="{!$Label.Has_Similar_Case}" columns="2" id="pgblock">
+                <apex:selectList value="{!selectedOption}" multiselect="false" size="1" id="selectval">
+                    <apex:selectOptions value="{!items}" id="selectopt"/>
+                </apex:selectList>
+                 <apex:commandButton action="{!getAllSimilarCases}" onclick="showloading();" value="Go" reRender="similarTable" oncomplete="hideloading();" id="cmdbut"/>
+            </apex:pageBlockSection>
+            <apex:outputLabel rendered="{!!hasSimilarCase}" value="{!$Label.No_Similar_Case}" id="optlabel"/>
+            
+            <apex:pageBlockTable value="{!list_cs}" var="c" rendered="{!hasSimilarCase}" id="pagebck">
+                <apex:repeat value="{!fields}" var="f" id="repeat">
+                    
+                    <apex:column rendered="{!f.fieldPath='CaseNumber'}" onclick="opennewsubtab('{!c['Id']}', '{!c[f.fieldPath]}');" id="clm">
+                        <a style="cursor: pointer; text-decoration: underline" href="">{!c[f.fieldPath]}</a>
+                    </apex:column>
+                    <apex:column value="{!c[f.fieldPath]}" rendered="{!f.fieldPath!='CaseNumber'}" id="clmval"/> 
+                </apex:repeat>
+                <!-- <apex:column value="{!c.Id}"/>  -->
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

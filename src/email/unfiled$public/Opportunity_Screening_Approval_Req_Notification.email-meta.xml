@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R4 - Template for Notification alert when user submit Opportunity Screening for approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Opportunity Screening Approval Req Notification</name>
+    <style>none</style>
+    <subject>Opportunity Screening {!Opportunity_Screening__c.Name} Pending Your Approval</subject>
+    <textOnly>Dear Approver,  An opportunity screening has been conducted for the opportunity {!Opportunity_Screening__c.Opportunity__c} and is pending your approval.  Please click on the link below to view the details of this opportunity screening, where the complete approval history can be found.  Link to Opportunity Screening: {!Opportunity_Screening__c.Name}  Best Regards,  Your Salesforce Team  *** This is an automatically generated email, please do not reply ***</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,69 @@
+<apex:page controller="CTLookupPopupController" sidebar="false" showheader="false" id="page">
+<script language="javascript">
+   window.onload = new function() 
+   { 
+      // bring popup window to front
+      window.focus(); 
+      var ele=document.getElementById('{!$Component.form.block.section.query}');
+      if (ele)
+      {
+         ele.focus();
+      }
+   }
+   
+   function fillIn(name, id)
+   {
+      var winMain=top.window.opener;
+      if (null==winMain)
+      {
+         winMain=window.parent.opener;
+      }
+      var ele=winMain.document.getElementById('{!$CurrentPage.parameters.namefield}');
+      ele.value=name;
+      ele=winMain.document.getElementById('{!$CurrentPage.parameters.idfield}');
+      ele.value=id;
+      CloseWindow();
+   }
+
+   function CloseWindow()
+   {
+      var winMain=window.opener;
+      if (null==winMain)
+      {
+         winMain=window.parent.opener;
+      }
+      winMain.closeLookupPopup();
+   }
+</script>
+
+  <apex:messages id="messages"/>
+  <apex:outputPanel styleClass="pageMsgCls">
+      <apex:pageMessage id="empAcc" summary="{!$Label.CT_Empty_Search}" severity="warning" rendered="{!empAcc}">
+      </apex:pageMessage>
+  </apex:outputPanel>
+  <apex:form id="form" >  
+        
+     <div style="width 100%">
+        <apex:pageBlock title="{!$Label.Search_Competitor}" id="block">
+           
+          <apex:pageBlockSection id="section" columns="3">
+              Enter search text and click Go<br/>
+              <apex:inputText value="{!query}" id="query"/> 
+              <apex:commandButton id="cb" value="{!$Label.Go}" action="{!runQuery}"/>
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock id="pb">
+          
+              <apex:pageBlockTable id="pbt" value="{!competitors}" var="competitor" columnsWidth="250px,250px,150px" rendered="{!NOT(empAcc)}">
+                <apex:column id="col" headerValue="Name">
+                  <apex:outputLink id="opl" value="#" onclick="fillIn('{!competitor.Name}', '{!competitor.id}')">{!competitor.Name}</apex:outputLink>   
+                </apex:column>
+                <apex:column headerValue="Primary Address" value="{!competitor.BillingStreet} {!competitor.BillingCity} {!competitor.BillingState} {!competitor.BillingPostalCode} {!competitor.BillingCountry}"/>
+                <apex:column headerValue="Record Type" value="{!competitor.RecordType.Name}"/>
+              </apex:pageBlockTable>    
+      
+        </apex:pageBlock>
+     </div>
+   </apex:form>
+</apex:page>

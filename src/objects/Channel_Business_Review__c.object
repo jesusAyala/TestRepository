@@ -1,0 +1,2582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <comment>R5-Channel business review edit page lint to apex class</comment>
+        <content>ChannelBusinessReviewEditPage</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 Channel Business Review is a custom object to review the Channels, Partner, ABB Authorized value provider &amp; Strategic / Key Partner  who will be partnering with ABB to do business.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>CBR_Next_Review_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Date_for_Next_Review__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CBR Next Review Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>STR_Actual_Year_to_sales_Hidden__c</fullName>
+        <description>It is Created for to display &quot; Actual Sales Year to Date value &quot; In CBR</description>
+        <externalId>false</externalId>
+        <formula>(Joint_Business_Plan__r.Actual_Sales_Year_to_Date_Formula__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Actual Year to sales Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>STR_Budget_Current_Year_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Budget_Current_Year_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Budget Current Year Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>STR_Forecast_Current_Year_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Forecast_Ongoing_Year_Formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Forecast Current Year	 Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>STR_Previous_Year_Hideen__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Previous_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Previous Year Hideen</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STR_Run_Rate_Current_Year_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Rund_Rate_Ongoing_year_Formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Run Rate Current Year Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>STR_Sales_Previous_Year_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Sales_previous_year_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Sales Previous Year Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>STR_Target_2nd_Year_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Target_2nd_Year_Formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Target 2nd Year Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>STR_Target_3rd_Year_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Target_3rd_Year_Formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>STR Target 3rd Year Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Focused_Industry_hidden__c</fullName>
+        <externalId>false</externalId>
+        <label>Focused Industry hidden</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Line_Hidden_from_scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Line Hidden from scope</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Channel review to have a look-up relationship with the Account Object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The partner and business plan this review covers. If the scope is several branch offices, that need to be indicated in general comments below.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Channel_Business_Reviews</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actions_Answer_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Text field to capture the Answer 1- Actions review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review and update all actions related to this business plan. Add new actions as agreed. Indicate here when done by selecting the checkbox</inlineHelpText>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Actions_Answer_2__c</fullName>
+        <description>R5 - Text field to capture the Answer 2- Actions review section</description>
+        <externalId>false</externalId>
+        <label>Total Number Of Actions</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actions_Flag1__c</fullName>
+        <description>R5 - R5 - Flag for Must Have Question 1 in Actions section</description>
+        <externalId>false</externalId>
+        <formula>IF( Actions_Answer_1__c==FALSE,IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actions_Flag2__c</fullName>
+        <description>R5 - Flag for Must Have Question 2 in Actions section</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Actions_Answer_2__c),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Minimum one action must be registered in the business plan</inlineHelpText>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actions_Question_1__c</fullName>
+        <defaultValue>$Label.CBR_Actions_Question_1</defaultValue>
+        <description>R5 - Text field to capture the Question 1- Actions review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review and update all actions related to this business plan. Add new actions as agreed. Indicate here when done</inlineHelpText>
+        <label>1.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Actions_Question_2__c</fullName>
+        <defaultValue>$Label.CBR_Actions_Question_2</defaultValue>
+        <description>R5 - Text field to capture the Question 2- Actions review section</description>
+        <externalId>false</externalId>
+        <label>Question 2</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Actual_Sales_Year_to_Date__c</fullName>
+        <description>R5- Copy the value from the Channel Business Plan</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Actual_Sales_Year_to_Date_Formula__c</formula>
+        <label>Actual Sales Year to Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Answer_1__c</fullName>
+        <description>R5 - Picklist to capture the Answer 1- Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick the value closest to the partner&apos;s view</inlineHelpText>
+        <label>Answer 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stable / OK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Answer_2__c</fullName>
+        <description>R5 - Picklist to capture the Answer 2- Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick the value closest to the partner&apos;s view</inlineHelpText>
+        <label>Answer 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stable / OK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Answer_3__c</fullName>
+        <description>R5 - Picklist to capture the Answer 3- Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate the current progress compared to what&apos;s stated in the business plan</inlineHelpText>
+        <label>Answer 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Answer_4__c</fullName>
+        <description>R5 - Picklist to capture the Answer 4- Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Example:  Answer  0 if only ABB is sold by the partner and 2 if the partner sells ABB + 2 other brands for the product mix discussed</inlineHelpText>
+        <label>Answer 4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <description>R5 - Approval Date for Approval Process</description>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>R5 - Approval Status for Approval Process</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approver_Name__c</fullName>
+        <description>R5 - Approver Name for Approval Process</description>
+        <externalId>false</externalId>
+        <label>Approver Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Average_time_used_in_Techical__c</fullName>
+        <description>R5- Channel Partner Business Reviews Field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>% time used in Technical support of ABB products</inlineHelpText>
+        <label>% time used in Techsupport of ABB prod</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Average_time_used_in_sales__c</fullName>
+        <description>R5- Channel Partner Business Reviews Field.</description>
+        <externalId>false</externalId>
+        <label>% time used in Sales of ABB products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Average_time_used_in_services__c</fullName>
+        <description>R5- Channel Partner Business Reviews Field.</description>
+        <externalId>false</externalId>
+        <label>% time used in Service of ABB products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BU_s_Covered__c</fullName>
+        <description>R5 - BU&apos;s Covered</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.BU_s_Covered__c</formula>
+        <label>BU&apos;s Covered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Budget_Current_Year__c</fullName>
+        <description>R5 - Budget Current Year copy from the channel business plan</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Budget_Current_Year_formula__c</formula>
+        <label>Budget Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Market_Coverage_Hidden__c</fullName>
+        <description>R5 Used to get the Channel market Coverage Name</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Channel_Market_Coverage__r.Name</formula>
+        <label>Channel Market Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments_Operations_Section__c</fullName>
+        <description>R5 - Comments field on Operations section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check that sufficient resources and skills are available to serve the market and also to keep the possible authorization. Assign actions as needed.</inlineHelpText>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Date_of_Completion__c</fullName>
+        <description>R5 - Date of Completion when the Status is changed to Completed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the status of this review is changed to Completed</inlineHelpText>
+        <label>Date of Completion</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_saving__c</fullName>
+        <description>R5 - Date of saving.</description>
+        <externalId>false</externalId>
+        <label>Date of saving</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_the_actual_sales_YTD_is_given__c</fullName>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Date_the_actual_sales_YTD_is_given__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date the actual sales YTD is given</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date_to_Complete__c</fullName>
+        <description>R5 - Formula Field calculate days over/under due date for the channel business review</description>
+        <externalId>false</externalId>
+        <formula>IF(
+  ISBLANK(  Date_of_Completion__c  ),
+  NULL,
+   Expected_Date_for_Review_Completion__c - Date_of_Completion__c 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Due Date to Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Date_for_Review_Completion__c</fullName>
+        <description>R5 - Date for Next Review</description>
+        <externalId>false</externalId>
+        <label>Expected Date for Review Completion</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Current_Year__c</fullName>
+        <description>R5 - Copy the Values from the Channel Business Plan</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Forecast_Ongoing_Year_Formula__c</formula>
+        <label>Forecast Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>General_Answer_1__c</fullName>
+        <description>R5 - Answer 1- General topics section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Add comments if not OK (e.g. if overall financial concerns or if consistent overdue to ABB)</inlineHelpText>
+        <label>Comment if not</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>General_Answer_2__c</fullName>
+        <description>R5 - Answer 2- General topics section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Add comments if not OK (e.g. if customer(s) indicated that they do not want to work with this partner)</inlineHelpText>
+        <label>Comment if not</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>General_Answer_3__c</fullName>
+        <description>R5 - Answer 3 - General topics section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check that sufficient resources and skills are available to serve the market and also to keep the possible authorization</inlineHelpText>
+        <label>Answer 3</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>General_Answer_4__c</fullName>
+        <description>R5- Picklist to capture the scale of ABB view on easy of doing business with the partner</description>
+        <externalId>false</externalId>
+        <inlineHelpText>0 low, 5 high.  Sum of (Self-supporting technically, self-supporting commercially, uses ABB online tools, Keeps people trained and company authorized, keeps agreed schedules). Assign actions as needed.</inlineHelpText>
+        <label>Answer 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>General_Answer_5__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Answer 5 under General topic section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate here when done by selecting the checkbox.</inlineHelpText>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>General_Comments__c</fullName>
+        <description>R5 - General Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overall impression and comments. Will be printed on summary page of review .pdf -report</inlineHelpText>
+        <label>General Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>General_Flag1__c</fullName>
+        <description>R5 - Flag for Must Have Question1 in General Section</description>
+        <externalId>false</externalId>
+        <formula>IF( AND( ISBLANK( General_Answer_1__c ), RecordType.DeveloperName= &quot;Channel_End_Period_Business_Review_Detail&quot; ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>General_Flag2__c</fullName>
+        <description>R5 - Flag for Must Have Question 2 in General Section</description>
+        <externalId>false</externalId>
+        <formula>IF( AND(ISBLANK( General_Answer_2__c), RecordType.DeveloperName= &quot;Channel_End_Period_Business_Review_Detail&quot; ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>General_Flag3__c</fullName>
+        <description>R5 - Flag for Must Have Question 3 in General Section</description>
+        <externalId>false</externalId>
+        <formula>IF( AND(ISBLANK( General_Answer_3__c), RecordType.DeveloperName= &quot;Channel_End_Period_Business_Review_Detail&quot; ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>General_Flag4__c</fullName>
+        <description>R5 - Flag for Must Have Question4 in General Section</description>
+        <externalId>false</externalId>
+        <formula>IF( AND( ISPICKVAL( General_Answer_4__c, &quot;&quot; ),  RecordType.DeveloperName= &quot;Channel_End_Period_Business_Review_Detail&quot; ),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>General_Flag5__c</fullName>
+        <description>R5 - Flag for Must Have Question 5 in General Section</description>
+        <externalId>false</externalId>
+        <formula>IF( General_Answer_5__c = FALSE,IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>General_Question_1__c</fullName>
+        <defaultValue>$Label.CBR_General_Question_1</defaultValue>
+        <description>R5 - Text field to capture the Question 1- General topics section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB view on the financial stability and profitability. Sanity check to be done every year.</inlineHelpText>
+        <label>1.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>General_Question_2__c</fullName>
+        <defaultValue>$Label.CBR_General_Question_2</defaultValue>
+        <description>R5 - Text field to capture the Question 2- General topics section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB view on the market reputation. Sanity check to be done every year.</inlineHelpText>
+        <label>2.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>General_Question_3__c</fullName>
+        <defaultValue>$Label.CBR_General_Question_3</defaultValue>
+        <description>R5 - Question 3 under General topic section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate if the partner still has competent persons to deliver the services expected</inlineHelpText>
+        <label>Question 3</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>General_Question_4__c</fullName>
+        <defaultValue>$Label.CBR_General_Question_4</defaultValue>
+        <description>R5 - Text field to capture the Question 4- General topics section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of (Self-supporting technically, self-supporting commercially, uses ABB online tools, Keeps people trained and company authorized, keeps agreed schedules)</inlineHelpText>
+        <label>3.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>General_Question_5__c</fullName>
+        <defaultValue>$Label.CBR_General_Question_5</defaultValue>
+        <description>R5 - Question 5 under General topic section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Update the next review info In Business Plan record, under section “Plan status and follow-up”, fields “Date for next review”  and “Assigned to&quot;</inlineHelpText>
+        <label>4.</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <description>R5-Channel review to have a look-up relationship with the Joint Business Plan Object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The partner business plan this review covers. If the scope is several branch offices, that need to be indicated in general comments below.</inlineHelpText>
+        <label>Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipLabel>Channel Partner Business Reviews</relationshipLabel>
+        <relationshipName>Channel_Reviews</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Market_Trend_Flag1__c</fullName>
+        <description>R5 - Flag for Must Have Question 1 in Market trends section</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL( Answer_1__c , &quot;&quot;), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Trend_Flag2__c</fullName>
+        <description>R5 - Flag for Must Have Question 2 in Market trends section</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL( Answer_2__c , &quot;&quot;),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Trend_Flag3__c</fullName>
+        <description>R5 - Flag for Must Have Question 3 in Market trends section</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Answer_3__c , &quot;&quot;),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Trend_Flag4__c</fullName>
+        <description>R5 - Flag for Must Have Question 4 in Market trends section</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL( Answer_4__c , &quot;&quot;),IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Persons_involved_in_Sales__c</fullName>
+        <description>R5- Channel Partner Business Reviews Field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of sales people working with ABB products</inlineHelpText>
+        <label>Sales people working with ABB products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Persons_involved_in_Service__c</fullName>
+        <description>R5- Channel Partner Business Reviews Field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of service people working with ABB products</inlineHelpText>
+        <label>Service people working with ABB products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Persons_involved_in_Technical__c</fullName>
+        <description>R5- Channel Partner Business Reviews Field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of technical people working with ABB products</inlineHelpText>
+        <label>Tech people working with ABB products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes_1__c</fullName>
+        <description>R5 - Notes on Each Section 1</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional information about market trend and offering</inlineHelpText>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_2__c</fullName>
+        <description>R5 - Notes Section 2</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional information about sales and pipeline</inlineHelpText>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_3__c</fullName>
+        <description>R5 - Notes Section 3</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional information about actions</inlineHelpText>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_4__c</fullName>
+        <description>R5 - Notes Section 4</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional information about resources</inlineHelpText>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_5__c</fullName>
+        <description>R5 - Notes on Section 5</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional information about general topics</inlineHelpText>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_Operations_Section__c</fullName>
+        <description>R5 - Notes Operations Section</description>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Old_Record_Type_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Record Type Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operations_Answer_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Operations Answer Review Open Cases</description>
+        <externalId>false</externalId>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Operations_Answer_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Operations Answer 2 Review of supply/ logistical related topics</description>
+        <externalId>false</externalId>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Operations_Answer_3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Operations Answer 3 Review and update ABB contacts</description>
+        <externalId>false</externalId>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PG_s_Covered__c</fullName>
+        <description>R5 - PG&apos;s Covered</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.PG_s_Covered__c</formula>
+        <label>PG&apos;s Covered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Answer_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 -  Check box to capture Contact and Review update</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review and update &quot;Contact Roles&quot; section under this Account. Notify Channel Manager if effects access rights to ABB tools. Check also contacts as indicated in Business plan. Check box when done.</inlineHelpText>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Flag1__c</fullName>
+        <description>R5-R5 - Flag for Must Have Question 1 in Partner section</description>
+        <externalId>false</externalId>
+        <formula>IF(Partner_Answer_1__c = FALSE,IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Question_1__c</fullName>
+        <defaultValue>$Label.CBR_Partner_Question_1</defaultValue>
+        <description>R5 - Text field to capture the Question 1- Partner resources section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review and update &quot;Contact Roles&quot; section under this Account. Notify Channel Manager if effects access rights to ABB tools. Check also contacts as indicated in Business plan.</inlineHelpText>
+        <label>1.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Address_Country__c</fullName>
+        <description>R5 - Copies Primary Address from Account</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Account__r.Primary_Address_Country__c )</formula>
+        <label>Primary Address Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Channel_Class__c</fullName>
+        <description>R5 - Primary Channel Class from Channel Partner Business Plan</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Primary_Channel_Class__c</formula>
+        <label>Primary Channel Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_1__c</fullName>
+        <defaultValue>$Label.CBR_Market_Question_1</defaultValue>
+        <description>R5- View on market trend in the next 6 months (total market), compared to previous 6 months-Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner view on expected sales trend for the next 6 months (total market); compared to the previous 6 months. Please indicate also market trend per focused industry further down the form.</inlineHelpText>
+        <label>1.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_2__c</fullName>
+        <defaultValue>$Label.CBR_Market_Question_2</defaultValue>
+        <description>R5 -  Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner view on change of ABB position against competitor products/offerings over past 6 months</inlineHelpText>
+        <label>2.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_3__c</fullName>
+        <defaultValue>$Label.CBR_Market_Question_3</defaultValue>
+        <description>R5 - Progress on expanding portfolio as indicated in the portfolio survey - Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Progress on expanding the ABB portfolio as indicated in the business plan</inlineHelpText>
+        <label>3.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_4__c</fullName>
+        <defaultValue>$Label.CBR_Market_Question_4</defaultValue>
+        <description>R5 -Market trends and offering - Partner view section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of other suppliers for the ABB product mix discussed.</inlineHelpText>
+        <label>4.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Operations_1__c</fullName>
+        <defaultValue>$Label.CBR_Operations_Question_1</defaultValue>
+        <description>R5 - Text field to capture the Question 1- Operations Review</description>
+        <externalId>false</externalId>
+        <inlineHelpText>e.g. NPS, CCRP. Assign actions as needed</inlineHelpText>
+        <label>1.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Operations_2__c</fullName>
+        <defaultValue>$Label.CBR_Operations_Question_2</defaultValue>
+        <description>R5 - Text field to capture the Question 2- Operations Review</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delivery performance, stocking situation, process review/improvements. Assign actions as needed</inlineHelpText>
+        <label>2.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resources_Contacts_Question_2__c</fullName>
+        <defaultValue>$Label.CBR_Partner_Question_2</defaultValue>
+        <description>R5 -  Text field to capture the Question 2- Resources and Partner Section</description>
+        <externalId>false</externalId>
+        <label>2.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resources_Contacts_Question_3__c</fullName>
+        <defaultValue>$Label.CBR_Partner_Question_3</defaultValue>
+        <description>R5 - Text field to capture the Question 3- Resources and Partner Section</description>
+        <externalId>false</externalId>
+        <label>3.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rund_Rate_Current_Year__c</fullName>
+        <description>R5 - Copy the run rate from the channel business plan</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Rund_Rate_Ongoing_year_Formula__c</formula>
+        <label>Rund Rate Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Answer_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5 - Confirmed -click -Sales and pipeline review</description>
+        <externalId>false</externalId>
+        <inlineHelpText>On Business plan -form, section &quot;Channel Sales Plan&quot;, update fields Actual YTD (+ date) and forecast ongoing year. Indicate here when done by selecting the checkbox.</inlineHelpText>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Answer_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5-Sales and pipeline review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review all open opportunities with the partner and update info as needed. Ensure that relevant opportunities are also registered in this tool. Indicate here when done by selecting the checkbox.</inlineHelpText>
+        <label>Done</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Answer_3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R5-Sales and pipeline review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review all open opportunities with the partner and update info as needed. Ensure that relevant opportunities are also registered in this tool. Indicate here when done by selecting the checkbox.</inlineHelpText>
+        <label>Answer 3</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Flag1__c</fullName>
+        <description>R5 - Flag for Must Have Question 1 in Sales section</description>
+        <externalId>false</externalId>
+        <formula>IF(Sales_Answer_1__c = FALSE,IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Flag2__c</fullName>
+        <description>R5 - Flag for Must Have Question 2 in Sales section</description>
+        <externalId>false</externalId>
+        <formula>IF( Sales_Answer_2__c == FALSE, IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Flag3__c</fullName>
+        <description>R5 - Flag for Must Have Question 3 in Sales section</description>
+        <externalId>false</externalId>
+        <formula>IF(Sales_Answer_3__c = FALSE,IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;),&quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Previous_Year__c</fullName>
+        <description>R5 - Sales Previous Year formula field to copy from CBP</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Sales_previous_year_formula__c</formula>
+        <label>Sales Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Question_1__c</fullName>
+        <defaultValue>$Label.CBR_Sales_Question_1</defaultValue>
+        <description>R5 - Update Sales Status, target, forecast -  Sales and pipeline review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Under Sales Targets and Results in  Business plan, update fields Actual YTD (+ date) and Forecast current year. Indicate here when done. Tip: use Mass Edit functionality..</inlineHelpText>
+        <label>1.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sales_Question_2__c</fullName>
+        <defaultValue>$Label.CBR_Sales_Question_3</defaultValue>
+        <description>R5 - Text field to capture the Question 2- Sales and pipeline review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review all open opportunities with the partner and update info as needed. Ensure that relevant opportunities are also registered in this tool. Indicate here when done.</inlineHelpText>
+        <label>2.</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sales_Question_3__c</fullName>
+        <defaultValue>$Label.CBR_Sales_Question_3</defaultValue>
+        <description>R5 - Text field to capture the Question 3- Sales and pipeline review section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review all open opportunities with the partner and update info as needed. Ensure that relevant opportunities are also registered in this tool. Indicate here when done.</inlineHelpText>
+        <label>Question 3</label>
+        <length>260</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sales_YTD_Compared_to_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Joint_Business_Plan__r.Budget_Current_Year_formula__c == 0, 0, (Joint_Business_Plan__r.Rund_Rate_Ongoing_year_Formula__c -  Joint_Business_Plan__r.Budget_Current_Year_formula__c) /Joint_Business_Plan__r.Budget_Current_Year_formula__c)</formula>
+        <label>Runrate vs Budget (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Sales_YTD_Compared_to_Forecast__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Joint_Business_Plan__r.Forecast_Ongoing_Year_Formula__c == 0, 0, ((Joint_Business_Plan__r.Rund_Rate_Ongoing_year_Formula__c - Joint_Business_Plan__r.Forecast_Ongoing_Year_Formula__c)/Joint_Business_Plan__r.Forecast_Ongoing_Year_Formula__c))</formula>
+        <label>Runrate vs Forecast (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Sales_YTD_Compared_to_Last_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Joint_Business_Plan__r.Sales_previous_year_formula__c == 0, 0, ((Joint_Business_Plan__r.Rund_Rate_Ongoing_year_Formula__c - Joint_Business_Plan__r.Sales_previous_year_formula__c)/Joint_Business_Plan__r.Sales_previous_year_formula__c))</formula>
+        <label>Runrate vs Last Year (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Channel_Class__c</fullName>
+        <description>R5 - Secondary Channel Class from Channel Partner Business Plan</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.Secondary_Channel_Class__c</formula>
+        <label>Secondary Channel Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>R5 - Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change status or send to approval when completed. Note that fields indicated with ! (exclamation mark) must first be completed.</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Number_of_Actions_Completed__c</fullName>
+        <description>R5 - Contains the number of actions are &quot;Completed&quot; status. Field is updated thru trigger &quot;ClsTriggerChannelBusinessReview&quot; - KAD-01052</description>
+        <externalId>false</externalId>
+        <label>Total Number of Actions Completed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Number_of_Actions_In_Progress__c</fullName>
+        <description>R5 - Contains the number of actions are &quot;In Progress&quot; status. Field is updated thru trigger &quot;ClsTriggerChannelBusinessReview&quot; - KAD-01052</description>
+        <externalId>false</externalId>
+        <label>Total Number of Actions In Progress</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>XA_Contracts__c</fullName>
+        <description>R5 Formula field to set up XA- Contracts</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/apex/Apttus__DocumentGenerate?id=&quot;&amp;Id &amp; &quot;&amp;action=Generate_Document&amp;templateType=Channel Partner Business Review&quot;, IMAGE(&quot;/resource/Apttus__Button_Generate&quot;, &quot;Generate&quot;),&quot;_self&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Click GENERATE button to create a standard format file from the content. You can choose between several file formats and languages.</inlineHelpText>
+        <label>Print Document</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>market_Scope_Channel_Class_Hideen__c</fullName>
+        <description>It  is created for X-Author Document to populate the Channel class values in Channel Partner Business Review</description>
+        <externalId>false</externalId>
+        <formula>(TEXT(Joint_Business_Plan__r.Channel_Market_Coverage__r.Primary_Channel_Class__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>market Scope Channel Class Hideen</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Channel Partner Business Review</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Business Review Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Channel Partner Business Reviews</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Channel_Business_Review_Default</fullName>
+        <active>true</active>
+        <description>R5 Channel Business Review Default Record Type</description>
+        <label>Channel Business Review Default</label>
+        <picklistValues>
+            <picklist>Answer_1__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_2__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_3__c</picklist>
+            <values>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Channel_End_Period_Business_Review</fullName>
+        <active>true</active>
+        <description>Review done in the end of planning period to &quot;close the planning period&quot;. After the review, a new plan for upcoming period is typically generated. ABB persons involved are normally sales responsible and Channel Manager</description>
+        <label>End-Period Business Review</label>
+        <picklistValues>
+            <picklist>Answer_1__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_2__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_3__c</picklist>
+            <values>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Channel_End_Period_Business_Review_Detail</fullName>
+        <active>true</active>
+        <description>Review done in the end of planning period to &quot;close the planning period&quot;. After the review, a new plan for upcoming period is typically generated. ABB persons involved are normally sales responsible and Channel Manager</description>
+        <label>End-Period Business Review Detail</label>
+        <picklistValues>
+            <picklist>Answer_1__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_2__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_3__c</picklist>
+            <values>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Channel_Mid_Period_Business_Review</fullName>
+        <active>true</active>
+        <description>Review done during the planning period. In addition to normal sales review, target is also to check/ adjust the direction compared to plan. Typically executed by sales persons responsible for supporting the sales of the partner.</description>
+        <label>Mid-Period Business Review</label>
+        <picklistValues>
+            <picklist>Answer_1__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_2__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_3__c</picklist>
+            <values>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Channel_Mid_Period_Business_Review_Detail</fullName>
+        <active>true</active>
+        <description>Review done during the planning period. In addition to normal sales review, target is also to check/ adjust the direction compared to plan. Typically executed by sales persons responsible for supporting the sales of the partner.</description>
+        <label>Mid-Period Business Review Detail</label>
+        <picklistValues>
+            <picklist>Answer_1__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_2__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_3__c</picklist>
+            <values>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Closed_Channel_Business_Review</fullName>
+        <active>true</active>
+        <description>R5 - Closed Channel Business Review</description>
+        <label>Closed Channel Business Review</label>
+        <picklistValues>
+            <picklist>Answer_1__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_2__c</picklist>
+            <values>
+                <fullName>Negative</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Negative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Positive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable %2F OK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_3__c</picklist>
+            <values>
+                <fullName>As Planned or Exceeded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>General_Answer_4__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Joint_Business_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Channel_Market_Coverage_Hidden__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Joint_Business_Plan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Channel_Market_Coverage_Hidden__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Joint_Business_Plan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Channel_Market_Coverage_Hidden__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>Joint_Business_Plan__c</searchFilterFields>
+        <searchFilterFields>Channel_Market_Coverage_Hidden__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CBR_Status_Change_to_InApproval</fullName>
+        <active>true</active>
+        <description>R5 - Validation rule to check the mandatory fields are filled to change the status from Draft to In Approval</description>
+        <errorConditionFormula>OR(
+AND( 
+RecordType.DeveloperName=&quot;Channel_Mid_Period_Business_Review&quot;, OR(ISPICKVAL(Status__c, &quot;In Approval&quot;), ISPICKVAL(Status__c, &quot;Completed&quot;)), OR(ISPICKVAL(Answer_1__c, &quot;None&quot;) ,ISPICKVAL(Answer_1__c, &quot;&quot;), ISPICKVAL(Answer_2__c, &quot;None&quot;), ISPICKVAL(Answer_2__c, &quot;&quot;),  Sales_Answer_1__c = FALSE, Actions_Answer_1__c = FALSE, General_Answer_5__c = FALSE, Sales_Answer_2__c = FALSE, ISBLANK(Actions_Answer_2__c),Partner_Answer_1__c=FALSE ) 
+),
+AND(
+RecordType.DeveloperName=&quot;Channel_End_Period_Business_Review&quot;, OR(ISPICKVAL(Status__c, &quot;In Approval&quot;), ISPICKVAL(Status__c, &quot;Completed&quot;)), OR(ISPICKVAL(Answer_1__c, &quot;None&quot;), ISPICKVAL(Answer_1__c, &quot;&quot;), ISPICKVAL(Answer_2__c, &quot;None&quot;), ISPICKVAL(Answer_2__c, &quot;&quot;), Sales_Answer_1__c = FALSE, Actions_Answer_1__c = FALSE, Sales_Answer_2__c = FALSE, ISBLANK(Actions_Answer_2__c), Partner_Answer_1__c=FALSE, General_Answer_5__c =FALSE)))</errorConditionFormula>
+        <errorMessage>Status cannot be changed. Scroll down to fill in the mandatory questions marked with a Red flag to proceed to the next stage.</errorMessage>
+    </validationRules>
+    <!--validationRules>
+        <fullName>CBR_Validate_Required_Fields</fullName>
+        <active>false</active>
+        <description>R5 - Validation rule to check all the checkbox fields need to be filled out</description>
+        <errorConditionFormula>OR(Sales_Answer_1__c = FALSE, Actions_Answer_1__c= FALSE, Partner_Answer_1__c=FALSE,ISBLANK(Sales_Answer_2__c),ISBLANK(Actions_Answer_2__c))</errorConditionFormula>
+        <errorMessage>Cannot save the changes. Please fill the required fields.</errorMessage>
+    </validationRules-->
+    <validationRules>
+        <fullName>Channel_Business_Review_Close_Check</fullName>
+        <active>true</active>
+        <description>R5 - If Account Plan Status is Closed, then the user should not edit the Channel partner business review</description>
+        <errorConditionFormula>ISPICKVAL( Joint_Business_Plan__r.Status__c, &apos;Closed&apos;)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Business Plan is Closed</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Assign_Actions</fullName>
+        <availability>online</availability>
+        <description>R5 Action button will redirect to record type selection page of Joint Business Plan Actions</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Assign Actions</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/RedirectWithVariables?object=Joint_Business_Plan_Actions__c&amp;sfdc_created__c=1&amp;allowRTS=true&amp;objectId={!$Label.Sys_Joint_Business_Plan_Actions_Obj_Id}&amp;{!Channel_Business_Review__c.Joint_Business_Plan__c}
+&amp;Joint_Business_Plan__c={! Joint_Business_Plan__c.Name} 
+&amp;ID_Joint_Business_Plan__c={!Joint_Business_Plan__c.Id} 
+&amp;retURL={!Joint_Business_Plan__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>End_Period</fullName>
+        <availability>online</availability>
+        <description>R5 - Custom button for the &quot;Channel End-Period Business Review&quot; Record Type.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>End-Period</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Channel_Business_Review__c&amp;object=Channel_Business_Review__c&amp;Joint_Business_Plan__c={!Joint_Business_Plan__c.Name}&amp;ID_Joint_Business_Plan__c={! Joint_Business_Plan__c.Id}&amp;Account__c={!Joint_Business_Plan__c.Account__c}&amp;ID_Account__c={!Joint_Business_Plan__c.AccountId__c}&amp;retURL={!Joint_Business_Plan__c.Id}&amp;RecordType={!$Label.CBR_End_Period_RecordType_Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mid_Period</fullName>
+        <availability>online</availability>
+        <description>R5 - Custom button for the &quot;Channel Mid-Period Business Review&quot; Record Type.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Mid-Period</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Channel_Business_Review__c&amp;object=Channel_Business_Review__c&amp;Joint_Business_Plan__c={!Joint_Business_Plan__c.Name}&amp;ID_Joint_Business_Plan__c={! Joint_Business_Plan__c.Id}&amp;Account__c={!Joint_Business_Plan__c.Account__c}&amp;ID_Account__c={!Joint_Business_Plan__c.AccountId__c}&amp;retURL={!Joint_Business_Plan__c.Id}&amp;RecordType={!$Label.CBR_Mid_Period_RecordType_Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Channel_Partner_Business_Review</fullName>
+        <availability>online</availability>
+        <description>R5 - Clicking on the button will redirect to the Standard new page with Account and Channel Partner Business Plan pre-populated.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Channel Partner Business Review</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Channel_Business_Review__c
+&amp;sfdc_created__c=1&amp;allowRTS=true&amp;objectId={!$Label.Channel_Partner_Business_Review_ObjectID}
+&amp;Joint_Business_Plan__c={! Joint_Business_Plan__c.Name }
+&amp;ID_Joint_Business_Plan__c={! Joint_Business_Plan__c.Id }
+&amp;Account__c={! Joint_Business_Plan__c.Account__c}
+&amp;ID_Account__c={! Joint_Business_Plan__c.AccountId__c}
+&amp;retURL={!Joint_Business_Plan__c.Id}</url>
+    </webLinks>
+</CustomObject>

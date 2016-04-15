@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>New_Entries_with_Fields</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>New_Entries_with_Fields</fullName>
+        <fields>Name</fields>
+        <fields>Date_of_Visit__c</fields>
+        <fields>Confidential__c</fields>
+        <fields>Account__c</fields>
+        <fields>LastModifiedById</fields>
+        <fields>OwnerId</fields>
+        <label>New Entries with Fields</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object holds the Visit Reports which will be attached to Accounts and can be linked to Opportunities &amp; Attendees</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Lookup Relationship with Account Plan</description>
+        <externalId>false</externalId>
+        <label>Account Plan</label>
+        <referenceTo>Account_Plan__c</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup to Accounts</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account_Plan__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Plan Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Partner_Business_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( (TEXT(Joint_Business_Plan__r.Status__c) == &apos;Closed&apos; || TEXT(Joint_Business_Plan__r.Status__c) == &apos;Obsolete&apos;), &apos;Closed&apos;, TEXT(Joint_Business_Plan__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Partner Business Plan Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Qualification_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (OR( ISPICKVAL( Channel_Pre_Qualification__r.Status__c , &apos;Obsolete&apos;), ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Declined&apos;), 
+ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Completed&apos;) ), &apos;Closed&apos;, TEXT(Channel_Pre_Qualification__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Qualification Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Business_Review_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (OR(ISPICKVAL( Channel_Review__r.Status__c , &apos;Obsolete&apos;), 
+ISPICKVAL( Channel_Review__r.Status__c , &apos;Completed&apos;)), &apos;Closed&apos;, TEXT(Channel_Review__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Business Review Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agenda__c</fullName>
+        <externalId>false</externalId>
+        <label>Agenda</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R4</description>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Pre_Qualification__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Channel Partner Pre-Qualification</label>
+        <referenceTo>Channel_Qualifications__c</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Review__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Channel Partner Business Review</label>
+        <referenceTo>Channel_Business_Review__c</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Confidential__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The information on this Visit Report should not be shared externally</inlineHelpText>
+        <label>Confidential</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Visit__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Visit</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_User_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>End User Project</label>
+        <referenceTo>End_User_Project__c</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Comment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is for internal comments only and should not be shared externally</inlineHelpText>
+        <label>Internal Comment</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Channel Partner Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup field created as part of R5-2576 to provide users with the ability to create visit reports from leads.</description>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Where did the visit take place?</inlineHelpText>
+        <label>Location</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Meeting_Minutes__c</fullName>
+        <externalId>false</externalId>
+        <label>Meeting Minutes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Migration_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Migration ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity.Account.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account__c</valueField>
+            </filterItems>
+            <infoMessage>Please select the related opportunity from the list</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Visit Reports</relationshipLabel>
+        <relationshipName>Visit_Reports</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What was the reason for the visit?</inlineHelpText>
+        <label>Reason</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Source_System_ID__c</fullName>
+        <description>Stores the ID form the source system of a record (used for data migration)</description>
+        <externalId>false</externalId>
+        <label>Source System ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visit_Type__c</fullName>
+        <description>Picklist created as part of R5-2538 to provide users with the ability to differentiate between internal events and external events (involving client contacts) when setting up an event in SFDC.</description>
+        <externalId>false</externalId>
+        <label>Visit Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Internal meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Visit Report</label>
+    <listViews>
+        <fullName>AllVisitReports</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Location__c</columns>
+        <columns>Confidential__c</columns>
+        <columns>Date_of_Visit__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>1. All Visit Reports</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>MyVisitReports</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Location__c</columns>
+        <columns>Confidential__c</columns>
+        <columns>Date_of_Visit__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <label>2. My Visit Reports</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Visit Report Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Visit Reports</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Confidential__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date_of_Visit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date_of_Visit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Reason__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Account__c</lookupFilterFields>
+        <lookupFilterFields>Date_of_Visit__c</lookupFilterFields>
+        <lookupFilterFields>Location__c</lookupFilterFields>
+        <lookupFilterFields>CREATED_DATE</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Agenda__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date_of_Visit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Location__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>Date_of_Visit__c</searchFilterFields>
+        <searchFilterFields>Location__c</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_of_Visit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Reason__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>ChannelPreQual_VisitReport_CloseCheck</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Partner Pre Qualification Status is Obsolete/Declined/Completed, then the user should not edit the Visit report record</description>
+        <errorConditionFormula>OR( ISPICKVAL( Channel_Pre_Qualification__r.Status__c , &apos;Obsolete&apos;), ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Declined&apos;),
+ISPICKVAL(Channel_Pre_Qualification__r.Status__c, &apos;Completed&apos;) )</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Pre Qualification is Closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ChannelBusReview_ClosedCheck_VisitReport</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Business review Status is Obsolete, then the user should not edit the visit report record</description>
+        <errorConditionFormula>OR(ISPICKVAL(  Channel_Review__r.Status__c  , &apos;Obsolete&apos;), 
+ISPICKVAL( Channel_Review__r.Status__c , &apos;Completed&apos;))</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Business Review is Closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Visit_Reports_On_Inactive_Accounts</fullName>
+        <active>true</active>
+        <description>No Visit Reports On Inactive Accounts</description>
+        <errorConditionFormula>IF( 
+ AND(NOT($User.AccountMerge_Override__c), Account__r.RecordType.Name = &quot;Read Only&quot;, ISNEW()),
+True, False)</errorConditionFormula>
+        <errorMessage>You can not create a new Visit report on an Account that is set to Inactive!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Visit_Report_Status_Closed_Check</fullName>
+        <active>true</active>
+        <description>R5 - If Account Plan Status is Closed, then the user should not edit the Visit Report.</description>
+        <errorConditionFormula>ISPICKVAL(Account_Plan__r.Status__c, &apos;Closed&apos;)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Account Plan is Closed</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Visit_Report</fullName>
+        <availability>online</availability>
+        <description>This button will make sure when creating a New Visit Report from an Opportunity, that the related Account field is also populated.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Visit Report</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Visit_Report__c&amp;Opportunity__c={!Opportunity.Name}&amp;ID_Opportunity__c={!Opportunity.Id}&amp;Account__c={!Opportunity.Account}&amp;ID_Account__c={!Opportunity.AccountId}&amp;retURL={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Visit_Report_ChannelBusReview</fullName>
+        <availability>online</availability>
+        <description>R5: When the user creating Visit Report from Channel Business Review then it should populate the account &amp;Joint Business Plan as well as the Channel Business Reviewpre-populated</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Visit Report</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/newVisitReportVF?retURL=%2F{!Channel_Business_Review__c.Id}&amp;Object=Channel_Business_Review__c&amp;Id={!Channel_Business_Review__c.Id}&amp;Reference=Channel_Review__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Visit_Report_ChannelQual</fullName>
+        <availability>online</availability>
+        <description>R5 - To populate Account and Channel Qualification When creating the Visit Report on Channel Qualification</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Visit Report</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/newVisitReportVF?retURL=%2F{!Channel_Qualifications__c.Id}&amp;Object=Channel_Qualifications__c&amp;Id={!Channel_Qualifications__c.Id}&amp;Reference=Channel_Pre_Qualification__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Visit_Report_JBP</fullName>
+        <availability>online</availability>
+        <description>R5: To Auto populate Account name and JBP on Visit Report Edit page</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Visit Report</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/newVisitReportVF?retURL=%2F{!Joint_Business_Plan__c.Id}&amp;Object=Joint_Business_Plan__c&amp;Id={!Joint_Business_Plan__c.Id}&amp;Reference=Joint_Business_Plan__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Visit_Report_R5</fullName>
+        <availability>online</availability>
+        <description>R5 - When creating the Visit Report on an Account Plan, the lookup field with the Account on the Visit Report should be already automatically filled.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Visit Report</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/RedirectWithVariables?object=Visit_Report__c&amp;sfdc_created__c=1
+&amp;Account_Plan__c={!Account_Plan__c.Name}
+&amp;ID_Account_Plan__c={!Account_Plan__c.Id}
+&amp;Account__c={!Account_Plan__c.Account__c}
+&amp;ID_Account__c={!Account_Plan__c.AccountId__c}
+&amp;retURL={!Account_Plan__c.Id}</url>
+    </webLinks>
+</CustomObject>

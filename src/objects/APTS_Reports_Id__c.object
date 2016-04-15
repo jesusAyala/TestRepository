@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Record Id of MSPAs with Agreement Line Items Report and Quotations with Proposal Line Items Repo.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_LP_MSPA_Information__c</fullName>
+        <description>Record Id of &quot;APTS LP MSPA Information&quot; email template.</description>
+        <externalId>false</externalId>
+        <label>APTS LP MSPA Information</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPAs_with_Agreement_Line_Items__c</fullName>
+        <description>Record Id of MSPAs with Agreement Line Items Report.</description>
+        <externalId>false</externalId>
+        <label>MSPAs with Agreement Line Items Report</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Quotations_with_Proposal_Line_Items__c</fullName>
+        <description>Record Id of Quotations with Proposal Line Items Repo.</description>
+        <externalId>false</externalId>
+        <label>Quotations with Proposal Line Items Repo</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Apttus Reports Id</label>
+    <visibility>Public</visibility>
+</CustomObject>

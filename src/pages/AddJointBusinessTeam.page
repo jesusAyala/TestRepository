@@ -1,0 +1,61 @@
+<!-- 
+VF Page - AddJointBusinessTeam
+Controller - ClsAddJointBusinessTeam
+Create the Joint Business team members from Standard Account Team
+
+-->
+
+
+<apex:page standardController="Joint_Business_Plan__c" extensions="ClsAddJointBusinessTeam" id="pageId1" standardStylesheets="false">
+    <br />
+    <apex:form title="{!$Label.Title_Add_Joint_Business_Team}" id="pageId2">
+     <apex:outputPanel id="pnl" rendered="true">
+    <apex:pagemessages id="pgmsg" > </apex:pagemessages> 
+    
+    <center> 
+<apex:commandButton title="{!$Label.Back}" value="{!$Label.Back}" action="{!goBack}"  rendered="{!showBack}" id="cb"/></center>
+    </apex:outputPanel>
+   
+  <apex:pageBlock title="{!$Label.New_Joint_Business_Team}" id="pageId4" rendered="{!showCanvas}" >
+  
+  <table>
+    <tr>
+    <td><apex:outputText value="User" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Team Role" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Access Level" style="color:red;font-weight:bold"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!jointBusinessTeam1.User__c}" required="true" id="value1"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam1.Team_Role__c}" required="true" id="value2"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam1.Access__c}" required="true" id="value3"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!jointBusinessTeam2.User__c}"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam2.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam2.Access__c}"/></td> 
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!jointBusinessTeam3.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!jointBusinessTeam3.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam3.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!jointBusinessTeam4.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!jointBusinessTeam4.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam4.Access__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!jointBusinessTeam5.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!jointBusinessTeam5.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!jointBusinessTeam5.Access__c}"/></td>
+    </tr>
+  </table>
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!saveRecord}" value="Save"/>
+    <apex:commandButton action="{!saveMoreRecord}" value="Save & More" />
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form> 
+
+</apex:page>

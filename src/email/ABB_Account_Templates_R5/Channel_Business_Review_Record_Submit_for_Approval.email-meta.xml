@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 Channel Business Review Record Submit for Approval</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Channel Business Review Record Submit for Approval</name>
+    <style>none</style>
+    <subject>Channel Business Review has been routed for your approval</subject>
+    <type>custom</type>
+</EmailTemplate>

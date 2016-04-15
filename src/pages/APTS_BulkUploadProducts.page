@@ -1,0 +1,724 @@
+<!--*************************************************************
+@Name: APTS_BulkUploadProducts
+@Author: Axaykumar Varu
+@CreateDate: 21st Oct 2015
+@Description: This page allow user to upload the CSV file containing the list of products to be upoloaded to the cart, system will create separate line item for each products.
+@UsedBy: Processes L4 – SAL04-02-01 Perform bulk upload for line items with in the Cart for Quotation and MSPA
+******************************************************************-->
+
+<apex:page showheader="false" controller="APTS_BulkUploadProductsController">
+
+<head>
+  <title>{!$Label.Apttus_Config2__PageCatalogName}</title>
+  
+  <!--libraries -->
+   <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'js/jquery-1.8.3.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'js/jquery-ui-1.9.2.custom.min.js')}"/>
+
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__JQueryUILibrary19, 'css/smoothness/jquery-ui-1.9.2.custom.css')}"/>
+
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryCarousel)}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryTouchSwipeLibrary, 'TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JQueryTouchSwipeLibrary, 'TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__JSTreeLibrary, 'jstree-v.pre1.0/jquery.jstree.js')}"/>
+   
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__AptBreadCrumb, 'js/jquery.easing.1.3.js')}"/>   
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__AptBreadCrumb, 'js/aptBreadCrumb.js')}"/>
+
+
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__ActionFunctionQueue)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__CPQColumnView)}"/>
+    
+    
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__CPQPageResources,'CPQCommon.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__CPQPageResources,'BreadCrumb.css')}"/>    
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__CPQPageResources,'CPQCatalog.css')}" />
+     <apex:includeScript value="{!$Resource.Apttus_Config2__CPQJSLibrary}"/>
+     <!--
+    <apex:includeScript value="{!$Resource.Apttus_Config2__CPQPricingJSLib}"/>
+    
+    <apex:includeScript value="{!$Resource.Apttus_Config2__CPQCatalogJS}"/>
+      -->
+  
+    <!-- Yahoo Library -->
+    <apex:include pageName="Apttus_Config2__ConfigJSLibInclude" />
+        
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/yahoo-dom-event/yahoo-dom-event.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/container/container-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/dragdrop/dragdrop-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/animation/animation-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/treeview/treeview-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/menu/menu-min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/yahoo/yahoo-min.js')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/assets/skins/sam/skin.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/treeview/assets/skins/sam/treeview.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/examples/treeview/assets/css/menu/tree.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/menu/assets/skins/sam/menu.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Apttus_Config2__YUILibrary, '/yui/build/container/assets/skins/sam/container.css')}" />
+    
+    <apex:stylesheet value="{!$Resource.Apttus_Config2__ConfigStyles}" />
+
+  <!--End of libraries-->
+
+<style type="text/css" id="vakata-stylesheet">
+#vakata-dragged {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 4px 4px 4px 24px;
+    position: absolute;
+    top: -2000px;
+    line-height: 16px;
+    z-index: 10000;
+}
+#vakata-contextmenu {
+    display: block;
+    visibility: hidden;
+    left: 0;
+    top: -200px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    min-width: 180px;
+    background: #ebebeb;
+    border: 1px solid silver;
+    z-index: 10000;
+*width:180px;
+}
+#vakata-contextmenu ul {
+    min-width: 180px;
+*width:180px;
+}
+#vakata-contextmenu ul, #vakata-contextmenu li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+}
+#vakata-contextmenu li {
+    line-height: 20px;
+    min-height: 20px;
+    position: relative;
+    padding: 0px;
+}
+#vakata-contextmenu li a {
+    padding: 1px 6px;
+    line-height: 17px;
+    display: block;
+    text-decoration: none;
+    margin: 1px 1px 0 1px;
+}
+#vakata-contextmenu li ins {
+    float: left;
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+    margin-right: 2px;
+}
+#vakata-contextmenu li a:hover, #vakata-contextmenu li.vakata-hover > a {
+    background: gray;
+    color: white;
+}
+#vakata-contextmenu li ul {
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+    background: #ebebeb;
+    border: 1px solid gray;
+}
+#vakata-contextmenu .right {
+    right: 100%;
+    left: auto;
+}
+#vakata-contextmenu .bottom {
+    bottom: -1px;
+    top: auto;
+}
+#vakata-contextmenu li.vakata-separator {
+    min-height: 0;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+    margin: 0 2px;
+    background: silver; /* border-top:1px solid #fefefe; */
+    padding: 0;
+}
+</style>
+  <style type="text/css" id="jstree-stylesheet">
+.jstree ul, .jstree li {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    list-style-type: none;
+}
+.jstree li {
+    display: block;
+    min-height: 18px;
+    line-height: 18px;
+    white-space: nowrap;
+    margin-left: 18px;
+    min-width: 18px;
+}
+.jstree-rtl li {
+    margin-left: 0;
+    margin-right: 18px;
+}
+.jstree > ul > li {
+    margin-left: 0px;
+}
+.jstree-rtl > ul > li {
+    margin-right: 0px;
+}
+.jstree ins {
+    display: inline-block;
+    text-decoration: none;
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+.jstree a {
+    display: inline-block;
+    line-height: 16px;
+    height: 16px;
+    color: black;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 1px 2px;
+    margin: 0;
+}
+.jstree a:focus {
+    outline: none;
+}
+.jstree a > ins {
+    height: 16px;
+    width: 16px;
+}
+.jstree a > .jstree-icon {
+    margin-right: 3px;
+}
+.jstree-rtl a > .jstree-icon {
+    margin-left: 3px;
+    margin-right: 0;
+}
+li.jstree-open > ul {
+    display: block;
+}
+li.jstree-closed > ul {
+    display: none;
+}
+#vakata-dragged ins {
+    display: block;
+    text-decoration: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 0;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+#vakata-dragged .jstree-ok {
+    background: green;
+}
+#vakata-dragged .jstree-invalid {
+    background: red;
+}
+#idSearchDiv {
+    float: left;
+    padding-top: 5px;
+    width: 600px;
+}
+#jstree-marker {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+    height: 12px;
+    width: 8px;
+    position: absolute;
+    top: -30px;
+    z-index: 10001;
+    background-repeat: no-repeat;
+    display: none;
+    background-color: transparent;
+    text-shadow: 1px 1px 1px white;
+    color: black;
+    line-height: 10px;
+}
+#jstree-marker-line {
+    padding: 0;
+    margin: 0;
+    line-height: 0%;
+    font-size: 1px;
+    overflow: hidden;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    z-index: 10000;
+    background-repeat: no-repeat;
+    display: none;
+    background-color: #456c43;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+    border-left: 0;
+    -moz-box-shadow: 0px 0px 2px #666;
+    -webkit-box-shadow: 0px 0px 2px #666;
+    box-shadow: 0px 0px 2px #666;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+}
+.jstree .jstree-real-checkbox {
+    display: none;
+}
+.jstree-themeroller .ui-icon {
+    overflow: visible;
+}
+.jstree-themeroller a {
+    padding: 0 2px;
+}
+.jstree-themeroller .jstree-no-icon {
+    display: none;
+}
+.jstree .jstree-wholerow-real {
+    position: relative;
+    z-index: 1;
+}
+.jstree .jstree-wholerow-real li {
+    cursor: pointer;
+}
+.jstree .jstree-wholerow-real a {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+.jstree .jstree-wholerow {
+    position: relative;
+    z-index: 0;
+    height: 0;
+}
+.jstree .jstree-wholerow ul, .jstree .jstree-wholerow li {
+    width: 100%;
+}
+.jstree .jstree-wholerow, .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li, .jstree .jstree-wholerow a {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.jstree .jstree-wholerow, .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li {
+    background: transparent !important;
+}
+.jstree .jstree-wholerow ins, .jstree .jstree-wholerow span, .jstree .jstree-wholerow input {
+    display: none !important;
+}
+.jstree .jstree-wholerow a, .jstree .jstree-wholerow a:hover {
+    text-indent: -9999px;
+!important;
+    width: 100%;
+    padding: 0 !important;
+    border-right-width: 0px !important;
+    border-left-width: 0px !important;
+}
+.jstree .jstree-wholerow-span {
+    position: absolute;
+    left: 0;
+    margin: 0px;
+    padding: 0;
+    height: 18px;
+    border-width: 0;
+    padding: 0;
+    z-index: 0;
+}
+#aptTopButtons {
+    float: left;
+    width: 98%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.aptProductRow {
+    margin: 14px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #DDD; 
+}
+
+.aptProductInfoFields {
+    width:86%!important;
+}
+#breadCrumbContainer a.aptListButton{
+ margin:7px 7px 7px 15px!important;   
+}
+
+.aptProductInfoFields span.aptSearchProductcheck{
+    float: left;
+    margin-right: 10px;
+}
+#rootMenuContainer{
+    margin-left: 5px;
+    margin-right: 5px;
+    width:auto!important;
+}
+.treeview li span:hover {
+    background: #e7f4f9;
+    border: 1px solid #d8f0fa;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #015ba7;
+}
+.treeview li span {
+    padding: 1px 2px;
+}
+#idSearchContainer{
+    margin-left: 315px;
+}
+.jstree div a {
+    text-align: right;
+    margin-left: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 3px 5px 3px 5px;
+}
+.idProductListPaginator{top: -2px!important;}
+.displayInline{
+    display: inline;
+}
+
+
+/* popup_box DIV-Styles*/
+#popup_box { 
+    display:none; /* Hide the DIV */
+    position:fixed;  
+    _position:absolute; /* hack for internet explorer 6 */  
+    height:300px;  
+    width:600px;  
+    background:#FFFFFF;  
+    left: 300px;
+    top: 150px;
+    z-index:100; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+    margin-left: 15px;  
+    
+    /* additional features, can be omitted */
+    border:2px solid #ff0000;      
+    padding:15px;  
+    font-size:15px;  
+    -moz-box-shadow: 0 0 5px #ff0000;
+    -webkit-box-shadow: 0 0 5px #ff0000;
+    box-shadow: 0 0 5px #ff0000;
+    
+}
+
+#container {
+    background: #d2d2d2; /*Sample*/
+    width:100%;
+    height:100%;
+}
+
+a{  
+cursor: pointer;  
+text-decoration:none;  
+} 
+
+/* This is for the positioning of the Close Link */
+#popupBoxClose {
+    font-size:20px;  
+    line-height:15px;  
+    right:5px;  
+    top:5px;  
+    position:absolute;  
+    color:#6fa5e2;  
+    font-weight:500;      
+}
+
+
+/*
+.fileType {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: auto;
+    cursor: pointer;
+    border: 0;
+    height: 60px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.fileType:hover:after {
+    background: #FF1111;
+}
+
+.fileType:after {
+    transition: 200ms all ease;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+    background: #000000;
+    //background-image:url('http://i.stack.imgur.com/CVpp3.jpg');
+    text-shadow: 0 2px 0 rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: 'Select a file';
+    line-height: 30px;
+    border-radius: 5px;
+}*/
+.hover-text {
+    text-decoration: none;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    //width: 15em;
+    width: 300px;
+    z-index: 12;
+    background-color: #fefdb9;
+    padding: 2px 5px;
+    border: 1px solid orange;
+    text-align: left;
+    white-space: normal;
+    font-weight: normal;
+    color: #000;
+}
+</style>
+
+    
+    <script type="text/javascript">
+      
+      YAHOO.namespace("force.com");
+      
+      function initateLoading(){
+          
+          console.log('Calling action method.');
+          YAHOO.force.com.waitPanel.setFooter('Creating Line Items, Please Wait..');
+          AddLineItem();
+      }
+     
+     function showLoading(){
+         YAHOO.force.com.buildWaitPanel();
+         YAHOO.force.com.waitPanel.setFooter('Processing CSV file, Please Wait..');
+     }
+     
+     YAHOO.force.com.init = function() {
+            document.body.className = document.body.className + " yui-skin-sam";
+            YAHOO.force.com.myDialog = new YAHOO.widget.Panel(
+                "confirmationPanel",  // The id of our dialog container
+                { 
+                        width           :   "300px", // You can play with this until it's right
+                        visible         :   false,   // Should be invisible when rendered
+                        draggable       :   false,    // Make the dialog draggable
+                        close           :   false,   // Don't include a close title button
+                        modal           :   true,    // Make it modal
+                        fixedCenter     :   true,    // Keep centered if window is scrolled
+                        zindex          :   40,      // Make sure it's on top of everything
+                        
+                        // This line adds the appear/disapper fade effect
+                        effect          :   {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.35} 
+                }
+             );
+            
+            // Render the dialog to the document.body level of the DOM
+            YAHOO.force.com.myDialog.render(document.body);
+        }
+        
+    // Add the init method to the window.load event
+    YAHOO.util.Event.addListener(window, "load", YAHOO.force.com.init);
+    
+    
+    /**
+    * Builds the wait panel.
+    */
+    YAHOO.force.com.buildWaitPanel = function() {
+        document.body.className = document.body.className + " yui-skin-sam";
+        YAHOO.force.com.waitPanel = new YAHOO.widget.Panel(
+            "waitPanel",  // The id of our dialog container
+            { 
+                    width           :   "300px", // You can play with this until it's right
+                    visible         :   true,   // Should be invisible when rendered
+                    draggable       :   false,   // Make the dialog draggable
+                    close           :   false,   // Don't include a close title button
+                    modal           :   true,    // Make it modal
+                    fixedCenter     :   true,    // Keep centered if window is scrolled
+                    zindex          :   40,      // Make sure it's on top of everything
+                    constraintoviewport: true,
+                    
+                    // This line adds the appear/disapper fade effect
+                    effect          :   {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.25}
+                                
+            }
+        );
+        
+        YAHOO.force.com.waitPanel.setHeader('Please Wait..');
+        YAHOO.force.com.waitPanel.setBody('<center><img class="waitingImage" src="/resource/1423513114000/apttus_config2__Image_LoadingPage" /></center>');
+        YAHOO.force.com.waitPanel.render(document.body);
+        }
+  </script>
+  
+  </head>
+  
+     <body>
+             <apex:form id="toppanel" >
+             
+                    <div class="apt-page-header cartTable clearfix">
+                      <div class="apt-quote-panel apt-pull-left"><span class="apt-cart-head-label">
+                      <apex:outputlabel value="{!$Label.Apttus_Config2__Quote}:" rendered="{!ProdConfigSobj.Apttus_QPConfig__Proposald__c !=null}"/>
+                      <apex:outputlabel value="{!$Label.Apttus_Config2__Agreement}:" rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}"/>
+                      </span> &nbsp;<span ><a href="/{!quoteid}">{!Quotename}</a></span><span class="apt-location-text apt-cart-head-label">{!Proposalname}</span>
+                      <apex:outputlabel styleclass="apt-location-text apt-cart-head-label"  value="Number:" rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}"/>&nbsp;<span  rendered="{!ProdConfigSobj.Apttus_CMConfig__AgreementId__c!=null}">{!agreementNumber}</span></div>
+                       
+                       <div class="apt-aprroval-panel apt-pull-left"><span class="apt-cart-head-label">Approval Status:</span><span class="approvalText"><span>{!ApprovalStatus}</span></span><span >&nbsp;</span> </div>
+                        <div id="aptGeneralSpinner"></div>
+                         <div id="aptAbandonBtn" style="float:right;padding-top:2px;">
+                           <div id="" style="text-align: right; padding-right: 4px;">
+                             <!--<input type="submit" value="Abandon" onclick="j$.APTTUS.showAbandonConfirmationDialog(); return false;" style="background-color:#657383;background-image:none;color:white;" class="btn">
+                             </input>-->
+                             <apex:commandButton value="Abandon"
+                                            action="{!DoAbandon}"
+                                            style="background-color:#657383;background-image:none;color:white;" 
+                                            immediate="true">
+                                 <!--reRender="dummy"--> 
+                           </apex:commandButton>
+                           </div>
+                         </div>
+                       <div class="apt-headerPlacement apt-pull-right"> </div>
+                     <div class="apt-powered-logo"><img src="/resource/1440518445000/apttus_config2__CPQDelight/apt-logo.png" alt="Powered By Apttus" title="Powered By Apttus"></img></div>
+                    
+                </div>
+            <br/>
+            
+            <div>
+                <div style="text-align: center;" >
+                <apex:pagemessages id="pagemessages"/>
+                  <apex:outputPanel id="categoryprdt">
+                    
+                    <apex:commandButton id="idBulkUploadBtnTop" 
+                                        value="Add More Products"
+                                        action="{!backToCatalog}"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatus" />
+                                        <!--reRender="dummy"-->
+                                                        
+                    <apex:commandButton id="idPromptAddBtn" 
+                                        value="Go to Pricing"
+                                        action="{!redirectToPricing}"
+                                        styleClass="aptListButton"                                                    
+                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                        status="constraintRuleCancelStatus">
+                        <!--reRender="dummy"--> 
+                     </apex:commandButton>
+                     
+                    <apex:actionstatus id="constraintRuleCancelStatus">
+                      <apex:facet name="start"> <img class="constraintRuleCancelStatus" src="/img/loading.gif" /> </apex:facet>
+                      <apex:facet name="stop"> </apex:facet>
+                    </apex:actionstatus>
+                    
+                  </apex:outputPanel>
+                </div>
+              </div>
+              <br/>
+             <div></div>
+             
+            
+            
+                <div class="catalog-products-section" style="width: 100%; float:right;">
+                    <div class="aptPageContainer" style="margin-bottom: 30px;">
+                      <apex:outputPanel id="idProductsHeader" layout="block">
+                        <div class="aptPageTitleBarPanel">
+                          <div class="title" style="display:inline-block;"> Bulk Upload Product</div>
+                        </div>
+                      </apex:outputPanel>
+                      
+                        <div class="aptPageBodyPanel">
+                            
+                                <div style="display: inline-block;margin-left: 30px;font-size: 22px;margin-top: 30px;"> Browse the CSV file and Upload the Line Items to the Current Cart</div>
+                                <br/><br/>
+                                <div style="display: inline-block;margin-left: 30px;font-size: 15px;margin-top: 15px;">
+                                    <apex:inputFile value="{!csvBody}" 
+                                                    fileName="{!fileName}" 
+                                                    style="margin-top: 3px; margin-bottom: 3px;"/>
+                                    <!--
+                                    <input type="submit" class="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;" onClick="showLoading();" />
+                                    -->
+                                    <apex:commandButton value="Upload" 
+                                                        action="{!uploadCSV}"
+                                                        styleClass="aptListButton"                                                    
+                                                        style="margin-top: 3px; margin-bottom: 3px;"
+                                                        onClick="showLoading();"
+                                                        />
+                                    
+                                   
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <apex:inputCheckbox value="{!allowDuplicates}" />
+                                    <div style="display: inline-block;font-weight: bold;"> Allow Duplicates </div>
+                                    
+                                        <span id="duplicateHelpText" class="helpButtonOn" onmouseout="hideMessage();" onmouseover="showMessage(this);"> 
+                                            <img class="helpOrb" title="" alt="" src="/s.gif" /> 
+                                        </span>
+                                    <br/>
+                                </div>
+                                
+                                <br/>
+                                
+                            <div style="display: inline-block;margin-left: 30px;margin-top: 30px;">
+                                 
+                                 <!--<apex:commandLink action="{!downloadSampleCSV}" value="Click here to download the CSV file template with sample data" style="color:blue;font-weight:bold;" target="_blank"/>-->
+                                 <br/><br/>
+                                 <a href="{!URLFOR($Resource.APTS_SampleBulkUploadFile)}" target="_blank" style="color:blue;font-weight:bold;">Click here to download the sample template. [Please save this file as a .CSV file before uploading]</a>
+                                 
+                            </div>
+                            
+                            <div>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="hover-text" style="display:none;">
+                     <span>
+                         <strong>With Allow Duplicates</strong><br/>
+                         
+                         <ul>
+                            <li>
+                                If the cart already has line items, the upload will create ALL NEW LINES.
+                            </li>
+                            <li>
+                                No Error for duplicate products or product hierarchies.
+                            </li>
+                         </ul>
+                         <strong>Without Allow Duplicates</strong><br/>
+                         <ul>
+                             <li>
+                                If the cart already has line items, the upload for duplicate lines will UPDATE the existing lines and only add the new lines as new.
+                            </li>
+                            <li>
+                                If the lines are duplicate in upload file itself and there are no existing lines to match with the product and product hierarchy, then the system will show error for the duplicate lines.
+                            </li>
+                         </ul>
+                    </span>
+                 </div>
+                 
+            </apex:form>
+            <script>
+               function showMessage(obj){
+                   var leftPx = j$(obj).offset().left;
+                   var topPx = j$(obj).offset().top;
+                   j$('.hover-text').css({left:leftPx+5+'px',top:topPx+10+'px',opacity:1});
+                   j$('.hover-text').show();
+               }
+               function hideMessage(){
+                   j$('.hover-text').hide();
+               }
+            </script>
+            </body>
+            
+</apex:page>

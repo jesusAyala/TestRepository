@@ -1,0 +1,72 @@
+Dear {!Channel_Business_Review__c.OwnerFullName} ,
+</br></br>
+
+Below Channel Business Review is rejected. Please login into Salesforce.com for additional information.
+
+</br>
+</br>
+
+<html><table height="250" width="700" border="1">
+<tr width="100" height="20">
+            <td>Account:</td>
+            <td> {!Channel_Business_Review__c.Account__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Country:</td>
+            <td> {!Channel_Business_Review__c.Primary_Address_Country__c} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Business Review Name : </td>
+            <td><a href = "{!Channel_Business_Review__c.Link}"> {!Channel_Business_Review__c.Name} </a></td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Primary Channel Class: </td>
+            <td>{!Channel_Business_Review__c.Primary_Channel_Class__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Secondary Channel Class: </td>
+            <td>{!Channel_Business_Review__c.Secondary_Channel_Class__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Date of Review: </td>
+            <td>{!Channel_Business_Review__c.LastModifiedDate}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Sales YTD: </td>
+            <td>{!Channel_Business_Review__c.Sales_YTD_Compared_to_Last_Year__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Sales Runrate: </td>
+            <td>{!Channel_Business_Review__c.Rund_Rate_Current_Year__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Sales Forecast: </td>
+            <td>{!Channel_Business_Review__c.Sales_YTD_Compared_to_Forecast__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Sales Budget Current Year: </td>
+            <td>{!Channel_Business_Review__c.Sales_YTD_Compared_to_Budget__c}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Owner: </td>
+            <td>{!Channel_Business_Review__c.CreatedBy}</td>
+</tr>
+
+<tr width="100" height="20">
+            <td>Comments from Approver: </td>
+            <td>{!ApprovalRequest.Comments}</td>
+</tr>
+
+
+</table>
+</html>

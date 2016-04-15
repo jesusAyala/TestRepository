@@ -1,0 +1,21 @@
+<apex:page id="page" controller="OpportunityTimeLineCTR">
+    <apex:pageBlock title="Please choose the applicable stage">
+        <apex:outputpanel id="out">
+            <apex:pageMessages id="pageMessage" showDetail="false"/>
+        </apex:outputpanel>
+        <apex:form id="form" >
+            <apex:selectRadio id="selectRadio" value="{!Stage}" layout="{!$Label.Page_Direction}" styleClass="{!$Label.Radio_Class}"> 
+                <apex:selectOptions id="selectOptions" value="{!items}"/>
+                    <apex:actionsupport event="onclick" rerender="out" action="{!checkInfo}"/>
+            </apex:selectRadio><p/> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp; 
+            <apex:commandButton id="commandButton" style="font-size:12px;width:60px;text-align:center" value="Confirm" action="{!Confirm}"/>
+            &nbsp;&nbsp;&nbsp; 
+            <apex:commandButton id="commandButton2" style="font-size:12px;width:50px;text-align:center" value="Cancel" action="{!goBack}"/>
+        </apex:form>    
+        <style>
+            input[type=radio] { margin-left: 100px;margin-top:20px;}
+            .radioClass { margin-left: -100px; }
+        </style>
+    </apex:pageBlock>
+</apex:page>

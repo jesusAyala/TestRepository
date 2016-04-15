@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>R5 - Step 1</description>
+        <label>Step 1</label>
+        <name>Step_1</name>
+    </approvalStep>
+    <description>R5 - Approval of Joint Business Plan</description>
+    <emailTemplate>ABB_Account_Templates_R5/Joint_Business_Plan_Record_Submit_For_Approval</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>OR( 
+AND(OR(RecordType.DeveloperName = &quot;Distributor_as_AVP&quot;,RecordType.DeveloperName =&quot;Technical_Channel_as_Key_Strategic_Partner_or_AVP&quot;),ISPICKVAL(Status__c, &quot;Draft&quot;), Channel_Market_Coverage__c != NULL, 
+AND(ISBLANK(Existing_ABB_offering_Flag__c),ISBLANK(Suppliers_potential_ABB_offering_Flag__c), ISBLANK( Suppliers_complementary_products_Flag__c ), ISBLANK(Co_Operation_Overview1_Flag__c), ISBLANK(Co_Operation_Overview2_Flag__c), LEN(Training_and_Authorization_Plan__c) &gt; 1, Actions_RollUp__c &gt; 0, JBP_ProdLine_Rollup__c &gt; 0, JBP_MarketCoverage_Rollup__c &gt; 0, JBP_Contact_Role_Rollup__c &gt; 0 , NOT(ISBLANK( Date_for_Next_Review__c )),NOT(ISBLANK( Assigned_To__c ))) ), 
+
+AND(RecordType.DeveloperName = &quot;Distributor_as_Strategic_Key_Partner&quot;, ISPICKVAL(Status__c, &quot;Draft&quot;), Channel_Market_Coverage__c != NULL, 
+AND(ISBLANK(Existing_ABB_offering_Flag__c),ISBLANK(Suppliers_potential_ABB_offering_Flag__c), ISBLANK( Suppliers_complementary_products_Flag__c ), ISBLANK(Co_Operation_Overview1_Flag__c), ISBLANK(Co_Operation_Overview2_Flag__c),  Actions_RollUp__c &gt; 0,JBP_ProdLine_Rollup__c &gt; 0, JBP_MarketCoverage_Rollup__c &gt; 0, JBP_Contact_Role_Rollup__c &gt; 0 , NOT(ISBLANK( Date_for_Next_Review__c) ),NOT(ISBLANK( Assigned_To__c )))), 
+
+AND(RecordType.DeveloperName =&quot;Distributor_as_Partner&quot;, ISPICKVAL(Status__c, &quot;Draft&quot;), Channel_Market_Coverage__c != NULL, AND(ISBLANK(Existing_ABB_offering_Flag__c), ISBLANK(Suppliers_potential_ABB_offering_Flag__c), ISBLANK( Suppliers_complementary_products_Flag__c ), ISBLANK(Co_Operation_Overview1_Flag__c), ISBLANK(Co_Operation_Overview2_Flag__c), Actions_RollUp__c &gt; 0,JBP_ProdLine_Rollup__c &gt; 0,JBP_Contact_Role_Rollup__c &gt; 0 , NOT(ISBLANK( Date_for_Next_Review__c )),NOT(ISBLANK( Assigned_To__c ))) ), 
+
+AND(RecordType.DeveloperName =&quot;Technical_Channel_as_Partner&quot;, ISPICKVAL(Status__c, &quot;Draft&quot;), Channel_Market_Coverage__c != NULL, 
+AND( ISBLANK(Existing_ABB_offering_Flag__c),ISBLANK(Suppliers_potential_ABB_offering_Flag__c), ISBLANK( Suppliers_complementary_products_Flag__c ), ISBLANK(Co_Operation_Overview1_Flag__c), ISBLANK(Co_Operation_Overview2_Flag__c),  Actions_RollUp__c &gt; 0, JBP_Contact_Role_Rollup__c &gt; 0 , JBP_MarketCoverage_Rollup__c &gt; 0,NOT(ISBLANK( Date_for_Next_Review__c) ),NOT(ISBLANK( Assigned_To__c )))) 
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Approved_Date_Details</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Approved_Details</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Joint_Business_Plan_Approved</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Set_Approver_Name</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Status1</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Approved_Date_Details1</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Joint_Business_Plan_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Rejected_Details</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Approver_Name1</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Status2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Joint_Business_Plan_Record_Approval</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Update_Status</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Approval of Joint Business Plan</label>
+    <recallActions>
+        <action>
+            <name>Update_Status_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

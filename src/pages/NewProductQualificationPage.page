@@ -1,0 +1,58 @@
+<apex:page standardController="Product_Qualification__c" extensions="ClsNewProductQualification">
+    <apex:form >
+        <apex:pageBlock mode="edit" title="{!$Label.Product_Qualification_Title}">
+            <apex:pageMessages /> 
+            <apex:pageBlockSection title="Information" columns="2">                
+                    <apex:inputField value="{!Product_Qualification__c.Initiative_Name__c}" required="true"/>
+                    <apex:outputField value="{!Product_Qualification__c.OwnerId}"/>
+                    <apex:inputField value="{!Product_Qualification__c.Initiative_Strategic_Reason__c}" required="true" />
+                    <apex:inputField value="{!Product_Qualification__c.Startdate__c}" required="true"/>
+                    <apex:outputField value="{!Product_Qualification__c.Initiative_Status__c}"/>  
+                    <apex:inputField value="{!Product_Qualification__c.Target_End_Date__c}" required="true"/>
+                    <apex:inputField value="{!Product_Qualification__c.Reason_for_not_Qualified__c}"/>
+                    <apex:outputField value="{!Product_Qualification__c.Actual_End_Date__c}"/>
+                    <apex:outputLabel />
+                    <apex:inputField value="{!Product_Qualification__c.Comments__c}"/>
+                    <apex:outputField value="{!Product_Qualification__c.Product_Name__c}"/>
+                    <apex:outputLabel />
+                    <apex:outputField value="{!Product_Qualification__c.Product_Group__c}"/>
+                    <apex:outputField value="{!Product_Qualification__c.Product_Commercial_Name__c}"/>
+                    <apex:outputLabel />
+                    <apex:outputField value="{!Product_Qualification__c.Source_Location__c}"/>
+                    <apex:inputField value="{!Product_Qualification__c.Available_Market_CAPEX__c}" required="true"/>
+                    <apex:outputLabel />
+                    <apex:inputField value="{!Product_Qualification__c.Available_Market_OPEX__c}" required="true"/>
+                    <apex:outputLabel />
+                    <apex:outputLabel /> 
+                    <apex:inputField value="{!Product_Qualification__c.Estimated_Cost_USD__c}"/>
+                    <apex:outputField value="{!Product_Qualification__c.Customer_Pilot_Installation_Start_Date__c}"/>
+                    <apex:inputField value="{!Product_Qualification__c.Actual_Cost_USD__c}"/>
+                    <apex:outputLabel />
+                    <apex:outputLabel />
+                    <apex:outputLabel />
+                    <apex:outputField value="{!Product_Qualification__c.End_Date__c}" />
+               
+            </apex:pageBlockSection>
+           <apex:pageBlockSection title="Customer Details">                
+                    <apex:inputField value="{!Product_Qualification__c.Account__c}" required="true"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Qualification Details" Columns="2">                
+                    <apex:outputField value="{!Product_Qualification__c.Current_Product_Qualification_Level__c}"/>
+                    <apex:outputField value="{!Product_Qualification__c.Level_Date__c}"/>
+                    <apex:outputField value="{!Product_Qualification__c.Current_Product_Qualification_Level_2__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Quotation Information" Columns="2">                
+                    <apex:inputField value="{!Product_Qualification__c.Quotation_ID__c}"/>
+                    <apex:inputField value="{!Product_Qualification__c.Quotation_Status__c}"/>
+                    <apex:inputField value="{!Product_Qualification__c.Quotation_Value__c}"/>
+                    <apex:inputField value="{!Product_Qualification__c.Quotation_Closed_Date__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons id="block2" location="top">
+                <apex:commandButton value="Save & Add Product" action="{!savePQRecord}"/>
+                <apex:actionRegion >
+                    <apex:commandButton value="Cancel" action="{!cancelPQRecord}" reRender="block2"/>
+                </apex:actionRegion>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R5 - Channel Pre-Qualification Record Rejected</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Channel Pre-Qualification Record Rejected</name>
+    <style>none</style>
+    <subject>Channel Channel Pre-Qualification has been rejected by the Approver.</subject>
+    <type>custom</type>
+</EmailTemplate>

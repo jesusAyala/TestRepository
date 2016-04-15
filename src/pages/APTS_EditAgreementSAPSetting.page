@@ -1,0 +1,31 @@
+<!--
+@Name: APTS_EditAgreementSAPSettings
+@Author: Chetan Patel
+@CreateDate: 3rd Nov 2015
+@Description: Custom edit page for APTS_Agreement_SAP_Setting__c record
+              to show warning message to user before changing value
+@UsedBy: Apex Class - APTS_EditAgreementSAPSettingsController
+-->
+
+<apex:page standardController="APTS_Agreement_SAP_Setting__c" extensions="APTS_EditAgreementSAPSettingsController" action="{!init}">
+<apex:form >
+    
+    <apex:pageBlock >
+        <apex:pageMessages id="showmsg"></apex:pageMessages>
+        
+        <apex:pageBlockSection columns="2">
+            <apex:outputField value="{!record.Name}"></apex:outputField>
+            <apex:outputField value="{!record.APTS_Country__c}"></apex:outputField>
+            <apex:inputField value="{!record.APTS_Auto_Create_MSPA_In_SAP_On_Approval__c}"></apex:inputField>
+            <apex:inputField value="{!record.APTS_Block_MSPA_Creation_In_SAP__c}"></apex:inputField>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!Save}" value="Save" rerender="showmsg"></apex:commandButton>
+            <apex:commandButton action="{!Cancel}" value="Cancel" rerender="showmsg"></apex:commandButton>
+        </apex:pageBlockButtons>
+        
+    </apex:pageBlock>
+    
+</apex:form>    
+</apex:page>

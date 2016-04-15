@@ -1,0 +1,157 @@
+<apex:page standardController="OpportunityLineitem" extensions="PISOpportunityProductsExtension" id="page">
+<script type="text/javascript" src="/canvas/sdk/js/33.0/controller.js" />
+<script type="text/javascript">
+
+  //Object to pass to VF controller
+  function PISNode() {
+     this.cid = null;
+     this.englishDescription = null;
+     this.languageSpecificDescription = null;
+  }
+
+  //Set to true for enhanced JavaScript debugging output 
+  var dbgMode = false;
+
+  //Utility function; to be deleted
+  function addText(text) {
+    if (dbgMode == true) {
+      document.getElementById("AppOutput").value += text + '\n';
+    }
+  }
+
+  //Utility function; to be deleted
+  function cleanText() {
+    if (dbgMode == true) {
+      document.getElementById("AppOutput").value = '';
+    }
+  }
+
+  // Set timeout at page level
+  Visualforce.remoting.timeout = 30000;
+
+  //Holds all products to be added
+  var productToEdit;
+  var opptyID = "{!OpportunityLineItem.opportunity.ID}";
+  var lineItemID = "{!OpportunityLineItem.Id}";
+  var returnLink = "/{!OpportunityLineItem.ID}";
+  
+  //handle the response from 
+  function returnHandler(result, event) {
+      if (event.status) {
+        addText('Result: ' + result.success + '[Success/Failed] : [' + result.processed + '/' + result.failed +']');
+        window.location.href = '/' + result.lineItemId;
+      } else if (event.type == 'exception') {
+          addText('Exception: ' + event.message);
+          addText('Result: ' + result.success + '[Success/Failed] : [' + success.processed + '/' + success.failed +']');
+          if (confirm('Exception: ' + result.failedProducts.cid +'.\n\nBack to Opportunity?')) {
+            window.location.href = returnLink;
+          }
+      } else {
+          addText('Other: ' + event.message);
+          addText(result);
+      }
+  }
+
+  //Call VF remote function on APEX controller to update opportunity line item with new product
+  function handleProducts() {
+    Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.PISOpportunityProductsExtension.replaceProduct}', 
+          lineItemID,
+          productToEdit,
+          returnHandler, 
+        {escape: true}
+    );
+  }
+ 
+ //Receives the Canvas APP event with the product to modify
+ Sfdc.canvas(function() {  
+        Sfdc.canvas.controller.subscribe(
+            {name : 'pis.sendProducts', 
+                onData : function (data) {                 
+                  cleanText();
+                  var parsedInput = JSON.parse(data.value);
+                 
+                  if (parsedInput.Type == 'Apply') {
+                    addText('pis.sendProducts: Apply event.');
+                    
+                    if (parsedInput.Nodes.length != 1) {
+                      alert('Unexpected number of products: ' + parsedInput.Nodes.length);
+                    }
+                    cleanText();
+                    addText('Data.value: ' + data.value);
+                    addText('parsedInput: ' + parsedInput);
+                    
+                    productToEdit = new PISNode();
+                    productToEdit.cid = 'init';
+                    addText('init: ' + productToEdit.cid);
+                    productToEdit.cid = parsedInput.Nodes[0].Cid;
+                    productToEdit.englishDescription = parsedInput.Nodes[0].EnglishDescription;
+                    productToEdit.languageSpecificDescription = parsedInput.Nodes[0].LanguageSpecificDescription;
+                    addText('productToEdit.cid: ' + productToEdit.cid);
+                    addText('productToEdit.englishDescription: ' + productToEdit.englishDescription);
+                    addText('productToEdit.languageSpecificDescription: ' + productToEdit.languageSpecificDescription);
+                    handleProducts();
+                  } else if (parsedInput.Type == 'Cancel') { 
+                      addText('pis.sendProducts: Cancel event.');                      
+                      window.location.href = returnLink;
+                    } else {
+                      addText('pis.sendProducts: unknown event: ' + parsedInput.Type);
+                      if (confirm('Back to Opportunity? \n')){
+                        window.location.href = returnLink;
+                      }
+                    }
+                 }
+            }
+        );
+    });   
+ </script>
+ 
+ <!-- <table width="100%">
+ <tr>
+ <td width="800">
+  -->
+      <apex:canvasApp applicationName="{!$Label.PIS_TreeView_Canvas}"
+                      parameters="{filterCountry:'{!IF(ISBLANK(OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c), OpportunityLineItem.Opportunity.Account_End_User__r.BillingCountryCode, OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c)}',
+                                   GARID:'{!$Setup.PIS__c.extSystemId__c}',
+                                   configKey:'{!$Setup.PIS__c.configKey__c}',
+                                   mode:'edit',
+                                   CID:'{!OpportunityLineItem.Product2.cid__c}'
+                      }"
+                      width="900" height="600" id="canvas"/>
+
+<!--
+    1) Project site country (which can be different from end user country; this is either manually selected or comes from the end user project)
+
+    2) if not 1, then End user country coming from the end user
+
+<p>Project site country: "{!OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c}"</p>
+<p>End User Country: "{!OpportunityLineItem.Opportunity.Account_End_User__r.Primary_Address_Country__c}"</p>
+<p>Billing Country: "{!OpportunityLineItem.Opportunity.Account_End_User__r.BillingCountryCode}"</p>
+<p>Filter Parameter for canvas app: "{!IF(ISBLANK(OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c), OpportunityLineItem.Opportunity.Account_End_User__r.Primary_Address_Country__c, OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c)}"</p>
+    -->
+<!-- 
+
+  </td>
+ <td width="200">
+    <p>Opportunity ID: {!OpportunityLineItem.opportunity.ID}</p>
+    <p>PriceBookEntry ID: {!OpportunityLineItem.PriceBookEntryID}</p>
+    <p>LineItem: {!OpportunityLineItem.Id}:{!OpportunityLineItem.Description}</p>
+    <p>Currency: {!OpportunityLineItem.CurrencyIsoCode}</p>
+    <p>Description: '{!OpportunityLineItem.Product2.name}'</p>
+    <p>CID: '{!OpportunityLineItem.Product2.cid__c}'</p>
+    <p>Return URL: {!$CurrentPage.Parameters.retURL}</p>
+    <p>configKey: '{!$Setup.PIS__c.configKey__c}'</p>
+    <p>GARID: '{!$Setup.PIS__c.extSystemId__c}'</p>
+     
+
+    <p>Project site country: "{!OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c}"</p>
+    <p>End User Country: "{!OpportunityLineItem.Opportunity.Account_End_User__r.Primary_Address_Country__c}"</p>
+    <p>Filter Parameter for canvas app: "{!IF(ISBLANK(OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c), OpportunityLineItem.Opportunity.Account_End_User__r.Primary_Address_Country__c, OpportunityLineItem.Opportunity.End_User_Project_Site_Country__c)}"</p>
+
+    <p>Output<br/><textarea cols="40" rows="10" id="AppOutput"/></p>
+    <p><button onclick="handleProducts()">Add Products</button></p>
+   </td>
+ </tr>
+ </table> -->
+
+ </apex:page>

@@ -1,0 +1,128 @@
+<apex:page id="pg" standardController="Account" extensions="ClsCustSegmChart" showHeader="false" sidebar="false"  >
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   </head>
+   <style>
+table {
+    
+    border: 1px solid black;
+}
+</style>
+    <apex:form id="frm">
+        
+     
+        
+        <apex:chart data="{!data1}" height="320" width="80%" id="ndata1">
+            <apex:legend position="bottom" id="ndata2"/>    
+            <apex:axis type="Category" position="bottom"  title="BU - Year" grid="false" fields="name"  dashSize="2" id="ndata3">
+            <apex:chartLabel font="9px Helvetica, sans-serif" id="ndata4" />
+            </apex:axis>
+            <apex:axis type="Numeric" id="ndata5" position="left" title="Marketing Segmentation" fields="name"  grid="false" minimum="0" maximum="5"  steps="4" >
+            <apex:chartLabel font="9px Helvetica, sans-serif" rotate="0" id="ndata6"/>
+            </apex:axis>
+            <apex:barSeries id="ndata7" showInLegend="true" stacked="true"  orientation="vertical" colorSet="black,lightgrey,red,yellow, lightgreen" axis="left" yField="{!fields}" xField="name" title="{!titles}" >
+            <apex:chartTips valueField="data"   labelField="lbl"   height="30" width="550" id="ndata8"  />        
+            </apex:barSeries>
+        </apex:chart>
+
+      <!-- <apex:chart data="{!data}" width="100%" height="300" resizable="true"> 
+       
+
+                <apex:axis type="Numeric" fields="score" position="left" grid="true" title="Marketing Segmentation" dashSize="1"
+                       minimum="0" maximum="6" steps="5" margin="1"  />
+                <apex:axis type="Category" position="bottom" grid="false" title="BU - Year"
+                        fields="BUandSegmentYear" >
+                       
+                </apex:axis>
+                <apex:barSeries orientation="vertical" axis="left" xField="BUandSegmentYear" yField="score"
+                    stacked="true"  colorsProgressWithinSeries="false" />
+            </apex:chart>
+             <span style="font-weight:bold;margin-left:20px;"> Note </span>
+            <table style="margin-left:20px;">
+                <tr>
+                    <th>1 - </th>
+                    <th> <span style="color:blue"> Preferred Supplier, &nbsp; </span></th>
+               
+                    <th>2 - </th>
+                    <th><span style="color:blue"> Supplier amongst others, &nbsp;</span> </th>
+              
+                    <th>3 - </th>
+                    <th><span style="color:blue"> Weak or not approved supllier, &nbsp; </span></th>
+                
+                    <th>4 - </th>
+                    <th><span style="color:blue"> Others, &nbsp;</span></th>
+                
+                    <th>5 - </th>
+                    <th><span style="color:blue"> Not applicable</span></th>
+                </tr>
+            </table>-->
+            
+       <!--
+        
+
+   <apex:chart data="{!data}" height="280" width="450">
+    <apex:legend position="bottom"/>    
+    <apex:axis type="Category" position="bottom"  title="CY2016" grid="false" fields="name"  dashSize="2" >
+        <apex:chartLabel font="9px Helvetica, sans-serif"  />
+    </apex:axis>
+    <apex:axis type="Numeric"  position="left" title="Record Count" fields="data"  grid="false" minimum="0" maximum="6"  steps="2" >
+        <apex:chartLabel font="9px Helvetica, sans-serif" rotate="0"/>
+    </apex:axis>
+    <apex:barSeries showInLegend="true" stacked="true"  orientation="vertical" colorSet="green,red" axis="left" yField="{!fields}" xField="name" title="{!titles}" >
+        <apex:chartTips valueField="data"   labelField="lbl"   height="30" width="250"  />        
+    </apex:barSeries>
+</apex:chart>
+             
+    
+<table width="100%" height="100%" >
+<tr>
+<td align="right" width="800px" height ="400px"   valign="top" >
+<div id="piechart" style="width: 800px; height: 400px;"></div></td>
+<td align="left" valign="bottom"> <apex:commandButton value="Refresh" action="{!Refresh}"  /></td>
+</tr>
+<tr><td colspan ="3" height="10px" >&nbsp;</td></tr>
+<tr>
+<td colspan ="3" height="10px" >
+<input id="txtP1" type="hidden" value ="{!lblPreferredSupplier}" />
+<input id="txtP2" type="hidden" value ="{!lblSupplierAmong}" />
+<input id="txtP3" type="hidden" value ="{!lblWeekSupplier}" />
+<input id="txtP4" type="hidden" value ="{!lblOthers}" />
+<input id="txtP5" type="hidden" value ="{!lblnotApplicable}" />
+</td>
+</tr>
+</table>
+</apex:form>
+ <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      var TP1 = document.getElementById("txtP1").value;
+      var TP2 = document.getElementById("txtP2").value; 
+      var TP3 = document.getElementById("txtP3").value; 
+      var TP4 = document.getElementById("txtP4").value; 
+      var TP5 = document.getElementById("txtP5").value; 
+       
+       function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          [TP1 ,     {!preferredSupplier}],
+          [TP2 ,     {!supplierAmong}],
+          [TP3 ,     {!weekSupplier}],
+          [TP4 ,     {!others}],
+          [TP5 ,     {!notApplicable}]
+        ]);
+        
+        var options = {
+          title: 'PIE Customer Marketing Segmentation',
+          colors: ['green', 'yellow', 'red', 'aqua', 'grey'],
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+-->
+</apex:form>
+</apex:page>

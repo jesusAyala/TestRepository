@@ -1,0 +1,46 @@
+<apex:page id="page" standardController="RFP__c" extensions="AddRfpTeamClass">
+  <apex:form id="form" title="{!$Label.Add_RFP_Team}">
+  <apex:outputPanel id="outputPanel" >
+  <apex:Pagemessages id="Pagemessages" />
+  </apex:outputPanel>
+  <apex:pageBlock id="pageBlock" title="{!$Label.Add_RFP_Team_Member}">
+  <table>
+    <tr>
+    <td><apex:outputText value="User" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Team Role" style="color:red;font-weight:bold"/></td>
+    <td><apex:outputText value="Access Level" style="color:red;font-weight:bold"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!rfpTeamMember1.User__c}" required="true"/></td>
+    <td><apex:inputField value="{!rfpTeamMember1.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!rfpTeamMember1.Access_Level__c}"/></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!rfpTeamMember2.User__c}"/></td>
+    <td><apex:inputField value="{!rfpTeamMember2.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!rfpTeamMember2.Access_Level__c}"/></td> 
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!rfpTeamMember3.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!rfpTeamMember3.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!rfpTeamMember3.Access_Level__c}" /></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!rfpTeamMember4.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!rfpTeamMember4.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!rfpTeamMember4.Access_Level__c}" /></td>
+    </tr>
+    <tr>
+    <td><apex:inputField value="{!rfpTeamMember5.User__c}" required="false" /></td>
+    <td><apex:inputField value="{!rfpTeamMember5.Team_Role__c}"/></td>
+    <td><apex:inputField value="{!rfpTeamMember5.Access_Level__c}" /></td>
+    </tr>
+  </table>
+  <apex:pageBlockButtons >
+    <apex:commandButton action="{!saveRecords}" value="Save"/>  
+    <apex:commandButton action="{!saveMoreRecords}" value="Save & More"/>
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form> 
+</apex:page>
